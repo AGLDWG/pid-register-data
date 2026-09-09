@@ -1,0 +1,9 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/western-shield>
+    a schema:Organization ;
+    schema:description "WA’s largest conservation program, Western Shield, works to manage introduced predators for native species conservation. Learn what animals are protected, where DBCA’s fauna recovery sites are located, and what management tools are used. " ;
+    schema:name "Western Shield" ;
+    schema:url "http://www.dbca.wa.gov.au/management/threat-management/invasive-animals/western-shield"^^xsd:anyURI ;
+.

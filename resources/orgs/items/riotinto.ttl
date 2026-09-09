@@ -1,0 +1,11 @@
+PREFIX id: <http://id.loc.gov/vocabulary/identifiers/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/riotinto>
+    a schema:Organization ;
+    schema:description "Rio Tinto Group is a British-Australian multinational company that is the world's second largest metals and mining corporation." ;
+    schema:identifier "96 004 458 404"^^id:ausbn ;
+    schema:name "Rio Tinto" ;
+    schema:url "https://www.riotinto.com"^^xsd:anyURI ;
+.

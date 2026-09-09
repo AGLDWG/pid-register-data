@@ -1,0 +1,12 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/ada>
+    a schema:Organization ;
+    schema:description """The Australian Data Archive (ADA) provides a national service for the collection and preservation of digital research data. ADA disseminates this data for secondary analysis by academic researchers and other users.
+
+The archive is based in the ANU Centre for Social Research and Methods (CSRM) at the Australian National University (ANU).""" ;
+    schema:isPartOf <https://linked.data.gov.au/org/anu> ;
+    schema:name "Australian Data Archive" ;
+    schema:url "https://ada.edu.au"^^xsd:anyURI ;
+.

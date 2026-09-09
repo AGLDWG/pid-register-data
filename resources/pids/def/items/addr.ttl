@@ -1,0 +1,49 @@
+PREFIX pid: <https://linked.data.gov.au/def/pid/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/pid/def/addr>
+    a pid:Pid ;
+    pid:redirectRules """RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/def/addr$         https://icsm-au.github.io/addr-model/model.ttl [R=302,L]
+RewriteRule ^/def/addr$         https://icsm-au.github.io/addr-model/model.html [R=302,L]
+RewriteRule ^/def/addr.ttl$     https://icsm-au.github.io/addr-model/model.ttl [R=302,L]
+RewriteRule ^/def/addr($|/.*)$  https://icsm-au.github.io/addr-model/model.ttl [R=302,L]"""^^pid:apacheRedirectRules ;
+    pid:redirectTest 
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/addr/Address" ;
+            pid:headers "" ;
+            pid:to "https://icsm-au.github.io/addr-model/model.ttl" ;
+            schema:name "Address Model Address Class" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/addr" ;
+            pid:headers "" ;
+            pid:to "https://icsm-au.github.io/addr-model/model.html" ;
+            schema:name "Address Model Specification HTML" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/addr/" ;
+            pid:headers "" ;
+            pid:to "https://icsm-au.github.io/addr-model/model.ttl" ;
+            schema:name "Address Model Namespace RDF" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/addr" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://icsm-au.github.io/addr-model/model.ttl" ;
+            schema:name "Address Model Specification RDF" ;
+        ] ;
+    schema:creator <https://linked.data.gov.au/person/anne.goldsack> ;
+    schema:dateCreated "2022-06-15"^^xsd:date ;
+    schema:dateModified "2026-09-07"^^xsd:date ;
+    schema:name "National Address Model" ;
+    schema:sponsor <https://linked.data.gov.au/org/icsm> ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/stable> ;
+    schema:url "https://linked.data.gov.au/def/addr"^^pid:agldwgPid ;
+.

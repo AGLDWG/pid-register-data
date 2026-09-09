@@ -1,0 +1,321 @@
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prof: <http://www.w3.org/ns/dx/prof/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX schema: <https://schema.org/>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX time: <http://www.w3.org/2006/time#>
+
+dcterms:conformsTo
+    schema:name "conforms to" ;
+.
+
+dcterms:isRequiredBy
+    schema:name "Is Required By" ;
+.
+
+rdf:first
+    schema:name "first" ;
+.
+
+()
+    schema:name "nil" ;
+.
+
+rdf:rest
+    schema:name "rest" ;
+.
+
+rdf:type
+    schema:name "type" ;
+.
+
+owl:Class
+    schema:name "Class" ;
+.
+
+owl:DatatypeProperty
+    schema:name "Datatype Property" ;
+.
+
+owl:ObjectProperty
+    schema:name "Object Property" ;
+.
+
+owl:Ontology
+    schema:name "Ontology" ;
+.
+
+owl:Restriction
+    schema:name "Restriction" ;
+.
+
+owl:equivalentClass
+    schema:name "equivalent class" ;
+.
+
+owl:minQualifiedCardinality
+    schema:name "min qualified cardinality" ;
+.
+
+owl:onClass
+    schema:name "on Class" ;
+.
+
+owl:onDatatype
+    schema:name "on Datatype" ;
+.
+
+owl:onProperty
+    schema:name "on Property" ;
+.
+
+owl:unionOf
+    schema:name "union of" ;
+.
+
+owl:versionIRI
+    schema:name "version IRI" ;
+.
+
+owl:withRestrictions
+    schema:name "with restrictions" ;
+.
+
+skos:example
+    schema:name "example" ;
+.
+
+skos:historyNote
+    schema:name "history note" ;
+.
+
+time:hasBeginning
+    schema:name "has beginning" ;
+.
+
+time:hasTime
+    schema:name "has time" ;
+.
+
+time:inXSDDate
+    schema:name "in XSD date" ;
+.
+
+dcat:Relationship
+    schema:name "Relationship" ;
+.
+
+dcat:hadRole
+    schema:name "hadRole" ;
+.
+
+dcat:qualifiedRelation
+    schema:name "qualified relation" ;
+.
+
+prof:hasArtifact
+    schema:name "has artifact" ;
+.
+
+prof:hasResource
+    schema:name "has resource" ;
+.
+
+prof:hasRole
+    schema:name "has role" ;
+.
+
+sh:IRI
+    schema:name "IRI"@en ;
+.
+
+sh:NodeShape
+    schema:name "Node shape"@en ;
+.
+
+sh:SPARQLConstraint
+    schema:name "SPARQL constraint"@en ;
+.
+
+sh:class
+    schema:name "class"@en ;
+.
+
+sh:datatype
+    schema:name "datatype"@en ;
+.
+
+sh:deactivated
+    schema:name "deactivated"@en ;
+.
+
+sh:maxCount
+    schema:name "max count"@en ;
+.
+
+sh:message
+    schema:name "message"@en ;
+.
+
+sh:minCount
+    schema:name "min count"@en ;
+.
+
+sh:nodeKind
+    schema:name "node kind"@en ;
+.
+
+sh:or
+    schema:name "or"@en ;
+.
+
+sh:path
+    schema:name "path"@en ;
+.
+
+sh:property
+    schema:name "property"@en ;
+.
+
+sh:select
+    schema:name "select"@en ;
+.
+
+sh:sparql
+    schema:name "constraint (in SPARQL)"@en ;
+.
+
+sh:targetClass
+    schema:name "target class"@en ;
+.
+
+<https://linked.data.gov.au/def/lifecycle/LifecycleStage>
+    schema:name "Lifecycle Stage" ;
+.
+
+<https://linked.data.gov.au/def/lifecycle/hasLifecycleStage>
+    schema:name "has Lifecycle Stage" ;
+.
+
+<https://prez.dev/Manifest>
+    schema:name "Manifest" ;
+.
+
+schema:DataCatalog
+    schema:name "Data Catalog" ;
+.
+
+schema:Organization
+    schema:name "Organization" ;
+.
+
+schema:additionalType
+    schema:name "additional type" ;
+.
+
+schema:agent
+    schema:name "agent" ;
+.
+
+schema:alternateName
+    schema:name "alternate name" ;
+.
+
+schema:backstory
+    schema:name "backstory" ;
+.
+
+schema:codeRepository
+    schema:name "code repository" ;
+.
+
+schema:copyrightHolder
+    schema:name "copyright holder" ;
+.
+
+schema:creator
+    schema:name "creator" ;
+.
+
+schema:dateCreated
+    schema:name "date created" ;
+.
+
+schema:dateIssued
+    schema:name "date issued" ;
+.
+
+schema:dateModified
+    schema:name "date modified" ;
+.
+
+schema:description
+    schema:name "description" ;
+.
+
+schema:hasPart
+    schema:name "has part" ;
+.
+
+schema:identifier
+    schema:name "identifier" ;
+.
+
+schema:isPartOf
+    schema:name "is part of" ;
+.
+
+schema:license
+    schema:name "license" ;
+.
+
+schema:member
+    schema:name "member" ;
+.
+
+schema:memberOf
+    schema:name "member of" ;
+.
+
+schema:name
+    schema:name "name" ;
+.
+
+schema:parentOrganization
+    schema:name "parent organization" ;
+.
+
+schema:publisher
+    schema:name "publisher" ;
+.
+
+schema:sponsor
+    schema:name "sponsor" ;
+.
+
+schema:status
+    schema:name "status" ;
+.
+
+schema:successorOf
+    schema:name "successor of" ;
+.
+
+schema:url
+    schema:name "url" ;
+.
+
+schema:value
+    schema:name "value" ;
+.
+
+schema:version
+    schema:name "version" ;
+.
+
+<http://purl.org/NET/rdflicense/cc-by4.0>
+    schema:name "Creative Commons CC-BY 4.0" ;
+.

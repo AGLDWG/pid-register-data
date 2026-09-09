@@ -1,0 +1,10 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/bom-gu>
+    a schema:Organization ;
+    schema:description "The Groundwater Unit within the Bureau of Meteorology" ;
+    schema:isPartOf <https://linked.data.gov.au/org/bom> ;
+    schema:name "BoM Groundwater Unit" ;
+    schema:url "http://www.bom.gov.au/water/groundwater/"^^xsd:anyURI ;
+.

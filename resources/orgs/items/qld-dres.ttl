@@ -1,0 +1,9 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/qld-dres>
+    a schema:Organization ;
+    schema:description "The Department of Resources was renamed the Department of Natural Resources and Mines, Manufacturing and Regional and Rural Development in 2025" ;
+    schema:name "Qld Department of Resources" ;
+    schema:url "https://www.resources.qld.gov.au"^^xsd:anyURI ;
+.

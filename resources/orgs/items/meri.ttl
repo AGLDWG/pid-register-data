@@ -1,0 +1,10 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/meri>
+    a schema:Organization ;
+    schema:description "MERI is part of DCCEEW that helps partners to identify what is working and what can be improved within their projects relating to natural resource management (NRM) activities." ;
+    schema:isPartOf <https://linked.data.gov.au/org/dcceew> ;
+    schema:name "Monitoring, Evaluation, Reporting and Improvement (MERI)" ;
+    schema:url "https://www.dcceew.gov.au/environment/land/natural-heritage-trust/monitoring-reporting/meri"^^xsd:anyURI ;
+.

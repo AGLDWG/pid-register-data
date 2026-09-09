@@ -1,0 +1,11 @@
+PREFIX id: <http://id.loc.gov/vocabulary/identifiers/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/mrcca>
+    a schema:Organization ;
+    schema:description "The Mary River Catchment Coordination Association is a very active Integrated Catchment Management Organization overseen by the Mary River Catchment Coordinating Committee (MRCCC), which comprises interest sector representatives from 30 community, industry and government sectors with interests in sustainable natural resource management. Today the group reaches out to thousands of catchment residents through our stakeholder delegates and associated networks throughout the catchment." ;
+    schema:identifier "23 009 920 786 "^^id:ausbn ;
+    schema:name "Mary River Catchment Coordination Association" ;
+    schema:url "https://mrccc.org.au"^^xsd:anyURI ;
+.

@@ -1,0 +1,10 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/cdu>
+    a schema:Organization ;
+    schema:description "Charles Darwin University (CDU) is an Australian public university with a main campus in Darwin and eight satellite campuses in some metropolitan and regional areas. It was established in 2003 after the merger of Northern Territory University, the Menzies School of Health Research, and Centralian College." ;
+    schema:identifier "https://ror.org/048zcaj52"^^<https://linked.data.gov.au/org/rorId> ;
+    schema:name "Charles Darwin University" ;
+    schema:url "https://www.cdu.edu.au"^^xsd:anyURI ;
+.

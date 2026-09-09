@@ -1,0 +1,40 @@
+PREFIX pid: <https://linked.data.gov.au/def/pid/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/pid/def/agop>
+    a pid:Pid ;
+    pid:redirectRules """RewriteRule ^/def/agop/spec$			               https://raw.githack.com/AGLDWG/agop/master/specification.html [R=302,L]
+RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/def/agop$                                https://raw.githack.com/AGLDWG/agop/master/agop.ttl? [R=302,L]
+RewriteRule ^/def/agop.ttl$                            https://raw.githack.com/AGLDWG/agop/master/agop.ttl [R=302,L]
+RewriteRule ^/def/agop$                                https://raw.githack.com/AGLDWG/agop/master/agop.html [R=302,L]
+RewriteRule ^/def/agop/validator$		               https://raw.githack.com/AGLDWG/agop/master/validator.shacl.ttl [R=302,L]
+RewriteRule ^/def/agop/example.valid-1$                https://raw.githack.com/AGLDWG/agop/master/example.valid-1.ttl [R=302,L]
+RewriteRule ^/def/agop/example.valid-2$                https://raw.githack.com/AGLDWG/agop/master/example.valid-2.ttl [R=302,L]
+RewriteRule ^/def/agop/example.invalid-1$              https://raw.githack.com/AGLDWG/agop/master/example.invalid-1.ttl [R=302,L]
+RewriteRule ^/def/agop/example.invalid-2$              https://raw.githack.com/AGLDWG/agop/master/example.invalid-2.ttl [R=302,L]"""^^pid:apacheRedirectRules ;
+    pid:redirectTest 
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/agop" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://raw.githack.com/AGLDWG/agop/master/agop.ttl" ;
+            schema:name "agop RDF (Turtle)" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/agop" ;
+            pid:headers "" ;
+            pid:to "https://raw.githack.com/AGLDWG/agop/master/agop.html" ;
+            schema:name "agop HTML" ;
+        ] ;
+    schema:creator <https://linked.data.gov.au/person/nicholas.car> ;
+    schema:dateCreated "2020-07-01"^^xsd:date ;
+    schema:dateModified "2026-09-07"^^xsd:date ;
+    schema:name "Australian Government Ontology Profile" ;
+    schema:sponsor <https://linked.data.gov.au/org/agldwg> ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/stable> ;
+    schema:url "https://linked.data.gov.au/def/agop"^^pid:agldwgPid ;
+.

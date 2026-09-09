@@ -1,0 +1,9 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/naturemapr>
+    a schema:Organization ;
+    schema:description "NatureMapr is a not-for-profit organisation whose mission is to empower anybody to report plant or animal information anywhere in Australia and ensure the information gets to the people that need to know about it." ;
+    schema:name "Naturemapr" ;
+    schema:url "https://naturemapr.org"^^xsd:anyURI ;
+.

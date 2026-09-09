@@ -1,0 +1,30 @@
+PREFIX pid: <https://linked.data.gov.au/def/pid/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/pid/def/policy>
+    a pid:Pid ;
+    pid:redirectRules "RewriteRule ^/def/policy/([0-9a-f\\-]{36}) https://apo.org.au/subject/$1 [R=302,L]"^^pid:apacheRedirectRules ;
+    pid:redirectTest 
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/policy/00000000-0000-0000-0000-000000000000" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://apo.org.au/subject/00000000-0000-0000-0000-000000000000" ;
+            schema:name "policy RDF (Turtle)" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/policy/00000000-0000-0000-0000-000000000000" ;
+            pid:headers "" ;
+            pid:to "https://apo.org.au/subject/00000000-0000-0000-0000-000000000000" ;
+            schema:name "policy HTML" ;
+        ] ;
+    schema:creator <https://linked.data.gov.au/person/cjorquera> ;
+    schema:dateCreated "2023-02-23"^^xsd:date ;
+    schema:dateModified "2026-09-07"^^xsd:date ;
+    schema:name "Public Policy Taxonomy" ;
+    schema:sponsor <https://linked.data.gov.au/org/ardc> ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/stable> ;
+    schema:url "https://linked.data.gov.au/def/policy"^^pid:agldwgPid ;
+.

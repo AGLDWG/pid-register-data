@@ -1,0 +1,11 @@
+PREFIX id: <http://id.loc.gov/vocabulary/identifiers/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/nsw-npws>
+    a schema:Organization ;
+    schema:description "NSW National Parks and Wildlife Service (NPWS) is part of Environment and Heritage in the Department of Climate Change" ;
+    schema:identifier "27 578 976 844"^^id:ausbn ;
+    schema:name "NSW National Parks and Wildlife Service" ;
+    schema:url "https://www.nationalparks.nsw.gov.au"^^xsd:anyURI ;
+.

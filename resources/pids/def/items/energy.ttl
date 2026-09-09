@@ -1,0 +1,17 @@
+PREFIX pid: <https://linked.data.gov.au/def/pid/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/pid/def/energy>
+    a pid:Pid ;
+    pid:redirectRules """RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/def/energy($|/.*)$ "https://raw.githack.com/AGLDWG/energy-dataset/master/energy.ttl" [R=302,L]
+RewriteRule ^/def/energy($|/.*)$ "https://raw.githack.com/AGLDWG/energy-dataset/master/energy.html$1" [R=302,NE,L]"""^^pid:apacheRedirectRules ;
+    schema:creator <https://linked.data.gov.au/person/nicholas.car> ;
+    schema:dateCreated "2020-02-15"^^xsd:date ;
+    schema:dateModified "2026-09-07"^^xsd:date ;
+    schema:sponsor <https://linked.data.gov.au/org/csiro> ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/stable> ;
+    schema:url "https://linked.data.gov.au/def/energy"^^pid:agldwgPid ;
+.

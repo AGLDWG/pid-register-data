@@ -1,0 +1,11 @@
+PREFIX id: <http://id.loc.gov/vocabulary/identifiers/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/baam>
+    a schema:Organization ;
+    schema:description "BAAM was established in Brisbane in 2001 to provide terrestrial fauna ecology consulting services. Since that time the company has grown to include botanical expertise, ecological restoration and fauna spotting services. For projects requiring specific expertise we source contribution from within our significant network of ecological specialists to ensure the rigour of our work." ;
+    schema:identifier "59 097 464 992"^^id:ausbn ;
+    schema:name "Biodiversity Assessment and Management (BAAM)" ;
+    schema:url "https://baamecology.com"^^xsd:anyURI ;
+.

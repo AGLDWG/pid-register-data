@@ -1,0 +1,14 @@
+PREFIX schema: <https://schema.org/>
+
+<https://linked.data.gov.au/org/acu>
+    a schema:Organization ;
+    schema:description """Australian Catholic University was opened on 1 January 1991 following the amalgamation of four Catholic tertiary institutions in eastern Australia:
+
+
+	Catholic College of Education Sydney, New South Wales
+	Institute of Catholic Education, Victoria
+	McAuley College, Queensland
+	Signadou College of Education, Australian Capital Territory""" ;
+    schema:identifier "https://ror.org/04cxm4j25"^^<https://linked.data.gov.au/org/rorId> ;
+    schema:name "Australian Catholic University" ;
+.

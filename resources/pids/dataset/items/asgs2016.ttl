@@ -1,0 +1,30 @@
+PREFIX pid: <https://linked.data.gov.au/def/pid/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/pid/dataset/asgs2016>
+    a pid:Pid ;
+    pid:redirectRules "RewriteRule ^/dataset/asgs2016(.*)                        https://linked.data.gov.au/static/broken.html\\?iri=https://linked.data.gov.au/dataset/asgs2016$1 [L]"^^pid:apacheRedirectRules ;
+    pid:redirectTest 
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/dataset/asgs2016.ttl" ;
+            pid:headers "" ;
+            pid:to "https://linked.data.gov.au/static/broken.html?iri=https://linked.data.gov.au/dataset/asgs2016.ttl" ;
+            schema:name "asgs2016 RDF (Turtle)" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/dataset/asgs2016" ;
+            pid:headers "" ;
+            pid:to "https://linked.data.gov.au/static/broken.html?iri=https://linked.data.gov.au/dataset/asgs2016" ;
+            schema:name "asgs2016 HTML" ;
+        ] ;
+    schema:creator <https://linked.data.gov.au/person/paul.j.box> ;
+    schema:dateCreated "2019-04-15"^^xsd:date ;
+    schema:dateModified "2026-09-07"^^xsd:date ;
+    schema:name "ASGS 2016 Dataset" ;
+    schema:sponsor <https://linked.data.gov.au/org/abs> ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/stable> ;
+    schema:url "https://linked.data.gov.au/dataset/asgs2016"^^pid:agldwgPid ;
+.

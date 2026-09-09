@@ -1,0 +1,34 @@
+PREFIX pid: <https://linked.data.gov.au/def/pid/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/pid/def/alteration-type>
+    a pid:Pid ;
+    pid:redirectRules """RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/def/alteration-type($|/.*)$ "https://vocabulary.gswa.kurrawong.ai/object?uri=https://linked.data.gov.au/def/alteration-type$1&_mediatype=text/turtle" [R=302,L]
+RewriteRule ^/def/alteration-type.ttl$ "https://vocabulary.gswa.kurrawong.ai/object?uri=https://linked.data.gov.au/def/alteration-type$1&_mediatype=text/turtle" [R=302,L]
+RewriteRule ^/def/alteration-type($|/.*) "https://vocabulary.gswa.kurrawong.ai/object?uri=https://linked.data.gov.au/def/alteration-type$1" [R=302,NE,L]"""^^pid:apacheRedirectRules ;
+    pid:redirectTest 
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/alteration-type" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://vocabulary.gswa.kurrawong.ai/object?uri=https://linked.data.gov.au/def/alteration-type&_mediatype=text/turtle" ;
+            schema:name "alteration-type RDF" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/alteration-type" ;
+            pid:headers "" ;
+            pid:to "https://vocabulary.gswa.kurrawong.ai/object?uri=https://linked.data.gov.au/def/alteration-type" ;
+            schema:name "alteration-type HTML" ;
+        ] ;
+    schema:creator <https://linked.data.gov.au/person/chee.ng> ;
+    schema:dateCreated "2024-12-02"^^xsd:date ;
+    schema:dateModified "2026-09-07"^^xsd:date ;
+    schema:name "Alteration type" ;
+    schema:sponsor <https://linked.data.gov.au/org/gswa> ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/accepted> ;
+    schema:url "https://linked.data.gov.au/def/alteration-type"^^pid:agldwgPid ;
+.

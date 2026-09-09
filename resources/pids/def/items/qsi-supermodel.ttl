@@ -1,0 +1,33 @@
+PREFIX pid: <https://linked.data.gov.au/def/pid/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/pid/def/qsi-supermodel>
+    a pid:Pid ;
+    pid:redirectRules """RewriteCond %{QUERY_STRING} _mediatype=text/turtle
+RewriteRule ^/def/qsi-supermodel        https://raw.githubusercontent.com/Spatial-Information-QLD/supermodel/main/supermodel.ttl [R=302,L]
+RewriteRule ^/def/qsi-supermodel.ttl    https://raw.githubusercontent.com/Spatial-Information-QLD/supermodel/main/supermodel.ttl [R=302,L]
+RewriteRule ^/def/qsi-supermodel        https://spatial-information-qld.github.io/supermodel/supermodel.html [R=302,L]"""^^pid:apacheRedirectRules ;
+    pid:redirectTest 
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/qsi-supermodel" ;
+            pid:headers "" ;
+            pid:to "https://spatial-information-qld.github.io/supermodel/supermodel.html" ;
+            schema:name "qsi-supermodel HTML" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/qsi-supermodel?_mediatype=text/turtle" ;
+            pid:headers "" ;
+            pid:to "https://raw.githubusercontent.com/Spatial-Information-QLD/supermodel/main/supermodel.ttl?_mediatype=text/turtle" ;
+            schema:name "qsi-supermodel RDF (Turtle)" ;
+        ] ;
+    schema:creator <https://linked.data.gov.au/person/anne.goldsack> ;
+    schema:dateCreated "2023-04-26"^^xsd:date ;
+    schema:dateModified "2026-09-07"^^xsd:date ;
+    schema:name "Queensland Spatial Information Supermodel" ;
+    schema:sponsor <https://linked.data.gov.au/org/qsi> ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/stable> ;
+    schema:url "https://linked.data.gov.au/def/qsi-supermodel"^^pid:agldwgPid ;
+.

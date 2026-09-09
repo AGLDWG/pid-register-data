@@ -1,0 +1,48 @@
+PREFIX pid: <https://linked.data.gov.au/def/pid/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/pid/def/borehole>
+    a pid:Pid ;
+    pid:redirectRules """RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/def/borehole$                         https://raw.githack.com/geological-survey-of-queensland/gsq-borehole-profile/master/model/borehole.ttl? [R=302,L]
+RewriteRule ^/def/borehole.ttl$                     https://raw.githack.com/geological-survey-of-queensland/gsq-borehole-profile/master/model/borehole.ttl [R=302,L]
+RewriteRule ^/def/borehole$                         https://raw.githack.com/geological-survey-of-queensland/gsq-borehole-profile/master/borehole.html [R=302,L]"""^^pid:apacheRedirectRules ;
+    pid:redirectTest 
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/borehole?_mediatype=text/turtle" ;
+            pid:headers "" ;
+            pid:to "https://raw.githack.com/geological-survey-of-queensland/gsq-borehole-profile/master/model/borehole.ttl" ;
+            schema:name "Borehole Profile, RDF (turtle) via QSA" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/borehole" ;
+            pid:headers "" ;
+            pid:to "https://raw.githack.com/geological-survey-of-queensland/gsq-borehole-profile/master/borehole.html" ;
+            schema:name "Borehole Profile, HTML" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/borehole.ttl" ;
+            pid:headers "" ;
+            pid:to "https://raw.githack.com/geological-survey-of-queensland/gsq-borehole-profile/master/model/borehole.ttl" ;
+            schema:name "Borehole Profile, RDF (turtle) via file ext." ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/borehole" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://raw.githack.com/geological-survey-of-queensland/gsq-borehole-profile/master/model/borehole.ttl" ;
+            schema:name "Borehole Profile, RDF (turtle) via conneg" ;
+        ] ;
+    schema:creator <https://linked.data.gov.au/person/david.crosswell> ;
+    schema:dateCreated "2019-04-30"^^xsd:date ;
+    schema:dateModified "2026-09-07"^^xsd:date ;
+    schema:name "Borehole Profile" ;
+    schema:sponsor <https://linked.data.gov.au/org/gsq> ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/stable> ;
+    schema:url "https://linked.data.gov.au/def/borehole"^^pid:agldwgPid ;
+.

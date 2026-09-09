@@ -1,0 +1,12 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/dhs>
+    a schema:Organization ;
+    schema:description "Responsible for the development of service delivery policy and provide access to social, health and other payments and services." ;
+    schema:identifier
+        "O-000880"^^<https://linked.data.gov.au/org/agorId> ,
+        "CA-7853"^^<https://linked.data.gov.au/org/crsId> ;
+    schema:name "Department of Human Services" ;
+    schema:url "https://www.humanservices.gov.au"^^xsd:anyURI ;
+.

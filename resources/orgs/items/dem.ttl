@@ -1,0 +1,9 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/dem>
+    a schema:Organization ;
+    schema:description "The Department for Energy and Mining (DEM) leads the global transformation economy, overseeing the responsible mining and production of the minerals, metals and fuels of the future, to safely and sustainably generate the energy and low carbon products of the future." ;
+    schema:name "SA Department for Energy and Mining" ;
+    schema:url "https://www.energymining.sa.gov.au"^^xsd:anyURI ;
+.

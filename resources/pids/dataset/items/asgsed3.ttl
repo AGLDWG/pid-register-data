@@ -1,0 +1,44 @@
+PREFIX pid: <https://linked.data.gov.au/def/pid/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/pid/dataset/asgsed3>
+    a pid:Pid ;
+    pid:redirectRules """RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/dataset/asgsed3$                          https://asgs.linked.fsdf.org.au/dataset/asgsed3?_profile=dcat&_mediatype=text/turtle [R=302,L]
+RewriteRule ^/dataset/asgsed3.ttl$                      https://asgs.linked.fsdf.org.au/dataset/asgsed3?_profile=dcat&_mediatype=text/turtle [R=302,L]
+RewriteRule ^/dataset/asgsed3$                          https://asgs.linked.fsdf.org.au/dataset/asgsed3 [R=302,L]
+RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/dataset/asgsed3/([A-Z0-9]+)$              https://asgs.linked.fsdf.org.au/dataset/asgsed3/collections/$1?_profile=geo&_mediatype=text/turtle [R=302,L]
+RewriteRule ^/dataset/asgsed3/([A-Z0-9]+).ttl$          https://asgs.linked.fsdf.org.au/dataset/asgsed3/collections/$1?_profile=geo&_mediatype=text/turtle [R=302,L]
+RewriteRule ^/dataset/asgsed3/([A-Z0-9]+)$              https://asgs.linked.fsdf.org.au/dataset/asgsed3/collections/$1 [R=302,L]
+RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/dataset/asgsed3/(.*)/(.*)$                https://asgs.linked.fsdf.org.au/dataset/asgsed3/collections/$1/items/$2?_profile=geo&mediatype=text/turtle [R=302,L]
+RewriteRule ^/dataset/asgsed3/(.*)/(.*).ttl$            https://asgs.linked.fsdf.org.au/dataset/asgsed3/collections/$1/items/$2?_profile=geo&mediatype=text/turtle [R=302,L]
+RewriteRule ^/dataset/asgsed3/(.*)/(.*)$                https://asgs.linked.fsdf.org.au/dataset/asgsed3/collections/$1/items/$2 [R=302,L]"""^^pid:apacheRedirectRules ;
+    pid:redirectTest 
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/dataset/asgsed3" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://asgs.linked.fsdf.org.au/dataset/asgsed3?_profile=dcat&_mediatype=text/turtle" ;
+            schema:name "asgsed3 RDF (Turtle)" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/dataset/asgsed3" ;
+            pid:headers "" ;
+            pid:to "https://asgs.linked.fsdf.org.au/dataset/asgsed3" ;
+            schema:name "asgsed3 HTML" ;
+        ] ;
+    schema:creator <https://linked.data.gov.au/person/sally.clement> ;
+    schema:dateCreated "2021-04-14"^^xsd:date ;
+    schema:dateModified "2026-09-07"^^xsd:date ;
+    schema:name "ASGS Edition 3 Dataset" ;
+    schema:sponsor <https://linked.data.gov.au/org/abs> ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/stable> ;
+    schema:url "https://linked.data.gov.au/dataset/asgsed3"^^pid:agldwgPid ;
+.

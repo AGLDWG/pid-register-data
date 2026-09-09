@@ -1,0 +1,8 @@
+PREFIX schema: <https://schema.org/>
+
+<https://linked.data.gov.au/org/nsl>
+    a schema:Organization ;
+    schema:description "Holder of authorititive species data for Australia." ;
+    schema:isPartOf <https://linked.data.gov.au/org/abrs> ;
+    schema:name "National Species List" ;
+.

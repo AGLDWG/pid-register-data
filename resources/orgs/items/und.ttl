@@ -1,0 +1,8 @@
+PREFIX schema: <https://schema.org/>
+
+<https://linked.data.gov.au/org/und>
+    a schema:Organization ;
+    schema:description "Notre Dame is a private Catholic University, extending from the West Coast of Australia in the beautiful and historic City of Fremantle, to the North-West town of Broome and across the continent to the heart of Sydney." ;
+    schema:identifier "https://ror.org/02stey378"^^<https://linked.data.gov.au/org/rorId> ;
+    schema:name "University of Notre Dame" ;
+.

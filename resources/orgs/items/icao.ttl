@@ -1,0 +1,13 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/icao>
+    a schema:Organization ;
+    schema:description """ICAO is funded and directed by 193 national governments to support their diplomacy and cooperation in air transport as signatory states to the Chicago Convention (1944).
+
+Its core function is to maintain an administrative and expert bureaucracy (the ICAO Secretariat) supporting these diplomatic interactions, and to research new air transport policy and standardization innovations as directed and endorsed by governments through the ICAO Assembly, or by the ICAO Council which the assembly elects.""" ;
+    schema:identifier "https://ror.org/04jebr251"^^<https://linked.data.gov.au/org/rorId> ;
+    schema:isPartOf <https://linked.data.gov.au/org/un> ;
+    schema:name "International Civil Aviation Organisation" ;
+    schema:url "https://www.icao.int/Pages/default.aspx"^^xsd:anyURI ;
+.

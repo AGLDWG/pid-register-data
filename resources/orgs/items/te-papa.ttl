@@ -1,0 +1,9 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/te-papa>
+    a schema:Organization ;
+    schema:description "Te Papa is New Zealand's national museum, renowned for being bicultural, scholarly, innovative, and fun. Our success is built on our relationships with and our ability to represent our community." ;
+    schema:name "Museum of New Zealand Te Papa Tongarewa" ;
+    schema:url "https://www.tepapa.govt.nz"^^xsd:anyURI ;
+.

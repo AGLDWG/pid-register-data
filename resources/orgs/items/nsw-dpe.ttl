@@ -1,0 +1,13 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/nsw-dpe>
+    a schema:Organization ;
+    schema:description """The New South Wales Department of Planning and Environment (DPE) was a department of the New South Wales Government, responsible for effective and sustainable planning to support the growth in the state of New South Wales, Australia.
+
+The department was renamed from the Department of Planning, Industry and Environment (DPIE) on 21 December 2021.
+
+Superseding agencies: Department of Planning, Housing and Infrastructure & Department of Climate Change, Energy, the Environment and Water.""" ;
+    schema:name "New South Wales Dept of Planning and Environment" ;
+    schema:url "https://www.dpie.nsw.gov.au"^^xsd:anyURI ;
+.

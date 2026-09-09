@@ -1,0 +1,42 @@
+PREFIX pid: <https://linked.data.gov.au/def/pid/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/pid/def/anzgeodcat>
+    a pid:Pid ;
+    pid:redirectRules """RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/def/anzgeodcat                https://kurrawong.github.io/anzgeodcat/profile/profile.ttl [R=302,L]
+RewriteRule ^/def/anzgeodcat.ttl$          https://kurrawong.github.io/anzgeodcat/profile/profile.ttl [R=302,L]
+RewriteRule ^/def/anzgeodcat$				https://kurrawong.github.io/anzgeodcat/profile/profile.html [R=302,L]
+
+RewriteRule ^/def/anzgeodcat/guide			https://kurrawong.github.io/anzgeodcat/profile/resources/guide.html [R=302,L]
+RewriteRule ^/def/anzgeodcat/spec			https://kurrawong.github.io/anzgeodcat/profile/resources/spec.html [R=302,L]
+RewriteRule ^/def/anzgeodcat/fsdf			https://kurrawong.github.io/anzgeodcat/profile/resources/mappings/fsdf.html [R=302,L]
+RewriteRule ^/def/anzgeodcat/idncp			https://kurrawong.github.io/anzgeodcat/profile/resources/mappings/idncp.html [R=302,L]
+RewriteRule ^/def/anzgeodcat/iso19115$		https://kurrawong.github.io/anzgeodcat/profile/resources/mappings/iso19115.html [R=302,L]
+RewriteRule ^/def/anzgeodcat/iso19115.py    https://kurrawong.github.io/anzgeodcat/profile/resources/mappings/iso19115.py [R=302,L]
+RewriteRule ^/def/anzgeodcat/sdo$			https://kurrawong.github.io/anzgeodcat/profile/resources/mappings/sdo.html [R=302,L]
+RewriteRule ^/def/anzgeodcat/sdo.ttl		https://kurrawong.github.io/anzgeodcat/profile/resources/mappings/sdo.ttl [R=302,L]"""^^pid:apacheRedirectRules ;
+    pid:redirectTest 
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/anzgeodcat" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://kurrawong.github.io/anzgeodcat/profile/profile.ttl" ;
+            schema:name "anzgeodcat RDF (Turtle)" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/anzgeodcat" ;
+            pid:headers "" ;
+            pid:to "https://kurrawong.github.io/anzgeodcat/profile/profile.html" ;
+            schema:name "anzgeodcat HTML" ;
+        ] ;
+    schema:creator <https://linked.data.gov.au/person/irina.bastrakova> ;
+    schema:dateCreated "2022-12-15"^^xsd:date ;
+    schema:dateModified "2026-09-07"^^xsd:date ;
+    schema:sponsor <https://linked.data.gov.au/org/icsm> ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/stable> ;
+    schema:url "https://linked.data.gov.au/def/anzgeodcat"^^pid:agldwgPid ;
+.

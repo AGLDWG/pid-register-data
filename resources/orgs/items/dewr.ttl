@@ -1,0 +1,22 @@
+PREFIX aarr: <https://data.idnau.org/pid/vocab/aarr/>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX id: <http://id.loc.gov/vocabulary/identifiers/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/dewr>
+    a schema:Organization ;
+    dcat:qualifiedRelation
+        [
+            a dcat:Relationship ;
+            dcat:hadRole aarr:partOf ;
+            schema:agent <https://linked.data.gov.au/org/au> ;
+        ] ;
+    schema:alternateName "DEWR" ;
+    schema:description "DEWR fosters a productive and competitive labour market through policies and programs that assist job seekers into work, including secure work, and meet employer and industry needs; promotes growth in economic productivity and social wellbeing through access to quality skills and training; and facilitates jobs growth, including secure work, through policies and programs that promote fair, productive and safe workplaces" ;
+    schema:identifier
+        "96584957427"^^id:ausbn ,
+        "https://ror.org/02wa0fq92"^^id:ror ;
+    schema:name "Department of Employment and Workplace Relations" ;
+    schema:url "https://www.dewr.gov.au"^^xsd:anyURI ;
+.

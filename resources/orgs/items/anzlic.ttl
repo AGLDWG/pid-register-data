@@ -1,0 +1,11 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/anzlic>
+    a schema:Organization ;
+    schema:description """ANZLIC is the peak government body in Australia and New Zealand responsible for spatial information.
+
+The role of ANZLIC is to develop policies and strategies to promote accessibility and usability of spatial information. ANZLIC is an advocate for the resolution of national level issues and provides a link between government and industry, academia and the general public.""" ;
+    schema:name "ANZLIC – The Spatial  Information Council" ;
+    schema:url "https://www.anzlic.gov.au"^^xsd:anyURI ;
+.

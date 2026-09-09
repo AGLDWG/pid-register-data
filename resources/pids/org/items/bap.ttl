@@ -1,0 +1,19 @@
+PREFIX pid: <https://linked.data.gov.au/def/pid/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/pid/org/bap>
+    a pid:Pid ;
+    pid:redirectRules """RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/org/bap($|/.*)$ "https://demo.dev.kurrawong.ai/object?uri=https://linked.data.gov.au/org/bap$1&_mediatype=text/turtle" [R=302,L]
+RewriteRule ^/org/bap(.*).ttl$ "https://demo.dev.kurrawong.ai/object?uri=https://linked.data.gov.au/org/bap$1&_mediatype=text/turtle" [R=302,L]
+RewriteRule ^/org/bap($|/.*)$ "https://demo.dev.kurrawong.ai/object?uri=https://linked.data.gov.au/org/bap$1" [R=302,NE,L]"""^^pid:apacheRedirectRules ;
+    schema:creator <https://linked.data.gov.au/person/> ;
+    schema:dateCreated "2024-04-15"^^xsd:date ;
+    schema:dateModified "2026-09-07"^^xsd:date ;
+    schema:name "Bioregional Assessment Programme" ;
+    schema:sponsor <https://linked.data.gov.au/org/agldwg> ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/stable> ;
+    schema:url "https://linked.data.gov.au/org/bap"^^pid:agldwgPid ;
+.

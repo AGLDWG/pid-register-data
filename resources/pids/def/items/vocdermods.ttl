@@ -1,0 +1,46 @@
+PREFIX pid: <https://linked.data.gov.au/def/pid/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/pid/def/vocdermods>
+    a pid:Pid ;
+    pid:redirectRules """RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/def/vocdermods$                            https://agldwg.github.io/vocdermods/vocabulary.ttl? [R=302,L]
+RewriteRule ^/def/vocdermods.ttl$                        https://agldwg.github.io/vocdermods/vocabulary.ttl? [R=302,L]
+RewriteRule ^/def/vocdermods$                            https://agldwg.github.io/vocdermods/ [R=302,L]
+RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/def/vocdermods/(.+)$                       https://agldwg.github.io/vocdermods/$1.ttl? [R=302,L]
+RewriteRule ^/def/vocdermods/(.+).ttl$                   https://agldwg.github.io/vocdermods/$1.ttl? [R=302,L]
+RewriteRule ^/def/vocdermods/(.+)$                       https://agldwg.github.io/vocdermods/$1 [R=302,L]"""^^pid:apacheRedirectRules ;
+    pid:redirectTest 
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/vocdermods/direct" ;
+            pid:headers "" ;
+            pid:to "https://agldwg.github.io/vocdermods/direct" ;
+            schema:name "AGLDWG Vocab Derivation Modes HTML - one Concept" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/vocdermods" ;
+            pid:headers "" ;
+            pid:to "https://agldwg.github.io/vocdermods/" ;
+            schema:name "AGLDWG Vocab Derivation Modes Vocabulary HTML" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/vocdermods" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://agldwg.github.io/vocdermods/vocabulary.ttl" ;
+            schema:name "AGLDWG Vocab Derivation Modes vocabulary RDF" ;
+        ] ;
+    schema:creator <https://linked.data.gov.au/person/nicholas.car> ;
+    schema:dateCreated "2022-12-10"^^xsd:date ;
+    schema:dateModified "2026-09-07"^^xsd:date ;
+    schema:name "Vocabulary Derivation Modes" ;
+    schema:sponsor <https://linked.data.gov.au/org/agldwg> ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/stable> ;
+    schema:url "https://linked.data.gov.au/def/vocdermods"^^pid:agldwgPid ;
+.

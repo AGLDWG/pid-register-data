@@ -1,0 +1,11 @@
+PREFIX id: <http://id.loc.gov/vocabulary/identifiers/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/mjdenv>
+    a schema:Organization ;
+    schema:description "MJD Environmental is an innovative Environmental Consultancy local to the Hunter and servicing the Hunter Valley and beyond in the Land Development" ;
+    schema:identifier "58 609 765 693"^^id:ausbn ;
+    schema:name "MJD Environmental" ;
+    schema:url "https://www.mjdenvironmental.com"^^xsd:anyURI ;
+.

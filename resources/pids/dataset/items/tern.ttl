@@ -1,0 +1,25 @@
+PREFIX lifecycle: <https://linked.data.gov.au/def/lifecycle/>
+PREFIX pid: <https://linked.data.gov.au/def/pid/>
+PREFIX schema: <https://schema.org/>
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/pid/dataset/tern>
+    a pid:Pid ;
+    lifecycle:hasLifecycleStage
+        [
+            time:hasTime
+                [
+                    time:hasBeginning
+                        [
+                            time:inXSDDate "2021-12-01"^^xsd:date ;
+                        ] ;
+                ] ;
+            schema:additionalType <https://linked.data.gov.au/def/reg-statuses/notAccepted> ;
+        ] ;
+    schema:creator <https://linked.data.gov.au/person/e.chuc> ;
+    schema:dateCreated "2021-12-01"^^xsd:date ;
+    schema:dateModified "2026-09-07"^^xsd:date ;
+    schema:name "TERN's RDF data" ;
+    schema:url "https://linked.data.gov.au/dataset/tern"^^pid:agldwgPid ;
+.

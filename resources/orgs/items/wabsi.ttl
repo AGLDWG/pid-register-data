@@ -1,0 +1,13 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/wabsi>
+    a schema:Organization ;
+    schema:description """A joint venture partnership with leading Western Australian science research Organizations, with multi-disciplinary research expertise.
+
+An independent, collaboration mechanism to facilitate end user driven, relevant biodiversity science research.
+
+Funded by the Western Australian Government’s Department of Jobs, Tourism, Science and Innovation.""" ;
+    schema:name "Western Australian Biodiversity Science Institute" ;
+    schema:url "https://wabsi.org.au"^^xsd:anyURI ;
+.

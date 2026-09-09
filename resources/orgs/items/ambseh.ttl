@@ -1,0 +1,11 @@
+PREFIX id: <http://id.loc.gov/vocabulary/identifiers/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/ambseh>
+    a schema:Organization ;
+    schema:description "AMBS Ecology & Heritage is a specialist consultancy providing expert advice and services in Aboriginal and historic heritage and archaeology" ;
+    schema:identifier "96 609 155 464"^^id:ausbn ;
+    schema:name "AMBS Ecology & Heritage" ;
+    schema:url "https://www.ambs.consulting"^^xsd:anyURI ;
+.

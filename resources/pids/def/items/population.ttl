@@ -1,0 +1,26 @@
+PREFIX lifecycle: <https://linked.data.gov.au/def/lifecycle/>
+PREFIX pid: <https://linked.data.gov.au/def/pid/>
+PREFIX schema: <https://schema.org/>
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/pid/def/population>
+    a pid:Pid ;
+    lifecycle:hasLifecycleStage
+        [
+            time:hasTime
+                [
+                    time:hasBeginning
+                        [
+                            time:inXSDDate "2023-06-15"^^xsd:date ;
+                        ] ;
+                ] ;
+            schema:additionalType <https://linked.data.gov.au/def/reg-statuses/notAccepted> ;
+            schema:description "Invalid as too broad a term. /def/population-zone accepted" ;
+        ] ;
+    schema:creator <https://linked.data.gov.au/person/irina.bastrakova> ;
+    schema:dateCreated "2020-11-12"^^xsd:date ;
+    schema:dateModified "2026-09-07"^^xsd:date ;
+    schema:name "Population Distributions" ;
+    schema:url "https://linked.data.gov.au/def/population"^^pid:agldwgPid ;
+.

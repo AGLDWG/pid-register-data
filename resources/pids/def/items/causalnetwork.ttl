@@ -1,0 +1,67 @@
+PREFIX pid: <https://linked.data.gov.au/def/pid/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/pid/def/causalnetwork>
+    a pid:Pid ;
+    pid:redirectRules """RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{QUERY_STRING} ^_format=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/def/causalnetwork/?$                      https://causalnetworks.azurewebsites.net/def/causalnetwork.ttl [R=302,QSA,L]
+RewriteRule ^/def/causalnetwork(.ttl|/.*\\.ttl)$         https://causalnetworks.azurewebsites.net/def/causalnetwork.ttl [R=302,QSA,L]
+RewriteCond %{QUERY_STRING} ^_mediatype=application/rdf\\+xml$ [OR]
+RewriteCond %{QUERY_STRING} ^_format=application/rdf\\+xml$ [OR]
+RewriteCond %{HTTP:Accept} application/rdf\\+xml [NC]
+RewriteRule ^/def/causalnetwork/?$                      https://causalnetworks.azurewebsites.net/def/causalnetwork.rdf [R=302,QSA,L]
+RewriteRule ^/def/causalnetwork(.rdf|/.*\\.rdf)$         https://causalnetworks.azurewebsites.net/def/causalnetwork.rdf [R=302,QSA,L]
+RewriteCond %{QUERY_STRING} ^_mediatype=application/ld\\+json$ [OR]
+RewriteCond %{QUERY_STRING} ^_format=application/ld\\+json$ [OR]
+RewriteCond %{HTTP:Accept} application/ld\\+json [NC]
+RewriteRule ^/def/causalnetwork/?$                      https://causalnetworks.azurewebsites.net/def/causalnetwork.jsonld [R=302,QSA,L]
+RewriteRule ^/def/causalnetwork(.jsonld|/.*\\.jsonld)$   https://causalnetworks.azurewebsites.net/def/causalnetwork.jsonld [R=302,QSA,L]
+RewriteRule ^/def/causalnetwork(.json|/.*\\.json)$       https://causalnetworks.azurewebsites.net/def/causalnetwork.json [R=302,QSA,L]
+RewriteRule ^/def/causalnetwork($|/.*)$                 https://causalnetworks.azurewebsites.net/def/causalnetwork$1 [R=302,QSA,L]"""^^pid:apacheRedirectRules ;
+    pid:redirectTest 
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/causalnetwork/" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://causalnetworks.azurewebsites.net/def/causalnetwork.ttl" ;
+            schema:name "CSIRO Causal Network Ontology (TTL header), final slash" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/causalnetwork/" ;
+            pid:headers "" ;
+            pid:to "https://causalnetworks.azurewebsites.net/def/causalnetwork/" ;
+            schema:name "CSIRO Causal Network Ontology (no headers), final slash" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/causalnetwork" ;
+            pid:headers "" ;
+            pid:to "https://causalnetworks.azurewebsites.net/def/causalnetwork" ;
+            schema:name "CSIRO Causal Network Ontology (no headers), no slash" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/causalnetwork.ttl" ;
+            pid:headers "" ;
+            pid:to "https://causalnetworks.azurewebsites.net/def/causalnetwork.ttl" ;
+            schema:name "CSIRO Causal Network Ontology (TTL ext)" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/causalnetwork" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://causalnetworks.azurewebsites.net/def/causalnetwork.ttl" ;
+            schema:name "CSIRO Causal Network Ontology (TTL header), no slash" ;
+        ] ;
+    schema:creator <https://linked.data.gov.au/person/ashley.sommer> ;
+    schema:dateCreated "2024-02-16"^^xsd:date ;
+    schema:dateModified "2026-09-07"^^xsd:date ;
+    schema:name "CSIRO Causal Networks" ;
+    schema:sponsor <https://linked.data.gov.au/org/csiro> ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/stable> ;
+    schema:url "https://linked.data.gov.au/def/causalnetwork"^^pid:agldwgPid ;
+.

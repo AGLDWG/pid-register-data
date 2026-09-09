@@ -1,0 +1,26 @@
+PREFIX reg: <https://linked.data.gov.au/reg/pids/envs>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+reg:
+    a schema:DataCatalog ;
+    schema:codeRepository "https://github.com/AGLDWG/pid-register-data" ;
+    schema:creator <https://linked.data.gov.au/org/agldwg> ;
+    schema:dateCreated "2018"^^xsd:gYear ;
+    schema:dateModified "2026-09-07"^^xsd:date ;
+    schema:description "The register of environment.data.gov.au legacy PIDs" ;
+    schema:hasPart
+        <http://environment.data.gov.au/pid/env/ba-glossary> ,
+        <http://environment.data.gov.au/pid/env/ba-landscape-classification> ,
+        <http://environment.data.gov.au/pid/env/ba-licence> ,
+        <http://environment.data.gov.au/pid/env/ba-source> ,
+        <http://environment.data.gov.au/pid/env/feature> ,
+        <http://environment.data.gov.au/pid/env/object> ,
+        <http://environment.data.gov.au/pid/env/op> ,
+        <http://environment.data.gov.au/pid/env/property> ,
+        <http://environment.data.gov.au/pid/env/quantity-kind> ,
+        <http://environment.data.gov.au/pid/env/unit> ;
+    schema:name "environment.data.gov.au Legacy PIDs" ;
+    schema:publisher <https://linked.data.gov.au/org/agldwg> ;
+    schema:version "1" ;
+.

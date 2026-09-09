@@ -1,0 +1,134 @@
+PREFIX pid: <https://linked.data.gov.au/def/pid/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/pid/dataset/gnaf>
+    a pid:Pid ;
+    pid:redirectRules """RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/dataset/gnaf$                            "https://gnaf.linked.fsdf.org.au/dataset/gnaf?_mediatype=text/turtle" [R=302,L]
+RewriteRule ^/dataset/gnaf.ttl$                        "https://gnaf.linked.fsdf.org.au/dataset/gnaf?_mediatype=text/turtle" [R=302,L]
+RewriteRule ^/dataset/gnaf$                            https://gnaf.linked.fsdf.org.au/dataset/gnaf [R=302,L]
+RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/dataset/gnaf/address$ "https://gnaf.linked.fsdf.org.au/dataset/gnaf/collections/addresses?_mediatype=text/turtle" [R=302,L]
+RewriteRule ^/dataset/gnaf/address.ttl$ "https://gnaf.linked.fsdf.org.au/dataset/gnaf/collections/addresses?_mediatype=text/turtle" [R=302,L]
+RewriteRule ^/dataset/gnaf/address$ "https://gnaf.linked.fsdf.org.au/dataset/gnaf/collections/addresses" [R=302,L]
+RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/dataset/gnaf/address/$ "https://gnaf.linked.fsdf.org.au/dataset/gnaf/collections/addresses/items?_mediatype=text/turtle" [R=302,L]
+RewriteRule ^/dataset/gnaf/address/index.ttl$ "https://gnaf.linked.fsdf.org.au/dataset/gnaf/collections/addresses/items?_mediatype=text/turtle" [R=302,L]
+RewriteRule ^/dataset/gnaf/address/$ "https://gnaf.linked.fsdf.org.au/dataset/gnaf/collections/addresses/items" [R=302,L]
+RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/dataset/gnaf/(addressSite|locality|streetLocality)$ "https://gnaf.linked.fsdf.org.au/dataset/gnaf/collections/$1?_mediatype=text/turtle" [R=302,L]
+RewriteRule ^/dataset/gnaf/(addressSite|locality|streetLocality).ttl$ "https://gnaf.linked.fsdf.org.au/dataset/gnaf/collections/$1?_mediatype=text/turtle" [R=302,L]
+RewriteRule ^/dataset/gnaf/(addressSite|locality|streetLocality)$ "https://gnaf.linked.fsdf.org.au/dataset/gnaf/collections/$1" [R=302,L]
+RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/dataset/gnaf/(addressSite|locality|streetLocality)/$ "https://gnaf.linked.fsdf.org.au/dataset/gnaf/collections/$1/items?_mediatype=text/turtle" [R=302,L]
+RewriteRule ^/dataset/gnaf/(addressSite|locality|streetLocality)/index.ttl$ "https://gnaf.linked.fsdf.org.au/dataset/gnaf/collections/$1/items?_mediatype=text/turtle" [R=302,L]
+RewriteRule ^/dataset/gnaf/(addressSite|locality|streetLocality)/$ "https://gnaf.linked.fsdf.org.au/dataset/gnaf/collections/$1/items" [R=302,L]
+RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/dataset/gnaf/address/(.+)$ "https://gnaf.linked.fsdf.org.au/dataset/gnaf/collections/addresses/items/$1?_mediatype=text/turtle" [R=302,L]
+RewriteRule ^/dataset/gnaf/address/(.+).ttl$ "https://gnaf.linked.fsdf.org.au/dataset/gnaf/collections/addresses/items/$1?_mediatype=text/turtle" [R=302,L]
+RewriteRule ^/dataset/gnaf/address/(.+)$ "https://gnaf.linked.fsdf.org.au/dataset/gnaf/collections/addresses/items/$1" [R=302,L]
+RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/dataset/gnaf/(addressSite|locality|streetLocality)/(.+)$ "https://gnaf.linked.fsdf.org.au/dataset/gnaf/collections/$1/items/$2?_mediatype=text/turtle" [R=302,L]
+RewriteRule ^/dataset/gnaf/(addressSite|locality|streetLocality)/(.+).ttl$ "https://gnaf.linked.fsdf.org.au/dataset/gnaf/collections/$1/items/$2?_mediatype=text/turtle" [R=302,L]
+RewriteRule ^/dataset/gnaf/(addressSite|locality|streetLocality)/(.+)$ "https://gnaf.linked.fsdf.org.au/dataset/gnaf/collections/$1/items/$2" [R=302,L]"""^^pid:apacheRedirectRules ;
+    pid:redirectTest 
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/dataset/gnaf/address/" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://gnaf.linked.fsdf.org.au/dataset/gnaf/collections/addresses/items?_mediatype=text/turtle" ;
+            schema:name "G-NAF Dataset, Address Register RDF (turtle) via conneg" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/dataset/gnaf/address/" ;
+            pid:headers "" ;
+            pid:to "https://gnaf.linked.fsdf.org.au/dataset/gnaf/collections/addresses/items" ;
+            schema:name "G-NAF Dataset, Address Register HTML" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/dataset/gnaf/address/GAACT714845933" ;
+            pid:headers "" ;
+            pid:to "https://gnaf.linked.fsdf.org.au/dataset/gnaf/collections/addresses/items/GAACT714845933" ;
+            schema:name "G-NAF Dataset, an Address HTML" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/dataset/gnaf" ;
+            pid:headers "" ;
+            pid:to "https://gnaf.linked.fsdf.org.au/dataset/gnaf" ;
+            schema:name "G-NAF Dataset, HTML" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/dataset/gnaf" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://gnaf.linked.fsdf.org.au/dataset/gnaf?_mediatype=text/turtle" ;
+            schema:name "G-NAF Dataset, RDF (turtle) via conneg" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/dataset/gnaf.ttl" ;
+            pid:headers "" ;
+            pid:to "https://gnaf.linked.fsdf.org.au/dataset/gnaf?_mediatype=text/turtle" ;
+            schema:name "G-NAF Dataset, RDF (turtle) via file ext" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/dataset/gnaf/address/GAACT714845933?_mediatype=text/turtle" ;
+            pid:headers "" ;
+            pid:to "https://gnaf.linked.fsdf.org.au/dataset/gnaf/collections/addresses/items/GAACT714845933?_mediatype=text/turtle" ;
+            schema:name "G-NAF Dataset, an Address RDF (turtle) via QSA" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/dataset/gnaf/address/GAACT714845933.ttl" ;
+            pid:headers "" ;
+            pid:to "https://gnaf.linked.fsdf.org.au/dataset/gnaf/collections/addresses/items/GAACT714845933?_mediatype=text/turtle" ;
+            schema:name "G-NAF Dataset, an Address RDF (turtle) via file ext" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/dataset/gnaf?_mediatype=text/turtle" ;
+            pid:headers "" ;
+            pid:to "https://gnaf.linked.fsdf.org.au/dataset/gnaf?_mediatype=text/turtle" ;
+            schema:name "G-NAF Dataset, RDF (turtle) via QSA" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/dataset/gnaf/address/GAACT714845933" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://gnaf.linked.fsdf.org.au/dataset/gnaf/collections/addresses/items/GAACT714845933?_mediatype=text/turtle" ;
+            schema:name "G-NAF Dataset, an Address RDF (turtle) via conneg" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/dataset/gnaf/address/?_mediatype=text/turtle" ;
+            pid:headers "" ;
+            pid:to "https://gnaf.linked.fsdf.org.au/dataset/gnaf/collections/addresses/items?_mediatype=text/turtle" ;
+            schema:name "G-NAF Dataset, Address Register RDF (turtle) via QSA" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/dataset/gnaf/address/index.ttl" ;
+            pid:headers "" ;
+            pid:to "https://gnaf.linked.fsdf.org.au/dataset/gnaf/collections/addresses/items?_mediatype=text/turtle" ;
+            schema:name "G-NAF Dataset, Address Register RDF (turtle) via file ext" ;
+        ] ;
+    schema:creator <https://linked.data.gov.au/person/paul.j.box> ;
+    schema:dateCreated "2019-04-15"^^xsd:date ;
+    schema:dateModified "2026-09-07"^^xsd:date ;
+    schema:name "GNAF Current Dataset" ;
+    schema:sponsor <https://linked.data.gov.au/org/ga> ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/stable> ;
+    schema:url "https://linked.data.gov.au/dataset/gnaf"^^pid:agldwgPid ;
+.

@@ -1,0 +1,15 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/rbgdt>
+    a schema:Organization ;
+    schema:description """Botanic Gardens of Sydney encompasses three world-leading botanic gardens, Australia’s premier botanical research institute, and Sydney’s leading outdoor activation precinct.
+
+As Australia’s oldest scientific institution, we are custodians of more than $1.2 billion in state significant cultural, heritage and botanical collections.
+
+The Gardens are a leading entity within the tourism sector with a focus on engaging international, national and regional visitors.
+
+Botanic Gardens of Sydney is the registered business name of the Royal Botanic Gardens and Domain Trust, which is constituted under the Royal Botanic Gardens and Domain Trust Act 1980.""" ;
+    schema:name "Royal Botanic Gardens and Domain Trust" ;
+    schema:url "https://www.service.nsw.gov.au/nswgovdirectory/royal-botanic-gardens-and-domain-trust-the"^^xsd:anyURI ;
+.

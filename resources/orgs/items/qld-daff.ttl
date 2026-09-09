@@ -1,0 +1,17 @@
+PREFIX id: <http://id.loc.gov/vocabulary/identifiers/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/qld-daff>
+    a schema:Organization ;
+    schema:description """The Department of Agriculture and Fisheries (DAF) was officially dissolved and replaced by the Department of Primary Industries (DPI) on 1 November 2024, due to machinery of government changes.
+
+Formerly known as the Department of Agriculture and Fisheries.
+
+We ensure that Queensland’s primary industries—the essential backbone of our economy and communities—are productive, profitable and sustainable for future generations.
+
+We do this by connecting industries, the community and government to grow our economy, protect our primary industries from biosecurity threats and support rural communities.""" ;
+    schema:identifier "66 934 348 189"^^id:ausbn ;
+    schema:name "Queensland Department of Agriculture and Fisheries" ;
+    schema:url "https://www.archivessearch.qld.gov.au/agencies/A11656"^^xsd:anyURI ;
+.

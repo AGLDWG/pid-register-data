@@ -1,0 +1,33 @@
+PREFIX pid: <https://linked.data.gov.au/def/pid/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/pid/dataset/addr1605mb16>
+    a pid:Pid ;
+    pid:redirectRules """RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/dataset/addr1605mb16			https://raw.githack.com/CSIRO-enviro-informatics/addr1605mb16-linkset/master/header.ttl [L,R=302]
+RewriteRule ^/dataset/addr1605mb16			https://github.com/CSIRO-enviro-informatics/addr1605mb16-linkset [L,R=302]"""^^pid:apacheRedirectRules ;
+    pid:redirectTest 
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/dataset/addr1605mb16" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://raw.githack.com/CSIRO-enviro-informatics/addr1605mb16-linkset/master/header.ttl" ;
+            schema:name "addr1605mb16 RDF (Turtle)" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/dataset/addr1605mb16" ;
+            pid:headers "" ;
+            pid:to "https://github.com/CSIRO-enviro-informatics/addr1605mb16-linkset" ;
+            schema:name "addr1605mb16 HTML" ;
+        ] ;
+    schema:creator <https://linked.data.gov.au/person/paul.j.box> ;
+    schema:dateCreated "2021-04-15"^^xsd:date ;
+    schema:dateModified "2026-09-07"^^xsd:date ;
+    schema:name "GNAF 2016 May Addresses to ASGS 2016 Mesh Blocks Linkset" ;
+    schema:sponsor <https://linked.data.gov.au/org/csiro> ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/stable> ;
+    schema:url "https://linked.data.gov.au/dataset/addr1605mb16"^^pid:agldwgPid ;
+.

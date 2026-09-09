@@ -1,0 +1,10 @@
+PREFIX schema: <https://schema.org/>
+
+<https://linked.data.gov.au/org/neii>
+    a schema:Organization ;
+    schema:description """The National Environmental Information Infrastructure (NEII) was an initiative lead by the Bureau of Meteorology that created IT infrastructure for use across government environmental organisations in Australia for several years until 2022.
+
+The NEII is now decommissioned, see the notice: http://www.bom.gov.au/environment/transition.shtml""" ;
+    schema:isPartOf <https://linked.data.gov.au/org/bom> ;
+    schema:name "National Environmental Information Infrastructure" ;
+.

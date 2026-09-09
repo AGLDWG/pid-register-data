@@ -1,0 +1,15 @@
+PREFIX id: <http://id.loc.gov/vocabulary/identifiers/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/wam>
+    a schema:Organization ;
+    schema:description """The Western Australian Museum is the State's premier cultural Organization, housing WA's scientific and cultural collection.
+
+For over 120 years the Museum has been making the State's natural and social heritage accessible and engaging through research, exhibition and public programs.
+
+Today, the Museum has seven public locations across the state - and a Collection and Research Centre that houses more than eight million objects.""" ;
+    schema:identifier "95 249 517 733"^^id:ausbn ;
+    schema:name "Western Australian Museum" ;
+    schema:url "https://visit.museum.wa.gov.au"^^xsd:anyURI ;
+.

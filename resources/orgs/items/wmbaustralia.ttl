@@ -1,0 +1,11 @@
+PREFIX id: <http://id.loc.gov/vocabulary/identifiers/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/wmbaustralia>
+    a schema:Organization ;
+    schema:description "Acquired by BTM in 2008" ;
+    schema:identifier "54 010 830 421"^^id:ausbn ;
+    schema:name "WBM Oceanics Australia" ;
+    schema:url "https://www.bmt.org/services/environment-solutions"^^xsd:anyURI ;
+.

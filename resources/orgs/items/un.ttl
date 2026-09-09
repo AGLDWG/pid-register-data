@@ -1,0 +1,10 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/un>
+    a schema:Organization ;
+    schema:description "The United Nations is an international organization founded in 1945. Currently made up of 193 Member States, the UN and its work are guided by the purposes and principles contained in its founding Charter." ;
+    schema:identifier "https://ror.org/006kxhp52"^^<https://linked.data.gov.au/org/rorId> ;
+    schema:name "United Nations" ;
+    schema:url "https://www.un.org"^^xsd:anyURI ;
+.

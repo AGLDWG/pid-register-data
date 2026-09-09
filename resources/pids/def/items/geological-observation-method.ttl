@@ -1,0 +1,32 @@
+PREFIX pid: <https://linked.data.gov.au/def/pid/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/pid/def/geological-observation-method>
+    a pid:Pid ;
+    pid:redirectRules """RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/def/geological-observation-method($|/.*)$ "https://vocabs.gsq.digital/object?vocab_id=geological-observation-method&uri=http://linked.data.gov.au/def/geological-observation-method$1&_mediatype=text/turtle" [R=302,L]
+RewriteRule ^/def/geological-observation-method($|/.*)$ "https://vocabs.gsq.digital/object?vocab_id=geological-observation-method&uri=http://linked.data.gov.au/def/geological-observation-method$1" [R=302,NE,L]"""^^pid:apacheRedirectRules ;
+    pid:redirectTest 
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/geological-observation-method" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://vocabs.gsq.digital/object?vocab_id=geological-observation-method&uri=http://linked.data.gov.au/def/geological-observation-method&_mediatype=text/turtle" ;
+            schema:name "geological-observation-method RDF" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/geological-observation-method" ;
+            pid:headers "" ;
+            pid:to "https://vocabs.gsq.digital/object?vocab_id=geological-observation-method&uri=http://linked.data.gov.au/def/geological-observation-method" ;
+            schema:name "geological-observation-method HTML" ;
+        ] ;
+    schema:creator <https://linked.data.gov.au/person/david.crosswell> ;
+    schema:dateCreated "2020-02-15"^^xsd:date ;
+    schema:dateModified "2026-09-07"^^xsd:date ;
+    schema:sponsor <https://linked.data.gov.au/org/gsq> ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/stable> ;
+    schema:url "https://linked.data.gov.au/def/geological-observation-method"^^pid:agldwgPid ;
+.

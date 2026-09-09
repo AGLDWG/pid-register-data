@@ -1,0 +1,10 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/nla>
+    a schema:Organization ;
+    schema:description "The National Library of Australia aims to provide Australians with high levels of customer service. With your assistance and feedback, we seek to continuously improve our service to the Australian community by responding to the changing needs of our users; by providing access to the nation’s library collections and services; and by safeguarding our heritage building for future generations." ;
+    schema:identifier "https://ror.org/04yvjg468"^^<https://linked.data.gov.au/org/rorId> ;
+    schema:name "National Library of Australia" ;
+    schema:url "https://www.nla.gov.au"^^xsd:anyURI ;
+.

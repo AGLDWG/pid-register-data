@@ -1,0 +1,161 @@
+PREFIX : <https://linked.data.gov.au/def/pid/shapes/>
+PREFIX lifecycle: <https://linked.data.gov.au/def/lifecycle/>
+PREFIX pid: <https://linked.data.gov.au/def/pid/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+PREFIX sg: <https://linked.data.gov.au/def/pid/shapes>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+:dates
+    a sh:NodeShape ;
+    sh:property 
+        [
+            sh:maxCount 1 ;
+            sh:message "A PID MUST indicate its creator - a person - with exactly one schema:creator predicate" ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path schema:creator ;
+        ] ,
+        [
+            sh:maxCount 1 ;
+            sh:message "A PID MUST indicate when it was last modified - a date or year - with exactly one schema:dateModified predicate" ;
+            sh:minCount 1 ;
+            sh:or (
+                
+                [
+                    sh:datatype xsd:date ;
+                ]
+                
+                [
+                    sh:datatype xsd:gYear ;
+                ]
+            ) ;
+            sh:path schema:dateModified ;
+        ] ,
+        [
+            sh:maxCount 1 ;
+            sh:message "A PID MUST indicate when it was created - a date or year - with exactly one schema:dateCreated predicate" ;
+            sh:minCount 1 ;
+            sh:or (
+                
+                [
+                    sh:datatype xsd:date ;
+                ]
+                
+                [
+                    sh:datatype xsd:gYear ;
+                ]
+            ) ;
+            sh:path schema:dateCreated ;
+        ] ;
+    sh:targetClass pid:Pid ;
+.
+
+:redirect-rules
+    a sh:NodeShape ;
+    rdfs:isDefinedBy sg: ;
+    sh:property 
+        [
+            sh:message "Redirect rules must be typed as Apache or NGINX redirect rules" ;
+            sh:or (
+                
+                [
+                    sh:datatype pid:apacheRedirectRules ;
+                ]
+                
+                [
+                    sh:datatype pid:nginxRedirectRules ;
+                ]
+            ) ;
+            sh:path pid:redirectRules ;
+        ] ,
+        [
+            sh:class lifecycle:LifecycleStage ;
+            sh:deactivated true ;
+            sh:message "A PID must have at least one Lifecycle Stage." ;
+            sh:minCount 1 ;
+            sh:path lifecycle:hasLifecycleStage ;
+        ] ;
+    sh:sparql
+        [
+            a sh:SPARQLConstraint ;
+            sh:message "A PID with no lifecycle stage, or with a current lifecycle stage whose schema:additionalType is neither notAccepted nor invalid, must indicate exactly one pid:redirectRules value." ;
+            sh:select """
+                PREFIX lifecycle: <https://linked.data.gov.au/def/lifecycle/>
+                PREFIX pid: <https://linked.data.gov.au/def/pid/>
+                PREFIX schema: <https://schema.org/>
+                PREFIX time: <http://www.w3.org/2006/time#>
+                PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+                SELECT $this
+                WHERE {
+                    {
+                        SELECT $this (COUNT(?redirectRules) AS ?redirectRulesCount)
+                        WHERE {
+                            OPTIONAL { $this pid:redirectRules ?redirectRules }
+                        }
+                        GROUP BY $this
+                    }
+                    FILTER (
+                        ?redirectRulesCount != 1
+                        && (
+                            NOT EXISTS {
+                                $this lifecycle:hasLifecycleStage ?anyLifecycleStage
+                            }
+                            || EXISTS {
+                                $this lifecycle:hasLifecycleStage ?lifecycleStage .
+                                ?lifecycleStage schema:additionalType ?lifecycleStageType .
+                                FILTER (
+                                    ?lifecycleStageType NOT IN (
+                                        <https://linked.data.gov.au/def/reg-statuses/notAccepted>,
+                                        <https://linked.data.gov.au/def/reg-statuses/invalid>,
+                                        <https://linked.data.gov.au/def/reg-statuses/submitted>,
+                                        <https://linked.data.gov.au/def/reg-statuses/retired>
+                                    )
+                                )
+                                FILTER (
+                                    (
+                                        NOT EXISTS {
+                                            ?lifecycleStage time:hasTime/time:hasBeginning ?beginning
+                                        }
+                                        || EXISTS {
+                                            ?lifecycleStage time:hasTime/time:hasBeginning/time:inXSDDate ?beginningDate .
+                                            FILTER (
+                                                ?beginningDate < STRDT(
+                                                    SUBSTR(STR(NOW()), 1, 10),
+                                                    xsd:date
+                                                )
+                                            )
+                                        }
+                                    )
+                                    && (
+                                        NOT EXISTS {
+                                            ?lifecycleStage time:hasTime/time:hasEnd ?end
+                                        }
+                                        || EXISTS {
+                                            ?lifecycleStage time:hasTime/time:hasEnd/time:inXSDDate ?endDate .
+                                            FILTER (
+                                                ?endDate > STRDT(
+                                                    SUBSTR(STR(NOW()), 1, 10),
+                                                    xsd:date
+                                                )
+                                            )
+                                        }
+                                    )
+                                )
+                            }
+                        )
+                    )
+                }
+                """ ;
+        ] ;
+    sh:targetClass pid:Pid ;
+    schema:description "Validates the lifecycle and redirect-rule properties of PID instances." ;
+    schema:name "PID shape" ;
+.
+
+sg:
+    a sh:ShapesGraph ;
+.

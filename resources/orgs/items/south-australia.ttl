@@ -1,0 +1,9 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/south-australia>
+    a schema:Organization ;
+    schema:description "The State of South Australia" ;
+    schema:name "State of South Australia" ;
+    schema:url "https://www.sa.gov.au"^^xsd:anyURI ;
+.

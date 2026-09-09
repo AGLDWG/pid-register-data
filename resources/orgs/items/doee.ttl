@@ -1,0 +1,10 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/doee>
+    a schema:Organization ;
+    schema:description "The Department designs and implements Australian Government policy and programs to protect and conserve the environment, water and heritage, promote climate action, and provide adequate,&nbsp;reliable and affordable energy." ;
+    schema:identifier "O-000841"^^<https://linked.data.gov.au/org/agorId> ;
+    schema:name "Department of the Environment and Energy" ;
+    schema:url "http://environment.gov.au"^^xsd:anyURI ;
+.

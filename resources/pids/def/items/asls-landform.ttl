@@ -1,0 +1,41 @@
+PREFIX pid: <https://linked.data.gov.au/def/pid/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/pid/def/asls-landform>
+    a pid:Pid ;
+    pid:redirectRules """RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/def/asls-landform($|/.+)$                 https://vocabs.ardc.edu.au/repository/api/lda/csiro/landform-classifiers/3ed/resource.ttl?uri=http://anzsoil.org/def/au/asls/landform$1 [R=302,L]
+RewriteRule ^/def/asls-landform.ttl$                    https://vocabs.ardc.edu.au/repository/api/lda/csiro/landform-classifiers/3ed/resource.ttl?uri=http://anzsoil.org/def/au/asls/landform [R=302,L]
+RewriteRule ^/def/asls-landform($|/.+)$                 https://vocabs.ardc.edu.au/repository/api/lda/csiro/landform-classifiers/3ed/resource?uri=http://anzsoil.org/def/au/asls/landform$1 [R=302,L]"""^^pid:apacheRedirectRules ;
+    pid:redirectTest 
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asls-landform" ;
+            pid:headers "" ;
+            pid:to "https://vocabs.ardc.edu.au/repository/api/lda/csiro/landform-classifiers/3ed/resource?uri=http://anzsoil.org/def/au/asls/landform" ;
+            schema:name "ASLS Landform classifiers - HTML" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asls-landform/relief-class-P" ;
+            pid:headers "" ;
+            pid:to "https://vocabs.ardc.edu.au/repository/api/lda/csiro/landform-classifiers/3ed/resource?uri=http://anzsoil.org/def/au/asls/landform/relief-class-P" ;
+            schema:name "ASLS Landform classifiers - one Concept HTML" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asls-landform" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://vocabs.ardc.edu.au/repository/api/lda/csiro/landform-classifiers/3ed/resource.ttl?uri=http://anzsoil.org/def/au/asls/landform" ;
+            schema:name "ASLS Landform classifiers - RDF" ;
+        ] ;
+    schema:creator <https://linked.data.gov.au/person/mr.wong> ;
+    schema:dateCreated "2024-11-15"^^xsd:date ;
+    schema:dateModified "2026-09-07"^^xsd:date ;
+    schema:name "The Australian Soil Classification" ;
+    schema:sponsor <https://linked.data.gov.au/org/csiro> ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/stable> ;
+    schema:url "https://linked.data.gov.au/def/asls-landform"^^pid:agldwgPid ;
+.

@@ -1,0 +1,114 @@
+PREFIX pid: <https://linked.data.gov.au/def/pid/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/pid/dataset/data-policies>
+    a pid:Pid ;
+    pid:redirectRules """RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/dataset/data-policies$                    https://licences.csiro.au/index.ttl? [R=302,L]
+RewriteRule ^/dataset/data-policies.ttl$                https://licences.csiro.au/index.ttl [R=302,L]
+RewriteRule ^/dataset/data-policies$                    https://licences.csiro.au/  [R=302,L]
+RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/dataset/data-policies/(.*)/$              http://licences.csiro.au/$1/?_mediatype=text/turtle [R=302,L]
+RewriteRule ^/dataset/data-policies/(.*)/index.ttl$     http://licences.csiro.au/$1/?_mediatype=text/turtle [R=302,L]
+RewriteRule ^/dataset/data-policies/(.*)/$              http://licences.csiro.au/$1/ [R=302,L]
+RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/dataset/data-policies/(.*)/(.*)$          http://licences.csiro.au/$1/?uri=http://linked.data.gov.au$0&_mediatype=text/turtle [R=302,L]
+RewriteRule ^/dataset/data-policies/(.*)/(.*).ttl$      http://licences.csiro.au/$1/?uri=http://linked.data.gov.au/dataset/data-policies/$1/$2&_mediatype=text/turtle [R=302,L]
+RewriteRule ^/dataset/data-policies/(.*)/(.*)           http://licences.csiro.au/$1/?uri=http://linked.data.gov.au$0 [R=302,L]"""^^pid:apacheRedirectRules ;
+    pid:redirectTest 
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/dataset/data-policies.ttl" ;
+            pid:headers "" ;
+            pid:to "https://licences.csiro.au/index.ttl" ;
+            schema:name "Data Policies Dataset, RDF (turtle) via file ext" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/dataset/data-policies" ;
+            pid:headers "" ;
+            pid:to "https://licences.csiro.au/" ;
+            schema:name "Data Policies Dataset, HTML" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/dataset/data-policies/licence/" ;
+            pid:headers "" ;
+            pid:to "http://licences.csiro.au/licence/" ;
+            schema:name "Data Policies Dataset, Licences Register HTML" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/dataset/data-policies/licence/b7d27814-a9ed-4cda-88d3-b85ea8ec5af0?_mediatype=text/turtle" ;
+            pid:headers "" ;
+            pid:to "http://licences.csiro.au/licence/?uri=http://linked.data.gov.au/dataset/data-policies/licence/b7d27814-a9ed-4cda-88d3-b85ea8ec5af0&_mediatype=text/turtle" ;
+            schema:name "Data Policies Dataset, a Licence RDF (turtle) via QSA" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/dataset/data-policies/licence/?_mediatype=text/turtle" ;
+            pid:headers "" ;
+            pid:to "http://licences.csiro.au/licence/?_mediatype=text/turtle" ;
+            schema:name "Data Policies Dataset, Licences Register RDF (turtle) via QSA" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/dataset/data-policies/licence/" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "http://licences.csiro.au/licence/?_mediatype=text/turtle" ;
+            schema:name "Data Policies Dataset, Licences Register RDF (turtle) via conneg" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/dataset/data-policies" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://licences.csiro.au/index.ttl" ;
+            schema:name "Data Policies Dataset, RDF (turtle) via conneg" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/dataset/data-policies/licence/b7d27814-a9ed-4cda-88d3-b85ea8ec5af0.ttl" ;
+            pid:headers "" ;
+            pid:to "http://licences.csiro.au/licence/?uri=http://linked.data.gov.au/dataset/data-policies/licence/b7d27814-a9ed-4cda-88d3-b85ea8ec5af0&_mediatype=text/turtle" ;
+            schema:name "Data Policies Dataset, a Licence RDF (turtle) via file ext" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/dataset/data-policies/licence/b7d27814-a9ed-4cda-88d3-b85ea8ec5af0" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "http://licences.csiro.au/licence/?uri=http://linked.data.gov.au/dataset/data-policies/licence/b7d27814-a9ed-4cda-88d3-b85ea8ec5af0&_mediatype=text/turtle" ;
+            schema:name "Data Policies Dataset, a Licence RDF (turtle) via conneg" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/dataset/data-policies/licence/index.ttl" ;
+            pid:headers "" ;
+            pid:to "http://licences.csiro.au/licence/?_mediatype=text/turtle" ;
+            schema:name "Data Policies Dataset, Licences Register RDF (turtle) via file ext" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/dataset/data-policies?_mediatype=text/turtle" ;
+            pid:headers "" ;
+            pid:to "https://licences.csiro.au/index.ttl" ;
+            schema:name "Data Policies Dataset, RDF (turtle) via QSA" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/dataset/data-policies/licence/b7d27814-a9ed-4cda-88d3-b85ea8ec5af0" ;
+            pid:headers "" ;
+            pid:to "http://licences.csiro.au/licence/?uri=http://linked.data.gov.au/dataset/data-policies/licence/b7d27814-a9ed-4cda-88d3-b85ea8ec5af0" ;
+            schema:name "Data Policies Dataset, a Licence HTML" ;
+        ] ;
+    schema:creator <https://linked.data.gov.au/person/> ;
+    schema:dateCreated "2019-04-15"^^xsd:date ;
+    schema:dateModified "2026-09-07"^^xsd:date ;
+    schema:name "Data Policies Dataset" ;
+    schema:sponsor <https://linked.data.gov.au/org/csiro> ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/accepted> ;
+    schema:url "https://linked.data.gov.au/dataset/data-policies"^^pid:agldwgPid ;
+.

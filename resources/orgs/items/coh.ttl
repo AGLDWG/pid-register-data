@@ -1,0 +1,21 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/coh>
+    a schema:Organization ;
+    schema:description """The 1850s saw the introduction of responsible government in Tasmania and the establishment of municipal administration, in the form of a general purpose locally-elected Council.
+
+A court of fifteen commissioners was created by the&nbsp;Hobart Town Commissioners Act 1846, with the commissioners responsible for such things as paving and lighting throughout the city.
+
+The first meeting of the Commissioners was held on 29 September 1846, but disputes soon began to arise between the colonial and civic authorities on the apportioning of revenues. Within a year the body of Commissioners was dissolved.
+
+Municipal government was established by the&nbsp;Hobart Town and Launceston Municipal Council Act 1852. During this year the first elections for a seven-member council were held. The new council took office from the beginning of 1853, with William Carter as Mayor.
+
+In 1857 the Municipal Council was incorporated (Hobart Town Corporation Act 1857), and its constitution and powers redefined.
+
+Between 1853 and 1934 the Council was led by various mayors, elected annually. The title was raised to ‘Lord Mayor’ by Letters Patent issued by King George V in January 1934.
+
+Further details of the history of Hobart, including its past Aldermen, is available in the historical reference Growing with Strength&nbsp;– a History of the Hobart City Council 1846 Council 2000.""" ;
+    schema:name "City of Hobart" ;
+    schema:url "https://www.hobartcity.com.au"^^xsd:anyURI ;
+.

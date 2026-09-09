@@ -1,0 +1,13 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/nci>
+    a schema:Organization ;
+    schema:description "The National Computational Infrastructure (NCI) is Australia’s leading high-performance data, storage and computing organisation, providing expert services to benefit all domains of science, government and industry." ;
+    schema:identifier
+        "https://grid.ac/institutes/grid.474065.4"^^<https://linked.data.gov.au/org/gridId> ,
+        "https://ror.org/04yx6dh41"^^<https://linked.data.gov.au/org/rorId> ;
+    schema:isPartOf <https://linked.data.gov.au/org/anu> ;
+    schema:name "National Computational Infrastructure" ;
+    schema:url "https://nci.org.au"^^xsd:anyURI ;
+.

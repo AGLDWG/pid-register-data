@@ -1,0 +1,11 @@
+PREFIX id: <http://id.loc.gov/vocabulary/identifiers/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/wwf-australia>
+    a schema:Organization ;
+    schema:description "At WWF-Australia we’ve been protecting nature’s wonders for more than 40 years. And now we’re working with communities, governments, companies and others not just to protect our natural world but to restore and regenerate it." ;
+    schema:identifier "57 001 594 074"^^id:ausbn ;
+    schema:name "WWF Australia" ;
+    schema:url "https://wwf.org.au"^^xsd:anyURI ;
+.

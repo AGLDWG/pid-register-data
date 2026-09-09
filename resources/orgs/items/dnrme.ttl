@@ -1,0 +1,9 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/dnrme>
+    a schema:Organization ;
+    schema:description "The State of Queensland's department for the management of renewable and non-renewable land, water, mineral and energy resources." ;
+    schema:name "Department of Natural Resources, Mines and Energy" ;
+    schema:url "https://www.dnrme.qld.gov.au"^^xsd:anyURI ;
+.

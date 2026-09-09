@@ -1,0 +1,8 @@
+PREFIX schema: <https://schema.org/>
+
+<https://linked.data.gov.au/org/gswa>
+    a schema:Organization ;
+    schema:description "The Geological Survey of WA within the Department of Mines, Industry Regulation &amp; Safety." ;
+    schema:member <https://linked.data.gov.au/person/chee.ng> ;
+    schema:name "Geological Survey of Western Australia" ;
+.

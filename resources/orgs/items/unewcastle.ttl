@@ -1,0 +1,9 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/unewcastle>
+    a schema:Organization ;
+    schema:description "The University of Newcastle (UON), informally known as Newcastle University, is a public university in Newcastle, New South Wales, Australia. Established in 1965, it has a primary campus in the Newcastle suburb of Callaghan. The university also operates campuses in Ourimbah, Port Macquarie, Singapore, Newcastle CBD and Sydney CBD." ;
+    schema:name "University of Newcastle" ;
+    schema:url "https://www.newcastle.edu.au"^^xsd:anyURI ;
+.

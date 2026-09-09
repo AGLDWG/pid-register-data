@@ -1,0 +1,13 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/igsn>
+    a schema:Organization ;
+    schema:description """International Geo Sample Number (IGSN), a unique identifier for samples and specimens collected from our natural environment.
+
+The IGSN was developed by the System for Earth Sample Registration SESAR, with funding from the US National Science Foundation.
+
+The IGSN e.V. is incorporated under German law as a not-for-profit society (gemeinnütziger eingetragener Verein) with a registered office at the GeoForschungsZentrum (GFZ) Potsdam.""" ;
+    schema:name "International Geo Sample Number" ;
+    schema:url "http://www.igsn.org/"^^xsd:anyURI ;
+.

@@ -1,0 +1,61 @@
+PREFIX : <https://linked.data.gov.au/pid/dataset/>
+PREFIX reg: <https://linked.data.gov.au/reg/pids/datasets>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+reg:
+    a schema:DataCatalog ;
+    schema:codeRepository "https://github.com/AGLDWG/pid-register-data" ;
+    schema:creator <https://linked.data.gov.au/org/agldwg> ;
+    schema:dateCreated "2018"^^xsd:gYear ;
+    schema:dateModified "2026-09-07"^^xsd:date ;
+    schema:description "The register of linked.data.gov.au/dataset/ PIDs" ;
+    schema:hasPart
+        :addr1605mb11 ,
+        :addr1605mb16 ,
+        :addrcatch ,
+        :addrmb11 ,
+        :addrmb16 ,
+        :agiftcrsth ,
+        :asgs2011 ,
+        :asgs2016 ,
+        :asgsed3 ,
+        :auscapad2022 ,
+        :ausnrm2023 ,
+        :auspix ,
+        :ausplots ,
+        :bdbsa ,
+        :bdr ,
+        :bsa ,
+        :capad-2018-terrestrial ,
+        :causalnetwork ,
+        :corveg ,
+        :data-policies ,
+        :electrical-infrastructure ,
+        :energy ,
+        :facilities ,
+        :geofabric ,
+        :gnaf ,
+        :gnaf-2016-05 ,
+        :gsq ,
+        :ibra7 ,
+        :local-gov-areas-2011 ,
+        :mb16cc ,
+        :mb16mb11 ,
+        :nrm-2017 ,
+        :nsw-fmip ,
+        :ntvsd ,
+        :placenames ,
+        :qldgeofeatures ,
+        :roads ,
+        :sandgate ,
+        :tern ,
+        :tern-ecosystem-processes ,
+        :three-parks-savanna ,
+        :wet-tropics-vertebrate ,
+        :wwf-terr-ecoregions ,
+        :wwf2011 ;
+    schema:name "Dataset PIDs" ;
+    schema:publisher <https://linked.data.gov.au/org/agldwg> ;
+    schema:version "1" ;
+.

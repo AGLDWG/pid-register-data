@@ -1,0 +1,23 @@
+PREFIX pid: <https://linked.data.gov.au/def/pid/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/pid/def/seismic-sampling-method>
+    a pid:Pid ;
+    pid:redirectRules "RewriteRule ^/def/seismic-sampling-method($|/.*)$ \"https://linked.data.gov.au/static/tombstoned.html\" [R=302,L]"^^pid:apacheRedirectRules ;
+    pid:redirectTest
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/seismic-sampling-method" ;
+            pid:headers "" ;
+            pid:to "https://linked.data.gov.au/static/tombstoned.html" ;
+            schema:name "Seismic Sampling Method HTML" ;
+        ] ;
+    schema:creator <https://linked.data.gov.au/person/david.crosswell> ;
+    schema:dateCreated "2019-04-26"^^xsd:date ;
+    schema:dateModified "2026-09-07"^^xsd:date ;
+    schema:name "Seismic Sampling Method" ;
+    schema:sponsor <https://linked.data.gov.au/org/gsq> ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/stable> ;
+    schema:url "https://linked.data.gov.au/def/seismic-sampling-method"^^pid:agldwgPid ;
+.

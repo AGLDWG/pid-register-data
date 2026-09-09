@@ -1,0 +1,11 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/daff>
+    a schema:Organization ;
+    schema:description """DAFF works to enhance Australia's agricultural, fisheries and forestry industries. DAFF creates new and maintains existing agricultural export opportunities, to provide gains for Australian agriculture. DAFF manages biosecurity risks to Australia to protect Australia's multi-billion dollar agricultural industries and our way of life.
+
+This is one of the successor Departments to the Department of Agriculture, Water and the Environment.""" ;
+    schema:name "Department of Agriculture, Fisheries and Forestry" ;
+    schema:url "https://www.agriculture.gov.au"^^xsd:anyURI ;
+.

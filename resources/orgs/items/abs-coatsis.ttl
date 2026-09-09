@@ -1,0 +1,10 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/abs-coatsis>
+    a schema:Organization ;
+    schema:description "The Centre of Aboriginal and Torres Strait Islander Statistics (CoATSIS) has a leadership and coordination role for national statistical activity about Aboriginal and Torres Strait Islander peoples. CoATSIS is dedicated to early and ongoing conversations with Aboriginal and Torres Strait Islander peoples to increase participation in, and the relevance of, ABS statistical collections. They engage with communities across a range of statistical activities and outputs from Indigenous specific surveys such as the Aboriginal and Torres Strait Islander health and social surveys, the five yearly Census, administrative data, and data integration projects." ;
+    schema:isPartOf <https://linked.data.gov.au/org/abs> ;
+    schema:name "ABS Centre of Aboriginal and Torres Strait Islander Statistics" ;
+    schema:url "https://www.abs.gov.au/about/aboriginal-and-torres-strait-islander-peoples/aboriginal-and-torres-strait-islander-engagement"^^xsd:anyURI ;
+.

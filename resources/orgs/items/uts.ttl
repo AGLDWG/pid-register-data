@@ -1,0 +1,9 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/uts>
+    a schema:Organization ;
+    schema:description "UTS is a public university of technology defined by our support for the economic, social and cultural prosperity of our communities. We are measured by the success of our students, staff and partners and committed to research, innovation and the dissemination of knowledge of public value. We are, and always will be, an inclusive university." ;
+    schema:name "University of Technology Sydney" ;
+    schema:url "https://www.uts.edu.au/"^^xsd:anyURI ;
+.

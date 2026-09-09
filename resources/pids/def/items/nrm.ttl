@@ -1,0 +1,58 @@
+PREFIX pid: <https://linked.data.gov.au/def/pid/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/pid/def/nrm>
+    a pid:Pid ;
+    pid:redirectRules """RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/def/nrm(.*)$                          https://linkeddata.tern.org.au/viewer/dawe/id/https://linked.data.gov.au/def/nrm$1?format=text/turtle [R=302,L]
+RewriteRule ^/def/nrm(.*).ttl$                      https://linkeddata.tern.org.au/viewer/dawe/id/https://linked.data.gov.au/def/nrm$1?format=text/turtle [R=302,L]
+RewriteCond %{QUERY_STRING} ^_mediatype=application/rdf\\+xml$ [OR]
+RewriteCond %{HTTP:Accept} application/rdf\\+xml [NC]
+RewriteRule ^/def/nrm(.*)$                          https://linkeddata.tern.org.au/viewer/dawe/id/https://linked.data.gov.au/def/nrm$1?format=application/rdf\\+xml [R=302,L]
+RewriteRule ^/def/nrm(.*).rdf$                      https://linkeddata.tern.org.au/viewer/dawe/id/https://linked.data.gov.au/def/nrm$1?format=application/rdf\\+xml [R=302,L]
+RewriteCond %{QUERY_STRING} ^_mediatype=application/n-triples$ [OR]
+RewriteCond %{HTTP:Accept} application/n-triples [NC]
+RewriteRule ^/def/nrm(.*)$                          https://linkeddata.tern.org.au/viewer/dawe/id/https://linked.data.gov.au/def/nrm$1?format=application/n-triples [R=302,L]
+RewriteRule ^/def/nrm(.*).nt$                       https://linkeddata.tern.org.au/viewer/dawe/id/https://linked.data.gov.au/def/nrm$1?format=application/n-triples [R=302,L]
+RewriteCond %{QUERY_STRING} ^_mediatype=application/ld\\+json$ [OR]
+RewriteCond %{HTTP:Accept} application/ld\\+json [NC]
+RewriteRule ^/def/nrm(.*)$                          https://linkeddata.tern.org.au/viewer/dawe/id/https://linked.data.gov.au/def/nrm$1?format=application/ld\\+json [R=302,L]
+RewriteRule ^/def/nrm(.*).jsonld$                   https://linkeddata.tern.org.au/viewer/dawe/id/https://linked.data.gov.au/def/nrm$1?format=application/ld\\+json [R=302,L]
+RewriteCond %{QUERY_STRING} ^_mediatype=text/n3$ [OR]
+RewriteCond %{HTTP:Accept} text/n3 [NC]
+RewriteRule ^/def/nrm(.*)$                          https://linkeddata.tern.org.au/viewer/dawe/id/https://linked.data.gov.au/def/nrm$1?format=text/n3 [R=302,L]
+RewriteRule ^/def/nrm(.*).n3$                       https://linkeddata.tern.org.au/viewer/dawe/id/https://linked.data.gov.au/def/nrm$1?format=text/n3 [R=302,L]
+RewriteRule ^/def/nrm$                              https://linkeddata.tern.org.au/prez/dawe-cv/v/ [R=302,L]
+RewriteRule ^/def/nrm(.*)$                          https://linkeddata.tern.org.au/viewer/dawe/id/https://linked.data.gov.au/def/nrm$1 [R=302,L]"""^^pid:apacheRedirectRules ;
+    pid:redirectTest 
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/nrm" ;
+            pid:headers "" ;
+            pid:to "https://linkeddata.tern.org.au/prez/dawe-cv/v/" ;
+            schema:name "Ecological Monitoring System – Australia (EMSA) Controlled Vocabularies HTML" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/nrm/71f0182a-e143-5ACC-8965-f72ab1795036" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://linkeddata.tern.org.au/viewer/dawe/id/https://linked.data.gov.au/def/nrm/71f0182a-e143-5ACC-8965-f72ab1795036?format=text/turtle" ;
+            schema:name "Ecological Monitoring System – Australia (EMSA) Controlled Vocabularies - one vocab TURTLE" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/nrm/71f0182a-e143-5ACC-8965-f72ab1795036" ;
+            pid:headers "" ;
+            pid:to "https://linkeddata.tern.org.au/viewer/dawe/id/https://linked.data.gov.au/def/nrm/71f0182a-e143-5ACC-8965-f72ab1795036" ;
+            schema:name "Ecological Monitoring System – Australia (EMSA) Controlled Vocabularies - one vocab HTML" ;
+        ] ;
+    schema:creator <https://linked.data.gov.au/person/nicholas.car> ;
+    schema:dateCreated "2022-05-20"^^xsd:date ;
+    schema:dateModified "2026-09-07"^^xsd:date ;
+    schema:name "Natural Resource Management Controlled Vocabularies" ;
+    schema:sponsor <https://linked.data.gov.au/org/tern> ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/accepted> ;
+    schema:url "https://linked.data.gov.au/def/nrm"^^pid:agldwgPid ;
+.

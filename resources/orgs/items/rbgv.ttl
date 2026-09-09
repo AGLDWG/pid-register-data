@@ -1,0 +1,11 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/rbgv>
+    a schema:Organization ;
+    schema:description """Royal Botanic Gardens Victoria plays a leading role in the conservation of plants through biodiversity research, programs to protect rare and threatened plants, and the study of habitats. This work is supported by education and visitor programs about the importance of plants to life.
+
+The Organization encompasses two diverse sites at Melbourne and Cranbourne and the State Botanical Collection housed at the National Herbarium of Victoria. Royal Botanic Gardens Victoria is managed by the Royal Botanic Gardens Board Victoria, which is responsible to the Minister for Environment.""" ;
+    schema:name "Royal Botanic Gardens Victoria" ;
+    schema:url "https://www.rbg.vic.gov.au"^^xsd:anyURI ;
+.

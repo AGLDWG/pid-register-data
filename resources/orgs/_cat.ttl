@@ -1,0 +1,1720 @@
+PREFIX : <https://linked.data.gov.au/org/>
+PREFIX ex: <http://example.org/>
+PREFIX istatus: <https://def.isotc211.org/codeset/ItemStatus/>
+PREFIX reg: <https://linked.data.gov.au/reg/orgs>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://kurrawong.ai>
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:abares
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:abrs
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:abs
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:abs-coatsis
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:act
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:act-atlas
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:act-epsdd
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:acu
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:ada
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:agson
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:aiatsis
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:ala
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:am
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:ambseh
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:amnh
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:anbg
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:anu
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:anzlic
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:apo
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:ardc
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:ath
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:ato
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:atsb
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:au
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:ausbigg
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:ausgin
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:awc
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:awmm
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:baam
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:bap
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:bdbsa
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:bdr-team
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:bhp
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:biepa
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:birdlife
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:bitre
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:bodc
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:bom
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:bom-cs
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:bom-gu
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:canbr
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:casa
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:cdu
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:cgi
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:cgi-gtwg
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:coh
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:cooloolacc
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:csiro
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:csiro-environment
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:csiro-publishing
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:daff
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:dafwa
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:dawe
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:dawr
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:dcceew
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:dem
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:des
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:dew
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:dewr
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:dhs
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:dmirs
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:dnrme
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:doee
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:doi
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:ecosmartecology
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:engineersaustralia
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:fedu
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:finance
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:ga
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:gaia-resources
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:gccc
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:geoscape
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:ggic
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:ggic-pdwg
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:gsq
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:gssa
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:gswa
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:handle
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:iag
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:icao
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:ics
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:icsm
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:icsm-awg
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:icsm-pnwg
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:idn
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:igsn
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:infrastructure
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:isgm-wg
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:iso
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:isu
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:jcu
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:jsa
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:latrobe
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:lcai
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:macleaymuseum
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:mboca
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:meri
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:mgrt
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:mjdenv
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:mrcca
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:museumsvictoria
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:mwlr
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:naa
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:naturemapr
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:nci
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:neii
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:nhm
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:nla
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:npansw
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:nrm-organisations
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:nsl
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:nsw
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:nsw-bionet
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:nsw-daff
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:nsw-dcceew
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:nsw-dpe
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:nsw-dpie
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:nsw-health
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:nsw-npws
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:nt
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:nt-atlas
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:nt-dipe
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:nt-dlpe
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:nt-dlrm
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:nt-herbarium
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:ogc
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:parksaustalia
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:psma
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:qld
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:qld-daff
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:qld-derm
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:qld-detsi
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:qld-dres
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:qld-resources
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:qld-tmr
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:qld-tsgehp
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:qld-widnet
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:qld-wildnet
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:qm
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:qnc
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:qpws
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:qsi
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:qvmag
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:rbgdt
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:rbgv
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:reefcatchments
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:riotinto
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:ror
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:sa
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:sa-dew
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:sa-dewnr
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:sa-herbarium
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:sam
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:scienceforwildlife
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:scion
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:sfsgi
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:south-australia
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:sunwater
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:surround
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:swmc
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:tas-dnre
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:tas-nre
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:tas-nva
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:tc211
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:te-papa
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:tern
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:tmag
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:uadelaide
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:umweltaust
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:un
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:und
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:une
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:unewcastle
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:unsw
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:uom
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:uq
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:uts
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:vic-atlas
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:vic-deeca
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:wa-bio
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:wa-dbca
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:wa-herbarium
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:wabsi
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:wam
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:western-shield
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:wmbaustralia
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:wwf-australia
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+:agldwg
+    ex:qualifiedStatus
+        [
+            schema:memberOf reg: ;
+            schema:value istatus:stable ;
+        ] ;
+.
+
+reg:
+    a schema:DataCatalog ;
+    schema:codeRepository "https://github.com/AGLDWG/pid-register-data" ;
+    schema:creator :agldwg ;
+    schema:dateCreated "2018"^^xsd:gYear ;
+    schema:dateModified "2026-09-07"^^xsd:date ;
+    schema:description "The Australian Government Linked Data Working Group's register of organisations used within the register Knowledge Base" ;
+    schema:hasPart
+        <https://kurrawong.ai> ,
+        :abares ,
+        :abrs ,
+        :abs ,
+        :abs-coatsis ,
+        :act ,
+        :act-atlas ,
+        :act-epsdd ,
+        :acu ,
+        :ada ,
+        :agldwg ,
+        :agson ,
+        :aiatsis ,
+        :ala ,
+        :am ,
+        :ambseh ,
+        :amnh ,
+        :anbg ,
+        :anu ,
+        :anzlic ,
+        :apo ,
+        :ardc ,
+        :ath ,
+        :ato ,
+        :atsb ,
+        :au ,
+        :ausbigg ,
+        :ausgin ,
+        :awc ,
+        :awmm ,
+        :baam ,
+        :bap ,
+        :bdbsa ,
+        :bdr-team ,
+        :bhp ,
+        :biepa ,
+        :birdlife ,
+        :bitre ,
+        :bodc ,
+        :bom ,
+        :bom-cs ,
+        :bom-gu ,
+        :canbr ,
+        :casa ,
+        :cdu ,
+        :cgi ,
+        :cgi-gtwg ,
+        :coh ,
+        :cooloolacc ,
+        :csiro ,
+        :csiro-environment ,
+        :csiro-publishing ,
+        :daff ,
+        :dafwa ,
+        :dawe ,
+        :dawr ,
+        :dcceew ,
+        :dem ,
+        :des ,
+        :dew ,
+        :dewr ,
+        :dhs ,
+        :dmirs ,
+        :dnrme ,
+        :doee ,
+        :doi ,
+        :ecosmartecology ,
+        :engineersaustralia ,
+        :fedu ,
+        :finance ,
+        :ga ,
+        :gaia-resources ,
+        :gccc ,
+        :geoscape ,
+        :ggic ,
+        :ggic-pdwg ,
+        :gsq ,
+        :gssa ,
+        :gswa ,
+        :handle ,
+        :iag ,
+        :icao ,
+        :ics ,
+        :icsm ,
+        :icsm-awg ,
+        :icsm-pnwg ,
+        :idn ,
+        :igsn ,
+        :infrastructure ,
+        :isgm-wg ,
+        :iso ,
+        :isu ,
+        :jcu ,
+        :jsa ,
+        :latrobe ,
+        :lcai ,
+        :macleaymuseum ,
+        :mboca ,
+        :meri ,
+        :mgrt ,
+        :mjdenv ,
+        :mrcca ,
+        :museumsvictoria ,
+        :mwlr ,
+        :naa ,
+        :naturemapr ,
+        :nci ,
+        :neii ,
+        :nhm ,
+        :nla ,
+        :npansw ,
+        :nrm-organisations ,
+        :nsl ,
+        :nsw ,
+        :nsw-bionet ,
+        :nsw-daff ,
+        :nsw-dcceew ,
+        :nsw-dpe ,
+        :nsw-dpie ,
+        :nsw-health ,
+        :nsw-npws ,
+        :nt ,
+        :nt-atlas ,
+        :nt-dipe ,
+        :nt-dlpe ,
+        :nt-dlrm ,
+        :nt-herbarium ,
+        :ogc ,
+        :parksaustalia ,
+        :psma ,
+        :qld ,
+        :qld-daff ,
+        :qld-derm ,
+        :qld-detsi ,
+        :qld-dres ,
+        :qld-resources ,
+        :qld-tmr ,
+        :qld-tsgehp ,
+        :qld-widnet ,
+        :qld-wildnet ,
+        :qm ,
+        :qnc ,
+        :qpws ,
+        :qsi ,
+        :qvmag ,
+        :rbgdt ,
+        :rbgv ,
+        :reefcatchments ,
+        :riotinto ,
+        :ror ,
+        :sa ,
+        :sa-dew ,
+        :sa-dewnr ,
+        :sa-herbarium ,
+        :sam ,
+        :scienceforwildlife ,
+        :scion ,
+        :sfsgi ,
+        :south-australia ,
+        :sunwater ,
+        :surround ,
+        :swmc ,
+        :tas-dnre ,
+        :tas-nre ,
+        :tas-nva ,
+        :tc211 ,
+        :te-papa ,
+        :tern ,
+        :tmag ,
+        :uadelaide ,
+        :umweltaust ,
+        :un ,
+        :und ,
+        :une ,
+        :unewcastle ,
+        :unsw ,
+        :uom ,
+        :uq ,
+        :uts ,
+        :vic-atlas ,
+        :vic-deeca ,
+        :wa-bio ,
+        :wa-dbca ,
+        :wa-herbarium ,
+        :wabsi ,
+        :wam ,
+        :western-shield ,
+        :wmbaustralia ,
+        :wwf-australia ;
+    schema:name "Organisations Register" ;
+    schema:publisher :agldwg ;
+    schema:version "1" ;
+.

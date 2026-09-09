@@ -1,0 +1,17 @@
+PREFIX pid: <https://linked.data.gov.au/def/pid/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/pid/def/scm-scma-2011>
+    a pid:Pid ;
+    pid:redirectRules """RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/def/scm-scma-2011($|/.+)$                 https://vocabs.ardc.edu.au/repository/api/lda/ub/soil-chemical-methods-australasia/scm3/resource.ttl?uri=http://anzsoil.org/def/au/scm/scma-2011$1 [R=302,L]
+RewriteRule ^/def/scm-scma-2011.ttl$                    https://vocabs.ardc.edu.au/repository/api/lda/ub/soil-chemical-methods-australasia/scm3/resource.ttl?uri=http://anzsoil.org/def/au/scm/scma-2011 [R=302,L]
+RewriteRule ^/def/scm-scma-2011($|/.+)$                 https://vocabs.ardc.edu.au/repository/api/lda/ub/soil-chemical-methods-australasia/scm3/resource?uri=http://anzsoil.org/def/au/scm/scma-2011$1 [R=302,L]"""^^pid:apacheRedirectRules ;
+    schema:creator <https://linked.data.gov.au/person/mr.wong> ;
+    schema:dateCreated "2024-11-15"^^xsd:date ;
+    schema:dateModified "2026-09-07"^^xsd:date ;
+    schema:name "The Australian Soil Classification 2011" ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/unstable> ;
+.

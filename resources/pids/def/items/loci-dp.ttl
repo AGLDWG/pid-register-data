@@ -1,0 +1,38 @@
+PREFIX pid: <https://linked.data.gov.au/def/pid/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/pid/def/loci-dp>
+    a pid:Pid ;
+    pid:redirectRules """RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/def/loci-dp$                              https://dcceew-bdr.github.io/loci-data-profile/profile.ttl [R=302,L]
+RewriteRule ^/def/loci-dp.ttl$                          https://dcceew-bdr.github.io/loci-data-profile/profile.ttl [R=302,L]
+RewriteRule ^/def/loci-dp$                              https://dcceew-bdr.github.io/loci-data-profile/specification.html [R=302,L]
+RewriteRule ^/def/loci-dp/spec$                         https://dcceew-bdr.github.io/loci-data-profile/specification.html [R=302,L]
+RewriteRule ^/def/loci-dp/validator$		            https://dcceew-bdr.github.io/loci-data-profile/validator.ttl [R=302,L]
+RewriteRule ^/def/loci-dp/example/(.*)$                 https://github.com/dcceew-bdr/loci-data-profile/tree/main/tests/data [R=302,L]
+RewriteRule ^/def/loci-dp/repo				            https://github.com/dcceew-bdr/loci-data-profile [R=302,L]"""^^pid:apacheRedirectRules ;
+    pid:redirectTest 
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/loci-dp" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://dcceew-bdr.github.io/loci-data-profile/profile.ttl" ;
+            schema:name "loci-dp RDF (Turtle)" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/loci-dp" ;
+            pid:headers "" ;
+            pid:to "https://dcceew-bdr.github.io/loci-data-profile/specification.html" ;
+            schema:name "loci-dp HTML" ;
+        ] ;
+    schema:creator <https://linked.data.gov.au/person/nicholas.car> ;
+    schema:dateCreated "2020-05-11"^^xsd:date ;
+    schema:dateModified "2026-09-07"^^xsd:date ;
+    schema:name "Loc-I Data Profile" ;
+    schema:sponsor <https://linked.data.gov.au/org/ga> ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/stable> ;
+    schema:url "https://linked.data.gov.au/def/loci-dp"^^pid:agldwgPid ;
+.

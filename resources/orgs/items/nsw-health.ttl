@@ -1,0 +1,9 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/nsw-health>
+    a schema:Organization ;
+    schema:description "The State of New South Wales' health department." ;
+    schema:name "NSW Ministry of Health" ;
+    schema:url "https://www.health.nsw.gov.au"^^xsd:anyURI ;
+.

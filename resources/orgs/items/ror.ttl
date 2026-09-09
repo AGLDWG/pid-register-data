@@ -1,0 +1,11 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/ror>
+    a schema:Organization ;
+    schema:description """ROR is a community-led project to develop an open, sustainable, usable, and unique identifier for every research organization in the world.
+
+Between 2016 and 2018, a group of 17 organizations with a shared purpose invested their time and energy into an Org ID initiative, with the goal of defining requirements for an open, community-led organization identifier registry. The initiative was a transparent, accessible process to help work towards a better system for all of our communities.""" ;
+    schema:name "Research Organization Registry Community" ;
+    schema:url "https://ror.community/"^^xsd:anyURI ;
+.

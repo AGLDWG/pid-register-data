@@ -1,0 +1,9 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/au>
+    a schema:Organization ;
+    schema:description "The Australian Government, also known as the Commonwealth Government, is the national government of Australia, a federal parliamentary constitutional monarchy." ;
+    schema:name "Australian Government" ;
+    schema:url "https://australia.gov.au"^^xsd:anyURI ;
+.

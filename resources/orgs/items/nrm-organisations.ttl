@@ -1,0 +1,9 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/nrm-organisations>
+    a schema:Organization ;
+    schema:description "Australian Natural Resource Management (NRM) Organisations" ;
+    schema:name "Natural Resource Management (NRM) Organisations" ;
+    schema:url "https://nrmregionsaustralia.com.au"^^xsd:anyURI ;
+.

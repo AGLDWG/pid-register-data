@@ -1,0 +1,12 @@
+PREFIX id: <http://id.loc.gov/vocabulary/identifiers/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/csiro-environment>
+    a schema:Organization ;
+    schema:description "Australia's national science research agency. Environment Research Unit." ;
+    schema:identifier "https://ror.org/05bgxxb69"^^id:ror ;
+    schema:isPartOf <https://linked.data.gov.au/org/csiro> ;
+    schema:name "Environment Research Unit CSIRO" ;
+    schema:url "https://www.csiro.au/en/about/people/research-units/environment"^^xsd:anyURI ;
+.

@@ -1,8 +1,0 @@
-[
-    {
-        "label": "/def/abis/validator",
-        "from": "https://linked.data.gov.au/def/abis/validator",
-        "to": "https://ausbigg.github.io/abis/validator.ttl",
-        "headers": {}
-    }
-]

@@ -1,0 +1,9 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/infrastructure>
+    a schema:Organization ;
+    schema:description "Our work connects, and enriches every Australian community, underpins our economy and society, and empowers our regions. We provide strategic policy advice, fit-for-purpose regulation, and deliver programs, projects and services in the major infrastructure, transport, communications and arts sectors, supporting our regions, cities and territories." ;
+    schema:name "Department of Infrastructure, Transport, Regional Development and Communications" ;
+    schema:url "https://www.infrastructure.gov.au"^^xsd:anyURI ;
+.

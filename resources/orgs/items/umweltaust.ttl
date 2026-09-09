@@ -1,0 +1,11 @@
+PREFIX id: <http://id.loc.gov/vocabulary/identifiers/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/umweltaust>
+    a schema:Organization ;
+    schema:description "An employee-owned environmental and social professional services consultancy" ;
+    schema:identifier "18 059 519 041"^^id:ausbn ;
+    schema:name "Umwelt Australia Pty Ltd" ;
+    schema:url "https://www.umwelt.com.au"^^xsd:anyURI ;
+.

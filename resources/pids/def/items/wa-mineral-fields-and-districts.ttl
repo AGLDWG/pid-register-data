@@ -1,0 +1,34 @@
+PREFIX pid: <https://linked.data.gov.au/def/pid/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/pid/def/wa-mineral-fields-and-districts>
+    a pid:Pid ;
+    pid:redirectRules """RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/def/wa-mineral-fields-and-districts($|/.*)$ "https://vocabulary.gswa.kurrawong.ai/object?uri=https://linked.data.gov.au/def/wa-mineral-fields-and-districts$1&_mediatype=text/turtle" [R=302,L]
+RewriteRule ^/def/wa-mineral-fields-and-districts.ttl$ "https://vocabulary.gswa.kurrawong.ai/object?uri=https://linked.data.gov.au/def/wa-mineral-fields-and-districts$1&_mediatype=text/turtle" [R=302,L]
+RewriteRule ^/def/wa-mineral-fields-and-districts($|/.*) "https://vocabulary.gswa.kurrawong.ai/object?uri=https://linked.data.gov.au/def/wa-mineral-fields-and-districts$1" [R=302,NE,L]"""^^pid:apacheRedirectRules ;
+    pid:redirectTest 
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/wa-mineral-fields-and-districts" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://vocabulary.gswa.kurrawong.ai/object?uri=https://linked.data.gov.au/def/wa-mineral-fields-and-districts&_mediatype=text/turtle" ;
+            schema:name "wa-mineral-fields-and-districts RDF" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/wa-mineral-fields-and-districts" ;
+            pid:headers "" ;
+            pid:to "https://vocabulary.gswa.kurrawong.ai/object?uri=https://linked.data.gov.au/def/wa-mineral-fields-and-districts" ;
+            schema:name "wa-mineral-fields-and-districts HTML" ;
+        ] ;
+    schema:creator <https://linked.data.gov.au/person/chee.ng> ;
+    schema:dateCreated "2023-09-21"^^xsd:date ;
+    schema:dateModified "2026-09-07"^^xsd:date ;
+    schema:name "Western Australian mineral fields and districts" ;
+    schema:sponsor <https://linked.data.gov.au/org/gswa> ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/stable> ;
+    schema:url "https://linked.data.gov.au/def/wa-mineral-fields-and-districts"^^pid:agldwgPid ;
+.

@@ -1,0 +1,32 @@
+PREFIX pid: <https://linked.data.gov.au/def/pid/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/pid/def/organisation-type>
+    a pid:Pid ;
+    pid:redirectRules """RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/def/organisation-type($|/.*)$ "https://vocabs.gsq.digital/object?vocab_id=organisation-type&uri=http://linked.data.gov.au/def/organisation-type$1&_mediatype=text/turtle" [R=302,L]
+RewriteRule ^/def/organisation-type($|/.*)$ "https://vocabs.gsq.digital/object?vocab_id=organisation-type&uri=http://linked.data.gov.au/def/organisation-type$1" [R=302,NE,L]"""^^pid:apacheRedirectRules ;
+    pid:redirectTest 
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/organisation-type" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://vocabs.gsq.digital/object?vocab_id=organisation-type&uri=http://linked.data.gov.au/def/organisation-type&_mediatype=text/turtle" ;
+            schema:name "organisation-type RDF" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/organisation-type" ;
+            pid:headers "" ;
+            pid:to "https://vocabs.gsq.digital/object?vocab_id=organisation-type&uri=http://linked.data.gov.au/def/organisation-type" ;
+            schema:name "organisation-type HTML" ;
+        ] ;
+    schema:creator <https://linked.data.gov.au/person/david.crosswell> ;
+    schema:dateCreated "2020-04-15"^^xsd:date ;
+    schema:dateModified "2026-09-07"^^xsd:date ;
+    schema:sponsor <https://linked.data.gov.au/org/gsq> ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/stable> ;
+    schema:url "https://linked.data.gov.au/def/organisation-type"^^pid:agldwgPid ;
+.

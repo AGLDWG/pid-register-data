@@ -1,0 +1,82 @@
+PREFIX pid: <https://linked.data.gov.au/def/pid/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/pid/def/asgs>
+    a pid:Pid ;
+    pid:redirectRules """RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/def/asgs                                  https://raw.githack.com/AGLDWG/asgs-ont/master/asgs.ttl? [R=302,L]
+RewriteRule ^/def/asgs(.*).ttl$                         https://raw.githack.com/AGLDWG/asgs-ont/master/asgs.ttl [R=302,L]
+RewriteRule ^/def/asgs/cat                              https://raw.githack.com/AGLDWG/asgs-ont/master/asgs-cat.ttl? [R=302,L]
+RewriteRule ^/def/asgs/cat(.*).ttl$                     https://raw.githack.com/AGLDWG/asgs-ont/master/asgs-cat.ttl [R=302,L]
+RewriteRule ^/def/asgs/code                             https://raw.githack.com/AGLDWG/asgs-ont/master/asgs-code.ttl? [R=302,L]
+RewriteRule ^/def/asgs/code(.*).ttl$                    https://raw.githack.com/AGLDWG/asgs-ont/master/asgs-code.ttl [R=302,L]
+RewriteRule ^/def/asgs/id                               https://raw.githack.com/AGLDWG/asgs-ont/master/asgs-id.ttl? [R=302,L]
+RewriteRule ^/def/asgs/id(.*).ttl$                      https://raw.githack.com/AGLDWG/asgs-ont/master/asgs-id.ttl [R=302,L]
+RewriteRule ^/def/asgs/isOf                             https://raw.githack.com/AGLDWG/asgs-ont/master/asgs-isOf.ttl? [R=302,L]
+RewriteRule ^/def/asgs/isOf(.*).ttl$                    https://raw.githack.com/AGLDWG/asgs-ont/master/asgs-isOf.ttl [R=302,L]
+RewriteRule ^/def/asgs/path                             https://raw.githack.com/AGLDWG/asgs-ont/master/asgs-path.ttl? [R=302,L]
+RewriteRule ^/def/asgs/path(.*).ttl$                    https://raw.githack.com/AGLDWG/asgs-ont/master/asgs-path.ttl [R=302,L]
+RewriteRule ^/def/asgs/prop                             https://raw.githack.com/AGLDWG/asgs-ont/master/asgs-prop.ttl? [R=302,L]
+RewriteRule ^/def/asgs/prop(.*).ttl$                    https://raw.githack.com/AGLDWG/asgs-ont/master/asgs-prop.ttl [R=302,L]
+RewriteCond %{QUERY_STRING} ^_mediatype=application/rdf\\+xml$ [OR]
+RewriteCond %{HTTP:Accept} application/rdf\\+xml [NC]
+RewriteRule ^/def/asgs                                  https://raw.githack.com/AGLDWG/asgs-ont/master/asgs.rdf? [R=302,L]
+RewriteRule ^/def/asgs(.*).rdf$                         https://raw.githack.com/AGLDWG/asgs-ont/master/asgs.rdf [R=302,L]
+RewriteCond %{QUERY_STRING} ^_mediatype=application/ld\\+json$ [OR]
+RewriteCond %{HTTP:Accept} application/ld\\+json [NC]
+RewriteRule ^/def/asgs                                  https://raw.githack.com/AGLDWG/asgs-ont/master/asgs.jsonld? [R=302,L]
+RewriteRule ^/def/asgs(.*).jsonld$                      https://raw.githack.com/AGLDWG/asgs-ont/master/asgs.jsonld [R=302,L]
+RewriteRule ^/def/asgs/cat                              https://raw.githack.com/AGLDWG/asgs-ont/master/asgs-cat.jsonld? [R=302,L]
+RewriteRule ^/def/asgs/cat(.*).jsonld$                  https://raw.githack.com/AGLDWG/asgs-ont/master/asgs-cat.jsonld [R=302,L]
+RewriteRule ^/def/asgs/code                             https://raw.githack.com/AGLDWG/asgs-ont/master/asgs-code.jsonld? [R=302,L]
+RewriteRule ^/def/asgs/code(.*).jsonld$                 https://raw.githack.com/AGLDWG/asgs-ont/master/asgs-code.jsonld [R=302,L]
+RewriteRule ^/def/asgs/id                               https://raw.githack.com/AGLDWG/asgs-ont/master/asgs-id.jsonld? [R=302,L]
+RewriteRule ^/def/asgs/id(.*).jsonld$                   https://raw.githack.com/AGLDWG/asgs-ont/master/asgs-id.jsonld [R=302,L]
+RewriteRule ^/def/asgs/isOf                             https://raw.githack.com/AGLDWG/asgs-ont/master/asgs-isOf.jsonld? [R=302,L]
+RewriteRule ^/def/asgs/isOf(.*).jsonld$                 https://raw.githack.com/AGLDWG/asgs-ont/master/asgs-isOf.jsonld [R=302,L]
+RewriteRule ^/def/asgs/path                             https://raw.githack.com/AGLDWG/asgs-ont/master/asgs-path.jsonld? [R=302,L]
+RewriteRule ^/def/asgs/path(.*).jsonld$                 https://raw.githack.com/AGLDWG/asgs-ont/master/asgs-path.jsonld [R=302,L]
+RewriteRule ^/def/asgs/prop                             https://raw.githack.com/AGLDWG/asgs-ont/master/asgs-prop.jsonld? [R=302,L]
+RewriteRule ^/def/asgs/prop(.*).jsonld$                 https://raw.githack.com/AGLDWG/asgs-ont/master/asgs-prop.jsonld [R=302,L]
+RewriteRule ^/def/asgs(.*)$                             https://raw.githack.com/AGLDWG/asgs-ont/master/asgs.html$1 [R=302,L]
+RewriteRule ^/def/asgs/cat(.*)$                         https://raw.githack.com/AGLDWG/asgs-ont/master/asgs-cat.html$1 [R=302,L]
+RewriteRule ^/def/asgs/id(.*)$                          https://raw.githack.com/AGLDWG/asgs-ont/master/asgs-id.html$1 [R=302,L]"""^^pid:apacheRedirectRules ;
+    pid:redirectTest 
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs.ttl" ;
+            pid:headers "" ;
+            pid:to "https://raw.githack.com/AGLDWG/asgs-ont/master/asgs.ttl" ;
+            schema:name "ASGS Ontology, RDF (turtle) via file ext." ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://raw.githack.com/AGLDWG/asgs-ont/master/asgs.ttl" ;
+            schema:name "ASGS Ontology, RDF (turtle) via conneg" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs" ;
+            pid:headers "" ;
+            pid:to "https://raw.githack.com/AGLDWG/asgs-ont/master/asgs.html" ;
+            schema:name "ASGS Ontology, HTML" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs?_mediatype=text/turtle" ;
+            pid:headers "" ;
+            pid:to "https://raw.githack.com/AGLDWG/asgs-ont/master/asgs.ttl" ;
+            schema:name "ASGS Ontology, RDF (turtle) via QSA" ;
+        ] ;
+    schema:creator <https://linked.data.gov.au/person/laurent.lefort> ;
+    schema:dateCreated "2019-04-15"^^xsd:date ;
+    schema:dateModified "2026-09-07"^^xsd:date ;
+    schema:name "ASGS Ontology" ;
+    schema:sponsor <https://linked.data.gov.au/org/agldwg> ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/stable> ;
+    schema:url "https://linked.data.gov.au/def/asgs"^^pid:agldwgPid ;
+.

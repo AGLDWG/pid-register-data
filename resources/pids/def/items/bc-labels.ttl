@@ -1,0 +1,33 @@
+PREFIX pid: <https://linked.data.gov.au/def/pid/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/pid/def/bc-labels>
+    a pid:Pid ;
+    pid:redirectRules """RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/def/bc-labels(.*)$                  https://idn-au.github.io/lc-vocs/bc-labels.ttl [R=302,L]
+RewriteRule ^/def/bc-labels(.*).ttl$              https://idn-au.github.io/lc-vocs/bc-labels.ttl [R=302,L]
+RewriteRule ^/def/bc-labels(.*)$                  https://idn-au.github.io/lc-vocs/bc-labels.html$1 [R=302,L]"""^^pid:apacheRedirectRules ;
+    pid:redirectTest 
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/bc-labels" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://idn-au.github.io/lc-vocs/bc-labels.ttl" ;
+            schema:name "bc-labels RDF (Turtle)" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/bc-labels" ;
+            pid:headers "" ;
+            pid:to "https://idn-au.github.io/lc-vocs/bc-labels.html" ;
+            schema:name "bc-labels HTML" ;
+        ] ;
+    schema:creator <https://linked.data.gov.au/person/nicholas.car> ;
+    schema:dateCreated "2022-06-30"^^xsd:date ;
+    schema:dateModified "2026-09-07"^^xsd:date ;
+    schema:sponsor <https://linked.data.gov.au/org/idn> ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/stable> ;
+    schema:url "https://linked.data.gov.au/def/bc-labels"^^pid:agldwgPid ;
+.

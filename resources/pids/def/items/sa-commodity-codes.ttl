@@ -1,0 +1,33 @@
+PREFIX pid: <https://linked.data.gov.au/def/pid/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/pid/def/sa-commodity-codes>
+    a pid:Pid ;
+    pid:redirectRules """RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/def/sa-commodity-codes($|/.*)$ "https://vocabularies.sarig.sa.gov.au/object?uri=https://linked.data.gov.au/def/sa-commodity-codes$1&_mediatype=text/turtle" [R=302,L]
+RewriteRule ^/def/sa-commodity-codes($|/.*)$ "https://vocabularies.sarig.sa.gov.au/object?uri=https://linked.data.gov.au/def/sa-commodity-codes$1" [R=302,NE,L]"""^^pid:apacheRedirectRules ;
+    pid:redirectTest 
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/sa-commodity-codes" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://vocabularies.sarig.sa.gov.au/object?uri=https://linked.data.gov.au/def/sa-commodity-codes&_mediatype=text/turtle" ;
+            schema:name "sa-commodity-codes RDF" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/sa-commodity-codes" ;
+            pid:headers "" ;
+            pid:to "https://vocabularies.sarig.sa.gov.au/object?uri=https://linked.data.gov.au/def/sa-commodity-codes" ;
+            schema:name "sa-commodity-codes HTML" ;
+        ] ;
+    schema:creator <https://linked.data.gov.au/person/alex.zou> ;
+    schema:dateCreated "2024-09-10"^^xsd:date ;
+    schema:dateModified "2026-09-07"^^xsd:date ;
+    schema:name "SA Commodity Codes" ;
+    schema:sponsor <https://linked.data.gov.au/org/gssa> ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/accepted> ;
+    schema:url "https://linked.data.gov.au/def/sa-commodity-codes"^^pid:agldwgPid ;
+.

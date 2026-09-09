@@ -1,0 +1,9 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/qpws>
+    a schema:Organization ;
+    schema:description "Part of Qld DETSI" ;
+    schema:name "Queensland Parks and Wildlife Service" ;
+    schema:url "https://parks.desi.qld.gov.au"^^xsd:anyURI ;
+.

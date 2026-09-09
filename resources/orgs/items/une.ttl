@@ -1,0 +1,11 @@
+PREFIX id: <http://id.loc.gov/vocabulary/identifiers/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/une>
+    a schema:Organization ;
+    schema:description "The University of New England (UNE) is a public university in the New England region of the state of New South Wales, Australia. Founded in 1938, it was the first Australian university to be established outside of a state capital." ;
+    schema:identifier "75 792 454 315"^^id:ausbn ;
+    schema:name "University of New England" ;
+    schema:url "https://www.une.edu.au"^^xsd:anyURI ;
+.

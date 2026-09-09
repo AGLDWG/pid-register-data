@@ -1,0 +1,12 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/tern>
+    a schema:Organization ;
+    schema:description "TERN is Australia’s land ecosystem observatory." ;
+    schema:member
+        <https://linked.data.gov.au/person/e.chuc> ,
+        <https://linked.data.gov.au/person/javiersan18> ;
+    schema:name "Terrestrial Ecosystems Research Network" ;
+    schema:url "https://www.tern.org.au"^^xsd:anyURI ;
+.

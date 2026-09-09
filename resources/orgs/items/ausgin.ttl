@@ -1,0 +1,9 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/ausgin>
+    a schema:Organization ;
+    schema:description "AusGIN gives &nbsp;people and companies interested in exploring for minerals in Australia a single &nbsp;point of access for information about mineral resource &nbsp;exploration in all Australian jurisdictions, and to geological and geophysical &nbsp;data from all Australian governments." ;
+    schema:name "Australian Geoscience Information Network" ;
+    schema:url "http://www.geoscience.gov.au/about"^^xsd:anyURI ;
+.

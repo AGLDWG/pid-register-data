@@ -1,0 +1,15 @@
+PREFIX id: <http://id.loc.gov/vocabulary/identifiers/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/museumsvictoria>
+    a schema:Organization ;
+    schema:description """For more than 160 years, the people of Victoria have turned to their State museum to connect the past and the present, and to imagine the future. As Australia's largest public museum Organization, we inspire audiences to engage in life’s deep mysteries and big questions.
+
+Our museums present unique and exceptional experiences for more than 2 million visitors each year, who come from all over Australia and around the world to be inspired and to learn about themselves and the universe we inhabit.
+
+The collection is an invaluable record of Victoria's environmental and cultural history, and our amazing wealth of over 15 million items has been creating a sense of wonder and awe in visitors for generations.""" ;
+    schema:identifier "63 640 679 155"^^id:ausbn ;
+    schema:name "Museums Victoria" ;
+    schema:url "https://museumsvictoria.com.au"^^xsd:anyURI ;
+.

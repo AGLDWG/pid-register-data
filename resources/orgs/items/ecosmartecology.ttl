@@ -1,0 +1,11 @@
+PREFIX id: <http://id.loc.gov/vocabulary/identifiers/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/ecosmartecology>
+    a schema:Organization ;
+    schema:description "EcoSmart Ecology is an emerging industry leader in ecological research, survey and assessment with a strong client focus and the highest commitment to quality. Use our balance of knowledge, skills and experience to assist in navigating through the array of environmental issues and statutory requirements facing ecological planners and developers." ;
+    schema:identifier "34 137 963 190"^^id:ausbn ;
+    schema:name "EcoSmart Ecology" ;
+    schema:url "https://ecosmartecology.com.au"^^xsd:anyURI ;
+.

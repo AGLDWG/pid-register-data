@@ -1,0 +1,12 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/icsm>
+    a schema:Organization ;
+    schema:description """The Intergovernmental Committee on Surveying and Mapping (ICSM) was established by the Prime Minister, State Premiers, and the Chief Minister of the Northern Territory in 1988.&nbsp; Since that time the Australian Capital Territory and New Zealand have joined ICSM.&nbsp; The Australian Defence forces are also represented on ICSM.
+
+Membership is comprised of senior representatives of surveying and mapping agencies.""" ;
+    schema:isPartOf <https://linked.data.gov.au/org/au> ;
+    schema:name "Intergovernmental Committee on Surveying and Mapping" ;
+    schema:url "https://www.icsm.gov.au"^^xsd:anyURI ;
+.

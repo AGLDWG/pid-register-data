@@ -1,0 +1,11 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/agson>
+    a schema:Organization ;
+    schema:description """AGSON gives people and companies interested in exploring for minerals in Australia a single point of access for information about mineral resource exploration in all Australian jurisdictions, and to geological and geophysical data from all Australian governments.
+
+AGSON is the new name for AusGIN.""" ;
+    schema:name "Australian Geological Survey Organisations Network (AGSON)A" ;
+    schema:url "http://www.geoscience.gov.au"^^xsd:anyURI ;
+.

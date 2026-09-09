@@ -1,0 +1,20 @@
+PREFIX reg: <https://linked.data.gov.au/reg>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+reg:
+    a schema:DataCatalog ;
+    schema:codeRepository "https://github.com/AGLDWG/pid-register-data" ;
+    schema:creator <https://linked.data.gov.au/org/agldwg> ;
+    schema:dateCreated "2026"^^xsd:gYear ;
+    schema:dateModified "2026-09-07"^^xsd:date ;
+    schema:description "The top-level register of the linked.data.gov.au Linked Data system" ;
+    schema:hasPart
+        <https://linked.data.gov.au/reg/models> ,
+        <https://linked.data.gov.au/reg/orgs> ,
+        <https://linked.data.gov.au/reg/pids> ,
+        <https://linked.data.gov.au/reg/vals> ;
+    schema:name "linked.data.gov.au Top-Level Register" ;
+    schema:publisher <https://linked.data.gov.au/org/agldwg> ;
+    schema:version "1" ;
+.

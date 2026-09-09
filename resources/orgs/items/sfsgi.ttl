@@ -1,0 +1,15 @@
+PREFIX id: <http://id.loc.gov/vocabulary/identifiers/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/sfsgi>
+    a schema:Organization ;
+    schema:description """The Sydney Fungal Studies Group Incorporated (SFSGI) consists of mycological and other academics, students, and many other, non-academic but interested people of all age groups.
+
+The SFSGI aims to advance the study of fungi at all levels, particularly the larger fungi, to educate people at all stages of skill and knowledge in the science of mycology, and to interact with groups and societies having mycological or closely related interests.
+
+Membership is open to all, with the only requirements being that they are interested in contributing to the activities of the Group, subscribe to the aims of the Group, and that they respect the basic principles of nature conservation.""" ;
+    schema:identifier "76 384 308 862"^^id:ausbn ;
+    schema:name "Sydney Fungal Studies Group" ;
+    schema:url "https://www.sydneyfungalstudies.org.au"^^xsd:anyURI ;
+.

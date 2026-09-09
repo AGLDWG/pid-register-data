@@ -1,0 +1,11 @@
+PREFIX id: <http://id.loc.gov/vocabulary/identifiers/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/qvmag>
+    a schema:Organization ;
+    schema:description "The Queen Victoria Museum and Art Gallery (QVMAG) is the cultural hub of Launceston and the leading destination for art, history and natural sciences in Northern Tasmania. " ;
+    schema:identifier "73 149 070 625"^^id:ausbn ;
+    schema:name "Queen Victoria Museum and Art Gallery" ;
+    schema:url "https://www.qvmag.tas.gov.au"^^xsd:anyURI ;
+.

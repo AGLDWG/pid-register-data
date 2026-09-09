@@ -1,0 +1,9 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/ggic>
+    a schema:Organization ;
+    schema:description "The inter-governmental committee in ANZ tasked with improving geoscience information." ;
+    schema:name "Australia-New Zealand Government Geoscience Information Committee (GGIC)" ;
+    schema:url "https://www.geoscience.gov.au/about"^^xsd:anyURI ;
+.

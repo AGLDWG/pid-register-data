@@ -1,0 +1,12 @@
+PREFIX id: <http://id.loc.gov/vocabulary/identifiers/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/qld-tmr>
+    a schema:Organization ;
+    schema:description """The Department of Transport and Main Roads moves and connects people, places, goods and services safely, efficiently and effectively across Queensland.
+We plan, manage and deliver Queensland's integrated transport environment to achieve sustainable transport solutions for road, rail, air and sea.""" ;
+    schema:identifier "39 407 690 291"^^id:ausbn ;
+    schema:name "Qld Department of Transport and Main Roads" ;
+    schema:url "https://www.tmr.qld.gov.au"^^xsd:anyURI ;
+.

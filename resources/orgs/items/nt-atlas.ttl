@@ -1,0 +1,14 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/nt-atlas>
+    a schema:Organization ;
+    schema:alternateName
+        "NR Maps" ,
+        "NT Fauna Atlas" ,
+        "NT Flora Atlas" ;
+    schema:description "Provider of NR Maps (Natural Resource Maps). Custodian organisation for biodiversity data held by the Northern Territory Government" ;
+    schema:name "NT Atlas Team" ;
+    schema:parentOrganization <https://linked.data.gov.au/org/nt-dlpe> ;
+    schema:url "https://nrmaps.nt.gov.au/biodiversity.html"^^xsd:anyURI ;
+.

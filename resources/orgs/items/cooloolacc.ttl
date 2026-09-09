@@ -1,0 +1,11 @@
+PREFIX id: <http://id.loc.gov/vocabulary/identifiers/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/cooloolacc>
+    a schema:Organization ;
+    schema:description "Cooloola Coastcare Association is the Cooloola Coast's award winning Natural Resource Management group, registered with Queensland Water and Land Carers (QWALC) and supported by Gympie Regional Council through ratepayer's Environment Levy." ;
+    schema:identifier "41 112 645 288"^^id:ausbn ;
+    schema:name "Cooloola Coastcare" ;
+    schema:url "https://www.cooloolacoastcare.org.au"^^xsd:anyURI ;
+.

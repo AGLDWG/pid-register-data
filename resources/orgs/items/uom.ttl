@@ -1,0 +1,10 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/uom>
+    a schema:Organization ;
+    schema:description "The University of Melbourne is a public research university located in Melbourne, Australia. Founded in 1853, it is Australia's second oldest university and the oldest in Victoria. Its main campus is located in Parkville, an inner suburb north of Melbourne's central business district, with several other campuses located across Victoria." ;
+    schema:identifier "https://ror.org/01ej9dk98"^^<https://linked.data.gov.au/org/rorId> ;
+    schema:name "University of Melbourne" ;
+    schema:url "https://www.unimelb.edu.au"^^xsd:anyURI ;
+.

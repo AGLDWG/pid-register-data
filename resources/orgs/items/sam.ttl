@@ -1,0 +1,11 @@
+PREFIX id: <http://id.loc.gov/vocabulary/identifiers/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/sam>
+    a schema:Organization ;
+    schema:description "The South Australian Museum has been committed to making Australia’s natural and cultural heritage accessible, engaging and fun for over 165 years. It is a place where families can learn and grow together. Today the Museum is one of the most visited museums in Australia and holds collections of national and international significance. It is a leader in remote and regional community engagement, and in Australian Aboriginal heritage and scientific research." ;
+    schema:identifier "39 808 959 302"^^id:ausbn ;
+    schema:name "South Australian Museum" ;
+    schema:url "https://www.samuseum.sa.gov.au"^^xsd:anyURI ;
+.

@@ -1,0 +1,18 @@
+PREFIX pid: <https://linked.data.gov.au/def/pid/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/pid/def/gn-statuses>
+    a pid:Pid ;
+    pid:redirectRules """RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/def/gn-statuses($|/.*)$ "https://icsm.information.qld.gov.au/object?uri=https://linked.data.gov.au/def/gn-statuses$1&_mediatype=text/turtle" [R=302,L]
+RewriteRule ^/def/gn-statuses(.*).ttl$ "https://icsm.information.qld.gov.au/object?uri=https://linked.data.gov.au/def/gn-statuses$1&_mediatype=text/turtle" [R=302,L]
+RewriteRule ^/def/gn-statuses($|/.*)$ "https://icsm.information.qld.gov.au/object?uri=https://linked.data.gov.au/def/gn-statuses$1" [R=302,NE,L]"""^^pid:apacheRedirectRules ;
+    schema:creator <https://linked.data.gov.au/person/nicholas.car> ;
+    schema:dateCreated "2024-10-15"^^xsd:date ;
+    schema:dateModified "2026-09-07"^^xsd:date ;
+    schema:sponsor <https://linked.data.gov.au/org/icsm> ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/deprecated> ;
+    schema:url "https://linked.data.gov.au/def/gn-statuses"^^pid:agldwgPid ;
+.

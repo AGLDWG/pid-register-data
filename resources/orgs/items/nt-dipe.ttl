@@ -1,0 +1,9 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/nt-dipe>
+    a schema:Organization ;
+    schema:description "The Northern Territory Department of Infrastructure, Planning and Environment is now called the Department of Logistics and Infrastructure (DLI). It was previously named the Department of Infrastructure, Planning and Logistics (DIPL). The DLI was established in September 2024 by the Northern Territory Government. It focuses on infrastructure, logistics, and sustainable development across the Northern Territory." ;
+    schema:name "Northern Territory Department of Infrastructure, Planning and Environment" ;
+    schema:url "https://environment.nt.gov.au"^^xsd:anyURI ;
+.

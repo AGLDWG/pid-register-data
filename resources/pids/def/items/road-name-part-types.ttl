@@ -1,0 +1,33 @@
+PREFIX pid: <https://linked.data.gov.au/def/pid/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/pid/def/road-name-part-types>
+    a pid:Pid ;
+    pid:redirectRules """RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/def/road-name-part-types($|/.*)$ "https://icsm-api.qlocation.information.qld.gov.au/object?uri=https://linked.data.gov.au/def/road-name-part-types$1&_profile=prez:OGCItemProfile&_mediatype=text/turtle" [R=302,L]
+RewriteRule ^/def/road-name-part-types(.*).ttl$ "https://icsm-api.qlocation.information.qld.gov.au/object?uri=https://linked.data.gov.au/def/road-name-part-types$1&_profile=prez:OGCItemProfile&_mediatype=text/turtle" [R=302,L]
+RewriteRule ^/def/road-name-part-types($|/.*)$ "https://icsm.information.qld.gov.au/object?uri=https://linked.data.gov.au/def/road-name-part-types$1" [R=302,NE,L]"""^^pid:apacheRedirectRules ;
+    pid:redirectTest 
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/road-name-part-types" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://icsm-api.qlocation.information.qld.gov.au/object?uri=https://linked.data.gov.au/def/road-name-part-types&_profile=prez:OGCItemProfile&_mediatype=text/turtle" ;
+            schema:name "road-name-part-types RDF" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/road-name-part-types" ;
+            pid:headers "" ;
+            pid:to "https://icsm.information.qld.gov.au/object?uri=https://linked.data.gov.au/def/road-name-part-types" ;
+            schema:name "road-name-part-types HTML" ;
+        ] ;
+    schema:creator <https://linked.data.gov.au/person/anne.goldsack> ;
+    schema:dateCreated "2023-04-26"^^xsd:date ;
+    schema:dateModified "2026-09-07"^^xsd:date ;
+    schema:sponsor <https://linked.data.gov.au/org/icsm> ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/stable> ;
+    schema:url "https://linked.data.gov.au/def/road-name-part-types"^^pid:agldwgPid ;
+.

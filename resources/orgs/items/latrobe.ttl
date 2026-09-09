@@ -1,0 +1,11 @@
+PREFIX id: <http://id.loc.gov/vocabulary/identifiers/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/latrobe>
+    a schema:Organization ;
+    schema:description "La Trobe University is a public research university based in Melbourne" ;
+    schema:identifier "64 804 735 113"^^id:ausbn ;
+    schema:name "La Trobe University" ;
+    schema:url "https://www.latrobe.edu.au"^^xsd:anyURI ;
+.

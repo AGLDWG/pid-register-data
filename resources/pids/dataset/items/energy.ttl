@@ -1,0 +1,36 @@
+PREFIX pid: <https://linked.data.gov.au/def/pid/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/pid/dataset/energy>
+    a pid:Pid ;
+    pid:redirectRules """RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/dataset/energy$                           https://raw.githack.com/AGLDWG/energy-dataset/master/energy.ttl [R=302,L]
+RewriteRule ^/dataset/energy.ttl$		                https://raw.githack.com/AGLDWG/energy-dataset/master/energy.ttl [R=302,L]
+RewriteRule ^/dataset/energy$                           https://raw.githack.com/AGLDWG/energy-dataset/master/energy.html [R=302,L]
+RewriteRule ^/dataset/energy/$                          https://near.csiro.au/assets/ [R=302,L]
+RewriteRule ^/dataset/energy/(.*)$                      https://near.csiro.au/assets/$1 [R=302,L]"""^^pid:apacheRedirectRules ;
+    pid:redirectTest 
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/dataset/energy/14260415-31db-4abf-bfc9-b5d113367b61" ;
+            pid:headers "" ;
+            pid:to "https://near.csiro.au/assets/14260415-31db-4abf-bfc9-b5d113367b61" ;
+            schema:name "NEAR Dataset 367b61, HTML" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/dataset/energy/" ;
+            pid:headers "" ;
+            pid:to "https://near.csiro.au/assets/" ;
+            schema:name "NEAR Dataset Register, HTML" ;
+        ] ;
+    schema:creator <https://linked.data.gov.au/person/stephen.lindsay> ;
+    schema:dateCreated "2019-04-15"^^xsd:date ;
+    schema:dateModified "2026-09-07"^^xsd:date ;
+    schema:name "NEAR Catalogue" ;
+    schema:sponsor <https://linked.data.gov.au/org/csiro> ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/stable> ;
+    schema:url "https://linked.data.gov.au/dataset/energy"^^pid:agldwgPid ;
+.

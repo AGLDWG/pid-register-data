@@ -1,0 +1,15 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/handle>
+    a schema:Organization ;
+    schema:description """The Handle System is the Corporation for National Research Initiatives's proprietary registry assigning persistent identifiers, or handles, to information resources, and for resolving "those handles into the information necessary to locate, access, and otherwise make use of the resources".
+
+As with handles used elsewhere in computing, Handle System handles are opaque, and encode no information about the underlying resource, being bound only to metadata regarding the resource. Consequently, the handles are not rendered invalid by changes to the metadata.
+
+The system was developed by Bob Kahn at the Corporation for National Research Initiatives (CNRI). The original work was funded by the Defense Advanced Research Projects Agency (DARPA) between 1992 and 1996, as part of a wider framework for distributed digital object services,[2] and was thus contemporaneous with the early deployment of the World Wide Web, with similar goals.
+
+Thousands of handle services are currently running. Over 1000 of these are at universities and libraries, but they are also in operation at national laboratories, research groups, government agencies, and commercial enterprises, receiving over 200 million resolution requests per month.""" ;
+    schema:name "Handle Registry" ;
+    schema:url "http://handle.net"^^xsd:anyURI ;
+.

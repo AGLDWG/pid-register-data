@@ -1,0 +1,10 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/ogc>
+    a schema:Organization ;
+    schema:description "The Open Geospatial Consortium (OGC) is an international consortium of more than 530 businesses, government agencies, research organizations, and universities driven to make geospatial (location) information and services FAIR - Findable, Accessible, Interoperable, and Reusable.&nbsp;" ;
+    schema:identifier "https://ror.org/00fsdxs93"^^<https://linked.data.gov.au/org/rorId> ;
+    schema:name "Open Geospatial Consortium" ;
+    schema:url "https://www.opengeospatial.org"^^xsd:anyURI ;
+.

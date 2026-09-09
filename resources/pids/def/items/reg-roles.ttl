@@ -1,0 +1,46 @@
+PREFIX pid: <https://linked.data.gov.au/def/pid/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/pid/def/reg-roles>
+    a pid:Pid ;
+    pid:redirectRules """RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/def/reg-roles$                            https://agldwg.github.io/reg-roles/vocabulary.ttl? [R=302,L]
+RewriteRule ^/def/reg-roles.ttl$                        https://agldwg.github.io/reg-roles/vocabulary.ttl? [R=302,L]
+RewriteRule ^/def/reg-roles$                            https://agldwg.github.io/reg-roles/ [R=302,L]
+RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/def/reg-roles/(.+)$                       https://agldwg.github.io/reg-roles/$1.ttl? [R=302,L]
+RewriteRule ^/def/reg-roles/(.+).ttl$                   https://agldwg.github.io/reg-roles/$1.ttl? [R=302,L]
+RewriteRule ^/def/reg-roles/(.+)$                       https://agldwg.github.io/reg-roles/$1 [R=302,L]"""^^pid:apacheRedirectRules ;
+    pid:redirectTest 
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/reg-roles/control-body" ;
+            pid:headers "" ;
+            pid:to "https://agldwg.github.io/reg-roles/control-body" ;
+            schema:name "AGLDWG Registry Roles HTML - one Concept" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/reg-roles" ;
+            pid:headers "" ;
+            pid:to "https://agldwg.github.io/reg-roles/" ;
+            schema:name "AGLDWG Registry Roles Vocabulary HTML" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/reg-roles" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://agldwg.github.io/reg-roles/vocabulary.ttl" ;
+            schema:name "AGLDWG Registry Roles vocabulary RDF" ;
+        ] ;
+    schema:creator <https://linked.data.gov.au/person/nicholas.car> ;
+    schema:dateCreated "2021-11-09"^^xsd:date ;
+    schema:dateModified "2026-09-07"^^xsd:date ;
+    schema:name "Registry Roles Vocabulary" ;
+    schema:sponsor <https://linked.data.gov.au/org/agldwg> ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/stable> ;
+    schema:url "https://linked.data.gov.au/def/reg-roles"^^pid:agldwgPid ;
+.

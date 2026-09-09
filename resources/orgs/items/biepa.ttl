@@ -1,0 +1,15 @@
+PREFIX id: <http://id.loc.gov/vocabulary/identifiers/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/biepa>
+    a schema:Organization ;
+    schema:description """BIEPA's mission is to help life to flourish on our island sanctuary by:
+* protecting, maintaining, and restoring the native flora and fauna on and around the island;
+* monitoring and improving the natural environment, including the surrounding waters;
+* influencing urban development and promoting sustainable ecotourism; and
+* proactively engaging with the local community to grow our membership and raise funds and awareness.""" ;
+    schema:identifier "18 064 697 900"^^id:ausbn ;
+    schema:name "Bribie Island Environmental Protection Association Inc" ;
+    schema:url "https://www.biepa.online"^^xsd:anyURI ;
+.

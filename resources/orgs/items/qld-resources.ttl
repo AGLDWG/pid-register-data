@@ -1,0 +1,10 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/qld-resources>
+    a schema:Organization ;
+    schema:description "The Department of Resources support landholders, businesses and the community to capitalise on Queensland’s land, mineral, petroleum and gas resources for sustainable economic prosperity and just outcomes." ;
+    schema:isPartOf <https://linked.data.gov.au/org/qld> ;
+    schema:name "Queensland Department of Resources" ;
+    schema:url "https://www.resources.qld.gov.au"^^xsd:anyURI ;
+.

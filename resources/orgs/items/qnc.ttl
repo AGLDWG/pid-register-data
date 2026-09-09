@@ -1,0 +1,11 @@
+PREFIX id: <http://id.loc.gov/vocabulary/identifiers/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/qnc>
+    a schema:Organization ;
+    schema:description "The Queensland Naturalists’ Club Inc aims to study all branches of natural history, to encourage the preservation and protection of native flora and fauna and their environments. We also focus on publishing worthwhile observations on natural history and record club activities." ;
+    schema:identifier "22 586 275 203"^^id:ausbn ;
+    schema:name "Queensland-Naturalists-Club" ;
+    schema:url "https://www.qnc.org.au"^^xsd:anyURI ;
+.

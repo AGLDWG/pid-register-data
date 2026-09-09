@@ -1,0 +1,36 @@
+PREFIX pid: <https://linked.data.gov.au/def/pid/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/pid/def/project>
+    a pid:Pid ;
+    pid:redirectRules """RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/def/project(.*)$                          https://raw.githack.com/dr-shorthair/project-ont/gh-pages/rdf/project.ttl [R=303,L]
+RewriteRule ^/def/project(.*).ttl$                      https://raw.githack.com/dr-shorthair/project-ont/gh-pages/rdf/project.ttl [R=303,L]
+RewriteRule ^/def/project/?$                            https://dr-shorthair.github.io/project-ont/docs/ [R=302,L]
+RewriteMap tolower int:tolower
+RewriteRule ^/def/project(.*)$                          https://dr-shorthair.github.io/project-ont/docs/\\#${tolower:$1} [R=302,L,NE]"""^^pid:apacheRedirectRules ;
+    pid:redirectTest 
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/project" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://raw.githack.com/dr-shorthair/project-ont/gh-pages/rdf/project.ttl" ;
+            schema:name "project RDF (Turtle)" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/project" ;
+            pid:headers "" ;
+            pid:to "https://dr-shorthair.github.io/project-ont/docs/" ;
+            schema:name "project HTML" ;
+        ] ;
+    schema:creator <https://linked.data.gov.au/person/simon.cox> ;
+    schema:dateCreated "2020-04-25"^^xsd:date ;
+    schema:dateModified "2026-09-07"^^xsd:date ;
+    schema:name "Project ontology" ;
+    schema:sponsor <https://linked.data.gov.au/org/csiro> ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/stable> ;
+    schema:url "https://linked.data.gov.au/def/project"^^pid:agldwgPid ;
+.

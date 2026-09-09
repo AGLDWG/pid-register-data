@@ -1,0 +1,48 @@
+PREFIX pid: <https://linked.data.gov.au/def/pid/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/pid/def/fsdf>
+    a pid:Pid ;
+    pid:redirectRules """RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/def/fsdf$                                  https://raw.githack.com/GeoscienceAustralia/FSDF-KG/master/rdf/ontologies/fsdf.ttl [R=302,L,QSD]
+RewriteRule ^/def/fsdf.ttl$                              https://raw.githack.com/GeoscienceAustralia/FSDF-KG/master/rdf/ontologies/fsdf.ttl [R=302,L]
+RewriteRule ^/def/fsdf$                                  https://raw.githack.com/GeoscienceAustralia/FSDF-KG/master/docs/fsdf.html [R=302,L,NE]"""^^pid:apacheRedirectRules ;
+    pid:redirectTest 
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/fsdf" ;
+            pid:headers "" ;
+            pid:to "https://raw.githack.com/GeoscienceAustralia/FSDF-KG/master/docs/fsdf.html" ;
+            schema:name "FSDF Ontology, HTML" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/fsdf?_mediatype=text/turtle" ;
+            pid:headers "" ;
+            pid:to "https://raw.githack.com/GeoscienceAustralia/FSDF-KG/master/rdf/ontologies/fsdf.ttl" ;
+            schema:name "FSDF Ontology, RDF (turtle) via QSA" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/fsdf.ttl" ;
+            pid:headers "" ;
+            pid:to "https://raw.githack.com/GeoscienceAustralia/FSDF-KG/master/rdf/ontologies/fsdf.ttl" ;
+            schema:name "FSDF Ontology, RDF (turtle) via file ext." ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/fsdf" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://raw.githack.com/GeoscienceAustralia/FSDF-KG/master/rdf/ontologies/fsdf.ttl" ;
+            schema:name "FSDF Ontology, RDF (turtle) via conneg" ;
+        ] ;
+    schema:creator <https://linked.data.gov.au/person/irina.bastrakova> ;
+    schema:dateCreated "2019-04-15"^^xsd:date ;
+    schema:dateModified "2026-09-07"^^xsd:date ;
+    schema:name "Foundational Spatial Data Framework (FSDF) Ontology and Vocabularies" ;
+    schema:sponsor <https://linked.data.gov.au/org/icsm> ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/stable> ;
+    schema:url "https://linked.data.gov.au/def/fsdf"^^pid:agldwgPid ;
+.

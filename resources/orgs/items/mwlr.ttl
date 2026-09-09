@@ -1,0 +1,7 @@
+PREFIX schema: <https://schema.org/>
+
+<https://linked.data.gov.au/org/mwlr>
+    a schema:Organization ;
+    schema:description "Manaaki Whenua – Landcare Research is one of seven Crown Research Institutes (CRIs) formed in 1992. CRIs function as independent companies but are owned by, and accountable to, the New Zealand Government." ;
+    schema:name "Manaaki Whenua – Landcare Research" ;
+.

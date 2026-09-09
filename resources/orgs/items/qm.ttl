@@ -1,0 +1,11 @@
+PREFIX id: <http://id.loc.gov/vocabulary/identifiers/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/qm>
+    a schema:Organization ;
+    schema:description "Queensland Museum is the keeping place for the State Collection, a magnificent assemblage of 1.2 million cultural objects, natural history specimens and geological treasures and more than 14 million research items. Every year, we bring our collections to life through fieldwork, contemporary acquisitions, world-class research and a dynamic program of exhibitions, workshops, talks, lectures and major events including World Science Festival Brisbane." ;
+    schema:identifier "91 522 611 802"^^id:ausbn ;
+    schema:name "Queensland Museum" ;
+    schema:url "https://www.museum.qld.gov.au"^^xsd:anyURI ;
+.

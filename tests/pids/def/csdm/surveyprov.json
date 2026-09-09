@@ -1,8 +1,0 @@
-[
-    {
-        "label": "CSDM Survey Provenance HTML",
-        "from": "https://linked.data.gov.au/def/csdm/surveyprov",
-        "to": "https://icsm-au.github.io/3d-csdm/surveyprov.html",
-        "headers": {}
-    }
-]

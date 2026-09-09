@@ -1,0 +1,33 @@
+PREFIX pid: <https://linked.data.gov.au/def/pid/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/pid/def/georesource-report>
+    a pid:Pid ;
+    pid:redirectRules """RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/def/georesource-report($|/.*)$ "https://vocabs.gsq.digital/object?vocab_id=georesource-report&uri=http://linked.data.gov.au/def/georesource-report$1&_mediatype=text/turtle" [R=302,L]
+RewriteRule ^/def/georesource-report($|/.*)$ "https://vocabs.gsq.digital/object?vocab_id=georesource-report&uri=http://linked.data.gov.au/def/georesource-report$1" [R=302,NE,L]"""^^pid:apacheRedirectRules ;
+    pid:redirectTest 
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/georesource-report" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://vocabs.gsq.digital/object?vocab_id=georesource-report&uri=http://linked.data.gov.au/def/georesource-report&_mediatype=text/turtle" ;
+            schema:name "georesource-report RDF" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/georesource-report" ;
+            pid:headers "" ;
+            pid:to "https://vocabs.gsq.digital/object?vocab_id=georesource-report&uri=http://linked.data.gov.au/def/georesource-report" ;
+            schema:name "georesource-report HTML" ;
+        ] ;
+    schema:creator <https://linked.data.gov.au/person/david.crosswell> ;
+    schema:dateCreated "2019-04-26"^^xsd:date ;
+    schema:dateModified "2026-09-07"^^xsd:date ;
+    schema:name "Georesource Report Types" ;
+    schema:sponsor <https://linked.data.gov.au/org/gsq> ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/stable> ;
+    schema:url "https://linked.data.gov.au/def/georesource-report"^^pid:agldwgPid ;
+.

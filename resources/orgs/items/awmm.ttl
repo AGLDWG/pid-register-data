@@ -1,0 +1,9 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/awmm>
+    a schema:Organization ;
+    schema:description "The Museum is a war memorial for the province of Auckland and holds one of New Zealand's top three heritage libraries. It has pre-eminent Māori and Pacific collections" ;
+    schema:name "Auckland War Memorial Museum" ;
+    schema:url "https://www.aucklandmuseum.com"^^xsd:anyURI ;
+.

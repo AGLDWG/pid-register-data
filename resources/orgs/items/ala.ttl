@@ -1,0 +1,9 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/ala>
+    a schema:Organization ;
+    schema:description "The Atlas of Living Australia (ALA)&nbsp;is a collaborative, digital, open infrastructure that pulls together Australian biodiversity data from multiple sources, making it accessible and reusable." ;
+    schema:name "Atlas of Living Australia" ;
+    schema:url "https://ala.org.au"^^xsd:anyURI ;
+.

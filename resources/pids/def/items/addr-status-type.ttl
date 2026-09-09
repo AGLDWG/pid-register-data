@@ -1,0 +1,33 @@
+PREFIX pid: <https://linked.data.gov.au/def/pid/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/pid/def/addr-status-type>
+    a pid:Pid ;
+    pid:redirectRules """RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/def/addr-status-type($|/.*)$ "https://icsm-api.qlocation.information.qld.gov.au/object?uri=https://linked.data.gov.au/def/addr-status-type$1&_profile=prez:OGCItemProfile&_mediatype=text/turtle" [R=302,L]
+RewriteRule ^/def/addr-status-type(.*).ttl$ "https://icsm-api.qlocation.information.qld.gov.au/object?uri=https://linked.data.gov.au/def/addr-status-type$1&_profile=prez:OGCItemProfile&_mediatype=text/turtle" [R=302,L]
+RewriteRule ^/def/addr-status-type($|/.*)$ "https://icsm.information.qld.gov.au/object?uri=https://linked.data.gov.au/def/addr-status-type$1" [R=302,NE,L]"""^^pid:apacheRedirectRules ;
+    pid:redirectTest 
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/addr-status-type" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://icsm-api.qlocation.information.qld.gov.au/object?uri=https://linked.data.gov.au/def/addr-status-type&_profile=prez:OGCItemProfile&_mediatype=text/turtle" ;
+            schema:name "addr-status-type RDF" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/addr-status-type" ;
+            pid:headers "" ;
+            pid:to "https://icsm.information.qld.gov.au/object?uri=https://linked.data.gov.au/def/addr-status-type" ;
+            schema:name "addr-status-type HTML" ;
+        ] ;
+    schema:creator <https://linked.data.gov.au/person/anne.goldsack> ;
+    schema:dateCreated "2022-06-15"^^xsd:date ;
+    schema:dateModified "2026-09-07"^^xsd:date ;
+    schema:sponsor <https://linked.data.gov.au/org/icsm> ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/stable> ;
+    schema:url "https://linked.data.gov.au/def/addr-status-type"^^pid:agldwgPid ;
+.

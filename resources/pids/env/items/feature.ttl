@@ -1,0 +1,28 @@
+PREFIX lifecycle: <https://linked.data.gov.au/def/lifecycle/>
+PREFIX pid: <https://linked.data.gov.au/def/pid/>
+PREFIX schema: <https://schema.org/>
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+<http://environment.data.gov.au/pid/env/feature>
+    a pid:Pid ;
+    lifecycle:hasLifecycleStage
+        [
+            time:hasTime
+                [
+                    time:hasBeginning
+                        [
+                            time:inXSDDate "2022-11-12"^^xsd:date ;
+                        ] ;
+                ] ;
+            schema:additionalType <https://linked.data.gov.au/def/reg-statuses/retired> ;
+            schema:description "Retired with the decommissioning of CSIRO's Linked Data Register in 2022" ;
+        ] ;
+    schema:creator <https://linked.data.gov.au/person/simon.cox> ;
+    schema:dateCreated "2021-03-29"^^xsd:date ;
+    schema:dateModified "2026-09-07"^^xsd:date ;
+    schema:name "environmental features " ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/deprecated> ;
+    schema:url "https://environment.data.gov.au/def/feature"^^xsd:anyURI ;
+.

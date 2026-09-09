@@ -1,0 +1,10 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/apo>
+    a schema:Organization ;
+    schema:description "APO is an open access evidence platform – making public policy research and resources accessible and useable. As a unique public good with a trusted reputation, we champion open access and evidence-informed decision-making." ;
+    schema:member <https://linked.data.gov.au/person/cjorquera> ;
+    schema:name "Analysis & Policy Observatory" ;
+    schema:url "https://apo.org.au"^^xsd:anyURI ;
+.

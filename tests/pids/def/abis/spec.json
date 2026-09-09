@@ -1,8 +1,0 @@
-[
-    {
-        "label": "/def/abis/spec",
-        "from": "https://linked.data.gov.au/def/abis/spec",
-        "to": "https://ausbigg.github.io/abis/specification.html",
-        "headers": {}
-    }
-]

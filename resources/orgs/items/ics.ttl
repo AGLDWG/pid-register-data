@@ -1,0 +1,9 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/ics>
+    a schema:Organization ;
+    schema:description "The International Commission on Stratigraphy (ICS) is the largest and oldest constituent scientific body in the International Union of Geological Sciences (IUGS). Its primary objective is to define precisely global units (systems, series and stages) of the International Chronostratigraphic Chart that, in turn, are the basis for the units (periods, epochs and age) of the International Geological Time Scale; thus setting global standards for the fundamental scale for expressing the history of the Earth." ;
+    schema:name "International Commission on Stratigraphy" ;
+    schema:url "https://stratigraphy.org"^^xsd:anyURI ;
+.

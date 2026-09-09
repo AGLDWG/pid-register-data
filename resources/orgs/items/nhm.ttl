@@ -1,0 +1,13 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/nhm>
+    a schema:Organization ;
+    schema:description """The Natural History Museum is a world-class visitor attraction and leading science research centre.
+
+We use our unique collections and unrivalled expertise to tackle the biggest challenges facing the world today.
+
+We care for more than 80 million objects spanning billions of years and welcome more than five million visitors annually.""" ;
+    schema:name "Natural History Museum" ;
+    schema:url "https://www.nhm.ac.uk"^^xsd:anyURI ;
+.

@@ -1,0 +1,9 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/qld-derm>
+    a schema:Organization ;
+    schema:description "DERM was dissolved and transformed into the Department of Environment and Heritage Protection (EHP) in 2012" ;
+    schema:name "Qld Department of Environment and Resource Management" ;
+    schema:url "https://www.archivessearch.qld.gov.au/agencies/A11171"^^xsd:anyURI ;
+.

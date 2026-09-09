@@ -1,37 +1,49 @@
-# AGLDWG PID Register
+![](agldwg-logo-ochre-150.png)
 
-This repository contains the source data for the [Australian Government Linked Data Working Group](https://www.linked.data.gov.au) (AGLDWG)'s Persistent Identifier (PID) and Organisations catalogues. The register maintains PIDs within the `linked.data.gov.au` namespace.
+# AGLDWG PID Register - Data
 
-## PID Catalogue
+This repository contains the source data for the [Australian Government Linked Data Working Group](https://www.linked.data.gov.au) (AGLDWG)'s Persistent Identifier (PID) register. The register maintains PIDs within the `linked.data.gov.au` namespace.
 
-The AGLDWG created PIDs for three types of thing:
+## The Register(s)
+
+This Register has multiple sub-registers within it, for different classes of things:
+
+* PIDs
+  * `linked.data.gov.au/(dataset|def|org|pid)/`
+  * persistent identifiers
+* Organisations
+  * `linked.data.gov.au/org/`
+  * any organisation that submits PID requests to the AGLDWG
+  * e.g. the Department of Finance, [`https://linked.data.gov.au/org/finance`](https://linked.data.gov.au/org/finance)* 
+
+Within the PID register indicated above, there are several child registers containing specalised classes of PID:
 
 * Datasets
-    * Linked Data datasets online
+  * `linked.data.gov.au/dataset/`
+  * Linked Data datasets online
+  * e.g. [`https://linked.data.gov.au/dataset/bdr`](`https://linked.data.gov.au/dataset/bdr`)
 * Definitional Items
-    * Linked Data ontologies, vocabularies, profiles, etc.
-* Organisations
-    * for any organisation that submits PID requests to the AGLDWG
+  * `linked.data.gov.au/def/`
+  * Linked Data ontologies, vocabularies, profiles, etc.
+  * e.g. the [ICSM](https://linked.data.gov.au/org/icsm)'s national _Address Model_, [`https://linked.data.gov.au/def/addr`](https://linked.data.gov.au/def/addr)
+* Registered PIDs
+  * `linked.data.gov.au/pid/`
+  * persistent identifiers for the metadata of registered PIDs
+  * for example, the PID for the PID [`https://linked.data.gov.au/dataset/bdr`]([`https://linked.data.gov.au/dataset/bdr`](`https://linked.data.gov.au/dataset/bdr`) - the PID used to identify [DCCEEW](https://linked.data.gov.au/org/dcceew)'s [Biodiversity Data Repository](https://bdr.gov.au/)'s main dataset - is `https://linked.data.gov.au/pid/dataset/bdr`.
 
 ## Creating PIDs
 
-PIDs for all these items redirect to their human- and machine-readable home locations online which are provided by the PID registers, not the AGLDWG.
+PIDs for PID Registrations and Organisations redirect to AGLDWG-managed metadata in the AGLDWG's PID Register Knwoledge Graph. PIDs for Datasets and Definitional Items resolve to whatever resources PID registrants nominate. 
 
 The AGLDWG creates PIDs according to its [Guidelines](https://www.linked.data.gov.au/guidelines). PIDs, once approved, are automatically enabled through extraction of redirect information from this catalogue and automated deployment to the PID Proxy server at `linked.data.gov.au`.
 
-Please refer to the [AGLDWG website](https://www.linked.data.gov.au) for more details about who can and how to make PIDs.
-
-## Organisation Catalogue
-
-The Organisations catalogue maintains information about organisations and people beyond just PID information, such organisation relations and PID management details. 
-
-Organisations can be added to the catalogue by request - directly to the AGLDWG. All organisations involved with PIDs will also be added to the catalogue.
+Please refer to the -guidelines_ page linked to above for more details about who can and how to make PIDs.
 
 ## License
 
 All the content of this repository is licensed with the [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/) license with the following copyright notice:
 
-&copy; Commonwealth of Australia (Australian Government Linked Data Working Group), 2025
+&copy; Commonwealth of Australia (Australian Government Linked Data Working Group), 2026
 
 ## Contact
 
@@ -39,29 +51,4 @@ For all matters relating to this repository and the registry that it supports, p
 
 **Australian Government Linked Data Working Group**  
 <linkeddatairi@ardc.edu.au>  
-<https://www.linked.data.gov.au>  
-
-
-## Operating Instructions
-
-Many of the operational tasks required to maintain the PID Register are coded into Docker and Python scripts that can be run via the "Task" task runner / build tool.
-
-All the tasks available are listed in Taskfile.yml, e.g. `rdf2conf`, `aup` & `adown`.
-
-They are run simply by typing `task aup` etc. on the (Linux-like) command line.
-
-### Adding a new PID
-
-### Testing a new PID
-
-1. Run the RDF-to-conf script
-
-```bash
-task rdf2conf
-```
-
-2. Start the test server container
-
-```bash
-task aup
-```
+<https://www.linked.data.gov.au>

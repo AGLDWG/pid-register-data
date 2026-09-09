@@ -1,0 +1,8 @@
+PREFIX schema: <https://schema.org/>
+
+<https://linked.data.gov.au/org/bap>
+    a schema:Organization ;
+    schema:description "The Australian Government’s bioregional assessment programs provide transparent scientific information to better understand the potential impacts of unconventional gas and coal mining developments on water and the environment. There are two separate programs of bioregional assessments." ;
+    schema:isPartOf <https://linked.data.gov.au/org/dawr> ;
+    schema:name "Bioregional Assessment Programme" ;
+.

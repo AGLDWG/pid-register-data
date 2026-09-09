@@ -1,8 +1,0 @@
-[
-    {
-        "label": "CSDM Parcels HTML",
-        "from": "https://linked.data.gov.au/def/csdm/parcels",
-        "to": "https://icsm-au.github.io/3d-csdm/parcels.html",
-        "headers": {}
-    }
-]

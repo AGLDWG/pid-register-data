@@ -1,0 +1,9 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/mgrt>
+    a schema:Organization ;
+    schema:description "The Mahogany Glider Recovery Team (MGRT) provides advice and coordinates actions identified in the Mahogany Glider Recovery Plan. The MGRT includes representatives from Organizations with a direct interest in the recovery of the Mahogany Glider, including those involved in funding and those participating in actions that support the recovery of the species." ;
+    schema:name "Mahogany Glider Recovery Team" ;
+    schema:url "https://www.wettropicsplan.org.au/contacts-plan-partners/mahogany-glider-recovery-team"^^xsd:anyURI ;
+.

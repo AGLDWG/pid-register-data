@@ -1,0 +1,9 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/dew>
+    a schema:Organization ;
+    schema:description "The Department for Environment and Water (DEW) manages a complex portfolio of natural and built assets that are critical to the wellbeing and economic prosperity of all South Australians." ;
+    schema:name "South Australian Department for Environment and Water" ;
+    schema:url "https://www.sa.gov.au/topics/about-sa/government/departments/environment-and-water"^^xsd:anyURI ;
+.

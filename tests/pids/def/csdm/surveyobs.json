@@ -1,8 +1,0 @@
-[
-    {
-        "label": "CSDM Survey Observations HTML",
-        "from": "https://linked.data.gov.au/def/csdm/surveyobs",
-        "to": "https://icsm-au.github.io/3d-csdm/surveyobs.html",
-        "headers": {}
-    }
-]

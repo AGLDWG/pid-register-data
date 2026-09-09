@@ -1,0 +1,11 @@
+PREFIX id: <http://id.loc.gov/vocabulary/identifiers/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/gccc>
+    a schema:Organization ;
+    schema:description "The council of the Gold Coast" ;
+    schema:identifier "84 858 548 460"^^id:ausbn ;
+    schema:name "Gold Coast City Council" ;
+    schema:url "https://www.goldcoast.qld.gov.au"^^xsd:anyURI ;
+.

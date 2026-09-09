@@ -1,0 +1,11 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/scienceforwildlife>
+    a schema:Organization ;
+    schema:description """Science for Wildlife is a leading not-for-profit conservation Organization working to ensure a future for wildlife and the places they call home.
+
+Bringing the best available science to wildlife conservation in Australia and beyond, through the creation and sharing of ecological knowledge we empower people to participate in conservation that has an on-the-ground, enduring impact. Working with iconic and important species in key areas, our research and conservation work is designed to bring broader ecosystem benefits, maximising gains for many other animals and their habitats. We work beyond fences, at a landscape scale to bring real world solutions to conservation challenges. Our work is highly regarded by government and industry partners and informs conservation policy and action both nationally and globally.""" ;
+    schema:name "Science for Wildlife Ltd" ;
+    schema:url "https://www.scienceforwildlife.org"^^xsd:anyURI ;
+.

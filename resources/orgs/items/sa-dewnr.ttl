@@ -1,0 +1,11 @@
+PREFIX id: <http://id.loc.gov/vocabulary/identifiers/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/sa-dewnr>
+    a schema:Organization ;
+    schema:description "The South Australian Department for Environment, Water and Natural Resources (DEWNR) has changed its name. It is now the Department for Environment and Water (DEW). This name change occurred on March 22, 2018, according to State Records South Australia. The change was due to adjustments in ministerial portfolios and reporting lines. " ;
+    schema:identifier "36 702 093 234"^^id:ausbn ;
+    schema:name "SA Department for Environment, Water and Natural Resources" ;
+    schema:url "https://www.environment.sa.gov.au"^^xsd:anyURI ;
+.

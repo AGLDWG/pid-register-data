@@ -1,0 +1,19 @@
+PREFIX pid: <https://linked.data.gov.au/def/pid/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/pid/org/doi>
+    a pid:Pid ;
+    pid:redirectRules """RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/org/doi($|/.*)$ "https://demo.dev.kurrawong.ai/object?uri=https://linked.data.gov.au/org/doi$1&_mediatype=text/turtle" [R=302,L]
+RewriteRule ^/org/doi(.*).ttl$ "https://demo.dev.kurrawong.ai/object?uri=https://linked.data.gov.au/org/doi$1&_mediatype=text/turtle" [R=302,L]
+RewriteRule ^/org/doi($|/.*)$ "https://demo.dev.kurrawong.ai/object?uri=https://linked.data.gov.au/org/doi$1" [R=302,NE,L]"""^^pid:apacheRedirectRules ;
+    schema:creator <https://linked.data.gov.au/person/> ;
+    schema:dateCreated "2019-10-22"^^xsd:date ;
+    schema:dateModified "2026-09-07"^^xsd:date ;
+    schema:name "Digital Object Identifier System" ;
+    schema:sponsor <https://linked.data.gov.au/org/agldwg> ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/stable> ;
+    schema:url "https://linked.data.gov.au/org/doi"^^pid:agldwgPid ;
+.

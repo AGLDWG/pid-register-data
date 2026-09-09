@@ -1,0 +1,9 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/nsw-dpie>
+    a schema:Organization ;
+    schema:description "The New South Wales Department of Department of Planning, Industry and Environment (DPIE) was renamed to the Department of Planning and Environment (DPE) on 21 December 2021." ;
+    schema:name "New South Wales Dept of Planning Industry and Environment" ;
+    schema:url "https://www.dpie.nsw.gov.au"^^xsd:anyURI ;
+.

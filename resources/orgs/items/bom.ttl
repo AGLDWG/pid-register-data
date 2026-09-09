@@ -1,0 +1,10 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/bom>
+    a schema:Organization ;
+    schema:description "The Bureau of Meteorology is Australia's national weather, climate and water agency. Its expertise and services assist Australians in dealing with the harsh realities of their natural environment, including drought, floods, fires, storms, tsunami and tropical cyclones. Through regular forecasts, warnings, monitoring and advice spanning the Australian region and Antarctic territory, the Bureau provides one of the most fundamental and widely used services of government." ;
+    schema:identifier "O-000843"^^<https://linked.data.gov.au/org/agorId> ;
+    schema:name "Bureau of Meteorology" ;
+    schema:url "http://www.bom.gov.au"^^xsd:anyURI ;
+.

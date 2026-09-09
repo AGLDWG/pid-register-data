@@ -1,0 +1,42 @@
+PREFIX pid: <https://linked.data.gov.au/def/pid/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/pid/def/geox>
+    a pid:Pid ;
+    pid:redirectRules """RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/def/geox                                  https://csiro-enviro-informatics.github.io/geosparql-ext-ont/geox.ttl? [R=302,L]
+RewriteRule ^/def/geox(.*).ttl$                         https://csiro-enviro-informatics.github.io/geosparql-ext-ont/geox.ttl [R=302,L]
+RewriteCond %{QUERY_STRING} ^_mediatype=application/rdf\\+xml$ [OR]
+RewriteCond %{HTTP:Accept} application/rdf\\+xml [NC]
+RewriteRule ^/def/geox                                  https://csiro-enviro-informatics.github.io/geosparql-ext-ont/geox.rdf? [R=302,L]
+RewriteRule ^/def/geox(.*).rdf$                         https://csiro-enviro-informatics.github.io/geosparql-ext-ont/geox.rdf [R=302,L]
+RewriteCond %{QUERY_STRING} ^_mediatype=application/ld\\+json$ [OR]
+RewriteCond %{HTTP:Accept} application/ld\\+json [NC]
+RewriteRule ^/def/geox                                  https://csiro-enviro-informatics.github.io/geosparql-ext-ont/geox.jsonld? [R=302,L]
+RewriteRule ^/def/geox(.*).jsonld$                      https://csiro-enviro-informatics.github.io/geosparql-ext-ont/geox.jsonld [R=302,L]
+RewriteRule ^/def/geox(.*)$                             https://csiro-enviro-informatics.github.io/geosparql-ext-ont/geox.html$1 [R=302,L]"""^^pid:apacheRedirectRules ;
+    pid:redirectTest 
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/geox" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://csiro-enviro-informatics.github.io/geosparql-ext-ont/geox.ttl" ;
+            schema:name "geox RDF (Turtle)" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/geox" ;
+            pid:headers "" ;
+            pid:to "https://csiro-enviro-informatics.github.io/geosparql-ext-ont/geox.html" ;
+            schema:name "geox HTML" ;
+        ] ;
+    schema:creator <https://linked.data.gov.au/person/simon.cox> ;
+    schema:dateCreated "2019-10-01"^^xsd:date ;
+    schema:dateModified "2026-09-07"^^xsd:date ;
+    schema:name "GeoSPARQL extensions" ;
+    schema:sponsor <https://linked.data.gov.au/org/csiro> ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/stable> ;
+    schema:url "https://linked.data.gov.au/def/geox"^^pid:agldwgPid ;
+.

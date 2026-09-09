@@ -1,0 +1,91 @@
+PREFIX pid: <https://linked.data.gov.au/def/pid/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/pid/dataset/causalnetwork>
+    a pid:Pid ;
+    pid:redirectRules """RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{QUERY_STRING} ^_format=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/dataset/causalnetwork/id/(.*)$            https://causalnetworks.azurewebsites.net/causalnetwork/id/$1.ttl [R=302,QSA,L]
+RewriteRule ^/dataset/causalnetwork/id/(.*)$            https://causalnetworks.azurewebsites.net/causalnetwork/id/$1 [R=302,QSA,L]
+RewriteRule ^/dataset/causalnetwork($|/.*)$             https://causalnetworks.azurewebsites.net/causalnetwork$1 [R=302,QSA,L]
+RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/dataset/mb16mb11				  https://raw.githack.com/CSIRO-enviro-informatics/mb16mb11-linkset/master/header.ttl [L,R=302]
+RewriteRule ^/dataset/mb16mb11				  https://github.com/CSIRO-enviro-informatics/mb16mb11-linkset [L,R=302]
+RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/dataset/mb16cc				    https://raw.githack.com/CSIRO-enviro-informatics/mb16cc-linkset/master/header.ttl [L,R=302]
+RewriteRule ^/dataset/mb16cc				    https://github.com/CSIRO-enviro-informatics/mb16cc-linkset [L,R=302]
+RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/dataset/addr1605mb11			https://raw.githack.com/CSIRO-enviro-informatics/addr1605mb11-linkset/master/header.ttl [L,R=302]
+RewriteRule ^/dataset/addr1605mb11			https://github.com/CSIRO-enviro-informatics/addr1605mb11-linkset [L,R=302]
+RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/dataset/addr1605mb16			https://raw.githack.com/CSIRO-enviro-informatics/addr1605mb16-linkset/master/header.ttl [L,R=302]
+RewriteRule ^/dataset/addr1605mb16			https://github.com/CSIRO-enviro-informatics/addr1605mb16-linkset [L,R=302]
+RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/dataset/addrmb11				  https://raw.githack.com/CSIRO-enviro-informatics/addrmb11-linkset/master/header.ttl [L,R=302]
+RewriteRule ^/dataset/addrmb11				  https://github.com/CSIRO-enviro-informatics/addrmb11-linkset [L,R=302]
+RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/dataset/addrmb16				  https://raw.githack.com/CSIRO-enviro-informatics/addrmb16-linkset/master/header.ttl [L,R=302]
+RewriteRule ^/dataset/addrmb16				  https://github.com/CSIRO-enviro-informatics/addrmb16-linkset [L,R=302]
+RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/dataset/addrcatch				  https://raw.githack.com/CSIRO-enviro-informatics/addrcatch-linkset/master/header.ttl [L,R=302]
+RewriteRule ^/dataset/addrcatch				  https://github.com/CSIRO-enviro-informatics/addrcatch-linkset [L,R=302]"""^^pid:apacheRedirectRules ;
+    pid:redirectTest 
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/dataset/causalnetwork/id/node/0c219dcc-942c-461e-b186-41b1564235bc" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://causalnetworks.azurewebsites.net/causalnetwork/id/node/0c219dcc-942c-461e-b186-41b1564235bc.ttl" ;
+            schema:name "CSIRO Causal Network Node identifiers (TTL header)" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/dataset/causalnetwork/id/link/1aaf6dbd-560f-4d8b-b977-28d9f59d8f0a-08656602-04c2-4f64-919b-1c2135066e09" ;
+            pid:headers "" ;
+            pid:to "https://causalnetworks.azurewebsites.net/causalnetwork/id/link/1aaf6dbd-560f-4d8b-b977-28d9f59d8f0a-08656602-04c2-4f64-919b-1c2135066e09" ;
+            schema:name "CSIRO Causal Network Link identifiers (no header)" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/dataset/causalnetwork/id/network/beetaloo/v1" ;
+            pid:headers "" ;
+            pid:to "https://causalnetworks.azurewebsites.net/causalnetwork/id/network/beetaloo/v1" ;
+            schema:name "CSIRO Causal Network identifiers (no header)" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/dataset/causalnetwork/id/network/beetaloo/v1" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://causalnetworks.azurewebsites.net/causalnetwork/id/network/beetaloo/v1.ttl" ;
+            schema:name "CSIRO Causal Network identifiers (TTL header)" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/dataset/causalnetwork/id/node/0c219dcc-942c-461e-b186-41b1564235bc" ;
+            pid:headers "" ;
+            pid:to "https://causalnetworks.azurewebsites.net/causalnetwork/id/node/0c219dcc-942c-461e-b186-41b1564235bc" ;
+            schema:name "CSIRO Causal Network Node identifiers (no header)" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/dataset/causalnetwork/id/link/1aaf6dbd-560f-4d8b-b977-28d9f59d8f0a-08656602-04c2-4f64-919b-1c2135066e09" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://causalnetworks.azurewebsites.net/causalnetwork/id/link/1aaf6dbd-560f-4d8b-b977-28d9f59d8f0a-08656602-04c2-4f64-919b-1c2135066e09.ttl" ;
+            schema:name "CSIRO Causal Network Link identifiers (TTL header)" ;
+        ] ;
+    schema:creator <https://linked.data.gov.au/person/ashley.sommer> ;
+    schema:dateCreated "2024-02-16"^^xsd:date ;
+    schema:dateModified "2026-09-07"^^xsd:date ;
+    schema:name "CSIRO Causal Networks" ;
+    schema:sponsor <https://linked.data.gov.au/org/csiro> ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/stable> ;
+    schema:url "https://linked.data.gov.au/dataset/causalnetwork"^^pid:agldwgPid ;
+.

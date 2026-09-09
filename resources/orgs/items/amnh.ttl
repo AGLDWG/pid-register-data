@@ -1,0 +1,11 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/amnh>
+    a schema:Organization ;
+    schema:description """The American Museum of Natural History is one of the world’s preeminent scientific and cultural institutions.
+
+Since its founding in 1869, the Museum has advanced its global mission to discover, interpret, and disseminate information about human cultures, the natural world, and the universe through a wide-ranging program of scientific research, education, and exhibition.""" ;
+    schema:name "American Museum of Natural History" ;
+    schema:url "https://www.amnh.org"^^xsd:anyURI ;
+.

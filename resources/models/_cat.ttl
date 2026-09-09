@@ -1,0 +1,16 @@
+PREFIX reg: <https://linked.data.gov.au/reg/models>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+reg:
+    a schema:DataCatalog ;
+    schema:codeRepository "https://github.com/AGLDWG/pid-register-data" ;
+    schema:creator <https://linked.data.gov.au/org/agldwg> ;
+    schema:dateCreated "2018"^^xsd:gYear ;
+    schema:dateModified "2026-09-07"^^xsd:date ;
+    schema:description "The Australian Government Linked Data Working Group's register of models used within the register Knowledge Base" ;
+    schema:hasPart <https://linked.data.gov.au/def/pid> ;
+    schema:name "Models Register" ;
+    schema:publisher <https://linked.data.gov.au/org/agldwg> ;
+    schema:version "1" ;
+.

@@ -1,0 +1,13 @@
+PREFIX id: <http://id.loc.gov/vocabulary/identifiers/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/npansw>
+    a schema:Organization ;
+    schema:description """The National Parks Association of NSW (commonly known as NPA) is a member-based conservation Organization and registered charity. Our mission is protecting nature through community action.
+
+We are committed to protecting, conserving and restoring the integrity and diversity of nature, its biodiversity, geodiversity, supporting ecological processes and associated cultural values. We complement our conservation work by providing rewarding and enjoyable opportunities for people to experience, appreciate, study and care for nature.""" ;
+    schema:identifier "67 694 961 955"^^id:ausbn ;
+    schema:name "National Parks Association of NSW" ;
+    schema:url "https://npansw.org.au"^^xsd:anyURI ;
+.

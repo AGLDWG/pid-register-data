@@ -1,0 +1,11 @@
+PREFIX id: <http://id.loc.gov/vocabulary/identifiers/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/lcai>
+    a schema:Organization ;
+    schema:description "Organization found in ABR but not online" ;
+    schema:identifier "56 756 200 363"^^id:ausbn ;
+    schema:name "Lockyer Catchment Association Inc" ;
+    schema:url "https://abr.business.gov.au/ABN/View?abn=56756200363"^^xsd:anyURI ;
+.

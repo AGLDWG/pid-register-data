@@ -1,0 +1,278 @@
+PREFIX pid: <https://linked.data.gov.au/def/pid/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/pid/def/climate-glossary>
+    a pid:Pid ;
+    pid:redirectRules """RewriteRule ^/def/climate-glossary(|/.+)\\.ttl$		https://vocabs.ardc.edu.au/repository/api/lda/neii/climate-glossary/version-2-0-agldwg-pid/resource.ttl?uri=https://linked.data.gov.au/def/climate-glossary$1 [R=302,QSA,L]
+RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{QUERY_STRING} ^_format=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/def/climate-glossary/?(|/.+)$		https://vocabs.ardc.edu.au/repository/api/lda/neii/climate-glossary/version-2-0-agldwg-pid/resource.ttl?uri=https://linked.data.gov.au/def/climate-glossary$1 [R=302,QSA,L]
+RewriteRule ^/def/climate-glossary(|/.+)\\.rdf$		https://vocabs.ardc.edu.au/repository/api/lda/neii/climate-glossary/version-2-0-agldwg-pid/resource.rdf?uri=https://linked.data.gov.au/def/climate-glossary$1 [R=302,QSA,L]
+RewriteCond %{QUERY_STRING} ^_mediatype=application/rdf\\+xml$ [OR]
+RewriteCond %{QUERY_STRING} ^_format=application/rdf\\+xml$ [OR]
+RewriteCond %{HTTP:Accept} application/rdf\\+xml [NC]
+RewriteRule ^/def/climate-glossary/?(|/.+)$		https://vocabs.ardc.edu.au/repository/api/lda/neii/climate-glossary/version-2-0-agldwg-pid/resource.rdf?uri=https://linked.data.gov.au/def/climate-glossary$1 [R=302,QSA,L]
+RewriteRule ^/def/climate-glossary(|/.+)\\.xml$		https://vocabs.ardc.edu.au/repository/api/lda/neii/climate-glossary/version-2-0-agldwg-pid/resource.xml?uri=https://linked.data.gov.au/def/climate-glossary$1 [R=302,QSA,L]
+RewriteCond %{QUERY_STRING} ^_mediatype=text/html$ [OR]
+RewriteCond %{QUERY_STRING} ^_format=text/html$ [OR]
+RewriteCond %{HTTP:Accept} text/html [NC]
+RewriteRule ^/def/climate-glossary/?(|/.+)$		https://vocabs.ardc.edu.au/repository/api/lda/neii/climate-glossary/version-2-0-agldwg-pid/resource.html?uri=https://linked.data.gov.au/def/climate-glossary$1 [R=302,QSA,L]
+RewriteCond %{QUERY_STRING} ^_mediatype=application/xml$ [OR]
+RewriteCond %{QUERY_STRING} ^_format=application/xml$ [OR]
+RewriteCond %{HTTP:Accept} application/xml [NC]
+RewriteRule ^/def/climate-glossary/?(|/.+)$		https://vocabs.ardc.edu.au/repository/api/lda/neii/climate-glossary/version-2-0-agldwg-pid/resource.xml?uri=https://linked.data.gov.au/def/climate-glossary$1 [R=302,QSA,L]
+RewriteRule ^/def/climate-glossary(|/.+)\\.json$		https://vocabs.ardc.edu.au/repository/api/lda/neii/climate-glossary/version-2-0-agldwg-pid/resource.json?uri=https://linked.data.gov.au/def/climate-glossary$1 [R=302,QSA,L]
+RewriteCond %{QUERY_STRING} ^_mediatype=application/json$ [OR]
+RewriteCond %{QUERY_STRING} ^_format=application/json$ [OR]
+RewriteCond %{HTTP:Accept} application/json [NC]
+RewriteRule ^/def/climate-glossary/?(|/.+)$		https://vocabs.ardc.edu.au/repository/api/lda/neii/climate-glossary/version-2-0-agldwg-pid/resource.json?uri=https://linked.data.gov.au/def/climate-glossary$1 [R=302,QSA,L]
+RewriteRule ^/def/climate-glossary(|/.+)\\.text$		https://vocabs.ardc.edu.au/repository/api/lda/neii/climate-glossary/version-2-0-agldwg-pid/resource.text?uri=https://linked.data.gov.au/def/climate-glossary$1 [R=302,QSA,L]
+RewriteRule ^/def/climate-glossary(|/.+)\\.txt$		https://vocabs.ardc.edu.au/repository/api/lda/neii/climate-glossary/version-2-0-agldwg-pid/resource.text?uri=https://linked.data.gov.au/def/climate-glossary$1 [R=302,QSA,L]
+RewriteCond %{QUERY_STRING} ^_mediatype=text/plain$ [OR]
+RewriteCond %{QUERY_STRING} ^_format=text/plain$ [OR]
+RewriteCond %{HTTP:Accept} text/plain [NC]
+RewriteRule ^/def/climate-glossary/?(|/.+)$		https://vocabs.ardc.edu.au/repository/api/lda/neii/climate-glossary/version-2-0-agldwg-pid/resource.text?uri=https://linked.data.gov.au/def/climate-glossary$1 [R=302,QSA,L]
+RewriteRule ^/def/climate-glossary(|/.+)\\.html$		https://vocabs.ardc.edu.au/repository/api/lda/neii/climate-glossary/version-2-0-agldwg-pid/resource.html?uri=https://linked.data.gov.au/def/climate-glossary$1 [R=302,QSA,L]
+RewriteRule ^/def/climate-glossary/?(|/.+)$		https://vocabs.ardc.edu.au/repository/api/lda/neii/climate-glossary/version-2-0-agldwg-pid/resource?uri=https://linked.data.gov.au/def/climate-glossary$1 [R=302,QSA,L]"""^^pid:apacheRedirectRules ;
+    pid:redirectTest 
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/climate-glossary" ;
+            pid:headers "'Accept': 'text/plain'" ;
+            pid:to "https://vocabs.ardc.edu.au/repository/api/lda/neii/climate-glossary/version-2-0-agldwg-pid/resource.text?uri=https://linked.data.gov.au/def/climate-glossary" ;
+            schema:name "NEII vocabulary climate-glossary, Plain Text headers, no ext, no slash" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/climate-glossary/Anomaly" ;
+            pid:headers "'Accept': 'application/xml'" ;
+            pid:to "https://vocabs.ardc.edu.au/repository/api/lda/neii/climate-glossary/version-2-0-agldwg-pid/resource.xml?uri=https://linked.data.gov.au/def/climate-glossary/Anomaly" ;
+            schema:name "NEII vocabulary climate-glossary concept entry, XML headers, no ext" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/climate-glossary/Anomaly" ;
+            pid:headers "'Accept': 'text/html'" ;
+            pid:to "https://vocabs.ardc.edu.au/repository/api/lda/neii/climate-glossary/version-2-0-agldwg-pid/resource.html?uri=https://linked.data.gov.au/def/climate-glossary/Anomaly" ;
+            schema:name "NEII vocabulary climate-glossary concept entry, HTML headers, no ext" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/climate-glossary/Anomaly.rdf" ;
+            pid:headers "" ;
+            pid:to "https://vocabs.ardc.edu.au/repository/api/lda/neii/climate-glossary/version-2-0-agldwg-pid/resource.rdf?uri=https://linked.data.gov.au/def/climate-glossary/Anomaly" ;
+            schema:name "NEII vocabulary climate-glossary concept entry, no headers, RDF ext" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/climate-glossary.rdf" ;
+            pid:headers "" ;
+            pid:to "https://vocabs.ardc.edu.au/repository/api/lda/neii/climate-glossary/version-2-0-agldwg-pid/resource.rdf?uri=https://linked.data.gov.au/def/climate-glossary" ;
+            schema:name "NEII vocabulary climate-glossary, no headers, RDF ext" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/climate-glossary.json" ;
+            pid:headers "" ;
+            pid:to "https://vocabs.ardc.edu.au/repository/api/lda/neii/climate-glossary/version-2-0-agldwg-pid/resource.json?uri=https://linked.data.gov.au/def/climate-glossary" ;
+            schema:name "NEII vocabulary climate-glossary, no headers, JSON ext" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/climate-glossary.ttl" ;
+            pid:headers "" ;
+            pid:to "https://vocabs.ardc.edu.au/repository/api/lda/neii/climate-glossary/version-2-0-agldwg-pid/resource.ttl?uri=https://linked.data.gov.au/def/climate-glossary" ;
+            schema:name "NEII vocabulary climate-glossary, no headers, Turtle ext" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/climate-glossary/Anomaly" ;
+            pid:headers "'Accept': 'text/plain'" ;
+            pid:to "https://vocabs.ardc.edu.au/repository/api/lda/neii/climate-glossary/version-2-0-agldwg-pid/resource.text?uri=https://linked.data.gov.au/def/climate-glossary/Anomaly" ;
+            schema:name "NEII vocabulary climate-glossary concept entry, Plain Text headers, no ext" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/climate-glossary/Anomaly" ;
+            pid:headers "'Accept': 'application/json'" ;
+            pid:to "https://vocabs.ardc.edu.au/repository/api/lda/neii/climate-glossary/version-2-0-agldwg-pid/resource.json?uri=https://linked.data.gov.au/def/climate-glossary/Anomaly" ;
+            schema:name "NEII vocabulary climate-glossary concept entry, JSON headers, no ext" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/climate-glossary/" ;
+            pid:headers "'Accept': 'text/plain'" ;
+            pid:to "https://vocabs.ardc.edu.au/repository/api/lda/neii/climate-glossary/version-2-0-agldwg-pid/resource.text?uri=https://linked.data.gov.au/def/climate-glossary" ;
+            schema:name "NEII vocabulary climate-glossary, Plain Text headers, no ext, remove final slash" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/climate-glossary/Anomaly.json" ;
+            pid:headers "" ;
+            pid:to "https://vocabs.ardc.edu.au/repository/api/lda/neii/climate-glossary/version-2-0-agldwg-pid/resource.json?uri=https://linked.data.gov.au/def/climate-glossary/Anomaly" ;
+            schema:name "NEII vocabulary climate-glossary concept entry, no headers, JSON ext" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/climate-glossary.xml" ;
+            pid:headers "" ;
+            pid:to "https://vocabs.ardc.edu.au/repository/api/lda/neii/climate-glossary/version-2-0-agldwg-pid/resource.xml?uri=https://linked.data.gov.au/def/climate-glossary" ;
+            schema:name "NEII vocabulary climate-glossary, no headers, XML ext" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/climate-glossary.html" ;
+            pid:headers "" ;
+            pid:to "https://vocabs.ardc.edu.au/repository/api/lda/neii/climate-glossary/version-2-0-agldwg-pid/resource.html?uri=https://linked.data.gov.au/def/climate-glossary" ;
+            schema:name "NEII vocabulary climate-glossary, no headers, HTML ext" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/climate-glossary/" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://vocabs.ardc.edu.au/repository/api/lda/neii/climate-glossary/version-2-0-agldwg-pid/resource.ttl?uri=https://linked.data.gov.au/def/climate-glossary" ;
+            schema:name "NEII vocabulary climate-glossary, Turtle headers, no ext, remove final slash" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/climate-glossary/" ;
+            pid:headers "'Accept': 'application/json'" ;
+            pid:to "https://vocabs.ardc.edu.au/repository/api/lda/neii/climate-glossary/version-2-0-agldwg-pid/resource.json?uri=https://linked.data.gov.au/def/climate-glossary" ;
+            schema:name "NEII vocabulary climate-glossary, JSON headers, no ext, remove final slash" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/climate-glossary/" ;
+            pid:headers "'Accept': 'text/html'" ;
+            pid:to "https://vocabs.ardc.edu.au/repository/api/lda/neii/climate-glossary/version-2-0-agldwg-pid/resource.html?uri=https://linked.data.gov.au/def/climate-glossary" ;
+            schema:name "NEII vocabulary climate-glossary, HTML headers, no ext, remove final slash" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/climate-glossary" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://vocabs.ardc.edu.au/repository/api/lda/neii/climate-glossary/version-2-0-agldwg-pid/resource.ttl?uri=https://linked.data.gov.au/def/climate-glossary" ;
+            schema:name "NEII vocabulary climate-glossary, Turtle headers, no ext, no slash" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/climate-glossary" ;
+            pid:headers "'Accept': 'text/html'" ;
+            pid:to "https://vocabs.ardc.edu.au/repository/api/lda/neii/climate-glossary/version-2-0-agldwg-pid/resource.html?uri=https://linked.data.gov.au/def/climate-glossary" ;
+            schema:name "NEII vocabulary climate-glossary, HTML headers, no ext, no slash" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/climate-glossary/Anomaly" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://vocabs.ardc.edu.au/repository/api/lda/neii/climate-glossary/version-2-0-agldwg-pid/resource.ttl?uri=https://linked.data.gov.au/def/climate-glossary/Anomaly" ;
+            schema:name "NEII vocabulary climate-glossary concept entry, Turtle headers, no ext" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/climate-glossary/Anomaly.html" ;
+            pid:headers "" ;
+            pid:to "https://vocabs.ardc.edu.au/repository/api/lda/neii/climate-glossary/version-2-0-agldwg-pid/resource.html?uri=https://linked.data.gov.au/def/climate-glossary/Anomaly" ;
+            schema:name "NEII vocabulary climate-glossary concept entry, no headers, HTML ext" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/climate-glossary/Anomaly.text" ;
+            pid:headers "" ;
+            pid:to "https://vocabs.ardc.edu.au/repository/api/lda/neii/climate-glossary/version-2-0-agldwg-pid/resource.text?uri=https://linked.data.gov.au/def/climate-glossary/Anomaly" ;
+            schema:name "NEII vocabulary climate-glossary concept entry, no headers, Plain Text ext" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/climate-glossary/Anomaly.xml" ;
+            pid:headers "" ;
+            pid:to "https://vocabs.ardc.edu.au/repository/api/lda/neii/climate-glossary/version-2-0-agldwg-pid/resource.xml?uri=https://linked.data.gov.au/def/climate-glossary/Anomaly" ;
+            schema:name "NEII vocabulary climate-glossary concept entry, no headers, XML ext" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/climate-glossary" ;
+            pid:headers "'Accept': 'application/rdf+xml'" ;
+            pid:to "https://vocabs.ardc.edu.au/repository/api/lda/neii/climate-glossary/version-2-0-agldwg-pid/resource.rdf?uri=https://linked.data.gov.au/def/climate-glossary" ;
+            schema:name "NEII vocabulary climate-glossary, RDF headers, no ext, no slash" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/climate-glossary/Anomaly" ;
+            pid:headers "'Accept': 'application/rdf+xml'" ;
+            pid:to "https://vocabs.ardc.edu.au/repository/api/lda/neii/climate-glossary/version-2-0-agldwg-pid/resource.rdf?uri=https://linked.data.gov.au/def/climate-glossary/Anomaly" ;
+            schema:name "NEII vocabulary climate-glossary concept entry, RDF headers, no ext" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/climate-glossary/" ;
+            pid:headers "'Accept': 'application/rdf+xml'" ;
+            pid:to "https://vocabs.ardc.edu.au/repository/api/lda/neii/climate-glossary/version-2-0-agldwg-pid/resource.rdf?uri=https://linked.data.gov.au/def/climate-glossary" ;
+            schema:name "NEII vocabulary climate-glossary, RDF headers, no ext, remove final slash" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/climate-glossary/" ;
+            pid:headers "'Accept': 'application/xml'" ;
+            pid:to "https://vocabs.ardc.edu.au/repository/api/lda/neii/climate-glossary/version-2-0-agldwg-pid/resource.xml?uri=https://linked.data.gov.au/def/climate-glossary" ;
+            schema:name "NEII vocabulary climate-glossary, XML headers, no ext, remove final slash" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/climate-glossary/" ;
+            pid:headers "" ;
+            pid:to "https://vocabs.ardc.edu.au/repository/api/lda/neii/climate-glossary/version-2-0-agldwg-pid/resource?uri=https://linked.data.gov.au/def/climate-glossary" ;
+            schema:name "NEII vocabulary climate-glossary, no headers, no ext, remove final slash" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/climate-glossary" ;
+            pid:headers "" ;
+            pid:to "https://vocabs.ardc.edu.au/repository/api/lda/neii/climate-glossary/version-2-0-agldwg-pid/resource?uri=https://linked.data.gov.au/def/climate-glossary" ;
+            schema:name "NEII vocabulary climate-glossary, no headers, no ext, no slash" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/climate-glossary/Anomaly" ;
+            pid:headers "" ;
+            pid:to "https://vocabs.ardc.edu.au/repository/api/lda/neii/climate-glossary/version-2-0-agldwg-pid/resource?uri=https://linked.data.gov.au/def/climate-glossary/Anomaly" ;
+            schema:name "NEII vocabulary climate-glossary concept entry, no headers, no ext" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/climate-glossary" ;
+            pid:headers "'Accept': 'application/xml'" ;
+            pid:to "https://vocabs.ardc.edu.au/repository/api/lda/neii/climate-glossary/version-2-0-agldwg-pid/resource.xml?uri=https://linked.data.gov.au/def/climate-glossary" ;
+            schema:name "NEII vocabulary climate-glossary, XML headers, no ext, no slash" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/climate-glossary.text" ;
+            pid:headers "" ;
+            pid:to "https://vocabs.ardc.edu.au/repository/api/lda/neii/climate-glossary/version-2-0-agldwg-pid/resource.text?uri=https://linked.data.gov.au/def/climate-glossary" ;
+            schema:name "NEII vocabulary climate-glossary, no headers, Plain Text ext" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/climate-glossary/Anomaly.ttl" ;
+            pid:headers "" ;
+            pid:to "https://vocabs.ardc.edu.au/repository/api/lda/neii/climate-glossary/version-2-0-agldwg-pid/resource.ttl?uri=https://linked.data.gov.au/def/climate-glossary/Anomaly" ;
+            schema:name "NEII vocabulary climate-glossary concept entry, no headers, Turtle ext" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/climate-glossary" ;
+            pid:headers "'Accept': 'application/json'" ;
+            pid:to "https://vocabs.ardc.edu.au/repository/api/lda/neii/climate-glossary/version-2-0-agldwg-pid/resource.json?uri=https://linked.data.gov.au/def/climate-glossary" ;
+            schema:name "NEII vocabulary climate-glossary, JSON headers, no ext, no slash" ;
+        ] ;
+    schema:creator <https://linked.data.gov.au/person/ashley.sommer> ;
+    schema:dateCreated "2024-04-18"^^xsd:date ;
+    schema:dateModified "2026-09-07"^^xsd:date ;
+    schema:name "Climate Glossary" ;
+    schema:sponsor <https://linked.data.gov.au/org/neii> ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/stable> ;
+    schema:url "https://linked.data.gov.au/def/climate-glossary"^^pid:agldwgPid ;
+.

@@ -1,0 +1,10 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/qld>
+    a schema:Organization ;
+    schema:description "Queensland is a state situated in northeastern Australia, and is the second-largest and third-most populous of the Australian states. It is bordered by the Northern Territory, South Australia and New South Wales to the west, southwest and south respectively. To the east, Queensland is bordered by the Coral Sea and the Pacific Ocean; to its north is the Torres Strait, separating the Australian mainland from Papua New Guinea." ;
+    schema:isPartOf <https://linked.data.gov.au/org/au> ;
+    schema:name "Queensland Government" ;
+    schema:url "https://www.qld.gov.au"^^xsd:anyURI ;
+.

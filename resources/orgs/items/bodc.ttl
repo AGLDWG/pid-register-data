@@ -1,0 +1,12 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/bodc>
+    a schema:Organization ;
+    schema:description """The BODC's mission is to 'operate as a world-class data centre in support of UK marine science'.
+
+The BODC is an independent self-governing organisation.""" ;
+    schema:identifier "https://ror.org/03102fn17"^^<https://linked.data.gov.au/org/rorId> ;
+    schema:name "British Oceanographic Data Centre" ;
+    schema:url "https://www.bodc.ac.uk"^^xsd:anyURI ;
+.

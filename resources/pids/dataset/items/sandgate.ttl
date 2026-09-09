@@ -1,0 +1,47 @@
+PREFIX pid: <https://linked.data.gov.au/def/pid/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/pid/dataset/sandgate>
+    a pid:Pid ;
+    pid:redirectRules """RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/dataset/sandgate$                         https://linked.fsdf.org.au/dataset/sandgate?_profile=dcat&_mediatype=text/turtle [R=302,L]
+RewriteRule ^/dataset/sandgate.ttl$                     https://linked.fsdf.org.au/dataset/sandgate?_profile=dcat&_mediatype=text/turtle [R=302,L]
+RewriteRule ^/dataset/sandgate$                         https://linked.fsdf.org.au/dataset/sandgate [R=302,L]
+
+RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/dataset/sandgate/(catchments|facilities|floods|roads)$           https://linked.fsdf.org.au/dataset/sandgate/collections/$1?_profile=geo&_mediatype=text/turtle [R=302,L]
+RewriteRule ^/dataset/sandgate/(catchments|facilities|floods|roads).ttl$       https://linked.fsdf.org.au/dataset/sandgate/collections/$1?_profile=geo&_mediatype=text/turtle [R=302,L]
+RewriteRule ^/dataset/sandgate/(catchments|facilities|floods|roads)$           https://linked.fsdf.org.au/dataset/sandgate/collections/$1 [R=302,L]
+
+RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/dataset/sandgate/(catchments|facilities|floods|roads)/(.*)$                    https://linked.fsdf.org.au/dataset/sandgate/collections/$1/items/$2?_profile=geo&mediatype=text/turtle [R=302,L]
+RewriteRule ^/dataset/sandgate/(catchments|facilities|floods|roads)/(.*).ttl$                https://linked.fsdf.org.au/dataset/sandgate/collections/$1/items/$2?_profile=geo&mediatype=text/turtle [R=302,L]
+RewriteRule ^/dataset/sandgate/(catchments|facilities|floods|roads)/(.*)$                    https://linked.fsdf.org.au/dataset/sandgate/collections/$1/items/$2 [R=302,L]"""^^pid:apacheRedirectRules ;
+    pid:redirectTest 
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/dataset/sandgate" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://linked.fsdf.org.au/dataset/sandgate?_profile=dcat&_mediatype=text/turtle" ;
+            schema:name "sandgate RDF (Turtle)" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/dataset/sandgate" ;
+            pid:headers "" ;
+            pid:to "https://linked.fsdf.org.au/dataset/sandgate" ;
+            schema:name "sandgate HTML" ;
+        ] ;
+    schema:creator <https://linked.data.gov.au/person/nicholas.car> ;
+    schema:dateCreated "2022"^^xsd:gYear ;
+    schema:dateIssued "2022"^^xsd:gYear ;
+    schema:dateModified "2026-09-07"^^xsd:date ;
+    schema:name "Sandgate Demonstration Spatial Dataset" ;
+    schema:sponsor <https://linked.data.gov.au/org/ga> ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/stable> ;
+    schema:url "https://linked.data.gov.au/dataset/sandgate"^^pid:agldwgPid ;
+.

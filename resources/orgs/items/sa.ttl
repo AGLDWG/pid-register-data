@@ -1,0 +1,9 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/sa>
+    a schema:Organization ;
+    schema:description "Formerly Department of Human Services" ;
+    schema:name "Services Australia" ;
+    schema:url "https://www.servicesaustralia.gov.au"^^xsd:anyURI ;
+.

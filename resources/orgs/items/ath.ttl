@@ -1,0 +1,9 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/ath>
+    a schema:Organization ;
+    schema:description "As Australia’s only university established to focus on the issues of Northern Australia and the Tropics worldwide" ;
+    schema:name "Australian Tropical Herbarium" ;
+    schema:url "https://www.ath.org.au"^^xsd:anyURI ;
+.

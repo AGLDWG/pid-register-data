@@ -1,0 +1,34 @@
+PREFIX pid: <https://linked.data.gov.au/def/pid/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/pid/def/lithotype>
+    a pid:Pid ;
+    pid:redirectRules """RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/def/lithotype($|/.*)$ "https://vocabs.gsq.digital/object?uri=http://linked.data.gov.au/def/lithotype$1&_mediatype=text/turtle" [R=302,L]
+RewriteRule ^/def/lithotype(.*).ttl$ "https://vocabs.gsq.digital/object?uri=http://linked.data.gov.au/def/lithotype$1&_mediatype=text/turtle" [R=302,L]
+RewriteRule ^/def/lithotype($|/.*)$ "https://vocabs.gsq.digital/object?uri=http://linked.data.gov.au/def/lithotype$1" [R=302,NE,L]"""^^pid:apacheRedirectRules ;
+    pid:redirectTest 
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/lithotype" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://vocabs.gsq.digital/object?uri=http://linked.data.gov.au/def/lithotype&_mediatype=text/turtle" ;
+            schema:name "lithotype RDF" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/lithotype" ;
+            pid:headers "" ;
+            pid:to "https://vocabs.gsq.digital/object?uri=http://linked.data.gov.au/def/lithotype" ;
+            schema:name "lithotype HTML" ;
+        ] ;
+    schema:creator <https://linked.data.gov.au/person/Steven.Bowden> ;
+    schema:dateCreated "2023-04-13"^^xsd:date ;
+    schema:dateModified "2026-09-07"^^xsd:date ;
+    schema:name "Lithological Type" ;
+    schema:sponsor <https://linked.data.gov.au/org/gsq> ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/stable> ;
+    schema:url "https://linked.data.gov.au/def/lithotype"^^pid:agldwgPid ;
+.

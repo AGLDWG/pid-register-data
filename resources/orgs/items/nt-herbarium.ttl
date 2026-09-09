@@ -1,0 +1,11 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/nt-herbarium>
+    a schema:Organization ;
+    schema:description """A herbarium is a 'museum or library of plant specimens'. They are part of an international network dedicated to the study and identification of plants.
+
+The NT Herbarium has a collection of 270,000 preserved plant specimens kept for reference and research.""" ;
+    schema:name "Norther Territory Herbarium" ;
+    schema:url "https://nt.gov.au/environment/native-plants/native-plants-and-nt-herbarium"^^xsd:anyURI ;
+.

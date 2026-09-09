@@ -1,0 +1,11 @@
+PREFIX id: <http://id.loc.gov/vocabulary/identifiers/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/jcu>
+    a schema:Organization ;
+    schema:description "James Cook University (JCU) is a public university in North Queensland, Australia. The second oldest university in Queensland, JCU is a teaching and research institution. The university's main campuses are located in the tropical cities of Cairns and Townsville, and one in the city state of Singapore. JCU also has study centres in Mount Isa, Mackay, Thursday Island and Rockhampton." ;
+    schema:identifier "46 253 211 955"^^id:ausbn ;
+    schema:name "James Cook University" ;
+    schema:url "https://www.jcu.edu.au"^^xsd:anyURI ;
+.

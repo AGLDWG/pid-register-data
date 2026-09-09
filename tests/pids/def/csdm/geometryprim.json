@@ -1,8 +1,0 @@
-[
-    {
-        "label": "CSDM Geometry Primitive HTML",
-        "from": "https://linked.data.gov.au/def/csdm/geometryprim",
-        "to": "https://icsm-au.github.io/3d-csdm/geometryprim.html",
-        "headers": {}
-    }
-]

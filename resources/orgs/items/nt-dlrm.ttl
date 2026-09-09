@@ -1,0 +1,9 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/nt-dlrm>
+    a schema:Organization ;
+    schema:description "The Department has been superseded by the Department of Lands" ;
+    schema:name "NT Department of Land Resource Management" ;
+    schema:url "https://environment.nt.gov.au"^^xsd:anyURI ;
+.

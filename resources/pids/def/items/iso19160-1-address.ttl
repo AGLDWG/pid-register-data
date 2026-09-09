@@ -1,0 +1,56 @@
+PREFIX pid: <https://linked.data.gov.au/def/pid/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/pid/def/iso19160-1-address>
+    a pid:Pid ;
+    pid:redirectRules """RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/def/iso19160-1-address(?:$|#(.*)$)          https://raw.githack.com/AGLDWG/iso19160-1-address-ont/master/iso19160-1.ttl? [R=302,L]
+RewriteRule ^/def/iso19160-1-address.ttl$                 https://raw.githack.com/AGLDWG/iso19160-1-address-ont/master/iso19160-1.ttl [R=302,L]
+RewriteRule ^/def/iso19160-1-address/Address/code/(.*)$   https://raw.githack.com/AGLDWG/iso19160-1-address-ont/master/codelist.ttl? [R=302,L]
+RewriteRule ^/def/iso19160-1-address(?:$|#(.*)$)$         https://raw.githack.com/AGLDWG/iso19160-1-address-ont/master/iso19160-1.html$1 [R=302,L]"""^^pid:apacheRedirectRules ;
+    pid:redirectTest 
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/iso19160-1-address.ttl" ;
+            pid:headers "" ;
+            pid:to "https://raw.githack.com/AGLDWG/iso19160-1-address-ont/master/iso19160-1.ttl" ;
+            schema:name "ISO19160 Ontology, RDF (turtle) via file ext." ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/iso19160-1-address#Address.addressComponent" ;
+            pid:headers "" ;
+            pid:to "https://raw.githack.com/AGLDWG/iso19160-1-address-ont/master/iso19160-1.html" ;
+            schema:name "ISO19160 Ontology element, HTML" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/iso19160-1-address" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://raw.githack.com/AGLDWG/iso19160-1-address-ont/master/iso19160-1.ttl" ;
+            schema:name "ISO19160 Ontology, RDF (turtle) via conneg" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/iso19160-1-address?_mediatype=text/turtle" ;
+            pid:headers "" ;
+            pid:to "https://raw.githack.com/AGLDWG/iso19160-1-address-ont/master/iso19160-1.ttl" ;
+            schema:name "ISO19160 Ontology, RDF (turtle) via QSA" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/iso19160-1-address" ;
+            pid:headers "" ;
+            pid:to "https://raw.githack.com/AGLDWG/iso19160-1-address-ont/master/iso19160-1.html" ;
+            schema:name "ISO19160 Ontology, HTML" ;
+        ] ;
+    schema:creator <https://linked.data.gov.au/person/nicholas.car> ;
+    schema:dateCreated "2019-04-15"^^xsd:date ;
+    schema:dateModified "2026-09-07"^^xsd:date ;
+    schema:name "ISO19160-1:2015 Address ontology" ;
+    schema:sponsor <https://linked.data.gov.au/org/agldwg> ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/stable> ;
+    schema:url "https://linked.data.gov.au/def/iso19160-1-address"^^pid:agldwgPid ;
+.

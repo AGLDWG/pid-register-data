@@ -1,0 +1,11 @@
+PREFIX id: <http://id.loc.gov/vocabulary/identifiers/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/uq>
+    a schema:Organization ;
+    schema:description "Ranked in the world's top 50, The University of Queensland is one of Australia's leading research and teaching institutions." ;
+    schema:identifier "63 942 912 684"^^id:ausbn ;
+    schema:name "University of Queensland" ;
+    schema:url "https://www.uq.edu.au"^^xsd:anyURI ;
+.

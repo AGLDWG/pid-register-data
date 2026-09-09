@@ -1,0 +1,10 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/bom-cs>
+    a schema:Organization ;
+    schema:description "The Climate Services unit within the Bureau of Meteorology" ;
+    schema:isPartOf <https://linked.data.gov.au/org/bom> ;
+    schema:name "BoM Climate Services" ;
+    schema:url "http://www.bom.gov.au/climate/data/"^^xsd:anyURI ;
+.

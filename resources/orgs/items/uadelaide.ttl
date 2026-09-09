@@ -1,0 +1,11 @@
+PREFIX id: <http://id.loc.gov/vocabulary/identifiers/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/uadelaide>
+    a schema:Organization ;
+    schema:description "The University of Adelaide is a public research university based in Adelaide, South Australia. Established in 1874, it is the third-oldest university in Australia." ;
+    schema:identifier "61 249 878 937"^^id:ausbn ;
+    schema:name "University of Adelaide" ;
+    schema:url "https://www.adelaide.edu.au"^^xsd:anyURI ;
+.

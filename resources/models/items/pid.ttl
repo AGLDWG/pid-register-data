@@ -1,0 +1,151 @@
+PREFIX : <https://linked.data.gov.au/def/pid/>
+PREFIX lifecycle: <https://linked.data.gov.au/def/lifecycle/>
+PREFIX ont: <https://linked.data.gov.au/def/pid>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+:agldwgPid
+    a rdfs:Datatype ;
+    rdfs:isDefinedBy ont: ;
+    owl:equivalentClass
+        [
+            a rdfs:Datatype ;
+            owl:onDatatype xsd:anyURI ;
+            owl:withRestrictions (
+                
+                [
+                    xsd:pattern "^https://linked\\.data\\.gov\\.au/(?:(?:dataset|def|org|pid)/[A-Za-z0-9-]+|[A-Za-z0-9-]+/)(?:[#/]?[A-Za-z0-9/-]*[A-Za-z0-9-])?$" ;
+                ]
+            ) ;
+        ] ;
+    skos:example "https://linked.data.gov.au/def/pid"^^:agldwgPid ;
+    schema:description "An HTTPS IRI in the linked.data.gov.au PID namespace whose path follows the AGLDWG PID IRI Guidelines." ;
+    schema:name "AGLDWG PID IRI" ;
+.
+
+:from
+    a owl:DatatypeProperty ;
+    rdfs:domain :RedirectTest ;
+    rdfs:isDefinedBy ont: ;
+    schema:name "from" ;
+.
+
+:headers
+    a owl:DatatypeProperty ;
+    rdfs:domain :RedirectTest ;
+    rdfs:isDefinedBy ont: ;
+    schema:name "headers" ;
+.
+
+:redirectRules
+    a owl:DatatypeProperty ;
+    rdfs:domain :Pid ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range
+        [
+            a rdfs:Datatype ;
+            owl:unionOf (
+                :apacheRedirectRules
+                :nginxRedirectRules
+            ) ;
+        ] ;
+    skos:example "RewriteRule ^/def/example$ https://example.gov.au/resource [R=302,L]" ;
+    skos:historyNote "Defined for the Linked Data PID Register." ;
+    schema:description "Redirect server configuration rules that implement a PID." ;
+    schema:name "redirect rules" ;
+.
+
+:redirectTest
+    a owl:ObjectProperty ;
+    rdfs:domain :Pid ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range :RedirectTest ;
+    schema:description "Associates a PID with a test of its redirect behaviour." ;
+    schema:name "redirect test" ;
+.
+
+:to
+    a owl:DatatypeProperty ;
+    rdfs:domain :RedirectTest ;
+    rdfs:isDefinedBy ont: ;
+    schema:name "to" ;
+.
+
+:1
+    schema:name "1" ;
+.
+
+:apacheRedirectRules
+    a rdfs:Datatype ;
+    rdfs:isDefinedBy ont: ;
+    owl:equivalentClass
+        [
+            a rdfs:Datatype ;
+            owl:onDatatype xsd:string ;
+        ] ;
+    skos:example "RewriteRule ^/def/example$ https://example.gov.au/resource [R=302,L]" ;
+    schema:description "The lexical form of one or more Apache HTTP Server redirect directives." ;
+    schema:name "Apache redirect rules" ;
+.
+
+:nginxRedirectRules
+    a rdfs:Datatype ;
+    rdfs:isDefinedBy ont: ;
+    owl:equivalentClass
+        [
+            a rdfs:Datatype ;
+            owl:onDatatype xsd:string ;
+        ] ;
+    skos:example "return 302 https://example.gov.au/resource;" ;
+    schema:description "The lexical form of one or more NGINX redirect directives." ;
+    schema:name "NGINX redirect rules" ;
+.
+
+:Pid
+    a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf
+        [
+            a owl:Restriction ;
+            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass lifecycle:LifecycleStage ;
+            owl:onProperty lifecycle:hasLifecycleStage ;
+        ] ;
+    skos:example "<https://linked.data.gov.au/pid/def/example> a <https://linked.data.gov.au/def/pid/Pid> ." ;
+    skos:historyNote "Defined for the Linked Data PID Register." ;
+    schema:description "A persistent identifier managed by the Australian Government Linked Data Working Group." ;
+    schema:name "Persistent Identifier (PID)" ;
+.
+
+<https://linked.data.gov.au/org/agldwg>
+    a schema:Organization ;
+    schema:name "Australian Government Linked Data Working Group" ;
+    schema:url "https://www.linked.data.gov.au"^^xsd:anyURI ;
+.
+
+:RedirectTest
+    a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "An expected redirect, including its source, destination and request headers." ;
+    schema:name "Redirect Test" ;
+.
+
+ont:
+    a owl:Ontology ;
+    owl:versionIRI :1 ;
+    skos:historyNote "Version 1 establishes the PID class, lifecycle requirement, redirect rules and PID IRI datatype." ;
+    schema:codeRepository "https://github.com/AGLDWG/pid-register-data"^^xsd:anyURI ;
+    schema:copyrightHolder <https://linked.data.gov.au/org/agldwg> ;
+    schema:creator <https://linked.data.gov.au/org/agldwg> ;
+    schema:dateCreated "2026-09-07"^^xsd:date ;
+    schema:dateModified "2026-09-07"^^xsd:date ;
+    schema:description "An ontology for persistent identifiers managed by the Australian Government Linked Data Working Group and the rules used to redirect them." ;
+    schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
+    schema:name "AGLDWG PID Ontology" ;
+    schema:publisher <https://linked.data.gov.au/org/agldwg> ;
+    schema:version "1" ;
+.

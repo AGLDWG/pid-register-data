@@ -1,0 +1,10 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/parksaustalia>
+    a schema:Organization ;
+    schema:description "Parks Australia is part of the federal environment portfolio. It supports the Director of National Parks who has responsibility under federal environment law for six Commonwealth national parks, the Australian National Botanic Gardens and Australian Marine Parks." ;
+    schema:isPartOf <https://linked.data.gov.au/org/dcceew> ;
+    schema:name "Parks Australia" ;
+    schema:url "https://parksaustralia.gov.au"^^xsd:anyURI ;
+.

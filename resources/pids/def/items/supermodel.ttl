@@ -1,0 +1,45 @@
+PREFIX pid: <https://linked.data.gov.au/def/pid/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/pid/def/supermodel>
+    a pid:Pid ;
+    pid:redirectRules """RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/def/supermodel$                           https://kurrawong.github.io/supermodel-model/model.ttl [R=303,L]
+RewriteRule ^/def/supermodel.ttl                        https://kurrawong.github.io/supermodel-model/model.ttl [R=303,L]
+RewriteRule ^/def/supermodel$                           https://kurrawong.github.io/supermodel-model/ [R=303,L]
+RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/def/supermodel/terms(.*)$                 https://agldwg.github.io/supermodel-terms-vocab$1 [R=302,L]
+RewriteRule ^/def/supermodel/terms(.*)$                 https://agldwg.github.io/supermodel-terms-vocab$1 [R=302,NE,L]"""^^pid:apacheRedirectRules ;
+    pid:redirectTest 
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/supermodel.ttl" ;
+            pid:headers "" ;
+            pid:to "https://kurrawong.github.io/supermodel-model/model.ttl" ;
+            schema:name "Supermodel RDF .ttl" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/supermodel" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://kurrawong.github.io/supermodel-model/model.ttl" ;
+            schema:name "Supermodel RDF Accept" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/supermodel" ;
+            pid:headers "" ;
+            pid:to "https://kurrawong.github.io/supermodel-model/" ;
+            schema:name "Supermodel HTML" ;
+        ] ;
+    schema:creator <https://linked.data.gov.au/person/sandra.silcot> ;
+    schema:dateCreated "2022-04-12"^^xsd:date ;
+    schema:dateModified "2026-09-07"^^xsd:date ;
+    schema:name "Organisational Supermodel" ;
+    schema:sponsor <https://linked.data.gov.au/org/agldwg> ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/stable> ;
+    schema:url "https://linked.data.gov.au/def/supermodel"^^pid:agldwgPid ;
+.
