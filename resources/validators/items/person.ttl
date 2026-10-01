@@ -9,7 +9,7 @@ sg:
     schema:name "AGLDWG Persons Validator" ;
 .
 
-:org-req-01
+:per-req-01
     a sh:NodeShape ;
     sh:property 
         [
