@@ -5,7 +5,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a schema:Organization ;
     schema:description "The geological survey unit within the State of Queensland's Department of Natural Resources, Mines and Energy." ;
     schema:member
-        <https://linked.data.gov.au/person/Steven.Bowden> ,
+        <https://linked.data.gov.au/person/steven.bowden> ,
         <https://linked.data.gov.au/person/david.crosswell> ;
     schema:name "Geological Survey of Queensland" ;
     schema:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI ;

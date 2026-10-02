@@ -319,3 +319,43 @@ schema:version
 <http://purl.org/NET/rdflicense/cc-by4.0>
     schema:name "Creative Commons CC-BY 4.0" ;
 .
+
+<https://linked.data.gov.au/def/pid/redirectRules>
+    schema:name "redirect rules" ;
+.
+
+<https://linked.data.gov.au/def/pid/headers>
+    schema:name "headers" ;
+.
+
+<https://linked.data.gov.au/def/pid/from>
+    schema:name "from" ;
+.
+
+<https://linked.data.gov.au/def/pid/to>
+    schema:name "to" ;
+.
+
+<http://www.w3.org/ns/shacl#ShapesGraph>
+    schema:name "Shapes Graph" ;
+.
+
+<https://linked.data.gov.au/def/lifecycle/LifecycleStage>
+    schema:name "Lifecycle Stage" ;
+.
+
+<https://linked.data.gov.au/def/lifecycle/hasLifecycleStage>
+    schema:name "has lifecycle stage" ;
+.
+
+owl:minQualifiedCardinality
+    schema:name "minimum qualified cardinality" ;
+.
+
+owl:onClass
+    schema:name "on class" ;
+.
+
+owl:onProperty
+    schema:name "on property" ;
+.

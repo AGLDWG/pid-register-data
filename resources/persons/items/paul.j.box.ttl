@@ -1,0 +1,9 @@
+PREFIX pers: <https://linked.data.gov.au/person/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+pers:paul.j.box
+    a schema:Person ;
+    schema:name "Paul J Box" ;
+    schema:email "paul.j.box@gov.au"^^xsd:anyURI ;
+.

@@ -9,7 +9,7 @@ RewriteCond %{HTTP:Accept} text/turtle [NC]
 RewriteRule ^/org/icsm($|/.*)$ "https://demo.dev.kurrawong.ai/object?uri=https://linked.data.gov.au/org/icsm$1&_mediatype=text/turtle" [R=302,L]
 RewriteRule ^/org/icsm(.*).ttl$ "https://demo.dev.kurrawong.ai/object?uri=https://linked.data.gov.au/org/icsm$1&_mediatype=text/turtle" [R=302,L]
 RewriteRule ^/org/icsm($|/.*)$ "https://demo.dev.kurrawong.ai/object?uri=https://linked.data.gov.au/org/icsm$1" [R=302,NE,L]"""^^pid:apacheRedirectRules ;
-    schema:creator <https://linked.data.gov.au/person/> ;
+    schema:creator <https://linked.data.gov.au/person/nicholas.car> ;
     schema:dateCreated "2023-04-27"^^xsd:date ;
     schema:dateModified "2026-09-07"^^xsd:date ;
     schema:name "Intergovernmental Committee on Surveying and Mapping" ;

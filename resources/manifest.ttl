@@ -14,6 +14,12 @@ PREFIX schema: <https://schema.org/>
             schema:additionalType schema:Organization ;
         ] ,
         [
+            dcterms:conformsTo "validators/items/person.ttl" ;
+            prof:hasArtifact "persons/items/*.ttl" ;
+            prof:hasRole mrr:ResourceData ;
+            schema:additionalType schema:Person ;
+        ] ,
+        [
             dcterms:conformsTo "validators/items/pid.ttl" ;
             prof:hasArtifact "pids/env/items/*.ttl" ;
             prof:hasRole mrr:ResourceData ;
@@ -29,6 +35,10 @@ PREFIX schema: <https://schema.org/>
         ] ,
         [
             prof:hasArtifact "pids/org/_cat.ttl" ;
+            prof:hasRole mrr:CatalogueData ;
+        ] ,
+        [
+            prof:hasArtifact "persons/_cat.ttl" ;
             prof:hasRole mrr:CatalogueData ;
         ] ,
         [
@@ -76,5 +86,9 @@ PREFIX schema: <https://schema.org/>
         [
             prof:hasArtifact "models/_cat.ttl" ;
             prof:hasRole mrr:CatalogueData ;
-        ] ;
+        ] ,
+        [
+            prof:hasArtifact "_background/*.ttl" ;
+            prof:hasRole mrr:CompleteCatalogueAndResourceLabels ;
+        ]
 .

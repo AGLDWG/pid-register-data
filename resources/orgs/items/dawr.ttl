@@ -5,7 +5,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a schema:Organization ;
     schema:description "The Australian Government Department of Agriculture and Water Resources&nbsp;develops and implements policies and programs to ensure Australia's agricultural, fisheries, food and fore​stry indust​ries remain competitive, profitable and sustainable, and supports the sustainable and productive management and use of rivers and water resources." ;
     schema:identifier "O-000769"^^<https://linked.data.gov.au/org/agorId> ;
-    schema:member <https://linked.data.gov.au/person/Stephen.Pratt> ;
+    schema:member <https://linked.data.gov.au/person/stephen.pratt> ;
     schema:name "Department of Agriculture and Water Resources" ;
     schema:url "http://agriculture.gov.au"^^xsd:anyURI ;
 .

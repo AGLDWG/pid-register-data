@@ -1,0 +1,52 @@
+PREFIX pers: <https://linked.data.gov.au/person/>
+PREFIX reg: <https://linked.data.gov.au/reg/orgs>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+reg:
+    a schema:DataCatalog ;
+    schema:codeRepository "https://github.com/AGLDWG/pid-register-data" ;
+    schema:creator pers:agldwg ;
+    schema:dateCreated "2026-09-09"^^xsd:date ;
+    schema:dateModified "2026-09-09"^^xsd:date ;
+    schema:description "The Australian Government Linked Data Working Group's register of persons used within the register Knowledge Base" ;
+    schema:hasPart
+        pers:alex.zou ,
+        pers:anne.goldsack ,
+        pers:armin.haller ,
+        pers:ashley.sommer ,
+        pers:chee.ng ,
+        pers:cjorquera ,
+        pers:daniel.brough ,
+        pers:david.crosswell ,
+        pers:derek.hoy ,
+        pers:e.chuc ,
+        pers:endymion.cooper ,
+        pers:garry.thomson ,
+        pers:irina.bastrakova ,
+        pers:javiersan18 ,
+        pers:john.machin ,
+        pers:joseph.abhayaratna ,
+        pers:kevin.thiele ,
+        pers:laurent.lefort ,
+        pers:leonard.smith ,
+        pers:michael.elliot-smith ,
+        pers:mr.wong ,
+        pers:nicholas.car ,
+        pers:paul.j.box ,
+        pers:richard.walker ,
+        pers:sally.clement ,
+        pers:sally.tetreault-campbell ,
+        pers:sandra.silcot ,
+        pers:scott.lutwyche ,
+        pers:simon.cox ,
+        pers:stephen.lindsay ,
+        pers:stephen.pratt ,
+        pers:steven.bowden ,
+        pers:tatiana.antsoupova ,
+        pers:vance.kelly ,
+        pers:william.francis ;
+    schema:name "Organisations Register" ;
+    schema:publisher pers:agldwg ;
+    schema:version "1" ;
+.

@@ -37,7 +37,7 @@ RewriteRule ^/def/phs(.*)$				    https://raw.githack.com/AGLDWG/phs-ont/master/
             pid:to "https://raw.githack.com/AGLDWG/phs-ont/master/phs.html" ;
             schema:name "phs HTML" ;
         ] ;
-    schema:creator <https://linked.data.gov.au/person/Stephen.Pratt> ;
+    schema:creator <https://linked.data.gov.au/person/stephen.pratt> ;
     schema:dateCreated "2020-05-07"^^xsd:date ;
     schema:dateModified "2026-09-07"^^xsd:date ;
     schema:name "Plant Health Surveillance" ;

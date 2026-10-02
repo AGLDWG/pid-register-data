@@ -8,6 +8,10 @@ PREFIX schema: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
+:1
+    schema:name "1" ;
+.
+
 :agldwgPid
     a rdfs:Datatype ;
     rdfs:isDefinedBy ont: ;
@@ -75,8 +79,23 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:name "to" ;
 .
 
-:1
-    schema:name "1" ;
+lifecycle:hasLifecycleStage
+    a owl:ObjectProperty ;
+    rdfs:domain :Pid ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/lifecycle> ;
+    rdfs:range lifecycle:LifecycleStage ;
+    skos:example """:pid-x lifecycle:hasLifecycleStage [
+        a lifecycle:LifecycleStage ;
+        schema:additionalType status:accepted ;
+        time:hasTime [
+            time:hasBeginning [
+                    time:inXSDDate "2020-11-12"^^xsd:date ;
+                ] ;
+            ] ;
+    ] ;
+.""" ;
+    schema:description "Indicates a Lifecycle Stage of a Resource" ;
+    schema:name "has Lifecycle Stage" ;
 .
 
 :apacheRedirectRules
@@ -105,6 +124,20 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:name "NGINX redirect rules" ;
 .
 
+lifecycle:LifecycleStage
+    a owl:Class ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/lifecycle> ;
+    skos:example "See example for lifecycle:hasLifecycleStage" ;
+    schema:description "A distinct part of a resource's lifecycle" ;
+    schema:name "Lifecycle Stage" ;
+.
+
+<https://linked.data.gov.au/org/agldwg>
+    a schema:Organization ;
+    schema:name "Australian Government Linked Data Working Group" ;
+    schema:url "https://www.linked.data.gov.au"^^xsd:anyURI ;
+.
+
 :Pid
     a owl:Class ;
     rdfs:isDefinedBy ont: ;
@@ -121,12 +154,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:name "Persistent Identifier (PID)" ;
 .
 
-<https://linked.data.gov.au/org/agldwg>
-    a schema:Organization ;
-    schema:name "Australian Government Linked Data Working Group" ;
-    schema:url "https://www.linked.data.gov.au"^^xsd:anyURI ;
-.
-
 :RedirectTest
     a owl:Class ;
     rdfs:isDefinedBy ont: ;
@@ -138,12 +165,35 @@ ont:
     a owl:Ontology ;
     owl:versionIRI :1 ;
     skos:historyNote "Version 1 establishes the PID class, lifecycle requirement, redirect rules and PID IRI datatype." ;
+    schema:abstract """This data model contains all the elements the Australian Government Linked Data Working Group (AGDWG) needs to manage Persistent Identifiers (PIDs)
+for Linked Data objects such as organisations, datasets and definitional items.
+
+PIDs are created by Australian government bodies using the namespace linked.data.gov.au which is independent of any one government department since they change over time
+and PIDs need to outlast organisational change if they are to truly persist.
+
+The properties the AGLDWG records for PIDs link them to who requested them, the lifecycle of their proposal, acceptance or rejection and their stable implementation and
+perhaps retirement - standard registry information modelled on ISO 19135. Properties containing web server redirect rules are also implemented from which the
+linked.data.gov.au server's redirection function is built. Objects containing tests for redirection rules are also linked to PIDs so automated testing of redirection rules
+can be implemented just using this data. Additional properties for registry/catalogue management are also implemented, such as categorisation.""" ;
     schema:codeRepository "https://github.com/AGLDWG/pid-register-data"^^xsd:anyURI ;
     schema:copyrightHolder <https://linked.data.gov.au/org/agldwg> ;
     schema:creator <https://linked.data.gov.au/org/agldwg> ;
     schema:dateCreated "2026-09-07"^^xsd:date ;
-    schema:dateModified "2026-09-07"^^xsd:date ;
-    schema:description "An ontology for persistent identifiers managed by the Australian Government Linked Data Working Group and the rules used to redirect them." ;
+    schema:dateModified "2026-09-09"^^xsd:date ;
+    schema:description "A data model for persistent identifiers managed by the Australian Government Linked Data Working Group" ;
+    schema:hasPart
+        lifecycle:LifecycleStage ,
+        lifecycle:hasLifecycleStage ,
+        :Pid ,
+        :RedirectTest ,
+        :agldwgPid ,
+        :apacheRedirectRules ,
+        :from ,
+        :headers ,
+        :nginxRedirectRules ,
+        :redirectRules ,
+        :redirectTest ,
+        :to ;
     schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
     schema:name "AGLDWG PID Ontology" ;
     schema:publisher <https://linked.data.gov.au/org/agldwg> ;

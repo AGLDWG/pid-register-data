@@ -1,0 +1,9 @@
+PREFIX pers: <https://linked.data.gov.au/person/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+pers:richard.walker
+    a schema:Person ;
+    schema:name "Richard Walker" ;
+    schema:email "richard.walker@gov.au"^^xsd:anyURI ;
+.

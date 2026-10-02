@@ -1,0 +1,29 @@
+PREFIX : <https://linked.data.gov.au/def/agldwg-person/>
+PREFIX schema: <https://schema.org/>
+PREFIX sg: <https://linked.data.gov.au/def/agldwg-person>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+sg:
+    a sh:ShapesGraph ;
+    schema:name "AGLDWG Persons Validator" ;
+.
+
+:per-req-01
+    a sh:NodeShape ;
+    sh:property 
+        [
+            sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:message "A Person must have exactly one name" ;
+            sh:minCount 1 ;
+            sh:path schema:name ;
+        ] ,
+        [
+            sh:datatype xsd:anyURI ;
+            sh:maxCount 1 ;
+            sh:message "A Person may have at most one email recorded and if it does, it must be of type xsd:anyURI" ;
+            sh:path schema:email ;
+        ] ;
+    sh:targetClass schema:Person ;
+.

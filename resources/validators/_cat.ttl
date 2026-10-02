@@ -11,6 +11,7 @@ reg:
     schema:description "The Australian Government Linked Data Working Group's register of validators used within the register Knowledge Base" ;
     schema:hasPart
         <https://linked.data.gov.au/def/agldwg-org> ,
+        <https://linked.data.gov.au/def/agldwg-person> ,
         <https://linked.data.gov.au/def/pid/shapes> ;
     schema:name "Validators Register" ;
     schema:publisher <https://linked.data.gov.au/org/agldwg> ;

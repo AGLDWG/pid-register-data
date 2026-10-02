@@ -1,0 +1,9 @@
+PREFIX pers: <https://linked.data.gov.au/person/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+pers:steven.bowden
+    a schema:Person ;
+    schema:name "Steven Bowden" ;
+    schema:email "steven.bowden@gov.au"^^xsd:anyURI ;
+.

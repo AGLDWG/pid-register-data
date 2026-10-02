@@ -1,0 +1,1660 @@
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX org: <https://linked.data.gov.au/org/>
+PREFIX pers: <https://linked.data.gov.au/person/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://kurrawong.ai>
+    a schema:Organization ;
+    schema:description "The company KurrawongAI" ;
+    schema:name "KurrawongAI" ;
+    schema:url "https://kurrawong.ai"^^xsd:anyURI ;
+.
+
+org:abares
+    a schema:Organization ;
+    schema:description "The Australian Bureau of Agricultural and Resource Economics and Sciences (ABARES), the science and economics research division of the Department of Agriculture, Fisheries and Forestry." ;
+    schema:name "Australian Bureau of Agricultural and Resource Economics and Sciences" ;
+    schema:url "https://www.agriculture.gov.au/abares"^^xsd:anyURI ;
+.
+
+org:abrs
+    a schema:Organization ;
+    schema:description "An organisational subunit of the federal department responsible for the Environment that manages, among other things, the National Species List." ;
+    schema:name "Australian Biological Resources Study" ;
+.
+
+org:abs
+    a schema:Organization ;
+    schema:description "The ABS is Australia’s national statistical agency, providing trusted official statistics on a wide range of economic, social, population and environmental matters of importance to Australia." ;
+    schema:name "Australian Bureau of Statistics" ;
+    schema:url "https://www.abs.gov.au"^^xsd:anyURI ;
+.
+
+org:abs-coatsis
+    a schema:Organization ;
+    schema:description "The Centre of Aboriginal and Torres Strait Islander Statistics (CoATSIS) has a leadership and coordination role for national statistical activity about Aboriginal and Torres Strait Islander peoples. CoATSIS is dedicated to early and ongoing conversations with Aboriginal and Torres Strait Islander peoples to increase participation in, and the relevance of, ABS statistical collections. They engage with communities across a range of statistical activities and outputs from Indigenous specific surveys such as the Aboriginal and Torres Strait Islander health and social surveys, the five yearly Census, administrative data, and data integration projects." ;
+    schema:name "ABS Centre of Aboriginal and Torres Strait Islander Statistics" ;
+    schema:url "https://www.abs.gov.au/about/aboriginal-and-torres-strait-islander-peoples/aboriginal-and-torres-strait-islander-engagement"^^xsd:anyURI ;
+.
+
+org:act
+    a schema:Organization ;
+    schema:description "The government of the Australian Capital Territory." ;
+    schema:name "Australian Capital Territory Government" ;
+    schema:url "https://www.act.gov.au"^^xsd:anyURI ;
+.
+
+org:act-atlas
+    a schema:Organization ;
+    schema:description "The team that manages the authoritative ACT Wildlife Atlas database of plants and animal occurrence records, and other related biodiversity datasets, in the ACT. Custodian sub-organisation for biodiversity data held by the Australian Capital Territory Government." ;
+    schema:name "ACT Wildlife Atlas Team" ;
+    schema:url "https://www.act.gov.au/environment"^^xsd:anyURI ;
+.
+
+org:act-epsdd
+    a schema:Organization ;
+    schema:description "The Environment, Planning and Sustainable Development Directorate plans, develops and works to protect the environment and develops strategies to mitigate and adapt to climate change." ;
+    schema:name "Environment, Planning and Sustainable Development Directorate" ;
+    schema:url "https://www.act.gov.au/directorates-and-agencies/epsdd"^^xsd:anyURI ;
+.
+
+org:acu
+    a schema:Organization ;
+    schema:description """Australian Catholic University was opened on 1 January 1991 following the amalgamation of four Catholic tertiary institutions in eastern Australia:
+
+
+	Catholic College of Education Sydney, New South Wales
+	Institute of Catholic Education, Victoria
+	McAuley College, Queensland
+	Signadou College of Education, Australian Capital Territory""" ;
+    schema:name "Australian Catholic University" ;
+.
+
+org:ada
+    a schema:Organization ;
+    schema:description """The Australian Data Archive (ADA) provides a national service for the collection and preservation of digital research data. ADA disseminates this data for secondary analysis by academic researchers and other users.
+
+The archive is based in the ANU Centre for Social Research and Methods (CSRM) at the Australian National University (ANU).""" ;
+    schema:name "Australian Data Archive" ;
+    schema:url "https://ada.edu.au"^^xsd:anyURI ;
+.
+
+org:agldwg
+    a schema:Organization ;
+    schema:description "The informal Australian government Working Group charged with assisting any government with matters relating to Linked Data." ;
+    schema:name "Australian Government Linked Data Working Group" ;
+    schema:url "http://www.linked.data.gov.au"^^xsd:anyURI ;
+.
+
+org:agson
+    a schema:Organization ;
+    schema:description """AGSON gives people and companies interested in exploring for minerals in Australia a single point of access for information about mineral resource exploration in all Australian jurisdictions, and to geological and geophysical data from all Australian governments.
+
+AGSON is the new name for AusGIN.""" ;
+    schema:name "Australian Geological Survey Organisations Network (AGSON)A" ;
+    schema:url "http://www.geoscience.gov.au"^^xsd:anyURI ;
+.
+
+org:aiatsis
+    a schema:Organization ;
+    schema:description """Australia's only national institution focused exclusively on the diverse history, cultures and heritage of Aboriginal and Torres Strait Islander Australia.
+
+&nbsp;""" ;
+    schema:name "Australian Institute of Aboriginal and Torres Strait Islander Studies" ;
+    schema:url "https://aiatsis.gov.au"^^xsd:anyURI ;
+.
+
+org:ala
+    a schema:Organization ;
+    schema:description "The Atlas of Living Australia (ALA)&nbsp;is a collaborative, digital, open infrastructure that pulls together Australian biodiversity data from multiple sources, making it accessible and reusable." ;
+    schema:name "Atlas of Living Australia" ;
+    schema:url "https://ala.org.au"^^xsd:anyURI ;
+.
+
+org:am
+    a schema:Organization ;
+    schema:description "The Australian Museum is an NSW Government Organization operating under the Department of Creative Industries" ;
+    schema:name "Australian Museum" ;
+    schema:url "https://australian.museum"^^xsd:anyURI ;
+.
+
+org:ambseh
+    a schema:Organization ;
+    schema:description "AMBS Ecology & Heritage is a specialist consultancy providing expert advice and services in Aboriginal and historic heritage and archaeology" ;
+    schema:name "AMBS Ecology & Heritage" ;
+    schema:url "https://www.ambs.consulting"^^xsd:anyURI ;
+.
+
+org:amnh
+    a schema:Organization ;
+    schema:description """The American Museum of Natural History is one of the world’s preeminent scientific and cultural institutions.
+
+Since its founding in 1869, the Museum has advanced its global mission to discover, interpret, and disseminate information about human cultures, the natural world, and the universe through a wide-ranging program of scientific research, education, and exhibition.""" ;
+    schema:name "American Museum of Natural History" ;
+    schema:url "https://www.amnh.org"^^xsd:anyURI ;
+.
+
+org:anbg
+    a schema:Organization ;
+    schema:description "The Australian National Botanic Gardens, on the lower slopes of Black Mountain in Canberra, has the world’s most comprehensive display of living Australian native plants. A place for recreation, inspiration, science and learning." ;
+    schema:name "Australian National Botanic Gardens" ;
+    schema:url "https://www.anbg.gov.au"^^xsd:anyURI ;
+.
+
+org:anu
+    a schema:Organization ;
+    schema:description "ANU is a world-leading university in Australia’s capital. Excellence is embedded in our approach to research and education." ;
+    schema:name "Australian National University" ;
+    schema:url "https://www.anu.edu.au"^^xsd:anyURI ;
+.
+
+org:anzlic
+    a schema:Organization ;
+    schema:description """ANZLIC is the peak government body in Australia and New Zealand responsible for spatial information.
+
+The role of ANZLIC is to develop policies and strategies to promote accessibility and usability of spatial information. ANZLIC is an advocate for the resolution of national level issues and provides a link between government and industry, academia and the general public.""" ;
+    schema:name "ANZLIC – The Spatial  Information Council" ;
+    schema:url "https://www.anzlic.gov.au"^^xsd:anyURI ;
+.
+
+org:apo
+    a schema:Organization ;
+    schema:description "APO is an open access evidence platform – making public policy research and resources accessible and useable. As a unique public good with a trusted reputation, we champion open access and evidence-informed decision-making." ;
+    schema:name "Analysis & Policy Observatory" ;
+    schema:url "https://apo.org.au"^^xsd:anyURI ;
+.
+
+org:ardc
+    a schema:Organization ;
+    schema:description "The Australian Research Data Commons (ARDC) is a transformational initiative that enables Australian researchers and the research community access to nationally significant, leading edge data intensive eInfrastructure, platforms, skills and collections of high-quality data." ;
+    schema:name "Australian Research Data Commons" ;
+    schema:url "https://ardc.edu.au"^^xsd:anyURI ;
+.
+
+org:ath
+    a schema:Organization ;
+    schema:description "As Australia’s only university established to focus on the issues of Northern Australia and the Tropics worldwide" ;
+    schema:name "Australian Tropical Herbarium" ;
+    schema:url "https://www.ath.org.au"^^xsd:anyURI ;
+.
+
+org:ato
+    a schema:Organization ;
+    schema:description "The Australian Taxation Office (ATO) is the principal revenue collection agency of the Australian Government." ;
+    schema:name "Australian Taxation Office" ;
+    schema:url "https://www.ato.gov.au"^^xsd:anyURI ;
+.
+
+org:atsb
+    a schema:Organization ;
+    schema:description "The Australian Transport Safety Bureau (ATSB) is Australia's national transport safety investigator." ;
+    schema:name "Australian Transport Safety Bureau" ;
+.
+
+org:au
+    a schema:Organization ;
+    schema:description "The Australian Government, also known as the Commonwealth Government, is the national government of Australia, a federal parliamentary constitutional monarchy." ;
+    schema:name "Australian Government" ;
+    schema:url "https://australia.gov.au"^^xsd:anyURI ;
+.
+
+org:ausbigg
+    a schema:Organization ;
+    schema:description """The Australian Biodiversity Information Governance Group (AusBIGG) comprises Australian Commonwealth, State &amp; Territory and environmental research organisations involved in the collection and management of biodiversity information.
+
+AusBIGG was established in 2021 and its main role, as of 2023, is the governance of the Australian Biodiversity Information Standard.""" ;
+    schema:name "Australian Biodiversity Information Governance Group" ;
+    schema:url "https://github.com/AusBIGG/"^^xsd:anyURI ;
+.
+
+org:ausgin
+    a schema:Organization ;
+    schema:description "AusGIN gives &nbsp;people and companies interested in exploring for minerals in Australia a single &nbsp;point of access for information about mineral resource &nbsp;exploration in all Australian jurisdictions, and to geological and geophysical &nbsp;data from all Australian governments." ;
+    schema:name "Australian Geoscience Information Network" ;
+    schema:url "http://www.geoscience.gov.au/about"^^xsd:anyURI ;
+.
+
+org:awc
+    a schema:Organization ;
+    schema:description "Australian Wildlife Conservancy (AWC) protects Australia's unique wildlife through science" ;
+    schema:name "Australian Wildlife Conservancy" ;
+    schema:url "https://www.australianwildlife.org"^^xsd:anyURI ;
+.
+
+org:awmm
+    a schema:Organization ;
+    schema:description "The Museum is a war memorial for the province of Auckland and holds one of New Zealand's top three heritage libraries. It has pre-eminent Māori and Pacific collections" ;
+    schema:name "Auckland War Memorial Museum" ;
+    schema:url "https://www.aucklandmuseum.com"^^xsd:anyURI ;
+.
+
+org:baam
+    a schema:Organization ;
+    schema:description "BAAM was established in Brisbane in 2001 to provide terrestrial fauna ecology consulting services. Since that time the company has grown to include botanical expertise, ecological restoration and fauna spotting services. For projects requiring specific expertise we source contribution from within our significant network of ecological specialists to ensure the rigour of our work." ;
+    schema:name "Biodiversity Assessment and Management (BAAM)" ;
+    schema:url "https://baamecology.com"^^xsd:anyURI ;
+.
+
+org:bap
+    a schema:Organization ;
+    schema:description "The Australian Government’s bioregional assessment programs provide transparent scientific information to better understand the potential impacts of unconventional gas and coal mining developments on water and the environment. There are two separate programs of bioregional assessments." ;
+    schema:name "Bioregional Assessment Programme" ;
+.
+
+org:bdbsa
+    a schema:Organization ;
+    schema:description "Provider of the Biological Databases of South Australia (BDBSA). The BDBSA is South Australia's flora and fauna database that stores and manages survey and observation records, as well as taxonomic systems. This vital resource is critical to support decision-making processes for environmental issues within South Australian and Australian governments, as well as the wider community interested in biodiversity conservation. Core repository for biodiversity data held by the South Australian Government." ;
+    schema:name "Biological Databases of South Australia Team" ;
+    schema:url "https://www.environment.sa.gov.au/topics/science/information-and-data/biological-databases-of-south-australia"^^xsd:anyURI ;
+.
+
+org:bdr-team
+    a schema:Organization ;
+    schema:description "The Biodiversity Data Repository (BDR) Team within the Department of Climate Change, Energy, the Environment and Water (DCCEEW) is the team responsible for managing the Biodiversity Data Repository." ;
+    schema:name "BDR Team" ;
+    schema:url "https://bdr.gov.au/"^^xsd:anyURI ;
+.
+
+org:bhp
+    a schema:Organization ;
+    schema:description "BHP is a large mining company whose 'purpose is to bring people and resources together to build a better world. We do this through our strategy to deliver long-term value and returns through the cycle.'" ;
+    schema:name "BHP" ;
+    schema:url "https://www.bhp.com"^^xsd:anyURI ;
+.
+
+org:biepa
+    a schema:Organization ;
+    schema:description """BIEPA's mission is to help life to flourish on our island sanctuary by:
+* protecting, maintaining, and restoring the native flora and fauna on and around the island;
+* monitoring and improving the natural environment, including the surrounding waters;
+* influencing urban development and promoting sustainable ecotourism; and
+* proactively engaging with the local community to grow our membership and raise funds and awareness.""" ;
+    schema:name "Bribie Island Environmental Protection Association Inc" ;
+    schema:url "https://www.biepa.online"^^xsd:anyURI ;
+.
+
+org:birdlife
+    a schema:Organization ;
+    schema:description """BirdLife Australia’s mission is to save birds. For over 120 years, they have been at the forefront of bird conservation in Australia.
+
+&nbsp;""" ;
+    schema:name "BirdLife Australia" ;
+    schema:url "https://birdlife.org.au"^^xsd:anyURI ;
+.
+
+org:bitre
+    a schema:Organization ;
+    schema:description "The Bureau of Infrastructure and Transport Research Economics (BITRE) provides economic analysis, research and statistics on infrastructure and transport to inform both Australian Government policy development and wider community understanding." ;
+    schema:name "Bureau of Infrastructure and Transport Research Economics" ;
+    schema:url "https://www.bitre.gov.au"^^xsd:anyURI ;
+.
+
+org:bodc
+    a schema:Organization ;
+    schema:description """The BODC's mission is to 'operate as a world-class data centre in support of UK marine science'.
+
+The BODC is an independent self-governing organisation.""" ;
+    schema:name "British Oceanographic Data Centre" ;
+    schema:url "https://www.bodc.ac.uk"^^xsd:anyURI ;
+.
+
+org:bom
+    a schema:Organization ;
+    schema:description "The Bureau of Meteorology is Australia's national weather, climate and water agency. Its expertise and services assist Australians in dealing with the harsh realities of their natural environment, including drought, floods, fires, storms, tsunami and tropical cyclones. Through regular forecasts, warnings, monitoring and advice spanning the Australian region and Antarctic territory, the Bureau provides one of the most fundamental and widely used services of government." ;
+    schema:name "Bureau of Meteorology" ;
+    schema:url "http://www.bom.gov.au"^^xsd:anyURI ;
+.
+
+org:bom-cs
+    a schema:Organization ;
+    schema:description "The Climate Services unit within the Bureau of Meteorology" ;
+    schema:name "BoM Climate Services" ;
+    schema:url "http://www.bom.gov.au/climate/data/"^^xsd:anyURI ;
+.
+
+org:bom-gu
+    a schema:Organization ;
+    schema:description "The Groundwater Unit within the Bureau of Meteorology" ;
+    schema:name "BoM Groundwater Unit" ;
+    schema:url "http://www.bom.gov.au/water/groundwater/"^^xsd:anyURI ;
+.
+
+org:canbr
+    a schema:Organization ;
+    schema:description "The Centre for Australian National Biodiversity Research (CANBR) includes the Australian National Herbarium. These are jointly managed by CSIRO and the Director of National Parks with strong links to the Australian National Botanic Gardens. The Herbarium, with over 1.2 million specimens, is responsible for the scientific integrity of the Gardens' plant labeling and manages the national plant name lists for Australia's botanical community." ;
+    schema:name "Centre for Australian National Biodiversity Research" ;
+    schema:url "https://www.anbg.gov.au/cpbr/index.html"^^xsd:anyURI ;
+.
+
+org:casa
+    a schema:Organization ;
+    schema:description "We’re all about aviation safety. We are a government body that licenses pilots, registers aircraft and oversees and promotes safety." ;
+    schema:name "Civil Aviation Safety Authority" ;
+    schema:url "https://www.casa.gov.au"^^xsd:anyURI ;
+.
+
+org:cdu
+    a schema:Organization ;
+    schema:description "Charles Darwin University (CDU) is an Australian public university with a main campus in Darwin and eight satellite campuses in some metropolitan and regional areas. It was established in 2003 after the merger of Northern Territory University, the Menzies School of Health Research, and Centralian College." ;
+    schema:name "Charles Darwin University" ;
+    schema:url "https://www.cdu.edu.au"^^xsd:anyURI ;
+.
+
+org:cgi
+    a schema:Organization ;
+    schema:description """The Commission for the Management and Application of Geoscience Information (CGI) is an organization that aims to:
+
+
+	Promote the exchange and interoperability of geoscience information
+	Develop and promote geoscience information standards and best practices
+	Provide means for transferring geoscience knowledge
+	Assist in the international dissemination of best practices in geoscience information
+	Stimulate and support initiatives that develop standards
+
+
+The CGI is part of the International Union of Geological Sciences (IUGS)""" ;
+    schema:name "Commission for Geoscience Information" ;
+    schema:url "https://cgi-iugs.org"^^xsd:anyURI ;
+.
+
+org:cgi-gtwg
+    a schema:Organization ;
+    schema:description "A Working Group within the Commission for Geoscience Information" ;
+    schema:name "CGI Geoscience Terminology Working Group" ;
+    schema:url "http://www.cgi-iugs.org/tech_collaboration/geoscience_terminology_working_group.html"^^xsd:anyURI ;
+.
+
+org:coh
+    a schema:Organization ;
+    schema:description """The 1850s saw the introduction of responsible government in Tasmania and the establishment of municipal administration, in the form of a general purpose locally-elected Council.
+
+A court of fifteen commissioners was created by the&nbsp;Hobart Town Commissioners Act 1846, with the commissioners responsible for such things as paving and lighting throughout the city.
+
+The first meeting of the Commissioners was held on 29 September 1846, but disputes soon began to arise between the colonial and civic authorities on the apportioning of revenues. Within a year the body of Commissioners was dissolved.
+
+Municipal government was established by the&nbsp;Hobart Town and Launceston Municipal Council Act 1852. During this year the first elections for a seven-member council were held. The new council took office from the beginning of 1853, with William Carter as Mayor.
+
+In 1857 the Municipal Council was incorporated (Hobart Town Corporation Act 1857), and its constitution and powers redefined.
+
+Between 1853 and 1934 the Council was led by various mayors, elected annually. The title was raised to ‘Lord Mayor’ by Letters Patent issued by King George V in January 1934.
+
+Further details of the history of Hobart, including its past Aldermen, is available in the historical reference Growing with Strength&nbsp;– a History of the Hobart City Council 1846 Council 2000.""" ;
+    schema:name "City of Hobart" ;
+    schema:url "https://www.hobartcity.com.au"^^xsd:anyURI ;
+.
+
+org:cooloolacc
+    a schema:Organization ;
+    schema:description "Cooloola Coastcare Association is the Cooloola Coast's award winning Natural Resource Management group, registered with Queensland Water and Land Carers (QWALC) and supported by Gympie Regional Council through ratepayer's Environment Levy." ;
+    schema:name "Cooloola Coastcare" ;
+    schema:url "https://www.cooloolacoastcare.org.au"^^xsd:anyURI ;
+.
+
+org:csiro
+    a schema:Organization ;
+    schema:description "Australia's national science research agency." ;
+    schema:name "Commonwealth Scientific and Industrial Research Organisation" ;
+    schema:url "https://www.csiro.au"^^xsd:anyURI ;
+.
+
+org:csiro-environment
+    a schema:Organization ;
+    schema:description "Australia's national science research agency. Environment Research Unit." ;
+    schema:name "Environment Research Unit CSIRO" ;
+    schema:url "https://www.csiro.au/en/about/people/research-units/environment"^^xsd:anyURI ;
+.
+
+org:csiro-publishing
+    a schema:Organization ;
+    schema:description "CSIRO Publishing is an Australian science publisher of books, peer-reviewed journals, and news" ;
+    schema:name "CSIRO publishing" ;
+    schema:url "https://www.publish.csiro.au/"^^xsd:anyURI ;
+.
+
+org:daff
+    a schema:Organization ;
+    schema:description """DAFF works to enhance Australia's agricultural, fisheries and forestry industries. DAFF creates new and maintains existing agricultural export opportunities, to provide gains for Australian agriculture. DAFF manages biosecurity risks to Australia to protect Australia's multi-billion dollar agricultural industries and our way of life.
+
+This is one of the successor Departments to the Department of Agriculture, Water and the Environment.""" ;
+    schema:name "Department of Agriculture, Fisheries and Forestry" ;
+    schema:url "https://www.agriculture.gov.au"^^xsd:anyURI ;
+.
+
+org:dafwa
+    a schema:Organization ;
+    schema:description "WA Department of Agriculture and Food" ;
+    schema:name "WA Department of Agriculture and Food" ;
+    schema:url "https://www.dpird.wa.gov.au"^^xsd:anyURI ;
+.
+
+org:dawe
+    a schema:Organization ;
+    schema:description """The Federal Department representing national interests across agriculture, water and the environment.
+
+A large and diverse portfolio that includes agencies, statutory and non-statutory bodies, independent advisors and industry representatives.""" ;
+    schema:name "Department of Agriculture, Water and the Environment" ;
+    schema:url "https://www.awe.gov.au"^^xsd:anyURI ;
+.
+
+org:dawr
+    a schema:Organization ;
+    schema:description "The Australian Government Department of Agriculture and Water Resources&nbsp;develops and implements policies and programs to ensure Australia's agricultural, fisheries, food and fore​stry indust​ries remain competitive, profitable and sustainable, and supports the sustainable and productive management and use of rivers and water resources." ;
+    schema:name "Department of Agriculture and Water Resources" ;
+    schema:url "http://agriculture.gov.au"^^xsd:anyURI ;
+.
+
+org:dcceew
+    a schema:Organization ;
+    schema:description "The Federal Government department that leads Australia’s response to climate change and sustainable energy use, and protects our environment, heritage and water." ;
+    schema:name "Department of Climate Change, Energy, the Environment and Water" ;
+    schema:url "https://www.dcceew.gov.au"^^xsd:anyURI ;
+.
+
+org:dem
+    a schema:Organization ;
+    schema:description "The Department for Energy and Mining (DEM) leads the global transformation economy, overseeing the responsible mining and production of the minerals, metals and fuels of the future, to safely and sustainably generate the energy and low carbon products of the future." ;
+    schema:name "SA Department for Energy and Mining" ;
+    schema:url "https://www.energymining.sa.gov.au"^^xsd:anyURI ;
+.
+
+org:des
+    a schema:Organization ;
+    schema:description "DES recognises the enormous value a clean environment, innovative society and visitor economy, and vibrant culture contributes to our lives. The department brings together key areas of work to achieve our objectives for a better Queensland." ;
+    schema:name "Department of Environment and Science, Queensland Government" ;
+    schema:url "https://www.des.qld.gov.au"^^xsd:anyURI ;
+.
+
+org:dew
+    a schema:Organization ;
+    schema:description "The Department for Environment and Water (DEW) manages a complex portfolio of natural and built assets that are critical to the wellbeing and economic prosperity of all South Australians." ;
+    schema:name "South Australian Department for Environment and Water" ;
+    schema:url "https://www.sa.gov.au/topics/about-sa/government/departments/environment-and-water"^^xsd:anyURI ;
+.
+
+org:dewr
+    a schema:Organization ;
+    schema:description "DEWR fosters a productive and competitive labour market through policies and programs that assist job seekers into work, including secure work, and meet employer and industry needs; promotes growth in economic productivity and social wellbeing through access to quality skills and training; and facilitates jobs growth, including secure work, through policies and programs that promote fair, productive and safe workplaces" ;
+    schema:name "Department of Employment and Workplace Relations" ;
+    schema:url "https://www.dewr.gov.au"^^xsd:anyURI ;
+.
+
+org:dhs
+    a schema:Organization ;
+    schema:description "Responsible for the development of service delivery policy and provide access to social, health and other payments and services." ;
+    schema:name "Department of Human Services" ;
+    schema:url "https://www.humanservices.gov.au"^^xsd:anyURI ;
+.
+
+org:dmirs
+    a schema:Organization ;
+    schema:description "Part of the government of Western Australia" ;
+    schema:name "Department of Mines, Industry Regulation & Safety" ;
+    schema:url "https://www.dmirs.wa.gov.au"^^xsd:anyURI ;
+.
+
+org:dnrme
+    a schema:Organization ;
+    schema:description "The State of Queensland's department for the management of renewable and non-renewable land, water, mineral and energy resources." ;
+    schema:name "Department of Natural Resources, Mines and Energy" ;
+    schema:url "https://www.dnrme.qld.gov.au"^^xsd:anyURI ;
+.
+
+org:doee
+    a schema:Organization ;
+    schema:description "The Department designs and implements Australian Government policy and programs to protect and conserve the environment, water and heritage, promote climate action, and provide adequate,&nbsp;reliable and affordable energy." ;
+    schema:name "Department of the Environment and Energy" ;
+    schema:url "http://environment.gov.au"^^xsd:anyURI ;
+.
+
+org:doi
+    a schema:Organization ;
+    schema:description "This is the web site of the International DOI Foundation (IDF), a not-for-profit membership organization that is the governance and management body for the federation of Registration Agencies providing Digital Object Identifier (DOI) services and registration, and is the registration authority for the ISO standard (ISO 26324) for the DOI system. The DOI system provides a technical and social infrastructure for the registration and use of persistent interoperable identifiers, called DOIs, for use on digital networks." ;
+    schema:name "Digital Object Identifier System" ;
+    schema:url "https://www.doi.org"^^xsd:anyURI ;
+.
+
+org:ecosmartecology
+    a schema:Organization ;
+    schema:description "EcoSmart Ecology is an emerging industry leader in ecological research, survey and assessment with a strong client focus and the highest commitment to quality. Use our balance of knowledge, skills and experience to assist in navigating through the array of environmental issues and statutory requirements facing ecological planners and developers." ;
+    schema:name "EcoSmart Ecology" ;
+    schema:url "https://ecosmartecology.com.au"^^xsd:anyURI ;
+.
+
+org:engineersaustralia
+    a schema:Organization ;
+    schema:description "Engineers Australia is the peak body for the engineering profession in Australia. The organisation was founded in 1919, as the Institution of Engineers Australia. With approximately 115,000 individual members, we are also the voice of the profession." ;
+    schema:name "Engineers Australia" ;
+    schema:url "https://www.engineersaustralia.org.au"^^xsd:anyURI ;
+.
+
+org:fedu
+    a schema:Organization ;
+    schema:description "Federation University Australia was formed when the former University of Ballarat and the Gippsland Campus of Monash University were amalgamated." ;
+    schema:name "Federation University" ;
+    schema:url "https://federation.edu.au"^^xsd:anyURI ;
+.
+
+org:finance
+    a schema:Organization ;
+    schema:description "As a central agency of the Australian Government, the Department of Finance (Finance) plays an important role in assisting government across a wide range of policy areas to ensure its outcomes are met. Finance supports the government’s ongoing priorities through the Budget process and fosters leading practice through the public sector resource management, governance and accountability frameworks." ;
+    schema:name "Department of Finance" ;
+    schema:url "https://www.finance.gov.au"^^xsd:anyURI ;
+.
+
+org:ga
+    a schema:Organization ;
+    schema:description "Australia's pre-eminent public sector geoscience organisation. We are the nation's trusted advisor on the geology and geography of Australia. We apply science and technology to describe and understand the Earth for the benefit of Australia." ;
+    schema:name "Geoscience Australia" ;
+    schema:url "http://www.ga.gov.au"^^xsd:anyURI ;
+.
+
+org:gaia-resources
+    a schema:Organization ;
+    schema:description "Gaia Resources provide a range of services around technology consulting to organisations that work with the environment, or collecting organisations. We work with organisations that interact with the environment in a range of ways - strategy development, spatial analysis, spatial support, software development, support, data management, and training being a few of the services that we offer in this area." ;
+    schema:name "Gaia Resources" ;
+    schema:url "https://www.gaiaresources.com.au/"^^xsd:anyURI ;
+.
+
+org:gccc
+    a schema:Organization ;
+    schema:description "The council of the Gold Coast" ;
+    schema:name "Gold Coast City Council" ;
+    schema:url "https://www.goldcoast.qld.gov.au"^^xsd:anyURI ;
+.
+
+org:geoscape
+    a schema:Organization ;
+    schema:description """Geoscape Australia is the trading name of PSMA Australia Limited, a self-funded public company owned by Australia’s governments.
+
+They deliver spatial data to enable economic, social and environmental outcomes across the economy. Their vision is achieved through a wide and sustained ecosystem of partnerships and collaboration.
+&nbsp;""" ;
+    schema:name "Geoscape" ;
+    schema:url "https://geoscape.com.au"^^xsd:anyURI ;
+.
+
+org:ggic
+    a schema:Organization ;
+    schema:description "The inter-governmental committee in ANZ tasked with improving geoscience information." ;
+    schema:name "Australia-New Zealand Government Geoscience Information Committee (GGIC)" ;
+    schema:url "https://www.geoscience.gov.au/about"^^xsd:anyURI ;
+.
+
+org:ggic-pdwg
+    a schema:Organization ;
+    schema:description "The Working Group tasked with petroleum data work within the GGIC" ;
+    schema:name "GGIC Petroleum Data Working Group" ;
+    schema:url "https://www.geoscience.gov.au/about"^^xsd:anyURI ;
+.
+
+org:gsq
+    a schema:Organization ;
+    schema:description "The geological survey unit within the State of Queensland's Department of Natural Resources, Mines and Energy." ;
+    schema:name "Geological Survey of Queensland" ;
+    schema:url "https://www.business.qld.gov.au/industries/mining-energy-water/resources/geoscience-information/gsq"^^xsd:anyURI ;
+.
+
+org:gssa
+    a schema:Organization ;
+    schema:description "The Geological Survey of South Australia (GSSA) collect, manage and deliver information and knowledge of South Australia’s geology, particularly for its mineral resources prospectivity." ;
+    schema:name "Geological Survey of South Australia" ;
+    schema:url "https://www.energymining.sa.gov.au/industry/geological-survey"^^xsd:anyURI ;
+.
+
+org:gswa
+    a schema:Organization ;
+    schema:description "The Geological Survey of WA within the Department of Mines, Industry Regulation &amp; Safety." ;
+    schema:name "Geological Survey of Western Australia" ;
+.
+
+org:handle
+    a schema:Organization ;
+    schema:description """The Handle System is the Corporation for National Research Initiatives's proprietary registry assigning persistent identifiers, or handles, to information resources, and for resolving "those handles into the information necessary to locate, access, and otherwise make use of the resources".
+
+As with handles used elsewhere in computing, Handle System handles are opaque, and encode no information about the underlying resource, being bound only to metadata regarding the resource. Consequently, the handles are not rendered invalid by changes to the metadata.
+
+The system was developed by Bob Kahn at the Corporation for National Research Initiatives (CNRI). The original work was funded by the Defense Advanced Research Projects Agency (DARPA) between 1992 and 1996, as part of a wider framework for distributed digital object services,[2] and was thus contemporaneous with the early deployment of the World Wide Web, with similar goals.
+
+Thousands of handle services are currently running. Over 1000 of these are at universities and libraries, but they are also in operation at national laboratories, research groups, government agencies, and commercial enterprises, receiving over 200 million resolution requests per month.""" ;
+    schema:name "Handle Registry" ;
+    schema:url "http://handle.net"^^xsd:anyURI ;
+.
+
+org:iag
+    a schema:Organization ;
+    schema:description "International Association of Geomorphologists (IAG/AIG) is a scientific, non-governmental and non-profit organisation, whose principal objectives are development and promotion of geomorphology as a science through international co-operation and dissemination of knowledge of geomorphology. The IAG/AIG was founded at the Second International Conference on Geomorphology in Frankfurt/Main (Germany) in 1989 in order to strengthen international geomorphology. IAG/AIG fulfils its aims through the establishment of working groups and task forces, organisation of international and regional conferences, publication activity and information exchange. Membership of the IAG/AIG is normally by countries. At present, 63 countries are affiliated to the IAG/AIG through their National Scientific Members. The activity of the IAG/AIG is steered by its Executive Committee." ;
+    schema:name "International Association of Geomorphologists" ;
+    schema:url "https://www.geomorph.org"^^xsd:anyURI ;
+.
+
+org:icao
+    a schema:Organization ;
+    schema:description """ICAO is funded and directed by 193 national governments to support their diplomacy and cooperation in air transport as signatory states to the Chicago Convention (1944).
+
+Its core function is to maintain an administrative and expert bureaucracy (the ICAO Secretariat) supporting these diplomatic interactions, and to research new air transport policy and standardization innovations as directed and endorsed by governments through the ICAO Assembly, or by the ICAO Council which the assembly elects.""" ;
+    schema:name "International Civil Aviation Organisation" ;
+    schema:url "https://www.icao.int/Pages/default.aspx"^^xsd:anyURI ;
+.
+
+org:ics
+    a schema:Organization ;
+    schema:description "The International Commission on Stratigraphy (ICS) is the largest and oldest constituent scientific body in the International Union of Geological Sciences (IUGS). Its primary objective is to define precisely global units (systems, series and stages) of the International Chronostratigraphic Chart that, in turn, are the basis for the units (periods, epochs and age) of the International Geological Time Scale; thus setting global standards for the fundamental scale for expressing the history of the Earth." ;
+    schema:name "International Commission on Stratigraphy" ;
+    schema:url "https://stratigraphy.org"^^xsd:anyURI ;
+.
+
+org:icsm
+    a schema:Organization ;
+    schema:description """The Intergovernmental Committee on Surveying and Mapping (ICSM) was established by the Prime Minister, State Premiers, and the Chief Minister of the Northern Territory in 1988.&nbsp; Since that time the Australian Capital Territory and New Zealand have joined ICSM.&nbsp; The Australian Defence forces are also represented on ICSM.
+
+Membership is comprised of senior representatives of surveying and mapping agencies.""" ;
+    schema:name "Intergovernmental Committee on Surveying and Mapping" ;
+    schema:url "https://www.icsm.gov.au"^^xsd:anyURI ;
+.
+
+org:icsm-awg
+    a schema:Organization ;
+    schema:description "The permanent Working Group within ICSM charged with addressing issues." ;
+    schema:name "ICSM Addressing Working Group" ;
+    schema:url "https://icsm.gov.au/what-we-do/addressing"^^xsd:anyURI ;
+.
+
+org:icsm-pnwg
+    a schema:Organization ;
+    schema:description "The permanent Working Group within ICSM charged with Place Names / Geographical Names issues." ;
+    schema:name "ICSM Place Names Working Group" ;
+    schema:url "https://www.icsm.gov.au/what-we-do/place-names-working-group"^^xsd:anyURI ;
+.
+
+org:idn
+    a schema:Organization ;
+    schema:description "The Indigenous Data Network of Australia." ;
+    schema:name "Indigenous Data Network" ;
+    schema:url "https://www.idnau.org"^^xsd:anyURI ;
+.
+
+org:igsn
+    a schema:Organization ;
+    schema:description """International Geo Sample Number (IGSN), a unique identifier for samples and specimens collected from our natural environment.
+
+The IGSN was developed by the System for Earth Sample Registration SESAR, with funding from the US National Science Foundation.
+
+The IGSN e.V. is incorporated under German law as a not-for-profit society (gemeinnütziger eingetragener Verein) with a registered office at the GeoForschungsZentrum (GFZ) Potsdam.""" ;
+    schema:name "International Geo Sample Number" ;
+    schema:url "http://www.igsn.org/"^^xsd:anyURI ;
+.
+
+org:infrastructure
+    a schema:Organization ;
+    schema:description "Our work connects, and enriches every Australian community, underpins our economy and society, and empowers our regions. We provide strategic policy advice, fit-for-purpose regulation, and deliver programs, projects and services in the major infrastructure, transport, communications and arts sectors, supporting our regions, cities and territories." ;
+    schema:name "Department of Infrastructure, Transport, Regional Development and Communications" ;
+    schema:url "https://www.infrastructure.gov.au"^^xsd:anyURI ;
+.
+
+org:isgm-wg
+    a schema:Organization ;
+    schema:description "The International Seabed Geomorphology Mapping Working Group (ISGM) is a collaboration between geoscience agencies in the United Kingdom, Norway, Ireland and Australia. The group have been collaborating since 2016 to develop a novel marine and coastal system that supports standardised geomorphic classification and mapping by a broad range of geoscientists. Users can download open-access reports and GIS tools or use the online vocabularies to apply the method to their own datasets." ;
+    schema:name "International Seabed Geomorphology Mapping Working Group" ;
+    schema:url "https://www.geomorph.org/international-seabed-geomorphology-mapping-working-group/"^^xsd:anyURI ;
+.
+
+org:iso
+    a schema:Organization ;
+    schema:description "The International Organization for Standardization is an independent, non-governmental, international standard development organization composed of representatives from the national standards organizations of member countries." ;
+    schema:name "International Organization for Standardization" ;
+    schema:url "https://www.iso.org"^^xsd:anyURI ;
+.
+
+org:isu
+    a schema:Organization ;
+    schema:description "The Indigenous Studies Unit undertakes research aiming to improve outcomes in Indigenous health and wellbeing, particularly in relation to alcohol misuse and family violence, Indigenous data governance, digital archives, cultural heritage, technology and resource management. We make regular contributions to Parliamentary reviews and Inquiries, cross-platform media, and policy development." ;
+    schema:name "Indigenous Studies Unit" ;
+    schema:url "https://mspgh.unimelb.edu.au/centres-institutes/onemda/research-group/indigenous-studies-unit"^^xsd:anyURI ;
+.
+
+org:jcu
+    a schema:Organization ;
+    schema:description "James Cook University (JCU) is a public university in North Queensland, Australia. The second oldest university in Queensland, JCU is a teaching and research institution. The university's main campuses are located in the tropical cities of Cairns and Townsville, and one in the city state of Singapore. JCU also has study centres in Mount Isa, Mackay, Thursday Island and Rockhampton." ;
+    schema:name "James Cook University" ;
+    schema:url "https://www.jcu.edu.au"^^xsd:anyURI ;
+.
+
+org:jsa
+    a schema:Organization ;
+    schema:description "Jobs and Skills Australia was established in 2022 under the Jobs and Skills Australia Act 2022." ;
+    schema:name "Jobs and Skills Australia" ;
+    schema:url "https://www.jobsandskills.gov.au"^^xsd:anyURI ;
+.
+
+org:latrobe
+    a schema:Organization ;
+    schema:description "La Trobe University is a public research university based in Melbourne" ;
+    schema:name "La Trobe University" ;
+    schema:url "https://www.latrobe.edu.au"^^xsd:anyURI ;
+.
+
+org:lcai
+    a schema:Organization ;
+    schema:description "Organization found in ABR but not online" ;
+    schema:name "Lockyer Catchment Association Inc" ;
+    schema:url "https://abr.business.gov.au/ABN/View?abn=56756200363"^^xsd:anyURI ;
+.
+
+org:macleaymuseum
+    a schema:Organization ;
+    schema:description "This museum was formerly part of the University of Sydney but it has been abolished now and its contents transfered to the chau Chack Wing museum within the university." ;
+    schema:name "Macleay Museum" ;
+    schema:url "https://en.wikipedia.org/wiki/Macleay_Museum"^^xsd:anyURI ;
+.
+
+org:mboca
+    a schema:Organization ;
+    schema:description "Now part of BirdLife Australia" ;
+    schema:name "Mackay Bird Observers Club of Australia" ;
+    schema:url "https://en.wikipedia.org/wiki/Bird_Observation_%26_Conservation_Australia"^^xsd:anyURI ;
+.
+
+org:meri
+    a schema:Organization ;
+    schema:description "MERI is part of DCCEEW that helps partners to identify what is working and what can be improved within their projects relating to natural resource management (NRM) activities." ;
+    schema:name "Monitoring, Evaluation, Reporting and Improvement (MERI)" ;
+    schema:url "https://www.dcceew.gov.au/environment/land/natural-heritage-trust/monitoring-reporting/meri"^^xsd:anyURI ;
+.
+
+org:mgrt
+    a schema:Organization ;
+    schema:description "The Mahogany Glider Recovery Team (MGRT) provides advice and coordinates actions identified in the Mahogany Glider Recovery Plan. The MGRT includes representatives from Organizations with a direct interest in the recovery of the Mahogany Glider, including those involved in funding and those participating in actions that support the recovery of the species." ;
+    schema:name "Mahogany Glider Recovery Team" ;
+    schema:url "https://www.wettropicsplan.org.au/contacts-plan-partners/mahogany-glider-recovery-team"^^xsd:anyURI ;
+.
+
+org:mjdenv
+    a schema:Organization ;
+    schema:description "MJD Environmental is an innovative Environmental Consultancy local to the Hunter and servicing the Hunter Valley and beyond in the Land Development" ;
+    schema:name "MJD Environmental" ;
+    schema:url "https://www.mjdenvironmental.com"^^xsd:anyURI ;
+.
+
+org:mrcca
+    a schema:Organization ;
+    schema:description "The Mary River Catchment Coordination Association is a very active Integrated Catchment Management Organization overseen by the Mary River Catchment Coordinating Committee (MRCCC), which comprises interest sector representatives from 30 community, industry and government sectors with interests in sustainable natural resource management. Today the group reaches out to thousands of catchment residents through our stakeholder delegates and associated networks throughout the catchment." ;
+    schema:name "Mary River Catchment Coordination Association" ;
+    schema:url "https://mrccc.org.au"^^xsd:anyURI ;
+.
+
+org:museumsvictoria
+    a schema:Organization ;
+    schema:description """For more than 160 years, the people of Victoria have turned to their State museum to connect the past and the present, and to imagine the future. As Australia's largest public museum Organization, we inspire audiences to engage in life’s deep mysteries and big questions.
+
+Our museums present unique and exceptional experiences for more than 2 million visitors each year, who come from all over Australia and around the world to be inspired and to learn about themselves and the universe we inhabit.
+
+The collection is an invaluable record of Victoria's environmental and cultural history, and our amazing wealth of over 15 million items has been creating a sense of wonder and awe in visitors for generations.""" ;
+    schema:name "Museums Victoria" ;
+    schema:url "https://museumsvictoria.com.au"^^xsd:anyURI ;
+.
+
+org:mwlr
+    a schema:Organization ;
+    schema:description "Manaaki Whenua – Landcare Research is one of seven Crown Research Institutes (CRIs) formed in 1992. CRIs function as independent companies but are owned by, and accountable to, the New Zealand Government." ;
+    schema:name "Manaaki Whenua – Landcare Research" ;
+.
+
+org:naa
+    a schema:Organization ;
+    schema:description "The National Archives of Australia can best be described as the memory of our nation – collecting and preserving Australian Government records that reflect our history and identity." ;
+    schema:name "National Archives of Australia" ;
+    schema:url "http://naa.gov.au"^^xsd:anyURI ;
+.
+
+org:naturemapr
+    a schema:Organization ;
+    schema:description "NatureMapr is a not-for-profit organisation whose mission is to empower anybody to report plant or animal information anywhere in Australia and ensure the information gets to the people that need to know about it." ;
+    schema:name "Naturemapr" ;
+    schema:url "https://naturemapr.org"^^xsd:anyURI ;
+.
+
+org:nci
+    a schema:Organization ;
+    schema:description "The National Computational Infrastructure (NCI) is Australia’s leading high-performance data, storage and computing organisation, providing expert services to benefit all domains of science, government and industry." ;
+    schema:name "National Computational Infrastructure" ;
+    schema:url "https://nci.org.au"^^xsd:anyURI ;
+.
+
+org:neii
+    a schema:Organization ;
+    schema:description """The National Environmental Information Infrastructure (NEII) was an initiative lead by the Bureau of Meteorology that created IT infrastructure for use across government environmental organisations in Australia for several years until 2022.
+
+The NEII is now decommissioned, see the notice: http://www.bom.gov.au/environment/transition.shtml""" ;
+    schema:name "National Environmental Information Infrastructure" ;
+.
+
+org:nhm
+    a schema:Organization ;
+    schema:description """The Natural History Museum is a world-class visitor attraction and leading science research centre.
+
+We use our unique collections and unrivalled expertise to tackle the biggest challenges facing the world today.
+
+We care for more than 80 million objects spanning billions of years and welcome more than five million visitors annually.""" ;
+    schema:name "Natural History Museum" ;
+    schema:url "https://www.nhm.ac.uk"^^xsd:anyURI ;
+.
+
+org:nla
+    a schema:Organization ;
+    schema:description "The National Library of Australia aims to provide Australians with high levels of customer service. With your assistance and feedback, we seek to continuously improve our service to the Australian community by responding to the changing needs of our users; by providing access to the nation’s library collections and services; and by safeguarding our heritage building for future generations." ;
+    schema:name "National Library of Australia" ;
+    schema:url "https://www.nla.gov.au"^^xsd:anyURI ;
+.
+
+org:npansw
+    a schema:Organization ;
+    schema:description """The National Parks Association of NSW (commonly known as NPA) is a member-based conservation Organization and registered charity. Our mission is protecting nature through community action.
+
+We are committed to protecting, conserving and restoring the integrity and diversity of nature, its biodiversity, geodiversity, supporting ecological processes and associated cultural values. We complement our conservation work by providing rewarding and enjoyable opportunities for people to experience, appreciate, study and care for nature.""" ;
+    schema:name "National Parks Association of NSW" ;
+    schema:url "https://npansw.org.au"^^xsd:anyURI ;
+.
+
+org:nrm-organisations
+    a schema:Organization ;
+    schema:description "Australian Natural Resource Management (NRM) Organisations" ;
+    schema:name "Natural Resource Management (NRM) Organisations" ;
+    schema:url "https://nrmregionsaustralia.com.au"^^xsd:anyURI ;
+.
+
+org:nsl
+    a schema:Organization ;
+    schema:description "Holder of authorititive species data for Australia." ;
+    schema:name "National Species List" ;
+.
+
+org:nsw
+    a schema:Organization ;
+    schema:description "The State of NSW" ;
+    schema:name "State of NSW" ;
+    schema:url "https://www.nsw.gov.au"^^xsd:anyURI ;
+.
+
+org:nsw-bionet
+    a schema:Organization ;
+    schema:description "BioNet is the repository for biodiversity data products managed by the Department of Climate Change, Energy, the Environment and Water. BioNet aims to improve biodiversity outcomes by enabling the community and government to proactively manage and enhance biodiversity in New South Wales through comprehensive, credible and robust data and information. BioNet delivers two of its data collections to BDR: BioNet Species Sightings Data Collection and BioNet Systematic Survey Data Collection. Custodian organisation for biodiversity data held by the New South Wales Government." ;
+    schema:name "NSW BioNet Atlas Team" ;
+    schema:url "https://www.environment.nsw.gov.au/topics/animals-and-plants/biodiversity/nsw-bionet"^^xsd:anyURI ;
+.
+
+org:nsw-daff
+    a schema:Organization ;
+    schema:description "From 1 July 2024, the NSW Department of Primary Industries Forests became part of the newly formed NSW Department of Primary Industries and Regional Development." ;
+    schema:name "NSW Department of Primary Industries Forests" ;
+    schema:url "https://www.dpi.nsw.gov.au/forestry"^^xsd:anyURI ;
+.
+
+org:nsw-dcceew
+    a schema:Organization ;
+    schema:description "The NSW Department of Climate Change, Energy, the Environment and Water (DCCEEW) works to protect the state’s environment and heritage. It leads the way on climate change, driving the sustainable transition to a net zero economy, powered by affordable, reliable, and clean energy." ;
+    schema:name "NSW Department of Climate Change, Energy, the Environment and Water" ;
+    schema:url "https://www.nsw.gov.au/departments-and-agencies/dcceew"^^xsd:anyURI ;
+.
+
+org:nsw-dpe
+    a schema:Organization ;
+    schema:description """The New South Wales Department of Planning and Environment (DPE) was a department of the New South Wales Government, responsible for effective and sustainable planning to support the growth in the state of New South Wales, Australia.
+
+The department was renamed from the Department of Planning, Industry and Environment (DPIE) on 21 December 2021.
+
+Superseding agencies: Department of Planning, Housing and Infrastructure & Department of Climate Change, Energy, the Environment and Water.""" ;
+    schema:name "New South Wales Dept of Planning and Environment" ;
+    schema:url "https://www.dpie.nsw.gov.au"^^xsd:anyURI ;
+.
+
+org:nsw-dpie
+    a schema:Organization ;
+    schema:description "The New South Wales Department of Department of Planning, Industry and Environment (DPIE) was renamed to the Department of Planning and Environment (DPE) on 21 December 2021." ;
+    schema:name "New South Wales Dept of Planning Industry and Environment" ;
+    schema:url "https://www.dpie.nsw.gov.au"^^xsd:anyURI ;
+.
+
+org:nsw-health
+    a schema:Organization ;
+    schema:description "The State of New South Wales' health department." ;
+    schema:name "NSW Ministry of Health" ;
+    schema:url "https://www.health.nsw.gov.au"^^xsd:anyURI ;
+.
+
+org:nsw-npws
+    a schema:Organization ;
+    schema:description "NSW National Parks and Wildlife Service (NPWS) is part of Environment and Heritage in the Department of Climate Change" ;
+    schema:name "NSW National Parks and Wildlife Service" ;
+    schema:url "https://www.nationalparks.nsw.gov.au"^^xsd:anyURI ;
+.
+
+org:nt
+    a schema:Organization ;
+    schema:description "The Northern Territory of Australia" ;
+    schema:name "Northern Territory" ;
+    schema:url "https://nt.gov.au"^^xsd:anyURI ;
+.
+
+org:nt-atlas
+    a schema:Organization ;
+    schema:description "Provider of NR Maps (Natural Resource Maps). Custodian organisation for biodiversity data held by the Northern Territory Government" ;
+    schema:name "NT Atlas Team" ;
+    schema:url "https://nrmaps.nt.gov.au/biodiversity.html"^^xsd:anyURI ;
+.
+
+org:nt-dipe
+    a schema:Organization ;
+    schema:description "The Northern Territory Department of Infrastructure, Planning and Environment is now called the Department of Logistics and Infrastructure (DLI). It was previously named the Department of Infrastructure, Planning and Logistics (DIPL). The DLI was established in September 2024 by the Northern Territory Government. It focuses on infrastructure, logistics, and sustainable development across the Northern Territory." ;
+    schema:name "Northern Territory Department of Infrastructure, Planning and Environment" ;
+    schema:url "https://environment.nt.gov.au"^^xsd:anyURI ;
+.
+
+org:nt-dlpe
+    a schema:Organization ;
+    schema:description "The department includes the key functions that foster and protect the environment and natural resources in the Northern Territory." ;
+    schema:name "NT Department of Lands Planning and Environment" ;
+    schema:url "https://environment.nt.gov.au"^^xsd:anyURI ;
+.
+
+org:nt-dlrm
+    a schema:Organization ;
+    schema:description "The Department has been superseded by the Department of Lands" ;
+    schema:name "NT Department of Land Resource Management" ;
+    schema:url "https://environment.nt.gov.au"^^xsd:anyURI ;
+.
+
+org:nt-herbarium
+    a schema:Organization ;
+    schema:description """A herbarium is a 'museum or library of plant specimens'. They are part of an international network dedicated to the study and identification of plants.
+
+The NT Herbarium has a collection of 270,000 preserved plant specimens kept for reference and research.""" ;
+    schema:name "Norther Territory Herbarium" ;
+    schema:url "https://nt.gov.au/environment/native-plants/native-plants-and-nt-herbarium"^^xsd:anyURI ;
+.
+
+org:ogc
+    a schema:Organization ;
+    schema:description "The Open Geospatial Consortium (OGC) is an international consortium of more than 530 businesses, government agencies, research organizations, and universities driven to make geospatial (location) information and services FAIR - Findable, Accessible, Interoperable, and Reusable.&nbsp;" ;
+    schema:name "Open Geospatial Consortium" ;
+    schema:url "https://www.opengeospatial.org"^^xsd:anyURI ;
+.
+
+org:parksaustalia
+    a schema:Organization ;
+    schema:description "Parks Australia is part of the federal environment portfolio. It supports the Director of National Parks who has responsibility under federal environment law for six Commonwealth national parks, the Australian National Botanic Gardens and Australian Marine Parks." ;
+    schema:name "Parks Australia" ;
+    schema:url "https://parksaustralia.gov.au"^^xsd:anyURI ;
+.
+
+org:psma
+    a schema:Organization ;
+    schema:description "PSMA Australia provides location data that is reliable, authoritative and accessible." ;
+    schema:name "PSMA Australia" ;
+    schema:url "https://www.psma.com.au"^^xsd:anyURI ;
+.
+
+org:qld
+    a schema:Organization ;
+    schema:description "Queensland is a state situated in northeastern Australia, and is the second-largest and third-most populous of the Australian states. It is bordered by the Northern Territory, South Australia and New South Wales to the west, southwest and south respectively. To the east, Queensland is bordered by the Coral Sea and the Pacific Ocean; to its north is the Torres Strait, separating the Australian mainland from Papua New Guinea." ;
+    schema:name "Queensland Government" ;
+    schema:url "https://www.qld.gov.au"^^xsd:anyURI ;
+.
+
+org:qld-daff
+    a schema:Organization ;
+    schema:description """The Department of Agriculture and Fisheries (DAF) was officially dissolved and replaced by the Department of Primary Industries (DPI) on 1 November 2024, due to machinery of government changes.
+
+Formerly known as the Department of Agriculture and Fisheries.
+
+We ensure that Queensland’s primary industries—the essential backbone of our economy and communities—are productive, profitable and sustainable for future generations.
+
+We do this by connecting industries, the community and government to grow our economy, protect our primary industries from biosecurity threats and support rural communities.""" ;
+    schema:name "Queensland Department of Agriculture and Fisheries" ;
+    schema:url "https://www.archivessearch.qld.gov.au/agencies/A11656"^^xsd:anyURI ;
+.
+
+org:qld-derm
+    a schema:Organization ;
+    schema:description "DERM was dissolved and transformed into the Department of Environment and Heritage Protection (EHP) in 2012" ;
+    schema:name "Qld Department of Environment and Resource Management" ;
+    schema:url "https://www.archivessearch.qld.gov.au/agencies/A11171"^^xsd:anyURI ;
+.
+
+org:qld-detsi
+    a schema:Organization ;
+    schema:description "DETSI protects enormous value that a clean environment, innovative society and visitor economy, and vibrant culture contributes to our lives" ;
+    schema:name "Queensland Department of the Environment, Tourism, Science and Innovation" ;
+    schema:url "https://www.detsi.qld.gov.au/"^^xsd:anyURI ;
+.
+
+org:qld-dres
+    a schema:Organization ;
+    schema:description "The Department of Resources was renamed the Department of Natural Resources and Mines, Manufacturing and Regional and Rural Development in 2025" ;
+    schema:name "Qld Department of Resources" ;
+    schema:url "https://www.resources.qld.gov.au"^^xsd:anyURI ;
+.
+
+org:qld-resources
+    a schema:Organization ;
+    schema:description "The Department of Resources support landholders, businesses and the community to capitalise on Queensland’s land, mineral, petroleum and gas resources for sustainable economic prosperity and just outcomes." ;
+    schema:name "Queensland Department of Resources" ;
+    schema:url "https://www.resources.qld.gov.au"^^xsd:anyURI ;
+.
+
+org:qld-tmr
+    a schema:Organization ;
+    schema:description """The Department of Transport and Main Roads moves and connects people, places, goods and services safely, efficiently and effectively across Queensland.
+We plan, manage and deliver Queensland's integrated transport environment to achieve sustainable transport solutions for road, rail, air and sea.""" ;
+    schema:name "Qld Department of Transport and Main Roads" ;
+    schema:url "https://www.tmr.qld.gov.au"^^xsd:anyURI ;
+.
+
+org:qld-tsgehp
+    a schema:Organization ;
+    schema:description "Part of Department of the Environment, Tourism, Science and Innovation (DETSI)" ;
+    schema:name "Qld Threatened Species Group" ;
+    schema:url "https://www.detsi.qld.gov.au"^^xsd:anyURI ;
+.
+
+org:qld-widnet
+    a schema:Organization ;
+    schema:description "The team that manages the WildNet platform which contains curated occurrence records of priority species and is sourced from government research and monitoring, private and university research programs, business, natural resource management bodies and select citizen science programs. The platform supports Queensland’s biodiversity and protected areas by providing important wildlife information that underpins conservation policies, programs and management responses." ;
+    schema:name "QLD WildNet Team" ;
+    schema:url "https://www.qld.gov.au/environment/plants-animals/species-information/wildnet"^^xsd:anyURI ;
+.
+
+org:qld-wildnet
+    a schema:Organization ;
+    schema:description "WildNet is home to wildlife sightings, survey results, species profiles and multimedia." ;
+    schema:name "WildNet platform" ;
+    schema:url "https://www.qld.gov.au/environment/plants-animals/species-information/wildnet"^^xsd:anyURI ;
+.
+
+org:qm
+    a schema:Organization ;
+    schema:description "Queensland Museum is the keeping place for the State Collection, a magnificent assemblage of 1.2 million cultural objects, natural history specimens and geological treasures and more than 14 million research items. Every year, we bring our collections to life through fieldwork, contemporary acquisitions, world-class research and a dynamic program of exhibitions, workshops, talks, lectures and major events including World Science Festival Brisbane." ;
+    schema:name "Queensland Museum" ;
+    schema:url "https://www.museum.qld.gov.au"^^xsd:anyURI ;
+.
+
+org:qnc
+    a schema:Organization ;
+    schema:description "The Queensland Naturalists’ Club Inc aims to study all branches of natural history, to encourage the preservation and protection of native flora and fauna and their environments. We also focus on publishing worthwhile observations on natural history and record club activities." ;
+    schema:name "Queensland-Naturalists-Club" ;
+    schema:url "https://www.qnc.org.au"^^xsd:anyURI ;
+.
+
+org:qpws
+    a schema:Organization ;
+    schema:description "Part of Qld DETSI" ;
+    schema:name "Queensland Parks and Wildlife Service" ;
+    schema:url "https://parks.desi.qld.gov.au"^^xsd:anyURI ;
+.
+
+org:qsi
+    a schema:Organization ;
+    schema:description "The unit within Queensland Government that manages fundamental spatial information for the State." ;
+    schema:name "Queensland Spatial Information" ;
+    schema:url "https://qldspatial.information.qld.gov.au"^^xsd:anyURI ;
+.
+
+org:qvmag
+    a schema:Organization ;
+    schema:description "The Queen Victoria Museum and Art Gallery (QVMAG) is the cultural hub of Launceston and the leading destination for art, history and natural sciences in Northern Tasmania. " ;
+    schema:name "Queen Victoria Museum and Art Gallery" ;
+    schema:url "https://www.qvmag.tas.gov.au"^^xsd:anyURI ;
+.
+
+org:rbgdt
+    a schema:Organization ;
+    schema:description """Botanic Gardens of Sydney encompasses three world-leading botanic gardens, Australia’s premier botanical research institute, and Sydney’s leading outdoor activation precinct.
+
+As Australia’s oldest scientific institution, we are custodians of more than $1.2 billion in state significant cultural, heritage and botanical collections.
+
+The Gardens are a leading entity within the tourism sector with a focus on engaging international, national and regional visitors.
+
+Botanic Gardens of Sydney is the registered business name of the Royal Botanic Gardens and Domain Trust, which is constituted under the Royal Botanic Gardens and Domain Trust Act 1980.""" ;
+    schema:name "Royal Botanic Gardens and Domain Trust" ;
+    schema:url "https://www.service.nsw.gov.au/nswgovdirectory/royal-botanic-gardens-and-domain-trust-the"^^xsd:anyURI ;
+.
+
+org:rbgv
+    a schema:Organization ;
+    schema:description """Royal Botanic Gardens Victoria plays a leading role in the conservation of plants through biodiversity research, programs to protect rare and threatened plants, and the study of habitats. This work is supported by education and visitor programs about the importance of plants to life.
+
+The Organization encompasses two diverse sites at Melbourne and Cranbourne and the State Botanical Collection housed at the National Herbarium of Victoria. Royal Botanic Gardens Victoria is managed by the Royal Botanic Gardens Board Victoria, which is responsible to the Minister for Environment.""" ;
+    schema:name "Royal Botanic Gardens Victoria" ;
+    schema:url "https://www.rbg.vic.gov.au"^^xsd:anyURI ;
+.
+
+org:reefcatchments
+    a schema:Organization ;
+    schema:description "Reef Catchments is the Natural Resource Management (NRM) Organization for the Mackay Whitsunday Isaac region. We facilitate change and work for long-term solutions to sustain, protect, and improve our region’s natural resources and environment, both now and into the future." ;
+    schema:name "Reef Catchments" ;
+    schema:url "https://reefcatchments.com.au"^^xsd:anyURI ;
+.
+
+org:riotinto
+    a schema:Organization ;
+    schema:description "Rio Tinto Group is a British-Australian multinational company that is the world's second largest metals and mining corporation." ;
+    schema:name "Rio Tinto" ;
+    schema:url "https://www.riotinto.com"^^xsd:anyURI ;
+.
+
+org:ror
+    a schema:Organization ;
+    schema:description """ROR is a community-led project to develop an open, sustainable, usable, and unique identifier for every research organization in the world.
+
+Between 2016 and 2018, a group of 17 organizations with a shared purpose invested their time and energy into an Org ID initiative, with the goal of defining requirements for an open, community-led organization identifier registry. The initiative was a transparent, accessible process to help work towards a better system for all of our communities.""" ;
+    schema:name "Research Organization Registry Community" ;
+    schema:url "https://ror.community/"^^xsd:anyURI ;
+.
+
+org:sa
+    a schema:Organization ;
+    schema:description "Formerly Department of Human Services" ;
+    schema:name "Services Australia" ;
+    schema:url "https://www.servicesaustralia.gov.au"^^xsd:anyURI ;
+.
+
+org:sa-dew
+    a schema:Organization ;
+    schema:description "The Department for Environment and Water (DEW) manages a complex portfolio of natural and built assets that are critical to the wellbeing and economic prosperity of all South Australians." ;
+    schema:name "SA Department for Environment and Water" ;
+    schema:url "https://www.environment.sa.gov.au"^^xsd:anyURI ;
+.
+
+org:sa-dewnr
+    a schema:Organization ;
+    schema:description "The South Australian Department for Environment, Water and Natural Resources (DEWNR) has changed its name. It is now the Department for Environment and Water (DEW). This name change occurred on March 22, 2018, according to State Records South Australia. The change was due to adjustments in ministerial portfolios and reporting lines. " ;
+    schema:name "SA Department for Environment, Water and Natural Resources" ;
+    schema:url "https://www.environment.sa.gov.au"^^xsd:anyURI ;
+.
+
+org:sa-herbarium
+    a schema:Organization ;
+    schema:description """The State Herbarium of South Australia, sometimes called the South Australian Herbarium, and having the herbarium code, AD, is located in Adelaide, South Australia. It is one of several State and Commonwealth herbaria in Australia. The Department for Environment and Water is the state agency which is responsible for the Herbarium, but the Board of the Botanic Gardens and State Herbarium (established by an Act of Parliament, most recently the Botanic Gardens and State Herbarium Act 1978) is charged with its establishment and maintenance.
+
+The herbarium is responsible for Electronic Flora of South Australia. It also produces the journal, Swainsona (formerly Journal of the Adelaide Botanic Gardens).""" ;
+    schema:name "State Herbarium of South Australia" ;
+    schema:url "https://www.botanicgardens.sa.gov.au/science/research/state-herbarium"^^xsd:anyURI ;
+.
+
+org:sam
+    a schema:Organization ;
+    schema:description "The South Australian Museum has been committed to making Australia’s natural and cultural heritage accessible, engaging and fun for over 165 years. It is a place where families can learn and grow together. Today the Museum is one of the most visited museums in Australia and holds collections of national and international significance. It is a leader in remote and regional community engagement, and in Australian Aboriginal heritage and scientific research." ;
+    schema:name "South Australian Museum" ;
+    schema:url "https://www.samuseum.sa.gov.au"^^xsd:anyURI ;
+.
+
+org:scienceforwildlife
+    a schema:Organization ;
+    schema:description """Science for Wildlife is a leading not-for-profit conservation Organization working to ensure a future for wildlife and the places they call home.
+
+Bringing the best available science to wildlife conservation in Australia and beyond, through the creation and sharing of ecological knowledge we empower people to participate in conservation that has an on-the-ground, enduring impact. Working with iconic and important species in key areas, our research and conservation work is designed to bring broader ecosystem benefits, maximising gains for many other animals and their habitats. We work beyond fences, at a landscape scale to bring real world solutions to conservation challenges. Our work is highly regarded by government and industry partners and informs conservation policy and action both nationally and globally.""" ;
+    schema:name "Science for Wildlife Ltd" ;
+    schema:url "https://www.scienceforwildlife.org"^^xsd:anyURI ;
+.
+
+org:scion
+    a schema:Organization ;
+    schema:description "Scion is a group of the New Zealand Institute for Bioeconomy Science" ;
+    schema:name "Scion Crown Research Institute of NZ" ;
+    schema:url "https://www.scionresearch.com"^^xsd:anyURI ;
+.
+
+org:sfsgi
+    a schema:Organization ;
+    schema:description """The Sydney Fungal Studies Group Incorporated (SFSGI) consists of mycological and other academics, students, and many other, non-academic but interested people of all age groups.
+
+The SFSGI aims to advance the study of fungi at all levels, particularly the larger fungi, to educate people at all stages of skill and knowledge in the science of mycology, and to interact with groups and societies having mycological or closely related interests.
+
+Membership is open to all, with the only requirements being that they are interested in contributing to the activities of the Group, subscribe to the aims of the Group, and that they respect the basic principles of nature conservation.""" ;
+    schema:name "Sydney Fungal Studies Group" ;
+    schema:url "https://www.sydneyfungalstudies.org.au"^^xsd:anyURI ;
+.
+
+org:south-australia
+    a schema:Organization ;
+    schema:description "The State of South Australia" ;
+    schema:name "State of South Australia" ;
+    schema:url "https://www.sa.gov.au"^^xsd:anyURI ;
+.
+
+org:sunwater
+    a schema:Organization ;
+    schema:description "Sunwater is a Queensland-based water service provider, making the most of the available water supply for our agriculture, urban and industrial customers." ;
+    schema:name "SunWater" ;
+    schema:url "https://www.sunwater.com.au"^^xsd:anyURI ;
+.
+
+org:surround
+    a schema:Organization ;
+    schema:description """SURROUND is an Australian technology company that develops advanced software systems and supplies consulting services.
+
+It is deeply involved with Linked Data in Australia.""" ;
+    schema:name "SURROUND Pty Ltd" ;
+    schema:url "https://surroundaustralia.com"^^xsd:anyURI ;
+.
+
+org:swmc
+    a schema:Organization ;
+    schema:description "Skills and Workforce Ministerial Council" ;
+    schema:name "Skills and Workforce Ministerial Council" ;
+    schema:url "https://www.directory.gov.au/portfolios/employment-and-workplace-relations/department-employment-and-workplace-relations/skills-and-workforce-ministerial-council"^^xsd:anyURI ;
+.
+
+org:tas-dnre
+    a schema:Organization ;
+    schema:description "DNRE aims to deliver a sustainable Tasmania by protecting and enhancing Tasmania's cultural and natural values; facilitating productive and sustainable industries; and by promoting the sustainable use, presentation, and enjoyment of our cultural and natural values." ;
+    schema:name "Tasmania Department of Natural Resources and Environment" ;
+    schema:url "https://nre.tas.gov.au/"^^xsd:anyURI ;
+.
+
+org:tas-nre
+    a schema:Organization ;
+    schema:description """The Department of Natural Resources and Environment Tasmania (NRE Tas) is responsible for delivering a sustainable Tasmania.
+We deliver a sustainable Tasmania by protecting and enhancing Tasmania's cultural and natural values; facilitating productive and sustainable industries; and by promoting the sustainable use, presentation, and enjoyment of our cultural and natural values.""" ;
+    schema:name "Department of Natural Resources and Environment Tasmania" ;
+    schema:url "https://www.nre.tas.gov.au"^^xsd:anyURI ;
+.
+
+org:tas-nva
+    a schema:Organization ;
+    schema:description "The Natural Values Atlas provides authoritative and comprehensive information on Tasmania's natural values. It draws together, in one centralised location, data on Tasmanian flora and fauna including threatened species and weeds, as well as Tasmanian geodiversity and soil survey data. It also incorporates access to other essential data sets such as TASVEG and Threatened Native Vegetation Communities maps. The Natural Values Atlas allows observations of plants and animals from various sources to be viewed, recorded and analysed. It can be used to search for information on plant and animal species from Tasmania, Australia and can display maps showing their location and extent. The observations of plants and animals recorded in the Natural Values Atlas have been collected by a variety of custodians through general species surveys and projects undertaken for scientific research, environmental assessments, and other purposes throughout the State since the 1800's. The Natural Values Atlas provides data products such as the Natural Values Report, which brings several data sets together providing a resource that can be used for desktop assessments of natural values for specific areas. Core repository for biodiversity data held by the Tasmanian Government." ;
+    schema:name "Tasmanian Natural Values Atlas Team" ;
+    schema:url "https://www.naturalvaluesatlas.tas.gov.au/"^^xsd:anyURI ;
+.
+
+org:tc211
+    a schema:Organization ;
+    schema:description "The International Organization for Standardization's Technical Committee on \"Geographic information/Geomatics\", is charged with standardization in the field of digital geographic information." ;
+    schema:name "ISO's Technical Committee 211" ;
+    schema:url "https://www.iso.org/committee/54904.html"^^xsd:anyURI ;
+.
+
+org:te-papa
+    a schema:Organization ;
+    schema:description "Te Papa is New Zealand's national museum, renowned for being bicultural, scholarly, innovative, and fun. Our success is built on our relationships with and our ability to represent our community." ;
+    schema:name "Museum of New Zealand Te Papa Tongarewa" ;
+    schema:url "https://www.tepapa.govt.nz"^^xsd:anyURI ;
+.
+
+org:tern
+    a schema:Organization ;
+    schema:description "TERN is Australia’s land ecosystem observatory." ;
+    schema:name "Terrestrial Ecosystems Research Network" ;
+    schema:url "https://www.tern.org.au"^^xsd:anyURI ;
+.
+
+org:tmag
+    a schema:Organization ;
+    schema:description """Tasmanian Museum and Art Gallery (TMAG) is Tasmania's leading natural and cultural heritage Organization. It is a combined museum, art gallery and herbarium which safeguards the physical evidence of Tasmania's natural and cultural heritage, and the cultural identity of Tasmanians.
+
+TMAG is Australia's second-oldest museum and has its origins in the collections of Australia's oldest scientific society, the Royal Society of Tasmania, established in 1843.  The first permanent home of the museum opened on the corner of Argyle and Macquarie streets in 1863 and the museum has gradually expanded from this corner to occupy the entire city block.""" ;
+    schema:name "Tasmanian Museum and Art Gallery" ;
+    schema:url "https://www.tmag.tas.gov.au"^^xsd:anyURI ;
+.
+
+org:uadelaide
+    a schema:Organization ;
+    schema:description "The University of Adelaide is a public research university based in Adelaide, South Australia. Established in 1874, it is the third-oldest university in Australia." ;
+    schema:name "University of Adelaide" ;
+    schema:url "https://www.adelaide.edu.au"^^xsd:anyURI ;
+.
+
+org:umweltaust
+    a schema:Organization ;
+    schema:description "An employee-owned environmental and social professional services consultancy" ;
+    schema:name "Umwelt Australia Pty Ltd" ;
+    schema:url "https://www.umwelt.com.au"^^xsd:anyURI ;
+.
+
+org:un
+    a schema:Organization ;
+    schema:description "The United Nations is an international organization founded in 1945. Currently made up of 193 Member States, the UN and its work are guided by the purposes and principles contained in its founding Charter." ;
+    schema:name "United Nations" ;
+    schema:url "https://www.un.org"^^xsd:anyURI ;
+.
+
+org:und
+    a schema:Organization ;
+    schema:description "Notre Dame is a private Catholic University, extending from the West Coast of Australia in the beautiful and historic City of Fremantle, to the North-West town of Broome and across the continent to the heart of Sydney." ;
+    schema:name "University of Notre Dame" ;
+.
+
+org:une
+    a schema:Organization ;
+    schema:description "The University of New England (UNE) is a public university in the New England region of the state of New South Wales, Australia. Founded in 1938, it was the first Australian university to be established outside of a state capital." ;
+    schema:name "University of New England" ;
+    schema:url "https://www.une.edu.au"^^xsd:anyURI ;
+.
+
+org:unewcastle
+    a schema:Organization ;
+    schema:description "The University of Newcastle (UON), informally known as Newcastle University, is a public university in Newcastle, New South Wales, Australia. Established in 1965, it has a primary campus in the Newcastle suburb of Callaghan. The university also operates campuses in Ourimbah, Port Macquarie, Singapore, Newcastle CBD and Sydney CBD." ;
+    schema:name "University of Newcastle" ;
+    schema:url "https://www.newcastle.edu.au"^^xsd:anyURI ;
+.
+
+org:unsw
+    a schema:Organization ;
+    schema:description "The University of New South Wales (UNSW) is a public research university based in Sydney, New South Wales, Australia. It is one of the founding members of Group of Eight, a coalition of Australian research-intensive universities." ;
+    schema:name "University of New South Wales" ;
+    schema:url "https://www.unsw.edu.au"^^xsd:anyURI ;
+.
+
+org:uom
+    a schema:Organization ;
+    schema:description "The University of Melbourne is a public research university located in Melbourne, Australia. Founded in 1853, it is Australia's second oldest university and the oldest in Victoria. Its main campus is located in Parkville, an inner suburb north of Melbourne's central business district, with several other campuses located across Victoria." ;
+    schema:name "University of Melbourne" ;
+    schema:url "https://www.unimelb.edu.au"^^xsd:anyURI ;
+.
+
+org:uq
+    a schema:Organization ;
+    schema:description "Ranked in the world's top 50, The University of Queensland is one of Australia's leading research and teaching institutions." ;
+    schema:name "University of Queensland" ;
+    schema:url "https://www.uq.edu.au"^^xsd:anyURI ;
+.
+
+org:uts
+    a schema:Organization ;
+    schema:description "UTS is a public university of technology defined by our support for the economic, social and cultural prosperity of our communities. We are measured by the success of our students, staff and partners and committed to research, innovation and the dissemination of knowledge of public value. We are, and always will be, an inclusive university." ;
+    schema:name "University of Technology Sydney" ;
+    schema:url "https://www.uts.edu.au/"^^xsd:anyURI ;
+.
+
+org:vic-atlas
+    a schema:Organization ;
+    schema:description "Provider of the Victorian Biodiverity Atlas. The VBA species observations are a foundation dataset that feeds into some of the many biodiversity tools used in everyday decision making - showing where wildlife is now and how this has changed over time.  This makes it a core input to the majority of the governments processes and programs that impact native species. Custodian organisation for biodiversity data held by the Victorian Government." ;
+    schema:name "Victorian Biodiversity Atlas Team" ;
+    schema:url "https://www.environment.vic.gov.au/biodiversity/victorian-biodiversity-atlas"^^xsd:anyURI ;
+.
+
+org:vic-deeca
+    a schema:Organization ;
+    schema:description "DEECA brings together Victoria’s energy, environment, water, agriculture, forestry, resources, climate action, and emergency management functions into a single department to maximise connections between the environment, community, industry and economy." ;
+    schema:name "Victorian Department of Energy, Environment and Climate Action" ;
+    schema:url "https://www.deeca.vic.gov.au/"^^xsd:anyURI ;
+.
+
+org:wa-bio
+    a schema:Organization ;
+    schema:description "The Biodiversity Information Office provides the Dandjoo platform. Dandjoo is Western Australia’s first whole-of-state biodiversity data platform, providing a way to discover and explore data from government, industry, and research providers. Custodian organisation for data sourced from within Western Australian environment-related sectors, including government, industry, research, and the community." ;
+    schema:name "WA Biodiversity Information Office" ;
+    schema:url "https://bio.wa.gov.au/"^^xsd:anyURI ;
+.
+
+org:wa-dbca
+    a schema:Organization ;
+    schema:description "DBCA brings together the Parks and Wildlife Service, Botanic Gardens and Parks Authority, Zoological Parks Authority (Perth Zoo), Rottnest Island Authority, Conservation and Parks Commission, Swan River Trust (Swan Canning Riverpark) and Biodiversity and Conservation Science." ;
+    schema:name "WA Department of Biodiversity, Conservation and Attractions" ;
+    schema:url "https://www.dbca.wa.gov.au/"^^xsd:anyURI ;
+.
+
+org:wa-herbarium
+    a schema:Organization ;
+    schema:description "The Western Australian Herbarium is responsible for the description and documentation of Western Australia's exceptional botanical species diversity." ;
+    schema:name "Western Australian Herbarium" ;
+    schema:url "https://www.dbca.wa.gov.au/science/research-tools-and-repositories/western-australian-herbarium"^^xsd:anyURI ;
+.
+
+org:wabsi
+    a schema:Organization ;
+    schema:description """A joint venture partnership with leading Western Australian science research Organizations, with multi-disciplinary research expertise.
+
+An independent, collaboration mechanism to facilitate end user driven, relevant biodiversity science research.
+
+Funded by the Western Australian Government’s Department of Jobs, Tourism, Science and Innovation.""" ;
+    schema:name "Western Australian Biodiversity Science Institute" ;
+    schema:url "https://wabsi.org.au"^^xsd:anyURI ;
+.
+
+org:wam
+    a schema:Organization ;
+    schema:description """The Western Australian Museum is the State's premier cultural Organization, housing WA's scientific and cultural collection.
+
+For over 120 years the Museum has been making the State's natural and social heritage accessible and engaging through research, exhibition and public programs.
+
+Today, the Museum has seven public locations across the state - and a Collection and Research Centre that houses more than eight million objects.""" ;
+    schema:name "Western Australian Museum" ;
+    schema:url "https://visit.museum.wa.gov.au"^^xsd:anyURI ;
+.
+
+org:western-shield
+    a schema:Organization ;
+    schema:description "WA’s largest conservation program, Western Shield, works to manage introduced predators for native species conservation. Learn what animals are protected, where DBCA’s fauna recovery sites are located, and what management tools are used. " ;
+    schema:name "Western Shield" ;
+    schema:url "http://www.dbca.wa.gov.au/management/threat-management/invasive-animals/western-shield"^^xsd:anyURI ;
+.
+
+org:wmbaustralia
+    a schema:Organization ;
+    schema:description "Acquired by BTM in 2008" ;
+    schema:name "WBM Oceanics Australia" ;
+    schema:url "https://www.bmt.org/services/environment-solutions"^^xsd:anyURI ;
+.
+
+org:wwf-australia
+    a schema:Organization ;
+    schema:description "At WWF-Australia we’ve been protecting nature’s wonders for more than 40 years. And now we’re working with communities, governments, companies and others not just to protect our natural world but to restore and regenerate it." ;
+    schema:name "WWF Australia" ;
+    schema:url "https://wwf.org.au"^^xsd:anyURI ;
+.
+
+pers:alex.zou
+    a schema:Person ;
+    schema:email "alex.zou@gov.au"^^xsd:anyURI ;
+    schema:name "Alex Zou" ;
+.
+
+pers:anne.goldsack
+    a schema:Person ;
+    schema:email "anne.goldsack@gov.au"^^xsd:anyURI ;
+    schema:name "Anne Goldsack" ;
+.
+
+pers:armin.haller
+    a schema:Person ;
+    schema:email "armin.haller@gov.au"^^xsd:anyURI ;
+    schema:name "Armin Haller" ;
+.
+
+pers:ashley.sommer
+    a schema:Person ;
+    schema:email "ashley.sommer@gov.au"^^xsd:anyURI ;
+    schema:name "Ashley Sommer" ;
+.
+
+pers:chee.ng
+    a schema:Person ;
+    schema:email "chee.ng@gov.au"^^xsd:anyURI ;
+    schema:name "Chee Ng" ;
+.
+
+pers:cjorquera
+    a schema:Person ;
+    schema:email "cjorquera@gov.au"^^xsd:anyURI ;
+    schema:name "Cjorquera" ;
+.
+
+pers:daniel.brough
+    a schema:Person ;
+    schema:email "daniel.brough@gov.au"^^xsd:anyURI ;
+    schema:name "Daniel Brough" ;
+.
+
+pers:david.crosswell
+    a schema:Person ;
+    schema:email "david.crosswell@gov.au"^^xsd:anyURI ;
+    schema:name "David Crosswell" ;
+.
+
+pers:derek.hoy
+    a schema:Person ;
+    schema:email "derek.hoy@gov.au"^^xsd:anyURI ;
+    schema:name "Derek Hoy" ;
+.
+
+pers:e.chuc
+    a schema:Person ;
+    schema:email "e.chuc@gov.au"^^xsd:anyURI ;
+    schema:name "E Chuc" ;
+.
+
+pers:endymion.cooper
+    a schema:Person ;
+    schema:email "endymion.cooper@gov.au"^^xsd:anyURI ;
+    schema:name "Endymion Cooper" ;
+.
+
+pers:garry.thomson
+    a schema:Person ;
+    schema:email "garry.thomson@gov.au"^^xsd:anyURI ;
+    schema:name "Garry Thomson" ;
+.
+
+pers:irina.bastrakova
+    a schema:Person ;
+    schema:email "irina.bastrakova@gov.au"^^xsd:anyURI ;
+    schema:name "Irina Bastrakova" ;
+.
+
+pers:javiersan18
+    a schema:Person ;
+    schema:email "javiersan18@gov.au"^^xsd:anyURI ;
+    schema:name "Javiersan18" ;
+.
+
+pers:john.machin
+    a schema:Person ;
+    schema:email "john.machin@gov.au"^^xsd:anyURI ;
+    schema:name "John Machin" ;
+.
+
+pers:joseph.abhayaratna
+    a schema:Person ;
+    schema:email "joseph.abhayaratna@gov.au"^^xsd:anyURI ;
+    schema:name "Joseph Abhayaratna" ;
+.
+
+pers:kevin.thiele
+    a schema:Person ;
+    schema:email "kevin.thiele@gov.au"^^xsd:anyURI ;
+    schema:name "Kevin Thiele" ;
+.
+
+pers:laurent.lefort
+    a schema:Person ;
+    schema:email "laurent.lefort@gov.au"^^xsd:anyURI ;
+    schema:name "Laurent Lefort" ;
+.
+
+pers:leonard.smith
+    a schema:Person ;
+    schema:email "leonard.smith@gov.au"^^xsd:anyURI ;
+    schema:name "Leonard Smith" ;
+.
+
+pers:michael.elliot-smith
+    a schema:Person ;
+    schema:email "michael.elliot-smith@gov.au"^^xsd:anyURI ;
+    schema:name "Michael Elliot-Smith" ;
+.
+
+pers:mr.wong
+    a schema:Person ;
+    schema:email "mr.wong@gov.au"^^xsd:anyURI ;
+    schema:name "Mr Wong" ;
+.
+
+pers:nicholas.car
+    a schema:Person ;
+    schema:email "nicholas.car@gov.au"^^xsd:anyURI ;
+    schema:name "Nicholas Car" ;
+.
+
+pers:paul.j.box
+    a schema:Person ;
+    schema:email "paul.j.box@gov.au"^^xsd:anyURI ;
+    schema:name "Paul J Box" ;
+.
+
+pers:richard.walker
+    a schema:Person ;
+    schema:email "richard.walker@gov.au"^^xsd:anyURI ;
+    schema:name "Richard Walker" ;
+.
+
+pers:sally.clement
+    a schema:Person ;
+    schema:email "sally.clement@gov.au"^^xsd:anyURI ;
+    schema:name "Sally Clement" ;
+.
+
+pers:sally.tetreault-campbell
+    a schema:Person ;
+    schema:email "sally.tetreault-campbell@gov.au"^^xsd:anyURI ;
+    schema:name "Sally Tetreault-Campbell" ;
+.
+
+pers:sandra.silcot
+    a schema:Person ;
+    schema:email "sandra.silcot@gov.au"^^xsd:anyURI ;
+    schema:name "Sandra Silcot" ;
+.
+
+pers:scott.lutwyche
+    a schema:Person ;
+    schema:email "scott.lutwyche@gov.au"^^xsd:anyURI ;
+    schema:name "Scott Lutwyche" ;
+.
+
+pers:simon.cox
+    a schema:Person ;
+    schema:email "simon.cox@gov.au"^^xsd:anyURI ;
+    schema:name "Simon Cox" ;
+.
+
+pers:stephen.lindsay
+    a schema:Person ;
+    schema:email "stephen.lindsay@gov.au"^^xsd:anyURI ;
+    schema:name "Stephen Lindsay" ;
+.
+
+pers:stephen.pratt
+    a schema:Person ;
+    schema:email "stephen.pratt@gov.au"^^xsd:anyURI ;
+    schema:name "Stephen Pratt" ;
+.
+
+pers:steven.bowden
+    a schema:Person ;
+    schema:email "steven.bowden@gov.au"^^xsd:anyURI ;
+    schema:name "Steven Bowden" ;
+.
+
+pers:tatiana.antsoupova
+    a schema:Person ;
+    schema:email "tatiana.antsoupova@gov.au"^^xsd:anyURI ;
+    schema:name "Tatiana Antsoupova" ;
+.
+
+pers:vance.kelly
+    a schema:Person ;
+    schema:email "vance.kelly@gov.au"^^xsd:anyURI ;
+    schema:name "Vance Kelly" ;
+.
+
+pers:william.francis
+    a schema:Person ;
+    schema:email "william.francis@gov.au"^^xsd:anyURI ;
+    schema:name "William Francis" ;
+.
+
+[]    a dcat:Relationship ;
+.
+
+[]    a dcat:Relationship ;
+.

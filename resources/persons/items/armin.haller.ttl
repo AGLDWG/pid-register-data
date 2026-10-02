@@ -1,0 +1,9 @@
+PREFIX pers: <https://linked.data.gov.au/person/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+pers:armin.haller
+    a schema:Person ;
+    schema:name "Armin Haller" ;
+    schema:email "armin.haller@gov.au"^^xsd:anyURI ;
+.

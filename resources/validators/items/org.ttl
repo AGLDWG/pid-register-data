@@ -6,6 +6,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 sg:
     a sh:ShapesGraph ;
+    schema:name "AGLDWG Organisations Validator" ;
 .
 
 :org-req-01

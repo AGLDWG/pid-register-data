@@ -24,7 +24,7 @@ RewriteRule ^/def/geo-product-form($|/.*)$ "https://vocabs.gsq.digital/object?ur
             pid:to "https://vocabs.gsq.digital/object?uri=http://linked.data.gov.au/def/geo-product-form" ;
             schema:name "geo-product-form HTML" ;
         ] ;
-    schema:creator <https://linked.data.gov.au/person/Steven.Bowden> ;
+    schema:creator <https://linked.data.gov.au/person/steven.bowden> ;
     schema:dateCreated "2023-04-13"^^xsd:date ;
     schema:dateModified "2026-09-07"^^xsd:date ;
     schema:name "Geoscience Commodity Product Forms" ;
