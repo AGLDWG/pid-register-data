@@ -1,0 +1,195 @@
+# Generated local proposal: not approved, submitted to maintainers, or deployed.
+# Apache destination percent signs are escaped; Turtle escapes those backslashes again.
+PREFIX lifecycle: <https://linked.data.gov.au/def/lifecycle/>
+PREFIX pid: <https://linked.data.gov.au/def/pid/>
+PREFIX schema: <https://schema.org/>
+PREFIX status: <https://linked.data.gov.au/def/reg-statuses/>
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/pid/def/odrl-action>
+    a pid:Pid ;
+    lifecycle:hasLifecycleStage
+        [
+            a lifecycle:LifecycleStage ;
+            time:hasTime
+                [
+                    time:hasBeginning
+                        [
+                            time:inXSDDate "2026-10-08"^^xsd:date ;
+                        ] ;
+                ] ;
+            schema:additionalType status:submitted ;
+        ] ;
+    pid:redirectRules """RewriteCond %{QUERY_STRING} (^|&)_mediatype=text(/|%2[Ff])turtle(&|$) [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/def/odrl-action/?$ https://api.idnau.org/object?uri=https\\%3A\\%2F\\%2Flinked.data.gov.au\\%2Fdef\\%2Fodrl-action&_mediatype=text\\%2Fturtle [R=302,NE,L]
+RewriteCond %{QUERY_STRING} (^|&)_mediatype=text(/|%2[Ff])turtle(&|$) [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/def/odrl-action/([A-Za-z0-9-]+)$ https://api.idnau.org/object?uri=https\\%3A\\%2F\\%2Flinked.data.gov.au\\%2Fdef\\%2Fodrl-action\\%2F$1&_mediatype=text\\%2Fturtle [R=302,NE,L]
+RewriteRule ^/def/odrl-action/?$ https://data.idnau.org/object?iri=https\\%3A\\%2F\\%2Flinked.data.gov.au\\%2Fdef\\%2Fodrl-action [R=302,NE,L]
+RewriteRule ^/def/odrl-action/([A-Za-z0-9-]+)$ https://data.idnau.org/object?iri=https\\%3A\\%2F\\%2Flinked.data.gov.au\\%2Fdef\\%2Fodrl-action\\%2F$1 [R=302,NE,L]"""^^pid:apacheRedirectRules ;
+    pid:redirectTest 
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/odrl-action" ;
+            pid:headers "'Accept': 'text/html'" ;
+            pid:to "https://data.idnau.org/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fodrl-action" ;
+            schema:name "scheme — HTML" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/odrl-action" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://api.idnau.org/object?uri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fodrl-action&_mediatype=text%2Fturtle" ;
+            schema:name "scheme — Turtle" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/odrl-action/consult" ;
+            pid:headers "'Accept': 'text/html'" ;
+            pid:to "https://data.idnau.org/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fodrl-action%2Fconsult" ;
+            schema:name "consult — HTML" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/odrl-action/consult" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://api.idnau.org/object?uri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fodrl-action%2Fconsult&_mediatype=text%2Fturtle" ;
+            schema:name "consult — Turtle" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/odrl-action/cooperate" ;
+            pid:headers "'Accept': 'text/html'" ;
+            pid:to "https://data.idnau.org/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fodrl-action%2Fcooperate" ;
+            schema:name "cooperate — HTML" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/odrl-action/cooperate" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://api.idnau.org/object?uri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fodrl-action%2Fcooperate&_mediatype=text%2Fturtle" ;
+            schema:name "cooperate — Turtle" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/odrl-action/follow-protocol" ;
+            pid:headers "'Accept': 'text/html'" ;
+            pid:to "https://data.idnau.org/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fodrl-action%2Ffollow-protocol" ;
+            schema:name "follow-protocol — HTML" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/odrl-action/follow-protocol" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://api.idnau.org/object?uri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fodrl-action%2Ffollow-protocol&_mediatype=text%2Fturtle" ;
+            schema:name "follow-protocol — Turtle" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/odrl-action/fulfil-commitments" ;
+            pid:headers "'Accept': 'text/html'" ;
+            pid:to "https://data.idnau.org/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fodrl-action%2Ffulfil-commitments" ;
+            schema:name "fulfil-commitments — HTML" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/odrl-action/fulfil-commitments" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://api.idnau.org/object?uri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fodrl-action%2Ffulfil-commitments&_mediatype=text%2Fturtle" ;
+            schema:name "fulfil-commitments — Turtle" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/odrl-action/manage-asset" ;
+            pid:headers "'Accept': 'text/html'" ;
+            pid:to "https://data.idnau.org/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fodrl-action%2Fmanage-asset" ;
+            schema:name "manage-asset — HTML" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/odrl-action/manage-asset" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://api.idnau.org/object?uri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fodrl-action%2Fmanage-asset&_mediatype=text%2Fturtle" ;
+            schema:name "manage-asset — Turtle" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/odrl-action/protect-heritage" ;
+            pid:headers "'Accept': 'text/html'" ;
+            pid:to "https://data.idnau.org/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fodrl-action%2Fprotect-heritage" ;
+            schema:name "protect-heritage — HTML" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/odrl-action/protect-heritage" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://api.idnau.org/object?uri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fodrl-action%2Fprotect-heritage&_mediatype=text%2Fturtle" ;
+            schema:name "protect-heritage — Turtle" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/odrl-action/provide-resources" ;
+            pid:headers "'Accept': 'text/html'" ;
+            pid:to "https://data.idnau.org/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fodrl-action%2Fprovide-resources" ;
+            schema:name "provide-resources — HTML" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/odrl-action/provide-resources" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://api.idnau.org/object?uri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fodrl-action%2Fprovide-resources&_mediatype=text%2Fturtle" ;
+            schema:name "provide-resources — Turtle" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/odrl-action/report-performance" ;
+            pid:headers "'Accept': 'text/html'" ;
+            pid:to "https://data.idnau.org/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fodrl-action%2Freport-performance" ;
+            schema:name "report-performance — HTML" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/odrl-action/report-performance" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://api.idnau.org/object?uri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fodrl-action%2Freport-performance&_mediatype=text%2Fturtle" ;
+            schema:name "report-performance — Turtle" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/odrl-action/" ;
+            pid:headers "'Accept': 'text/html'" ;
+            pid:to "https://data.idnau.org/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fodrl-action" ;
+            schema:name "scheme trailing slash — text/html" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/odrl-action/" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://api.idnau.org/object?uri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fodrl-action&_mediatype=text%2Fturtle" ;
+            schema:name "scheme trailing slash — text/turtle" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/odrl-action?_mediatype=text/turtle" ;
+            pid:headers "'Accept': 'text/html'" ;
+            pid:to "https://api.idnau.org/object?uri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fodrl-action&_mediatype=text%2Fturtle" ;
+            schema:name "odrl-action — explicit Turtle parameter" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/odrl-action/consult?_mediatype=text/turtle" ;
+            pid:headers "'Accept': 'text/html'" ;
+            pid:to "https://api.idnau.org/object?uri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fodrl-action%2Fconsult&_mediatype=text%2Fturtle" ;
+            schema:name "consult — explicit Turtle parameter" ;
+        ] ;
+    schema:creator <https://kurrawong.ai> ;
+    schema:dateCreated "2026-10-08"^^xsd:date ;
+    schema:dateModified "2026-10-08"^^xsd:date ;
+    schema:description "Proposed registration of the IDN exploratory ODRL action vocabulary and its locally defined concepts."@en ;
+    schema:name "ODRL actions"@en ;
+    schema:sponsor <https://linked.data.gov.au/org/idn> ;
+    schema:status status:submitted ;
+    schema:url "https://linked.data.gov.au/def/odrl-action"^^pid:agldwgPid ;
+.

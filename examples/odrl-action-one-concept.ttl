@@ -1,0 +1,44 @@
+PREFIX pid: <https://linked.data.gov.au/def/pid/>
+PREFIX schema: <https://schema.org/>
+
+# Learning example only: one concept, not a complete registration submission.
+# This file is outside resources/ and is not included in the register manifest.
+# The subject identifies the proposed registration record, not the concept.
+<https://linked.data.gov.au/pid/def/odrl-action>
+    a pid:Pid ;
+    schema:name "ODRL actions — one-concept redirect example" ;
+    schema:url "https://linked.data.gov.au/def/odrl-action"^^pid:agldwgPid ;
+
+    # Everything between the triple quotes is Apache configuration text.
+    # RewriteCond: apply the NEXT rule when Accept mentions text/turtle.
+    # RewriteRule: match a URL path and send the client to the destination.
+    # ^ and $ anchor the match: this example matches ONLY /cooperate.
+    # NC = case-insensitive header matching.
+    # R=302 = HTTP 302 redirect. L = stop processing rules for this request.
+    # NE preserves URL encoding. Percent signs are escaped for Apache and Turtle.
+    # Order matters: try the Turtle rule first; otherwise use the HTML rule.
+    # The concept IRI is URL-encoded inside each destination's parameter.
+    pid:redirectRules """RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/def/odrl-action/cooperate$ https://api.idnau.org/object?uri=https\\%3A\\%2F\\%2Flinked.data.gov.au\\%2Fdef\\%2Fodrl-action\\%2Fcooperate&_mediatype=text\\%2Fturtle [R=302,NE,L]
+RewriteRule ^/def/odrl-action/cooperate$ https://data.idnau.org/object?iri=https\\%3A\\%2F\\%2Flinked.data.gov.au\\%2Fdef\\%2Fodrl-action\\%2Fcooperate [R=302,NE,L]"""^^pid:apacheRedirectRules ;
+
+    # Tests describe the expected first redirect, not the final page content.
+    pid:redirectTest
+        [
+            a pid:RedirectTest ;
+            schema:name "cooperate — Turtle request" ;
+            pid:from "https://linked.data.gov.au/def/odrl-action/cooperate" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://api.idnau.org/object?uri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fodrl-action%2Fcooperate&_mediatype=text%2Fturtle" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            schema:name "cooperate — HTML request" ;
+            pid:from "https://linked.data.gov.au/def/odrl-action/cooperate" ;
+            pid:headers "'Accept': 'text/html'" ;
+            pid:to "https://data.idnau.org/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fodrl-action%2Fcooperate" ;
+        ] ;
+.
+
+# Deliberately omitted: creator, sponsor, dates, status and catalogue membership.
+# Those belong in the complete proposal after the registration metadata is settled.

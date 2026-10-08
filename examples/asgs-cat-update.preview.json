@@ -1,0 +1,490 @@
+{
+  "proposal_only": true,
+  "production_verified": false,
+  "registration": "https://linked.data.gov.au/pid/def/asgs",
+  "scheme": "https://linked.data.gov.au/def/asgs/cat",
+  "local_concepts": [
+    "https://linked.data.gov.au/def/asgs/cat/antarctica",
+    "https://linked.data.gov.au/def/asgs/cat/commercial",
+    "https://linked.data.gov.au/def/asgs/cat/education",
+    "https://linked.data.gov.au/def/asgs/cat/hospital-medical",
+    "https://linked.data.gov.au/def/asgs/cat/industrial",
+    "https://linked.data.gov.au/def/asgs/cat/migratory",
+    "https://linked.data.gov.au/def/asgs/cat/nousualresidence",
+    "https://linked.data.gov.au/def/asgs/cat/offshore",
+    "https://linked.data.gov.au/def/asgs/cat/other",
+    "https://linked.data.gov.au/def/asgs/cat/outside-australia",
+    "https://linked.data.gov.au/def/asgs/cat/parkland",
+    "https://linked.data.gov.au/def/asgs/cat/primary-production",
+    "https://linked.data.gov.au/def/asgs/cat/residential",
+    "https://linked.data.gov.au/def/asgs/cat/shipping",
+    "https://linked.data.gov.au/def/asgs/cat/transport",
+    "https://linked.data.gov.au/def/asgs/cat/water"
+  ],
+  "new_redirects": [
+    {
+      "name": "Meshblock scheme — HTML",
+      "source": "https://linked.data.gov.au/def/asgs/cat",
+      "target": "https://resources.bdr.gov.au/catalogues/vocabs:/collections/asgs:cat",
+      "headers": {
+        "Accept": "text/html"
+      }
+    },
+    {
+      "name": "Meshblock scheme — Turtle",
+      "source": "https://linked.data.gov.au/def/asgs/cat",
+      "target": "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat&_mediatype=text%2Fturtle",
+      "headers": {
+        "Accept": "text/turtle"
+      }
+    },
+    {
+      "name": "Meshblock scheme — .ttl alias",
+      "source": "https://linked.data.gov.au/def/asgs/cat.ttl",
+      "target": "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat&_mediatype=text%2Fturtle",
+      "headers": {}
+    },
+    {
+      "name": "Meshblock antarctica — HTML",
+      "source": "https://linked.data.gov.au/def/asgs/cat/antarctica",
+      "target": "https://resources.bdr.gov.au/catalogues/vocabs:/collections/asgs:cat/items/cat:antarctica",
+      "headers": {
+        "Accept": "text/html"
+      }
+    },
+    {
+      "name": "Meshblock antarctica — Turtle",
+      "source": "https://linked.data.gov.au/def/asgs/cat/antarctica",
+      "target": "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Fantarctica&_mediatype=text%2Fturtle",
+      "headers": {
+        "Accept": "text/turtle"
+      }
+    },
+    {
+      "name": "Meshblock antarctica — .ttl alias",
+      "source": "https://linked.data.gov.au/def/asgs/cat/antarctica.ttl",
+      "target": "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Fantarctica&_mediatype=text%2Fturtle",
+      "headers": {}
+    },
+    {
+      "name": "Meshblock commercial — HTML",
+      "source": "https://linked.data.gov.au/def/asgs/cat/commercial",
+      "target": "https://resources.bdr.gov.au/catalogues/vocabs:/collections/asgs:cat/items/cat:commercial",
+      "headers": {
+        "Accept": "text/html"
+      }
+    },
+    {
+      "name": "Meshblock commercial — Turtle",
+      "source": "https://linked.data.gov.au/def/asgs/cat/commercial",
+      "target": "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Fcommercial&_mediatype=text%2Fturtle",
+      "headers": {
+        "Accept": "text/turtle"
+      }
+    },
+    {
+      "name": "Meshblock commercial — .ttl alias",
+      "source": "https://linked.data.gov.au/def/asgs/cat/commercial.ttl",
+      "target": "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Fcommercial&_mediatype=text%2Fturtle",
+      "headers": {}
+    },
+    {
+      "name": "Meshblock education — HTML",
+      "source": "https://linked.data.gov.au/def/asgs/cat/education",
+      "target": "https://resources.bdr.gov.au/catalogues/vocabs:/collections/asgs:cat/items/cat:education",
+      "headers": {
+        "Accept": "text/html"
+      }
+    },
+    {
+      "name": "Meshblock education — Turtle",
+      "source": "https://linked.data.gov.au/def/asgs/cat/education",
+      "target": "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Feducation&_mediatype=text%2Fturtle",
+      "headers": {
+        "Accept": "text/turtle"
+      }
+    },
+    {
+      "name": "Meshblock education — .ttl alias",
+      "source": "https://linked.data.gov.au/def/asgs/cat/education.ttl",
+      "target": "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Feducation&_mediatype=text%2Fturtle",
+      "headers": {}
+    },
+    {
+      "name": "Meshblock hospital-medical — HTML",
+      "source": "https://linked.data.gov.au/def/asgs/cat/hospital-medical",
+      "target": "https://resources.bdr.gov.au/catalogues/vocabs:/collections/asgs:cat/items/cat:hospital-medical",
+      "headers": {
+        "Accept": "text/html"
+      }
+    },
+    {
+      "name": "Meshblock hospital-medical — Turtle",
+      "source": "https://linked.data.gov.au/def/asgs/cat/hospital-medical",
+      "target": "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Fhospital-medical&_mediatype=text%2Fturtle",
+      "headers": {
+        "Accept": "text/turtle"
+      }
+    },
+    {
+      "name": "Meshblock hospital-medical — .ttl alias",
+      "source": "https://linked.data.gov.au/def/asgs/cat/hospital-medical.ttl",
+      "target": "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Fhospital-medical&_mediatype=text%2Fturtle",
+      "headers": {}
+    },
+    {
+      "name": "Meshblock industrial — HTML",
+      "source": "https://linked.data.gov.au/def/asgs/cat/industrial",
+      "target": "https://resources.bdr.gov.au/catalogues/vocabs:/collections/asgs:cat/items/cat:industrial",
+      "headers": {
+        "Accept": "text/html"
+      }
+    },
+    {
+      "name": "Meshblock industrial — Turtle",
+      "source": "https://linked.data.gov.au/def/asgs/cat/industrial",
+      "target": "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Findustrial&_mediatype=text%2Fturtle",
+      "headers": {
+        "Accept": "text/turtle"
+      }
+    },
+    {
+      "name": "Meshblock industrial — .ttl alias",
+      "source": "https://linked.data.gov.au/def/asgs/cat/industrial.ttl",
+      "target": "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Findustrial&_mediatype=text%2Fturtle",
+      "headers": {}
+    },
+    {
+      "name": "Meshblock migratory — HTML",
+      "source": "https://linked.data.gov.au/def/asgs/cat/migratory",
+      "target": "https://resources.bdr.gov.au/catalogues/vocabs:/collections/asgs:cat/items/cat:migratory",
+      "headers": {
+        "Accept": "text/html"
+      }
+    },
+    {
+      "name": "Meshblock migratory — Turtle",
+      "source": "https://linked.data.gov.au/def/asgs/cat/migratory",
+      "target": "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Fmigratory&_mediatype=text%2Fturtle",
+      "headers": {
+        "Accept": "text/turtle"
+      }
+    },
+    {
+      "name": "Meshblock migratory — .ttl alias",
+      "source": "https://linked.data.gov.au/def/asgs/cat/migratory.ttl",
+      "target": "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Fmigratory&_mediatype=text%2Fturtle",
+      "headers": {}
+    },
+    {
+      "name": "Meshblock nousualresidence — HTML",
+      "source": "https://linked.data.gov.au/def/asgs/cat/nousualresidence",
+      "target": "https://resources.bdr.gov.au/catalogues/vocabs:/collections/asgs:cat/items/cat:nousualresidence",
+      "headers": {
+        "Accept": "text/html"
+      }
+    },
+    {
+      "name": "Meshblock nousualresidence — Turtle",
+      "source": "https://linked.data.gov.au/def/asgs/cat/nousualresidence",
+      "target": "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Fnousualresidence&_mediatype=text%2Fturtle",
+      "headers": {
+        "Accept": "text/turtle"
+      }
+    },
+    {
+      "name": "Meshblock nousualresidence — .ttl alias",
+      "source": "https://linked.data.gov.au/def/asgs/cat/nousualresidence.ttl",
+      "target": "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Fnousualresidence&_mediatype=text%2Fturtle",
+      "headers": {}
+    },
+    {
+      "name": "Meshblock offshore — HTML",
+      "source": "https://linked.data.gov.au/def/asgs/cat/offshore",
+      "target": "https://resources.bdr.gov.au/catalogues/vocabs:/collections/asgs:cat/items/cat:offshore",
+      "headers": {
+        "Accept": "text/html"
+      }
+    },
+    {
+      "name": "Meshblock offshore — Turtle",
+      "source": "https://linked.data.gov.au/def/asgs/cat/offshore",
+      "target": "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Foffshore&_mediatype=text%2Fturtle",
+      "headers": {
+        "Accept": "text/turtle"
+      }
+    },
+    {
+      "name": "Meshblock offshore — .ttl alias",
+      "source": "https://linked.data.gov.au/def/asgs/cat/offshore.ttl",
+      "target": "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Foffshore&_mediatype=text%2Fturtle",
+      "headers": {}
+    },
+    {
+      "name": "Meshblock other — HTML",
+      "source": "https://linked.data.gov.au/def/asgs/cat/other",
+      "target": "https://resources.bdr.gov.au/catalogues/vocabs:/collections/asgs:cat/items/cat:other",
+      "headers": {
+        "Accept": "text/html"
+      }
+    },
+    {
+      "name": "Meshblock other — Turtle",
+      "source": "https://linked.data.gov.au/def/asgs/cat/other",
+      "target": "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Fother&_mediatype=text%2Fturtle",
+      "headers": {
+        "Accept": "text/turtle"
+      }
+    },
+    {
+      "name": "Meshblock other — .ttl alias",
+      "source": "https://linked.data.gov.au/def/asgs/cat/other.ttl",
+      "target": "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Fother&_mediatype=text%2Fturtle",
+      "headers": {}
+    },
+    {
+      "name": "Meshblock outside-australia — HTML",
+      "source": "https://linked.data.gov.au/def/asgs/cat/outside-australia",
+      "target": "https://resources.bdr.gov.au/catalogues/vocabs:/collections/asgs:cat/items/cat:outside-australia",
+      "headers": {
+        "Accept": "text/html"
+      }
+    },
+    {
+      "name": "Meshblock outside-australia — Turtle",
+      "source": "https://linked.data.gov.au/def/asgs/cat/outside-australia",
+      "target": "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Foutside-australia&_mediatype=text%2Fturtle",
+      "headers": {
+        "Accept": "text/turtle"
+      }
+    },
+    {
+      "name": "Meshblock outside-australia — .ttl alias",
+      "source": "https://linked.data.gov.au/def/asgs/cat/outside-australia.ttl",
+      "target": "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Foutside-australia&_mediatype=text%2Fturtle",
+      "headers": {}
+    },
+    {
+      "name": "Meshblock parkland — HTML",
+      "source": "https://linked.data.gov.au/def/asgs/cat/parkland",
+      "target": "https://resources.bdr.gov.au/catalogues/vocabs:/collections/asgs:cat/items/cat:parkland",
+      "headers": {
+        "Accept": "text/html"
+      }
+    },
+    {
+      "name": "Meshblock parkland — Turtle",
+      "source": "https://linked.data.gov.au/def/asgs/cat/parkland",
+      "target": "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Fparkland&_mediatype=text%2Fturtle",
+      "headers": {
+        "Accept": "text/turtle"
+      }
+    },
+    {
+      "name": "Meshblock parkland — .ttl alias",
+      "source": "https://linked.data.gov.au/def/asgs/cat/parkland.ttl",
+      "target": "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Fparkland&_mediatype=text%2Fturtle",
+      "headers": {}
+    },
+    {
+      "name": "Meshblock primary-production — HTML",
+      "source": "https://linked.data.gov.au/def/asgs/cat/primary-production",
+      "target": "https://resources.bdr.gov.au/catalogues/vocabs:/collections/asgs:cat/items/cat:primary-production",
+      "headers": {
+        "Accept": "text/html"
+      }
+    },
+    {
+      "name": "Meshblock primary-production — Turtle",
+      "source": "https://linked.data.gov.au/def/asgs/cat/primary-production",
+      "target": "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Fprimary-production&_mediatype=text%2Fturtle",
+      "headers": {
+        "Accept": "text/turtle"
+      }
+    },
+    {
+      "name": "Meshblock primary-production — .ttl alias",
+      "source": "https://linked.data.gov.au/def/asgs/cat/primary-production.ttl",
+      "target": "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Fprimary-production&_mediatype=text%2Fturtle",
+      "headers": {}
+    },
+    {
+      "name": "Meshblock residential — HTML",
+      "source": "https://linked.data.gov.au/def/asgs/cat/residential",
+      "target": "https://resources.bdr.gov.au/catalogues/vocabs:/collections/asgs:cat/items/cat:residential",
+      "headers": {
+        "Accept": "text/html"
+      }
+    },
+    {
+      "name": "Meshblock residential — Turtle",
+      "source": "https://linked.data.gov.au/def/asgs/cat/residential",
+      "target": "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Fresidential&_mediatype=text%2Fturtle",
+      "headers": {
+        "Accept": "text/turtle"
+      }
+    },
+    {
+      "name": "Meshblock residential — .ttl alias",
+      "source": "https://linked.data.gov.au/def/asgs/cat/residential.ttl",
+      "target": "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Fresidential&_mediatype=text%2Fturtle",
+      "headers": {}
+    },
+    {
+      "name": "Meshblock shipping — HTML",
+      "source": "https://linked.data.gov.au/def/asgs/cat/shipping",
+      "target": "https://resources.bdr.gov.au/catalogues/vocabs:/collections/asgs:cat/items/cat:shipping",
+      "headers": {
+        "Accept": "text/html"
+      }
+    },
+    {
+      "name": "Meshblock shipping — Turtle",
+      "source": "https://linked.data.gov.au/def/asgs/cat/shipping",
+      "target": "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Fshipping&_mediatype=text%2Fturtle",
+      "headers": {
+        "Accept": "text/turtle"
+      }
+    },
+    {
+      "name": "Meshblock shipping — .ttl alias",
+      "source": "https://linked.data.gov.au/def/asgs/cat/shipping.ttl",
+      "target": "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Fshipping&_mediatype=text%2Fturtle",
+      "headers": {}
+    },
+    {
+      "name": "Meshblock transport — HTML",
+      "source": "https://linked.data.gov.au/def/asgs/cat/transport",
+      "target": "https://resources.bdr.gov.au/catalogues/vocabs:/collections/asgs:cat/items/cat:transport",
+      "headers": {
+        "Accept": "text/html"
+      }
+    },
+    {
+      "name": "Meshblock transport — Turtle",
+      "source": "https://linked.data.gov.au/def/asgs/cat/transport",
+      "target": "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Ftransport&_mediatype=text%2Fturtle",
+      "headers": {
+        "Accept": "text/turtle"
+      }
+    },
+    {
+      "name": "Meshblock transport — .ttl alias",
+      "source": "https://linked.data.gov.au/def/asgs/cat/transport.ttl",
+      "target": "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Ftransport&_mediatype=text%2Fturtle",
+      "headers": {}
+    },
+    {
+      "name": "Meshblock water — HTML",
+      "source": "https://linked.data.gov.au/def/asgs/cat/water",
+      "target": "https://resources.bdr.gov.au/catalogues/vocabs:/collections/asgs:cat/items/cat:water",
+      "headers": {
+        "Accept": "text/html"
+      }
+    },
+    {
+      "name": "Meshblock water — Turtle",
+      "source": "https://linked.data.gov.au/def/asgs/cat/water",
+      "target": "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Fwater&_mediatype=text%2Fturtle",
+      "headers": {
+        "Accept": "text/turtle"
+      }
+    },
+    {
+      "name": "Meshblock water — .ttl alias",
+      "source": "https://linked.data.gov.au/def/asgs/cat/water.ttl",
+      "target": "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Fwater&_mediatype=text%2Fturtle",
+      "headers": {}
+    },
+    {
+      "name": "Meshblock scheme trailing slash — text/html",
+      "source": "https://linked.data.gov.au/def/asgs/cat/",
+      "target": "https://resources.bdr.gov.au/catalogues/vocabs:/collections/asgs:cat",
+      "headers": {
+        "Accept": "text/html"
+      }
+    },
+    {
+      "name": "Meshblock scheme trailing slash — text/turtle",
+      "source": "https://linked.data.gov.au/def/asgs/cat/",
+      "target": "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat&_mediatype=text%2Fturtle",
+      "headers": {
+        "Accept": "text/turtle"
+      }
+    },
+    {
+      "name": "Meshblock cat — parameter text/turtle",
+      "source": "https://linked.data.gov.au/def/asgs/cat?_mediatype=text/turtle",
+      "target": "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat&_mediatype=text%2Fturtle",
+      "headers": {
+        "Accept": "text/html"
+      }
+    },
+    {
+      "name": "Meshblock cat — parameter text%2Fturtle",
+      "source": "https://linked.data.gov.au/def/asgs/cat?_mediatype=text%2Fturtle",
+      "target": "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat&_mediatype=text%2Fturtle",
+      "headers": {
+        "Accept": "text/html"
+      }
+    },
+    {
+      "name": "Meshblock cat — default HTML",
+      "source": "https://linked.data.gov.au/def/asgs/cat",
+      "target": "https://resources.bdr.gov.au/catalogues/vocabs:/collections/asgs:cat",
+      "headers": {}
+    },
+    {
+      "name": "Meshblock residential — parameter text/turtle",
+      "source": "https://linked.data.gov.au/def/asgs/cat/residential?_mediatype=text/turtle",
+      "target": "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Fresidential&_mediatype=text%2Fturtle",
+      "headers": {
+        "Accept": "text/html"
+      }
+    },
+    {
+      "name": "Meshblock residential — parameter text%2Fturtle",
+      "source": "https://linked.data.gov.au/def/asgs/cat/residential?_mediatype=text%2Fturtle",
+      "target": "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Fresidential&_mediatype=text%2Fturtle",
+      "headers": {
+        "Accept": "text/html"
+      }
+    },
+    {
+      "name": "Meshblock residential — default HTML",
+      "source": "https://linked.data.gov.au/def/asgs/cat/residential",
+      "target": "https://resources.bdr.gov.au/catalogues/vocabs:/collections/asgs:cat/items/cat:residential",
+      "headers": {}
+    }
+  ],
+  "preserved_redirects": [
+    {
+      "name": "ASGS Ontology, HTML",
+      "source": "https://linked.data.gov.au/def/asgs",
+      "target": "https://raw.githack.com/AGLDWG/asgs-ont/master/asgs.html",
+      "headers": {}
+    },
+    {
+      "name": "ASGS Ontology, RDF (turtle) via QSA",
+      "source": "https://linked.data.gov.au/def/asgs?_mediatype=text/turtle",
+      "target": "https://raw.githack.com/AGLDWG/asgs-ont/master/asgs.ttl",
+      "headers": {}
+    },
+    {
+      "name": "ASGS Ontology, RDF (turtle) via conneg",
+      "source": "https://linked.data.gov.au/def/asgs",
+      "target": "https://raw.githack.com/AGLDWG/asgs-ont/master/asgs.ttl",
+      "headers": {
+        "Accept": "text/turtle"
+      }
+    },
+    {
+      "name": "ASGS Ontology, RDF (turtle) via file ext.",
+      "source": "https://linked.data.gov.au/def/asgs.ttl",
+      "target": "https://raw.githack.com/AGLDWG/asgs-ont/master/asgs.ttl",
+      "headers": {}
+    }
+  ],
+  "apply_to": "resources/pids/def/items/asgs.ttl",
+  "catalogue_membership_change": null
+}
