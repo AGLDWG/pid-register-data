@@ -1,0 +1,356 @@
+PREFIX : <https://data.idnau.org/pid/vocab/aarr/>
+PREFIX cs: <https://data.idnau.org/pid/vocab/aarr>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+:org-to-org
+    a skos:Collection ;
+    dcterms:provenance "Developed for this Agent to Agent Roles vocabulary"@en ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Roles that pertain to relationships between Organisations"@en ;
+    skos:inScheme cs: ;
+    skos:member
+        :antecedent ,
+        :descendant ,
+        :part ,
+        :partOf ;
+    skos:prefLabel "Organisation to Organisation relation Roles"@en ;
+.
+
+:org-to-person
+    a skos:Collection ;
+    dcterms:provenance "Developed for this Agent to Agent Roles vocabulary"@en ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Roles that pertain to relationships from Organisations to Persons"@en ;
+    skos:inScheme cs: ;
+    skos:member
+        :affiliate ,
+        :chair ,
+        :contactPoint ,
+        :elder ,
+        :head ,
+        :manager ,
+        :member ;
+    skos:prefLabel "Organisation to Person relation Roles"@en ;
+.
+
+:person-to-org
+    a skos:Collection ;
+    dcterms:provenance "Developed for this Agent to Agent Roles vocabulary"@en ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Roles that pertain to relationships from Organisations to Persons"@en ;
+    skos:inScheme cs: ;
+    skos:member
+        :affiliateOf ,
+        :chairOf ,
+        :contactPointOf ,
+        :elderOf ,
+        :headOf ,
+        :managerOf ,
+        :memberOf ;
+    skos:prefLabel "Person to Organisation relation Roles"@en ;
+.
+
+:person-to-person
+    a skos:Collection ;
+    dcterms:provenance "Developed for this Agent to Agent Roles vocabulary"@en ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Roles that pertain to relationships from Organisations to Persons"@en ;
+    skos:inScheme cs: ;
+    skos:member
+        :affiliate ,
+        :chair ,
+        :contactPoint ,
+        :elder ,
+        :head ,
+        :manager ,
+        :member ;
+    skos:prefLabel "Person to Person relation Roles"@en ;
+.
+
+:0.0.2
+    schema:name "0.0.2" ;
+.
+
+:proxy
+    a skos:Concept ;
+    dcterms:provenance "Developed for this Agent to Agent Roles vocabulary"@en ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "One appointed or authorised to act for another"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Proxy"@en ;
+    skos:scopeNote "Person to Person relations" ;
+    skos:topConceptOf cs: ;
+.
+
+:proxyOf
+    a skos:Concept ;
+    dcterms:provenance "Developed for this Agent to Agent Roles vocabulary"@en ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "The same as Proxy but for inverse agent relations"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Proxy Of"@en ;
+    skos:scopeNote "Person to Person relations" ;
+    skos:topConceptOf cs: ;
+.
+
+:affiliateOf
+    a skos:Concept ;
+    dcterms:provenance "Informed by https://schema.org/affiliation"@en ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "The same as Affiliate but for inverse agent relations"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Affiliate Of"@en ;
+    skos:scopeNote "Person to Organisation relations" ;
+    skos:topConceptOf cs: ;
+    schema:citation "https://schema.org/affiliation"^^xsd:anyURI ;
+.
+
+:antecedent
+    a skos:Concept ;
+    dcterms:provenance "Informed by https://www.w3.org/TR/vocab-org/#org:resultedFrom"@en ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "A lineage relationship between two Organisations where the first precedes, in time and in function, the second"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Antecedent Organisation"@en ;
+    skos:scopeNote "Organisation to Organisation relations" ;
+    skos:topConceptOf cs: ;
+.
+
+:chairOf
+    a skos:Concept ;
+    dcterms:provenance "Developed for this Agent to Agent Roles vocabulary"@en ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader :memberOf ;
+    skos:definition "The same as Chair but for inverse agent relations"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Chair Of"@en ;
+    skos:scopeNote "Person to Organisation relations" ;
+.
+
+:contactPointOf
+    a skos:Concept ;
+    dcterms:provenance "Informed by http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/pointOfContact"@en ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "The same as Contact Point but for inverse agent relations"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Contact Point Of"@en ;
+    skos:scopeNote "Person to Organisation relations" ;
+    skos:topConceptOf cs: ;
+    schema:citation "http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/pointOfContact"^^xsd:anyURI ;
+.
+
+:descendant
+    a skos:Concept ;
+    dcterms:provenance "Informed by https://www.w3.org/TR/vocab-org/#org:resultingOrganization"@en ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "The same as Precursor Organisation but for inverse agent relations"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Descendant Organisation"@en ;
+    skos:scopeNote "Organisation to Organisation relations" ;
+    skos:topConceptOf cs: ;
+.
+
+:elderOf
+    a skos:Concept ;
+    dcterms:provenance "Developed for this Agent to Agent Roles vocabulary"@en ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader :memberOf ;
+    skos:definition "The same as Elder but for inverse agent relations"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Elder Of"@en ;
+    skos:scopeNote "Person to Organisation relations" ;
+.
+
+:headOf
+    a skos:Concept ;
+    dcterms:provenance "Informed by http://www.w3.org/ns/org#headOf"@en ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader :memberOf ;
+    skos:definition "The same as Head but for inverse agent relations"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Head Of"@en ;
+    skos:scopeNote "Person to Organisation relations" ;
+    schema:citation "http://www.w3.org/ns/org#headOf"^^xsd:anyURI ;
+.
+
+:managerOf
+    a skos:Concept ;
+    dcterms:provenance "Developed for this Agent to Agent Roles vocabulary"@en ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader :memberOf ;
+    skos:definition "The same as Manager but for inverse agent relations"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Manager Of"@en ;
+    skos:scopeNote "Person to Organisation relations" ;
+.
+
+:part
+    a skos:Concept ;
+    dcterms:provenance "Developed for this Agent to Agent Roles vocabulary"@en ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "A relationship between two organizations where the first is included within the second, e.g., as a subsidiary"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Part"@en ;
+    skos:scopeNote "Organisation to Organisation relations" ;
+    skos:topConceptOf cs: ;
+.
+
+:partOf
+    a skos:Concept ;
+    dcterms:provenance "Developed for this Agent to Agent Roles vocabulary"@en ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "A relationship between two organizations where the first includes the second, e.g., as a subsidiary"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Part Of"@en ;
+    skos:scopeNote "Organisation to Organisation relations" ;
+    skos:topConceptOf cs: ;
+.
+
+<https://linked.data.gov.au/org/idn>
+    a schema:Organization ;
+    schema:name "Indigenous Data Network" ;
+    schema:url "https://mspgh.unimelb.edu.au/centres-institutes/centre-for-health-equity/research-group/indigenous-data-network"^^xsd:anyURI ;
+.
+
+:affiliate
+    a skos:Concept ;
+    dcterms:provenance "Informed by https://schema.org/affiliation"@en ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "A looser association than member"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Affiliate"@en ;
+    skos:scopeNote "Organisation to Person relations" ;
+    skos:topConceptOf cs: ;
+    schema:citation "https://schema.org/affiliation"^^xsd:anyURI ;
+.
+
+:chair
+    a skos:Concept ;
+    dcterms:provenance "Developed for this Agent to Agent Roles vocabulary"@en ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader :member ;
+    skos:definition "The presiding officer of an assembly, meeting, committee, or board"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Chair"@en ;
+    skos:scopeNote "Organisation to Person relations" ;
+.
+
+:contactPoint
+    a skos:Concept ;
+    dcterms:provenance "Informed by http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/pointOfContact"@en ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Party who can be contacted for acquiring knowledge about the target Agent"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Contact Point"@en ;
+    skos:scopeNote "Organisation to Person relations" ;
+    skos:topConceptOf cs: ;
+    schema:citation "http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/pointOfContact"^^xsd:anyURI ;
+.
+
+:elder
+    a skos:Concept ;
+    dcterms:provenance "Developed for this Agent to Agent Roles vocabulary"@en ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader :member ;
+    skos:definition "An older, influential member of a community"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Elder"@en ;
+    skos:scopeNote "Organisation to Person relations" ;
+.
+
+:head
+    a skos:Concept ;
+    dcterms:provenance "Informed by http://www.w3.org/ns/org#headOf"@en ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader :member ;
+    skos:definition "Indicates that a Person is the leader or formal head of an Organisation"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Head"@en ;
+    skos:scopeNote "Organisation to Person relations" ;
+    schema:citation "http://www.w3.org/ns/org#headOf"^^xsd:anyURI ;
+.
+
+:manager
+    a skos:Concept ;
+    dcterms:provenance "Developed for this Agent to Agent Roles vocabulary"@en ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader :member ;
+    skos:definition "One who directs a business or other enterprise"@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Manager"@en ;
+    skos:scopeNote "Organisation to Person relations" ;
+.
+
+:memberOf
+    a skos:Concept ;
+    dcterms:provenance "Developed for this Agent to Agent Roles vocabulary"@en ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "The same as Member but for inverse agent relations"@en ;
+    skos:inScheme cs: ;
+    skos:narrower
+        :chairOf ,
+        :headOf ,
+        :managerOf ;
+    skos:prefLabel "Member Of"@en ;
+    skos:scopeNote "Agent to Agent relations" ;
+    skos:topConceptOf cs: ;
+.
+
+:member
+    a skos:Concept ;
+    dcterms:provenance "Developed for this Agent to Agent Roles vocabulary"@en ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "A Person with official standing within an Organisation"@en ;
+    skos:inScheme cs: ;
+    skos:narrower
+        :chair ,
+        :head ,
+        :manager ;
+    skos:prefLabel "Member"@en ;
+    skos:scopeNote "Agent to Agent relations" ;
+    skos:topConceptOf cs: ;
+.
+
+cs:
+    a skos:ConceptScheme ;
+    dcterms:provenance "This vocabulary was established in 2022 to relate Agents to other Agents within the Indigenous Data Network's Agents Database, however it it expected to be, and promoted to be, general-purpose in nature, i.e. for any Agent/Agent relations"@en ;
+    owl:versionIRI :0.0.2 ;
+    owl:versionInfo "0.0.2" ;
+    skos:definition "Provides a vocabulary of roles that exist between Agents, that is Persons and Organisations"@en ;
+    skos:hasTopConcept
+        :affiliate ,
+        :affiliateOf ,
+        :antecedent ,
+        :contactPoint ,
+        :contactPointOf ,
+        :descendant ,
+        :elder ,
+        :elderOf ,
+        :member ,
+        :memberOf ,
+        :part ,
+        :partOf ,
+        :proxy ,
+        :proxyOf ;
+    skos:prefLabel "Agent to Agent Relationship Roles"@en ;
+    prov:qualifiedDerivation
+        [
+            a prov:Derivation ;
+            prov:entity cs: ;
+            schema:hadRole <https://linked.data.gov.au/def/vocdermods/none> ;
+        ] ;
+    schema:copyrightNotice "(c) Indigenous Data Network, 2022" ;
+    schema:creator <https://linked.data.gov.au/org/idn> ;
+    schema:dateCreated "2022-11-14"^^xsd:date ;
+    schema:dateIssued "2022-11-14"^^xsd:date ;
+    schema:dateModified "2026-08-28"^^xsd:date ;
+    schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
+    schema:publisher <https://linked.data.gov.au/org/idn> ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/experimental> ;
+.

@@ -39,6 +39,10 @@ The AGLDWG creates PIDs according to its [Guidelines](https://www.linked.data.go
 
 Please refer to the -guidelines_ page linked to above for more details about who can and how to make PIDs.
 
+## Validating organisations
+
+Run `task validate-orgs` to validate organisation records with the organisation validator, all registered organisation/person types and the role concept types from `resources/supporting-vocabs/`. See [supporting vocabulary provenance and refresh instructions](resources/supporting-vocabs/README.md). The command requires no live vocabulary downloads and exits unsuccessfully on validation violations. GitHub Actions runs it and its regression tests on pull requests and pushes to `main` or `valpub-compliant`.
+
 ## License
 
 All the content of this repository is licensed with the [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/) license with the following copyright notice:
