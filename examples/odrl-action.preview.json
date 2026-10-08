@@ -1,0 +1,201 @@
+{
+  "proposal_only": true,
+  "scheme": "https://linked.data.gov.au/def/odrl-action",
+  "registration": "https://linked.data.gov.au/pid/def/odrl-action",
+  "local_concepts": [
+    "https://linked.data.gov.au/def/odrl-action/consult",
+    "https://linked.data.gov.au/def/odrl-action/cooperate",
+    "https://linked.data.gov.au/def/odrl-action/follow-protocol",
+    "https://linked.data.gov.au/def/odrl-action/fulfil-commitments",
+    "https://linked.data.gov.au/def/odrl-action/manage-asset",
+    "https://linked.data.gov.au/def/odrl-action/protect-heritage",
+    "https://linked.data.gov.au/def/odrl-action/provide-resources",
+    "https://linked.data.gov.au/def/odrl-action/report-performance"
+  ],
+  "external_concepts_not_registered": [
+    "http://www.w3.org/ns/odrl/2/transfer"
+  ],
+  "catalogue_membership_to_add_after_review": {
+    "catalogue": "https://linked.data.gov.au/reg/pids/defs",
+    "predicate": "https://schema.org/hasPart",
+    "registration": "https://linked.data.gov.au/pid/def/odrl-action"
+  },
+  "redirects": [
+    {
+      "name": "scheme — HTML",
+      "source": "https://linked.data.gov.au/def/odrl-action",
+      "headers": {
+        "Accept": "text/html"
+      },
+      "target": "https://data.idnau.org/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fodrl-action"
+    },
+    {
+      "name": "scheme — Turtle",
+      "source": "https://linked.data.gov.au/def/odrl-action",
+      "headers": {
+        "Accept": "text/turtle"
+      },
+      "target": "https://api.idnau.org/object?uri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fodrl-action&_mediatype=text%2Fturtle"
+    },
+    {
+      "name": "consult — HTML",
+      "source": "https://linked.data.gov.au/def/odrl-action/consult",
+      "headers": {
+        "Accept": "text/html"
+      },
+      "target": "https://data.idnau.org/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fodrl-action%2Fconsult"
+    },
+    {
+      "name": "consult — Turtle",
+      "source": "https://linked.data.gov.au/def/odrl-action/consult",
+      "headers": {
+        "Accept": "text/turtle"
+      },
+      "target": "https://api.idnau.org/object?uri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fodrl-action%2Fconsult&_mediatype=text%2Fturtle"
+    },
+    {
+      "name": "cooperate — HTML",
+      "source": "https://linked.data.gov.au/def/odrl-action/cooperate",
+      "headers": {
+        "Accept": "text/html"
+      },
+      "target": "https://data.idnau.org/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fodrl-action%2Fcooperate"
+    },
+    {
+      "name": "cooperate — Turtle",
+      "source": "https://linked.data.gov.au/def/odrl-action/cooperate",
+      "headers": {
+        "Accept": "text/turtle"
+      },
+      "target": "https://api.idnau.org/object?uri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fodrl-action%2Fcooperate&_mediatype=text%2Fturtle"
+    },
+    {
+      "name": "follow-protocol — HTML",
+      "source": "https://linked.data.gov.au/def/odrl-action/follow-protocol",
+      "headers": {
+        "Accept": "text/html"
+      },
+      "target": "https://data.idnau.org/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fodrl-action%2Ffollow-protocol"
+    },
+    {
+      "name": "follow-protocol — Turtle",
+      "source": "https://linked.data.gov.au/def/odrl-action/follow-protocol",
+      "headers": {
+        "Accept": "text/turtle"
+      },
+      "target": "https://api.idnau.org/object?uri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fodrl-action%2Ffollow-protocol&_mediatype=text%2Fturtle"
+    },
+    {
+      "name": "fulfil-commitments — HTML",
+      "source": "https://linked.data.gov.au/def/odrl-action/fulfil-commitments",
+      "headers": {
+        "Accept": "text/html"
+      },
+      "target": "https://data.idnau.org/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fodrl-action%2Ffulfil-commitments"
+    },
+    {
+      "name": "fulfil-commitments — Turtle",
+      "source": "https://linked.data.gov.au/def/odrl-action/fulfil-commitments",
+      "headers": {
+        "Accept": "text/turtle"
+      },
+      "target": "https://api.idnau.org/object?uri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fodrl-action%2Ffulfil-commitments&_mediatype=text%2Fturtle"
+    },
+    {
+      "name": "manage-asset — HTML",
+      "source": "https://linked.data.gov.au/def/odrl-action/manage-asset",
+      "headers": {
+        "Accept": "text/html"
+      },
+      "target": "https://data.idnau.org/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fodrl-action%2Fmanage-asset"
+    },
+    {
+      "name": "manage-asset — Turtle",
+      "source": "https://linked.data.gov.au/def/odrl-action/manage-asset",
+      "headers": {
+        "Accept": "text/turtle"
+      },
+      "target": "https://api.idnau.org/object?uri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fodrl-action%2Fmanage-asset&_mediatype=text%2Fturtle"
+    },
+    {
+      "name": "protect-heritage — HTML",
+      "source": "https://linked.data.gov.au/def/odrl-action/protect-heritage",
+      "headers": {
+        "Accept": "text/html"
+      },
+      "target": "https://data.idnau.org/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fodrl-action%2Fprotect-heritage"
+    },
+    {
+      "name": "protect-heritage — Turtle",
+      "source": "https://linked.data.gov.au/def/odrl-action/protect-heritage",
+      "headers": {
+        "Accept": "text/turtle"
+      },
+      "target": "https://api.idnau.org/object?uri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fodrl-action%2Fprotect-heritage&_mediatype=text%2Fturtle"
+    },
+    {
+      "name": "provide-resources — HTML",
+      "source": "https://linked.data.gov.au/def/odrl-action/provide-resources",
+      "headers": {
+        "Accept": "text/html"
+      },
+      "target": "https://data.idnau.org/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fodrl-action%2Fprovide-resources"
+    },
+    {
+      "name": "provide-resources — Turtle",
+      "source": "https://linked.data.gov.au/def/odrl-action/provide-resources",
+      "headers": {
+        "Accept": "text/turtle"
+      },
+      "target": "https://api.idnau.org/object?uri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fodrl-action%2Fprovide-resources&_mediatype=text%2Fturtle"
+    },
+    {
+      "name": "report-performance — HTML",
+      "source": "https://linked.data.gov.au/def/odrl-action/report-performance",
+      "headers": {
+        "Accept": "text/html"
+      },
+      "target": "https://data.idnau.org/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fodrl-action%2Freport-performance"
+    },
+    {
+      "name": "report-performance — Turtle",
+      "source": "https://linked.data.gov.au/def/odrl-action/report-performance",
+      "headers": {
+        "Accept": "text/turtle"
+      },
+      "target": "https://api.idnau.org/object?uri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fodrl-action%2Freport-performance&_mediatype=text%2Fturtle"
+    },
+    {
+      "name": "scheme trailing slash — text/html",
+      "source": "https://linked.data.gov.au/def/odrl-action/",
+      "headers": {
+        "Accept": "text/html"
+      },
+      "target": "https://data.idnau.org/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fodrl-action"
+    },
+    {
+      "name": "scheme trailing slash — text/turtle",
+      "source": "https://linked.data.gov.au/def/odrl-action/",
+      "headers": {
+        "Accept": "text/turtle"
+      },
+      "target": "https://api.idnau.org/object?uri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fodrl-action&_mediatype=text%2Fturtle"
+    },
+    {
+      "name": "odrl-action — explicit Turtle parameter",
+      "source": "https://linked.data.gov.au/def/odrl-action?_mediatype=text/turtle",
+      "headers": {
+        "Accept": "text/html"
+      },
+      "target": "https://api.idnau.org/object?uri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fodrl-action&_mediatype=text%2Fturtle"
+    },
+    {
+      "name": "consult — explicit Turtle parameter",
+      "source": "https://linked.data.gov.au/def/odrl-action/consult?_mediatype=text/turtle",
+      "headers": {
+        "Accept": "text/html"
+      },
+      "target": "https://api.idnau.org/object?uri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fodrl-action%2Fconsult&_mediatype=text%2Fturtle"
+    }
+  ]
+}

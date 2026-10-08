@@ -1,0 +1,136 @@
+PREFIX cs: <https://linked.data.gov.au/def/odrl-action>
+PREFIX odrl: <http://www.w3.org/ns/odrl/2/>
+PREFIX odrl-action: <https://linked.data.gov.au/def/odrl-action/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX vann: <http://purl.org/vocab/vann/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://kurrawong.ai> a schema:Organization ;
+    schema:name "Kurrawong AI"@en ;
+    schema:url "https://kurrawong.ai"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/org/idn>
+    a schema:Organization ;
+    schema:name "Indigenous Data Network" ;
+    schema:url "https://mspgh.unimelb.edu.au/centres-institutes/onemda/research-group/indigenous-studies-unit/indigenous-data-network"^^xsd:anyURI ;
+.
+
+odrl-action:fulfil-commitments
+    a
+        odrl:Action ,
+        skos:Concept ;
+    skos:definition
+        "Perform the commitments for which a party is responsible under an agreement, determination or other policy."@en ;
+    skos:inScheme cs: ;
+    rdfs:isDefinedBy odrl-action: ;
+    skos:narrower
+        odrl:transfer ,
+        odrl-action:cooperate ,
+        odrl-action:consult ,
+        odrl-action:follow-protocol ,
+        odrl-action:manage-asset ,
+        odrl-action:provide-resources ,
+        odrl-action:protect-heritage ,
+        odrl-action:report-performance ;
+    skos:prefLabel "fulfil agreement commitments"@en ;
+    skos:topConceptOf cs: ;
+.
+
+odrl:transfer
+	a odrl:Action, skos:Concept ;
+    skos:broader odrl-action:fulfil-commitments ;
+	rdfs:isDefinedBy odrl: ;
+	skos:prefLabel "Transfer Ownership"@en ;
+	skos:definition "To transfer the ownership of the Asset in perpetuity."@en ;
+    skos:inScheme cs: ;
+.
+
+odrl-action:cooperate
+    a odrl:Action, skos:Concept ;
+    skos:broader odrl-action:fulfil-commitments ;
+    skos:definition "Cooperate with other parties in carrying out an agreement."@en ;
+    skos:inScheme cs: ;
+    rdfs:isDefinedBy odrl-action: ;
+    skos:prefLabel "cooperate"@en ;
+.
+
+odrl-action:consult
+    a odrl:Action, skos:Concept ;
+    skos:broader odrl-action:fulfil-commitments ;
+    skos:definition "Consult the parties or communities identified by a policy."@en ;
+    skos:inScheme cs: ;
+    rdfs:isDefinedBy odrl-action: ;
+    skos:prefLabel "consult"@en ;
+    skos:broadMatch schema:CommunicateAction ;
+.
+
+odrl-action:follow-protocol
+    a odrl:Action, skos:Concept ;
+    skos:broader odrl-action:fulfil-commitments ;
+    skos:definition "Follow the protocols identified by a policy for accessing, using, handling, viewing, sharing or otherwise interacting with an asset."@en ;
+    skos:inScheme cs: ;
+    rdfs:isDefinedBy odrl-action: ;
+    skos:prefLabel "follow protocol"@en ;
+.
+
+odrl-action:manage-asset
+    a odrl:Action, skos:Concept ;
+    skos:broader odrl-action:fulfil-commitments ;
+    skos:definition "Manage land, feature, infrastructure or another asset in accordance with a policy."@en ;
+    skos:inScheme cs: ;
+    rdfs:isDefinedBy odrl-action: ;
+    skos:prefLabel "manage asset"@en ;
+.
+
+odrl-action:provide-resources
+    a odrl:Action, skos:Concept ;
+    skos:broader odrl-action:fulfil-commitments ;
+    skos:definition "Provide funding, personnel, services or other resources required by a policy."@en ;
+    skos:inScheme cs: ;
+    rdfs:isDefinedBy odrl-action: ;
+    skos:prefLabel "provide resources"@en ;
+.
+
+odrl-action:protect-heritage
+    a odrl:Action, skos:Concept ;
+    skos:broader odrl-action:fulfil-commitments ;
+    skos:definition "Protect places, Country, knowledge or heritage objects in accordance with a policy."@en ;
+    skos:inScheme cs: ;
+    rdfs:isDefinedBy odrl-action: ;
+    skos:prefLabel "protect heritage"@en ;
+    skos:altLabel "protect cultural heritage"@en ;
+.
+
+odrl-action:report-performance
+    a odrl:Action, skos:Concept ;
+    skos:broader odrl-action:fulfil-commitments ;
+    skos:definition "Report progress, performance or outcomes required by a policy."@en ;
+    skos:inScheme cs: ;
+    rdfs:isDefinedBy odrl-action: ;
+    skos:prefLabel "report performance"@en ;
+    skos:broadMatch 
+        odrl:inform ,
+        schema:CommunicateAction ;
+.
+
+cs:
+    a skos:ConceptScheme ;
+    vann:preferredNamespacePrefix "odrl-action" ;
+    vann:preferredNamespaceUri "https://linked.data.gov.au/def/odrl-action/" ;
+    schema:dateCreated "2026-09-15"^^xsd:date ;
+    schema:dateModified "2026-10-08"^^xsd:date ;
+    schema:creator <https://kurrawong.ai> ;
+    schema:publisher <https://linked.data.gov.au/org/idn> ;
+    skos:definition
+        "Actions used to express responsibilities and permissions arising from negotiated agreements or other policy types."@en ;
+    skos:hasTopConcept 
+        odrl-action:fulfil-commitments ;
+    skos:historyNote
+        "Created as an exploratory vocabulary for reviewed ODRL enrichment within the Indigenous Data Network. Its terms are initially derived from the Agreements, Treaties and Negotiated Settlements database, and not assertions by the ATNS source owners, not are not part of the normative ODRL vocabulary. Imports some terms from ODRL 2.2"@en ;
+    skos:prefLabel "ODRL actions"@en ;
+    skos:hasTopConcept 
+        odrl-action:fulfil-commitments ;
+    .

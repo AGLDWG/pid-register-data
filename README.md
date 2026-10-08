@@ -39,6 +39,10 @@ The AGLDWG creates PIDs according to its [Guidelines](https://www.linked.data.go
 
 Please refer to the -guidelines_ page linked to above for more details about who can and how to make PIDs.
 
+### Preparing a local registration proposal
+
+The experimental local generator takes vocabulary Turtle and an explicit JSON registration plan and writes a proposed `pid:Pid` record plus a redirect preview. It does not allocate PIDs or deploy redirects. See [the worked ODRL action example](examples/README.md) for inputs, reproducible commands, supported patterns and validation.
+
 ## License
 
 All the content of this repository is licensed with the [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/) license with the following copyright notice:

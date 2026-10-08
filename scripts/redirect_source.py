@@ -75,7 +75,8 @@ def _redirects_from_graph(graph: Graph) -> list[Redirect]:
 
 def load_local(folder: Path) -> list[Redirect]:
     graph = Graph()
-    for path in sorted(folder.rglob("*.ttl")):
+    paths = [folder] if folder.is_file() else sorted(folder.rglob("*.ttl"))
+    for path in paths:
         graph.parse(path, format="turtle")
     return _redirects_from_graph(graph)
 

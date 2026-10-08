@@ -1,0 +1,181 @@
+PREFIX cs: <https://linked.data.gov.au/def/asgs/cat>
+PREFIX mbcat: <https://linked.data.gov.au/def/asgs/cat/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+mbcat:antarctica
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Antarctica" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Antarctica" ;
+    skos:topConceptOf cs: ;
+.
+
+mbcat:commercial
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Commercial" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Commercial" ;
+    skos:topConceptOf cs: ;
+.
+
+mbcat:education
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Education" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Education" ;
+    skos:topConceptOf cs: ;
+.
+
+mbcat:hospital-medical
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Hospital/Medical" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Hospital/Medical" ;
+    skos:topConceptOf cs: ;
+.
+
+mbcat:industrial
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Industrial" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Industrial" ;
+    skos:topConceptOf cs: ;
+.
+
+mbcat:migratory
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Migratory" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Migratory" ;
+    skos:topConceptOf cs: ;
+.
+
+mbcat:nousualresidence
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "No usual residence" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "No usual residence" ;
+    skos:topConceptOf cs: ;
+.
+
+mbcat:offshore
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Offshore" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Offshore" ;
+    skos:topConceptOf cs: ;
+.
+
+mbcat:other
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Other" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Other" ;
+    skos:topConceptOf cs: ;
+.
+
+mbcat:outside-australia
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Outside Australia" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Outside Australia" ;
+    skos:topConceptOf cs: ;
+.
+
+mbcat:parkland
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Parkland" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Parkland" ;
+    skos:topConceptOf cs: ;
+.
+
+mbcat:primary-production
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Primary Production" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Primary Production" ;
+    skos:topConceptOf cs: ;
+.
+
+mbcat:residential
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Residential" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Residential" ;
+    skos:topConceptOf cs: ;
+.
+
+mbcat:shipping
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Shipping" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Shipping" ;
+    skos:topConceptOf cs: ;
+.
+
+mbcat:transport
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Transport" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Transport" ;
+    skos:topConceptOf cs: ;
+.
+
+mbcat:water
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Water" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Water" ;
+    skos:topConceptOf cs: ;
+.
+
+cs:
+    a skos:ConceptScheme ;
+    skos:definition "Meshblock categories are a categorisation of Meshblock's land use, as defined by ABS"@en ;
+    skos:hasTopConcept
+        mbcat:antarctica ,
+        mbcat:commercial ,
+        mbcat:education ,
+        mbcat:hospital-medical ,
+        mbcat:industrial ,
+        mbcat:migratory ,
+        mbcat:nousualresidence ,
+        mbcat:offshore ,
+        mbcat:other ,
+        mbcat:outside-australia ,
+        mbcat:parkland ,
+        mbcat:primary-production ,
+        mbcat:residential ,
+        mbcat:shipping ,
+        mbcat:transport ,
+        mbcat:water ;
+    skos:historyNote "2026-09: was unused and unmaintained after ASGS LD API taken offline in 2025. Acquired by DCCEEW for use in BDR" ;
+    skos:prefLabel "Meshblock categories" ;
+    schema:citation "https://www.abs.gov.au/ausstats/abs@.nsf/Lookup/by%20Subject/1270.0.55.001~July%202016~Main%20Features~Mesh%20Blocks%20(MB)~10012"^^xsd:anyURI ;
+    schema:contributor <https://orcid.org/0000-0002-3884-3420> ;
+    schema:copyrightNotice "(c) 2018 Australian Bureau of Statistics." ;
+    schema:creator <https://orcid.org/0000-0002-8742-7730> ;
+    schema:dateCreated "2019-12-11"^^xsd:date ;
+    schema:dateModified "2026-09-03"^^xsd:date ;
+    schema:publisher <https://linked.data.gov.au/org/abs> ;
+.

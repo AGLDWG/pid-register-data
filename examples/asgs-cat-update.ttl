@@ -1,0 +1,508 @@
+# Local update proposal only: production destinations are not yet verified.
+# Existing stable status records the registration, not approval of this update.
+PREFIX pid: <https://linked.data.gov.au/def/pid/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/pid/def/asgs>
+    a pid:Pid ;
+    pid:redirectRules """# Meshblock categories: specific rules precede the existing ASGS rules.
+RewriteRule ^/def/asgs/cat\\.ttl$ https://bdr.azure-api.net/prez-v4/v1/object?iri=https\\%3A\\%2F\\%2Flinked.data.gov.au\\%2Fdef\\%2Fasgs\\%2Fcat&_mediatype=text\\%2Fturtle [R=302,NE,L]
+RewriteRule ^/def/asgs/cat/([A-Za-z0-9-]+)\\.ttl$ https://bdr.azure-api.net/prez-v4/v1/object?iri=https\\%3A\\%2F\\%2Flinked.data.gov.au\\%2Fdef\\%2Fasgs\\%2Fcat\\%2F$1&_mediatype=text\\%2Fturtle [R=302,NE,L]
+RewriteCond %{QUERY_STRING} (^|&)_mediatype=text(/|%2[Ff])turtle(&|$) [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/def/asgs/cat/?$ https://bdr.azure-api.net/prez-v4/v1/object?iri=https\\%3A\\%2F\\%2Flinked.data.gov.au\\%2Fdef\\%2Fasgs\\%2Fcat&_mediatype=text\\%2Fturtle [R=302,NE,L]
+RewriteCond %{QUERY_STRING} (^|&)_mediatype=text(/|%2[Ff])turtle(&|$) [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/def/asgs/cat/([A-Za-z0-9-]+)$ https://bdr.azure-api.net/prez-v4/v1/object?iri=https\\%3A\\%2F\\%2Flinked.data.gov.au\\%2Fdef\\%2Fasgs\\%2Fcat\\%2F$1&_mediatype=text\\%2Fturtle [R=302,NE,L]
+RewriteRule ^/def/asgs/cat/?$ https://resources.bdr.gov.au/catalogues/vocabs:/collections/asgs:cat [R=302,NE,L]
+RewriteRule ^/def/asgs/cat/([A-Za-z0-9-]+)$ https://resources.bdr.gov.au/catalogues/vocabs:/collections/asgs:cat/items/cat:$1 [R=302,NE,L]
+RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/def/asgs                                  https://raw.githack.com/AGLDWG/asgs-ont/master/asgs.ttl? [R=302,L]
+RewriteRule ^/def/asgs(.*).ttl$                         https://raw.githack.com/AGLDWG/asgs-ont/master/asgs.ttl [R=302,L]
+RewriteRule ^/def/asgs/cat                              https://raw.githack.com/AGLDWG/asgs-ont/master/asgs-cat.ttl? [R=302,L]
+RewriteRule ^/def/asgs/cat(.*).ttl$                     https://raw.githack.com/AGLDWG/asgs-ont/master/asgs-cat.ttl [R=302,L]
+RewriteRule ^/def/asgs/code                             https://raw.githack.com/AGLDWG/asgs-ont/master/asgs-code.ttl? [R=302,L]
+RewriteRule ^/def/asgs/code(.*).ttl$                    https://raw.githack.com/AGLDWG/asgs-ont/master/asgs-code.ttl [R=302,L]
+RewriteRule ^/def/asgs/id                               https://raw.githack.com/AGLDWG/asgs-ont/master/asgs-id.ttl? [R=302,L]
+RewriteRule ^/def/asgs/id(.*).ttl$                      https://raw.githack.com/AGLDWG/asgs-ont/master/asgs-id.ttl [R=302,L]
+RewriteRule ^/def/asgs/isOf                             https://raw.githack.com/AGLDWG/asgs-ont/master/asgs-isOf.ttl? [R=302,L]
+RewriteRule ^/def/asgs/isOf(.*).ttl$                    https://raw.githack.com/AGLDWG/asgs-ont/master/asgs-isOf.ttl [R=302,L]
+RewriteRule ^/def/asgs/path                             https://raw.githack.com/AGLDWG/asgs-ont/master/asgs-path.ttl? [R=302,L]
+RewriteRule ^/def/asgs/path(.*).ttl$                    https://raw.githack.com/AGLDWG/asgs-ont/master/asgs-path.ttl [R=302,L]
+RewriteRule ^/def/asgs/prop                             https://raw.githack.com/AGLDWG/asgs-ont/master/asgs-prop.ttl? [R=302,L]
+RewriteRule ^/def/asgs/prop(.*).ttl$                    https://raw.githack.com/AGLDWG/asgs-ont/master/asgs-prop.ttl [R=302,L]
+RewriteCond %{QUERY_STRING} ^_mediatype=application/rdf\\+xml$ [OR]
+RewriteCond %{HTTP:Accept} application/rdf\\+xml [NC]
+RewriteRule ^/def/asgs                                  https://raw.githack.com/AGLDWG/asgs-ont/master/asgs.rdf? [R=302,L]
+RewriteRule ^/def/asgs(.*).rdf$                         https://raw.githack.com/AGLDWG/asgs-ont/master/asgs.rdf [R=302,L]
+RewriteCond %{QUERY_STRING} ^_mediatype=application/ld\\+json$ [OR]
+RewriteCond %{HTTP:Accept} application/ld\\+json [NC]
+RewriteRule ^/def/asgs                                  https://raw.githack.com/AGLDWG/asgs-ont/master/asgs.jsonld? [R=302,L]
+RewriteRule ^/def/asgs(.*).jsonld$                      https://raw.githack.com/AGLDWG/asgs-ont/master/asgs.jsonld [R=302,L]
+RewriteRule ^/def/asgs/cat                              https://raw.githack.com/AGLDWG/asgs-ont/master/asgs-cat.jsonld? [R=302,L]
+RewriteRule ^/def/asgs/cat(.*).jsonld$                  https://raw.githack.com/AGLDWG/asgs-ont/master/asgs-cat.jsonld [R=302,L]
+RewriteRule ^/def/asgs/code                             https://raw.githack.com/AGLDWG/asgs-ont/master/asgs-code.jsonld? [R=302,L]
+RewriteRule ^/def/asgs/code(.*).jsonld$                 https://raw.githack.com/AGLDWG/asgs-ont/master/asgs-code.jsonld [R=302,L]
+RewriteRule ^/def/asgs/id                               https://raw.githack.com/AGLDWG/asgs-ont/master/asgs-id.jsonld? [R=302,L]
+RewriteRule ^/def/asgs/id(.*).jsonld$                   https://raw.githack.com/AGLDWG/asgs-ont/master/asgs-id.jsonld [R=302,L]
+RewriteRule ^/def/asgs/isOf                             https://raw.githack.com/AGLDWG/asgs-ont/master/asgs-isOf.jsonld? [R=302,L]
+RewriteRule ^/def/asgs/isOf(.*).jsonld$                 https://raw.githack.com/AGLDWG/asgs-ont/master/asgs-isOf.jsonld [R=302,L]
+RewriteRule ^/def/asgs/path                             https://raw.githack.com/AGLDWG/asgs-ont/master/asgs-path.jsonld? [R=302,L]
+RewriteRule ^/def/asgs/path(.*).jsonld$                 https://raw.githack.com/AGLDWG/asgs-ont/master/asgs-path.jsonld [R=302,L]
+RewriteRule ^/def/asgs/prop                             https://raw.githack.com/AGLDWG/asgs-ont/master/asgs-prop.jsonld? [R=302,L]
+RewriteRule ^/def/asgs/prop(.*).jsonld$                 https://raw.githack.com/AGLDWG/asgs-ont/master/asgs-prop.jsonld [R=302,L]
+RewriteRule ^/def/asgs(.*)$                             https://raw.githack.com/AGLDWG/asgs-ont/master/asgs.html$1 [R=302,L]
+RewriteRule ^/def/asgs/cat(.*)$                         https://raw.githack.com/AGLDWG/asgs-ont/master/asgs-cat.html$1 [R=302,L]
+RewriteRule ^/def/asgs/id(.*)$                          https://raw.githack.com/AGLDWG/asgs-ont/master/asgs-id.html$1 [R=302,L]"""^^pid:apacheRedirectRules ;
+    pid:redirectTest 
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs/cat" ;
+            pid:headers "'Accept': 'text/html'" ;
+            pid:to "https://resources.bdr.gov.au/catalogues/vocabs:/collections/asgs:cat" ;
+            schema:name "Meshblock scheme — HTML" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs/cat" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat&_mediatype=text%2Fturtle" ;
+            schema:name "Meshblock scheme — Turtle" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs/cat.ttl" ;
+            pid:headers "" ;
+            pid:to "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat&_mediatype=text%2Fturtle" ;
+            schema:name "Meshblock scheme — .ttl alias" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs/cat/antarctica" ;
+            pid:headers "'Accept': 'text/html'" ;
+            pid:to "https://resources.bdr.gov.au/catalogues/vocabs:/collections/asgs:cat/items/cat:antarctica" ;
+            schema:name "Meshblock antarctica — HTML" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs/cat/antarctica" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Fantarctica&_mediatype=text%2Fturtle" ;
+            schema:name "Meshblock antarctica — Turtle" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs/cat/antarctica.ttl" ;
+            pid:headers "" ;
+            pid:to "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Fantarctica&_mediatype=text%2Fturtle" ;
+            schema:name "Meshblock antarctica — .ttl alias" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs/cat/commercial" ;
+            pid:headers "'Accept': 'text/html'" ;
+            pid:to "https://resources.bdr.gov.au/catalogues/vocabs:/collections/asgs:cat/items/cat:commercial" ;
+            schema:name "Meshblock commercial — HTML" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs/cat/commercial" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Fcommercial&_mediatype=text%2Fturtle" ;
+            schema:name "Meshblock commercial — Turtle" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs/cat/commercial.ttl" ;
+            pid:headers "" ;
+            pid:to "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Fcommercial&_mediatype=text%2Fturtle" ;
+            schema:name "Meshblock commercial — .ttl alias" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs/cat/education" ;
+            pid:headers "'Accept': 'text/html'" ;
+            pid:to "https://resources.bdr.gov.au/catalogues/vocabs:/collections/asgs:cat/items/cat:education" ;
+            schema:name "Meshblock education — HTML" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs/cat/education" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Feducation&_mediatype=text%2Fturtle" ;
+            schema:name "Meshblock education — Turtle" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs/cat/education.ttl" ;
+            pid:headers "" ;
+            pid:to "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Feducation&_mediatype=text%2Fturtle" ;
+            schema:name "Meshblock education — .ttl alias" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs/cat/hospital-medical" ;
+            pid:headers "'Accept': 'text/html'" ;
+            pid:to "https://resources.bdr.gov.au/catalogues/vocabs:/collections/asgs:cat/items/cat:hospital-medical" ;
+            schema:name "Meshblock hospital-medical — HTML" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs/cat/hospital-medical" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Fhospital-medical&_mediatype=text%2Fturtle" ;
+            schema:name "Meshblock hospital-medical — Turtle" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs/cat/hospital-medical.ttl" ;
+            pid:headers "" ;
+            pid:to "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Fhospital-medical&_mediatype=text%2Fturtle" ;
+            schema:name "Meshblock hospital-medical — .ttl alias" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs/cat/industrial" ;
+            pid:headers "'Accept': 'text/html'" ;
+            pid:to "https://resources.bdr.gov.au/catalogues/vocabs:/collections/asgs:cat/items/cat:industrial" ;
+            schema:name "Meshblock industrial — HTML" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs/cat/industrial" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Findustrial&_mediatype=text%2Fturtle" ;
+            schema:name "Meshblock industrial — Turtle" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs/cat/industrial.ttl" ;
+            pid:headers "" ;
+            pid:to "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Findustrial&_mediatype=text%2Fturtle" ;
+            schema:name "Meshblock industrial — .ttl alias" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs/cat/migratory" ;
+            pid:headers "'Accept': 'text/html'" ;
+            pid:to "https://resources.bdr.gov.au/catalogues/vocabs:/collections/asgs:cat/items/cat:migratory" ;
+            schema:name "Meshblock migratory — HTML" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs/cat/migratory" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Fmigratory&_mediatype=text%2Fturtle" ;
+            schema:name "Meshblock migratory — Turtle" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs/cat/migratory.ttl" ;
+            pid:headers "" ;
+            pid:to "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Fmigratory&_mediatype=text%2Fturtle" ;
+            schema:name "Meshblock migratory — .ttl alias" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs/cat/nousualresidence" ;
+            pid:headers "'Accept': 'text/html'" ;
+            pid:to "https://resources.bdr.gov.au/catalogues/vocabs:/collections/asgs:cat/items/cat:nousualresidence" ;
+            schema:name "Meshblock nousualresidence — HTML" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs/cat/nousualresidence" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Fnousualresidence&_mediatype=text%2Fturtle" ;
+            schema:name "Meshblock nousualresidence — Turtle" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs/cat/nousualresidence.ttl" ;
+            pid:headers "" ;
+            pid:to "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Fnousualresidence&_mediatype=text%2Fturtle" ;
+            schema:name "Meshblock nousualresidence — .ttl alias" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs/cat/offshore" ;
+            pid:headers "'Accept': 'text/html'" ;
+            pid:to "https://resources.bdr.gov.au/catalogues/vocabs:/collections/asgs:cat/items/cat:offshore" ;
+            schema:name "Meshblock offshore — HTML" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs/cat/offshore" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Foffshore&_mediatype=text%2Fturtle" ;
+            schema:name "Meshblock offshore — Turtle" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs/cat/offshore.ttl" ;
+            pid:headers "" ;
+            pid:to "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Foffshore&_mediatype=text%2Fturtle" ;
+            schema:name "Meshblock offshore — .ttl alias" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs/cat/other" ;
+            pid:headers "'Accept': 'text/html'" ;
+            pid:to "https://resources.bdr.gov.au/catalogues/vocabs:/collections/asgs:cat/items/cat:other" ;
+            schema:name "Meshblock other — HTML" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs/cat/other" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Fother&_mediatype=text%2Fturtle" ;
+            schema:name "Meshblock other — Turtle" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs/cat/other.ttl" ;
+            pid:headers "" ;
+            pid:to "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Fother&_mediatype=text%2Fturtle" ;
+            schema:name "Meshblock other — .ttl alias" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs/cat/outside-australia" ;
+            pid:headers "'Accept': 'text/html'" ;
+            pid:to "https://resources.bdr.gov.au/catalogues/vocabs:/collections/asgs:cat/items/cat:outside-australia" ;
+            schema:name "Meshblock outside-australia — HTML" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs/cat/outside-australia" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Foutside-australia&_mediatype=text%2Fturtle" ;
+            schema:name "Meshblock outside-australia — Turtle" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs/cat/outside-australia.ttl" ;
+            pid:headers "" ;
+            pid:to "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Foutside-australia&_mediatype=text%2Fturtle" ;
+            schema:name "Meshblock outside-australia — .ttl alias" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs/cat/parkland" ;
+            pid:headers "'Accept': 'text/html'" ;
+            pid:to "https://resources.bdr.gov.au/catalogues/vocabs:/collections/asgs:cat/items/cat:parkland" ;
+            schema:name "Meshblock parkland — HTML" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs/cat/parkland" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Fparkland&_mediatype=text%2Fturtle" ;
+            schema:name "Meshblock parkland — Turtle" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs/cat/parkland.ttl" ;
+            pid:headers "" ;
+            pid:to "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Fparkland&_mediatype=text%2Fturtle" ;
+            schema:name "Meshblock parkland — .ttl alias" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs/cat/primary-production" ;
+            pid:headers "'Accept': 'text/html'" ;
+            pid:to "https://resources.bdr.gov.au/catalogues/vocabs:/collections/asgs:cat/items/cat:primary-production" ;
+            schema:name "Meshblock primary-production — HTML" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs/cat/primary-production" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Fprimary-production&_mediatype=text%2Fturtle" ;
+            schema:name "Meshblock primary-production — Turtle" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs/cat/primary-production.ttl" ;
+            pid:headers "" ;
+            pid:to "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Fprimary-production&_mediatype=text%2Fturtle" ;
+            schema:name "Meshblock primary-production — .ttl alias" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs/cat/residential" ;
+            pid:headers "'Accept': 'text/html'" ;
+            pid:to "https://resources.bdr.gov.au/catalogues/vocabs:/collections/asgs:cat/items/cat:residential" ;
+            schema:name "Meshblock residential — HTML" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs/cat/residential" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Fresidential&_mediatype=text%2Fturtle" ;
+            schema:name "Meshblock residential — Turtle" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs/cat/residential.ttl" ;
+            pid:headers "" ;
+            pid:to "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Fresidential&_mediatype=text%2Fturtle" ;
+            schema:name "Meshblock residential — .ttl alias" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs/cat/shipping" ;
+            pid:headers "'Accept': 'text/html'" ;
+            pid:to "https://resources.bdr.gov.au/catalogues/vocabs:/collections/asgs:cat/items/cat:shipping" ;
+            schema:name "Meshblock shipping — HTML" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs/cat/shipping" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Fshipping&_mediatype=text%2Fturtle" ;
+            schema:name "Meshblock shipping — Turtle" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs/cat/shipping.ttl" ;
+            pid:headers "" ;
+            pid:to "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Fshipping&_mediatype=text%2Fturtle" ;
+            schema:name "Meshblock shipping — .ttl alias" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs/cat/transport" ;
+            pid:headers "'Accept': 'text/html'" ;
+            pid:to "https://resources.bdr.gov.au/catalogues/vocabs:/collections/asgs:cat/items/cat:transport" ;
+            schema:name "Meshblock transport — HTML" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs/cat/transport" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Ftransport&_mediatype=text%2Fturtle" ;
+            schema:name "Meshblock transport — Turtle" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs/cat/transport.ttl" ;
+            pid:headers "" ;
+            pid:to "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Ftransport&_mediatype=text%2Fturtle" ;
+            schema:name "Meshblock transport — .ttl alias" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs/cat/water" ;
+            pid:headers "'Accept': 'text/html'" ;
+            pid:to "https://resources.bdr.gov.au/catalogues/vocabs:/collections/asgs:cat/items/cat:water" ;
+            schema:name "Meshblock water — HTML" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs/cat/water" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Fwater&_mediatype=text%2Fturtle" ;
+            schema:name "Meshblock water — Turtle" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs/cat/water.ttl" ;
+            pid:headers "" ;
+            pid:to "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Fwater&_mediatype=text%2Fturtle" ;
+            schema:name "Meshblock water — .ttl alias" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs/cat/" ;
+            pid:headers "'Accept': 'text/html'" ;
+            pid:to "https://resources.bdr.gov.au/catalogues/vocabs:/collections/asgs:cat" ;
+            schema:name "Meshblock scheme trailing slash — text/html" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs/cat/" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat&_mediatype=text%2Fturtle" ;
+            schema:name "Meshblock scheme trailing slash — text/turtle" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs/cat?_mediatype=text/turtle" ;
+            pid:headers "'Accept': 'text/html'" ;
+            pid:to "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat&_mediatype=text%2Fturtle" ;
+            schema:name "Meshblock cat — parameter text/turtle" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs/cat?_mediatype=text%2Fturtle" ;
+            pid:headers "'Accept': 'text/html'" ;
+            pid:to "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat&_mediatype=text%2Fturtle" ;
+            schema:name "Meshblock cat — parameter text%2Fturtle" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs/cat" ;
+            pid:headers "" ;
+            pid:to "https://resources.bdr.gov.au/catalogues/vocabs:/collections/asgs:cat" ;
+            schema:name "Meshblock cat — default HTML" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs/cat/residential?_mediatype=text/turtle" ;
+            pid:headers "'Accept': 'text/html'" ;
+            pid:to "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Fresidential&_mediatype=text%2Fturtle" ;
+            schema:name "Meshblock residential — parameter text/turtle" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs/cat/residential?_mediatype=text%2Fturtle" ;
+            pid:headers "'Accept': 'text/html'" ;
+            pid:to "https://bdr.azure-api.net/prez-v4/v1/object?iri=https%3A%2F%2Flinked.data.gov.au%2Fdef%2Fasgs%2Fcat%2Fresidential&_mediatype=text%2Fturtle" ;
+            schema:name "Meshblock residential — parameter text%2Fturtle" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs/cat/residential" ;
+            pid:headers "" ;
+            pid:to "https://resources.bdr.gov.au/catalogues/vocabs:/collections/asgs:cat/items/cat:residential" ;
+            schema:name "Meshblock residential — default HTML" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs.ttl" ;
+            pid:headers "" ;
+            pid:to "https://raw.githack.com/AGLDWG/asgs-ont/master/asgs.ttl" ;
+            schema:name "ASGS Ontology, RDF (turtle) via file ext." ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://raw.githack.com/AGLDWG/asgs-ont/master/asgs.ttl" ;
+            schema:name "ASGS Ontology, RDF (turtle) via conneg" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs" ;
+            pid:headers "" ;
+            pid:to "https://raw.githack.com/AGLDWG/asgs-ont/master/asgs.html" ;
+            schema:name "ASGS Ontology, HTML" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/asgs?_mediatype=text/turtle" ;
+            pid:headers "" ;
+            pid:to "https://raw.githack.com/AGLDWG/asgs-ont/master/asgs.ttl" ;
+            schema:name "ASGS Ontology, RDF (turtle) via QSA" ;
+        ] ;
+    schema:creator <https://linked.data.gov.au/person/laurent.lefort> ;
+    schema:dateCreated "2019-04-15"^^xsd:date ;
+    schema:dateModified "2026-10-08"^^xsd:date ;
+    schema:name "ASGS Ontology" ;
+    schema:sponsor <https://linked.data.gov.au/org/agldwg> ;
+    schema:status <https://linked.data.gov.au/def/reg-statuses/stable> ;
+    schema:url "https://linked.data.gov.au/def/asgs"^^pid:agldwgPid ;
+.

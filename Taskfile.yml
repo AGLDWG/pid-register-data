@@ -7,6 +7,16 @@ vars:
   SPARQL_PASSWORD: '{{default "" .SPARQL_PASSWORD}}'
 
 tasks:
+  generate-proposal:
+    desc: Generate a local PID proposal and redirect preview from vocabulary Turtle and a JSON plan
+    requires:
+      vars: [VOCABULARY, PLAN, OUTPUT]
+    cmd: >-
+      uv run python scripts/generate_pid.py
+      --vocabulary {{.VOCABULARY | shellQuote}}
+      --plan {{.PLAN | shellQuote}}
+      --output {{.OUTPUT | shellQuote}}
+
   build-redirects:
     desc: Build sponsor-specific Apache configurations from local RDF or an authenticated SPARQL endpoint
     silent: true

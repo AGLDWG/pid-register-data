@@ -1,0 +1,12 @@
+{
+  "scheme": "https://linked.data.gov.au/def/odrl-action",
+  "namespace": "https://linked.data.gov.au/def/odrl-action/",
+  "name": "ODRL actions",
+  "description": "Proposed registration of the IDN exploratory ODRL action vocabulary and its locally defined concepts.",
+  "creator": "https://kurrawong.ai",
+  "sponsor": "https://linked.data.gov.au/org/idn",
+  "date_created": "2026-10-08",
+  "date_modified": "2026-10-08",
+  "html_destination": "https://data.idnau.org/object?iri={iri}",
+  "turtle_destination": "https://api.idnau.org/object?uri={iri}&_mediatype=text%2Fturtle"
+}
