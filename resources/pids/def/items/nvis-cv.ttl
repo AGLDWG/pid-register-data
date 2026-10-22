@@ -1,0 +1,77 @@
+PREFIX lifecycle: <https://linked.data.gov.au/def/lifecycle/>
+PREFIX pid: <https://linked.data.gov.au/def/pid/>
+PREFIX schema: <https://schema.org/>
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/pid/def/nvis-cv>
+    a pid:Pid ;
+    lifecycle:hasLifecycleStage
+        [
+            time:hasTime
+                [
+                    time:hasBeginning
+                        [
+                            time:inXSDDate "2026-10-22"^^xsd:date ;
+                        ] ;
+                ] ;
+            schema:additionalType <https://linked.data.gov.au/def/reg-statuses/submitted> ;
+        ] ;
+    pid:redirectRules """RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/def/nvis-cv(.*)$                          https://linkeddata.tern.org.au/viewer/nvis/id/https://linked.data.gov.au/def/nvis-cv$1?format=text/turtle [R=302,L]
+RewriteRule ^/def/nvis-cv(.*).ttl$                      https://linkeddata.tern.org.au/viewer/nvis/id/https://linked.data.gov.au/def/nvis-cv$1?format=text/turtle [R=302,L]
+RewriteCond %{QUERY_STRING} ^_mediatype=application/rdf\\+xml$ [OR]
+RewriteCond %{HTTP:Accept} application/rdf\\+xml [NC]
+RewriteRule ^/def/nvis-cv(.*)$                          https://linkeddata.tern.org.au/viewer/nvis/id/https://linked.data.gov.au/def/nvis-cv$1?format=application/rdf\\+xml [R=302,L]
+RewriteRule ^/def/nvis-cv(.*).rdf$                      https://linkeddata.tern.org.au/viewer/nvis/id/https://linked.data.gov.au/def/nvis-cv$1?format=application/rdf\\+xml [R=302,L]
+RewriteCond %{QUERY_STRING} ^_mediatype=application/n-triples$ [OR]
+RewriteCond %{HTTP:Accept} application/n-triples [NC]
+RewriteRule ^/def/nvis-cv(.*)$                          https://linkeddata.tern.org.au/viewer/nvis/id/https://linked.data.gov.au/def/nvis-cv$1?format=application/n-triples [R=302,L]
+RewriteRule ^/def/nvis-cv(.*).nt$                       https://linkeddata.tern.org.au/viewer/nvis/id/https://linked.data.gov.au/def/nvis-cv$1?format=application/n-triples [R=302,L]
+RewriteCond %{QUERY_STRING} ^_mediatype=application/ld\\+json$ [OR]
+RewriteCond %{HTTP:Accept} application/ld\\+json [NC]
+RewriteRule ^/def/nvis-cv(.*)$                          https://linkeddata.tern.org.au/viewer/nvis/id/https://linked.data.gov.au/def/nvis-cv$1?format=application/ld\\+json [R=302,L]
+RewriteRule ^/def/nvis-cv(.*).jsonld$                   https://linkeddata.tern.org.au/viewer/nvis/id/https://linked.data.gov.au/def/nvis-cv$1?format=application/ld\\+json [R=302,L]
+RewriteCond %{QUERY_STRING} ^_mediatype=text/n3$ [OR]
+RewriteCond %{HTTP:Accept} text/n3 [NC]
+RewriteRule ^/def/nvis-cv(.*)$                          https://linkeddata.tern.org.au/viewer/nvis/id/https://linked.data.gov.au/def/nvis-cv$1?format=text/n3 [R=302,L]
+RewriteRule ^/def/nvis-cv(.*).n3$                       https://linkeddata.tern.org.au/viewer/nvis/id/https://linked.data.gov.au/def/nvis-cv$1?format=text/n3 [R=302,L]
+RewriteRule ^/def/nvis-cv(.*)$                          https://linkeddata.tern.org.au/viewer/nvis/id/https://linked.data.gov.au/def/nvis-cv$1 [R=302,L]"""^^pid:apacheRedirectRules ;
+    pid:redirectTest
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/nvis-cv/v7/044f129a-c9dd-42f9-a7ba-3800b0fd5320" ;
+            pid:headers "" ;
+            pid:to "https://linkeddata.tern.org.au/viewer/nvis/id/https://linked.data.gov.au/def/nvis-cv/v7/044f129a-c9dd-42f9-a7ba-3800b0fd5320" ;
+            schema:name "NVIS Vocabularies - one concept HTML" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/nvis-cv/v7/044f129a-c9dd-42f9-a7ba-3800b0fd5320" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://linkeddata.tern.org.au/viewer/nvis/id/https://linked.data.gov.au/def/nvis-cv/v7/044f129a-c9dd-42f9-a7ba-3800b0fd5320?format=text/turtle" ;
+            schema:name "NVIS Vocabularies - one concept TURTLE" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/nvis-cv/v7" ;
+            pid:headers "" ;
+            pid:to "https://linkeddata.tern.org.au/viewer/nvis/id/https://linked.data.gov.au/def/nvis-cv/v7" ;
+            schema:name "NVIS Vocabularies - one version HTML" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/nvis-cv" ;
+            pid:headers "" ;
+            pid:to "https://linkeddata.tern.org.au/viewer/nvis/id/https://linked.data.gov.au/def/nvis-cv" ;
+            schema:name "NVIS Vocabularies HTML" ;
+        ] ;
+    schema:creator <https://linked.data.gov.au/person/junrongYu> ;
+    schema:dateCreated "2026-10-22"^^xsd:date ;
+    schema:dateModified "2026-10-22"^^xsd:date ;
+    schema:description "Categorical values from the Australian Vegetation Attribute Manual (NVIS), managed by TERN. Each NVIS version has its own path segment, e.g. /v7/." ;
+    schema:name "NVIS vocabularies (National Vegetation Information System)" ;
+    schema:sponsor <https://linked.data.gov.au/org/tern> ;
+    schema:url "https://linked.data.gov.au/def/nvis-cv"^^pid:agldwgPid ;
+.
