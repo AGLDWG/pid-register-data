@@ -156,7 +156,6 @@ reg:
         :gswa-supermodel ,
         :gswa-vocabulary-themes ,
         :idn-role-codes ,
-        :idncp ,
         :imagery ,
         :infrastructure ,
         :irg ,

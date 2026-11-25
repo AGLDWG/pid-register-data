@@ -5,6 +5,14 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://linked.data.gov.au/pid/dataset/2023-referendum>
     a pid:Pid ;
     pid:redirectRules "RewriteRule ^/dataset/2023-referendum(.*)$ \"https://data.idnau.org/object?iri=https://linked.data.gov.au/dataset/2023-referendum$1\" [R=302,NE,L]"^^pid:apacheRedirectRules ;
+    pid:redirectTest
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/dataset/2023-referendum" ;
+            pid:headers "" ;
+            pid:to "https://data.idnau.org/object?iri=https://linked.data.gov.au/dataset/2023-referendum" ;
+            schema:name "/dataset/2023-referendum HTML" ;
+        ] ;
     schema:creator <https://linked.data.gov.au/person/nicholas.car> ;
     schema:dateCreated "2026-11-25"^^xsd:date ;
     schema:dateModified "2026-11-25"^^xsd:date ;

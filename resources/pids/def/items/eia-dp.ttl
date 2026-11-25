@@ -11,6 +11,42 @@ RewriteCond %{HTTP:Accept} text/turtle [NC]
 RewriteRule ^/def/eia-dp$                               https://dcceew-bdr.github.io/eia-data-profile/profile.ttl [R=302,L]
 RewriteRule ^/def/eia-dp.ttl$                           https://dcceew-bdr.github.io/eia-data-profile/profile.ttl [R=302,L]
 RewriteRule ^/def/eia-dp$                               https://dcceew-bdr.github.io/eia-data-profile/spec.html [R=302,NE,L]"""^^pid:apacheRedirectRules ;
+    pid:redirectTest 
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/eia-dp/context.json" ;
+            pid:headers "" ;
+            pid:to "https://dcceew-bdr.github.io/eia-data-profile/context.json" ;
+            schema:name "EIA DP JSON-LD context" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/eia-dp" ;
+            pid:headers "" ;
+            pid:to "https://dcceew-bdr.github.io/eia-data-profile/spec.html" ;
+            schema:name "EIA DP Spec HTML" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/eia-dp/validator" ;
+            pid:headers "" ;
+            pid:to "https://dcceew-bdr.github.io/eia-data-profile/validator.ttl" ;
+            schema:name "EIA DP validator" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/eia-dp/validator" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://dcceew-bdr.github.io/eia-data-profile/validator.ttl" ;
+            schema:name "EIA DP validator RDF" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/eia-dp" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://dcceew-bdr.github.io/eia-data-profile/profile.ttl" ;
+            schema:name "EIA DP profile RDF" ;
+        ] ;
     schema:creator <https://linked.data.gov.au/person/nicholas.car> ;
     schema:dateCreated "2026-11-25"^^xsd:date ;
     schema:dateModified "2026-11-25"^^xsd:date ;

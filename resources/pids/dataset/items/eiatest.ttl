@@ -6,6 +6,42 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a pid:Pid ;
     pid:redirectRules """RewriteRule ^/dataset/eiatest$                          https://eia.testing.bdr.gov.au [R=302,L]
 RewriteRule ^/dataset/eiatest/(.*)                      "https://eia.testing.bdr.gov.au/object?iri=https://linked.data.gov.au/dataset/eiatest/$1" [R=307,QSA,L]"""^^pid:apacheRedirectRules ;
+    pid:redirectTest 
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/dataset/eiatest/bdr-act" ;
+            pid:headers "" ;
+            pid:to "https://eia.testing.bdr.gov.au/object?iri=https://linked.data.gov.au/dataset/eiatest/bdr-act" ;
+            schema:name "EIA Dataset BDR ACT" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/dataset/eiatest/bdr-act/incidental-occurrences" ;
+            pid:headers "" ;
+            pid:to "https://eia.testing.bdr.gov.au/object?iri=https://linked.data.gov.au/dataset/eiatest/bdr-act/incidental-occurrences" ;
+            schema:name "EIA Dataset BDR ACT FC" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/dataset/eiatest/catalogue/datasets" ;
+            pid:headers "" ;
+            pid:to "https://eia.testing.bdr.gov.au/object?iri=https://linked.data.gov.au/dataset/eiatest/catalogue/datasets" ;
+            schema:name "EIA Datasets catalogue" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/dataset/eiatest/nvis-veg" ;
+            pid:headers "" ;
+            pid:to "https://eia.testing.bdr.gov.au/object?iri=https://linked.data.gov.au/dataset/eiatest/nvis-veg" ;
+            schema:name "NVIS Major Vegetation Groups and Major Vegetation Subgroups vocab" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/dataset/eiatest" ;
+            pid:headers "" ;
+            pid:to "https://eia.testing.bdr.gov.au" ;
+            schema:name "EIA dataset home" ;
+        ] ;
     schema:creator <https://linked.data.gov.au/person/nicholas.car> ;
     schema:dateCreated "2026-11-25"^^xsd:date ;
     schema:dateModified "2026-11-25"^^xsd:date ;

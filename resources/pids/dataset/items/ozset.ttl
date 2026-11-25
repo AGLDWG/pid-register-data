@@ -25,6 +25,21 @@ RewriteCond %{HTTP:Accept} text/n3 [NC]
 RewriteRule ^\\/dataset\\/ozset(.*)$                    https://linkeddata.tern.org.au/viewers/general?uri=http://linked.data.gov.au/dataset/ozset$1&sparql_endpoint=https://virtuoso.tern.org.au/sparql&format=text/n3 [R=302,L]
 RewriteRule ^\\/dataset\\/ozset(.*).n3$                 https://linkeddata.tern.org.au/viewers/general?uri=http://linked.data.gov.au/dataset/ozset$1&sparql_endpoint=https://virtuoso.tern.org.au/sparql&format=text/n3 [R=302,L]
 RewriteRule ^/dataset/ozset(.*)$                      https://linkeddata.tern.org.au/viewers/general?uri=http://linked.data.gov.au/dataset/ozset$1&sparql_endpoint=https://virtuoso.tern.org.au/sparql [R=302,L]"""^^pid:apacheRedirectRules ;
+    pid:redirectTest 
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/dataset/ozset" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://linkeddata.tern.org.au/viewers/general?uri=http://linked.data.gov.au/dataset/ozset&sparql_endpoint=https://virtuoso.tern.org.au/sparql&format=text/turtle" ;
+            schema:name "OzSET Dataset Metadata - one vocab TURTLE" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/dataset/ozset" ;
+            pid:headers "" ;
+            pid:to "https://linkeddata.tern.org.au/viewers/general?uri=http://linked.data.gov.au/dataset/ozset&sparql_endpoint=https://virtuoso.tern.org.au/sparql" ;
+            schema:name "OzSET Dataset Metadata - one vocab HTML" ;
+        ] ;
     schema:creator <https://linked.data.gov.au/person/nicholas.car> ;
     schema:dateCreated "2026-11-25"^^xsd:date ;
     schema:dateModified "2026-11-25"^^xsd:date ;

@@ -10,6 +10,21 @@ RewriteRule ^/dataset/worldcountries2025(.*)$                          https://l
 RewriteRule ^/dataset/worldcountries2025(.*).ttl$                      https://linkeddata.tern.org.au/viewers/administrative-areas?regiontype=https://linked.data.gov.au/dataset/worldcountries2025$1&format=text/turtle [R=302,L]
 RewriteRule ^/dataset/worldcountries2025$                              https://linkeddata.tern.org.au/viewers/administrative-areas?regiontype=https://linked.data.gov.au/dataset/worldcountries2025 [R=302,L]
 RewriteRule ^/dataset/worldcountries2025(.*)$                          https://linkeddata.tern.org.au/viewers/administrative-areas?regiontype=https://linked.data.gov.au/dataset/worldcountries2025$1 [R=302,L]"""^^pid:apacheRedirectRules ;
+    pid:redirectTest 
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/dataset/worldcountries2025" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://linkeddata.tern.org.au/viewers/administrative-areas?regiontype=https://linked.data.gov.au/dataset/worldcountries2025&format=text/turtle" ;
+            schema:name "worldcountries2025 - TURTLE" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/dataset/worldcountries2025" ;
+            pid:headers "" ;
+            pid:to "https://linkeddata.tern.org.au/viewers/administrative-areas?regiontype=https://linked.data.gov.au/dataset/worldcountries2025" ;
+            schema:name "worldcountries2025 - HTML" ;
+        ] ;
     schema:creator <https://linked.data.gov.au/person/nicholas.car> ;
     schema:dateCreated "2026-11-25"^^xsd:date ;
     schema:dateModified "2026-11-25"^^xsd:date ;

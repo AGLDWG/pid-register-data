@@ -9,6 +9,21 @@ RewriteCond %{HTTP:Accept} text/turtle [NC]
 RewriteRule ^/def/geofh                     https://geological-survey-of-western-australia.github.io/GSWA-Supermodel/rdf/components/geofh.ttl [R=302,L]
 RewriteRule ^/def/geofh.ttl$                https://geological-survey-of-western-australia.github.io/GSWA-Supermodel/rdf/components/geofh.ttl [R=302,L]
 RewriteRule ^/def/geofh                     https://geological-survey-of-western-australia.github.io/GSWA-Supermodel/components/geofh/ [R=302,L]"""^^pid:apacheRedirectRules ;
+    pid:redirectTest 
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/geofh" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://geological-survey-of-western-australia.github.io/GSWA-Supermodel/rdf/components/geofh.ttl" ;
+            schema:name "geofh HTML" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/geofh" ;
+            pid:headers "" ;
+            pid:to "https://geological-survey-of-western-australia.github.io/GSWA-Supermodel/components/geofh/" ;
+            schema:name "geofh RDF" ;
+        ] ;
     schema:creator <https://linked.data.gov.au/person/nicholas.car> ;
     schema:dateCreated "2026-11-25"^^xsd:date ;
     schema:dateModified "2026-11-25"^^xsd:date ;

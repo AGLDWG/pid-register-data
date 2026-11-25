@@ -12,6 +12,42 @@ RewriteRule ^/def/valpub/validator               https://agldwg.github.io/valpub
 RewriteRule ^/def/valpub/repo                    https://github.com/AGLDWG/valpub-profile [R=302,L]
 RewriteRule ^/def/valpub/spec                    https://agldwg.github.io/valpub-profile/specification.html [R=302,L]
 RewriteRule ^/def/valpub                         https://agldwg.github.io/valpub-profile/profile.html [R=302,L]"""^^pid:apacheRedirectRules ;
+    pid:redirectTest 
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/valpub" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://agldwg.github.io/valpub-profile/profile.ttl" ;
+            schema:name "ValPub Profile RDF" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/valpub" ;
+            pid:headers "" ;
+            pid:to "https://agldwg.github.io/valpub-profile/profile.html" ;
+            schema:name "ValPub Profile HTML" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/valpub/validator" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://agldwg.github.io/valpub-profile/validators/validator.ttl" ;
+            schema:name "ValPub Validator RDF" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/valpub/repo" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://github.com/AGLDWG/valpub-profile" ;
+            schema:name "ValPub repo" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/valpub/spec" ;
+            pid:headers "" ;
+            pid:to "https://agldwg.github.io/valpub-profile/specification.html" ;
+            schema:name "ValPub Specification HTML" ;
+        ] ;
     schema:creator <https://linked.data.gov.au/person/nicholas.car> ;
     schema:dateCreated "2026-11-25"^^xsd:date ;
     schema:dateModified "2026-11-25"^^xsd:date ;
