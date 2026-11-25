@@ -1,0 +1,23 @@
+name: Validate organisations
+
+on:
+  pull_request:
+  push:
+    branches: [main, valpub-compliant]
+
+permissions:
+  contents: read
+
+jobs:
+  validate-orgs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+      - run: uv sync --locked --python 3.12
+      - name: Validate organisation records with supporting role types
+        run: uv run --locked python scripts/validate_orgs.py
+      - name: Test supporting vocabulary validation
+        run: uv run --locked python -m unittest discover -s tests -p test_validate_orgs.py -v

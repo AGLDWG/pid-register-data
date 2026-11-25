@@ -7,6 +7,10 @@ vars:
   SPARQL_PASSWORD: '{{default "" .SPARQL_PASSWORD}}'
 
 tasks:
+  validate-orgs:
+    desc: Validate organisation records using registered agents and supporting role vocabularies
+    cmd: uv run --locked python scripts/validate_orgs.py
+
   build-redirects:
     desc: Build sponsor-specific Apache configurations from local RDF or an authenticated SPARQL endpoint
     silent: true
