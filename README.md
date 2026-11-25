@@ -70,6 +70,40 @@ uv run --locked python scripts/build_redirects.py
 uv run --locked pytest -v scripts/test_redirects.py
 ```
 
+## Synchronising RDF after a merge
+
+The `Synchronise RDF` workflow runs when a merge updates `main`. It can also be started from the Actions tab using
+**Run workflow** with `main` selected. Runs are serialised, and each run checks out the latest `main` before calling
+`bash scripts/sync.sh` with the locked project dependencies.
+
+The script reads `resources/manifest.ttl` and updates newer remote records and adds new remote records. It does not pull
+remote changes into the local files (`True False True False` for the four `kgm sync` options).
+
+Before merging the workflow, open the repository's **Settings → Secrets and variables → Actions**, then use
+**New repository secret** to create all three secrets:
+
+| Secret | Value |
+| --- | --- |
+| `SPARQL_ENDPOINT` | The target SPARQL dataset endpoint previously used in `scripts/sync.sh` |
+| `SPARQL_USERNAME` | The endpoint's authentication username |
+| `SPARQL_PASSWORD` | The endpoint's authentication password |
+
+Alternatively, run these commands and enter each value at the prompt; do not put the values in command arguments:
+
+```bash
+gh secret set SPARQL_ENDPOINT --repo AGLDWG/pid-register-data
+gh secret set SPARQL_USERNAME --repo AGLDWG/pid-register-data
+gh secret set SPARQL_PASSWORD --repo AGLDWG/pid-register-data
+```
+
+The workflow supplies these secrets as environment variables only to the sync step. `scripts/sync.sh` exits with an error if a
+value is missing. No endpoint or credential values belong in repository files. For a local sync, supply the same three
+environment variables before running `bash scripts/sync.sh`.
+
+KGM validates the manifest and its resources before synchronising. Its validator lookup can contact the Semantic
+Background service, so that service must be reachable as well as the target SPARQL endpoint. A validator lookup timeout
+fails the workflow; it does not indicate a successful sync. Inspect the failed Actions run before retrying it.
+
 ## License
 
 All the content of this repository is licensed with the [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/) license with the following copyright notice:
