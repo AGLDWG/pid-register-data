@@ -1,0 +1,33 @@
+PREFIX pid: <https://linked.data.gov.au/def/pid/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/pid/def/eia-dk>
+    a pid:Pid ;
+    pid:redirectRules """RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/def/eia-dk($|/.*)$ "https://eia.testing.bdr.gov.au/object?iri=https://linked.data.gov.au/def/eia-dk&_mediatype=text/turtle" [R=302,L]
+RewriteRule ^/def/eia-dk(.*).ttl$ "https://eia.testing.bdr.gov.au/object?iri=https://linked.data.gov.au/def/eia-dk&_mediatype=text/turtle" [R=302,L]
+RewriteRule ^/def/eia-dk($|/.*)$ "https://eia.testing.bdr.gov.au/object?iri=https://linked.data.gov.au/def/eia-dk" [R=302,NE,L]"""^^pid:apacheRedirectRules ;
+    pid:redirectTest 
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/eia-dk" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://eia.testing.bdr.gov.au/object?iri=https://linked.data.gov.au/def/eia-dk&_mediatype=text/turtle" ;
+            schema:name "EIA Data Kinds RDF" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/eia-dk" ;
+            pid:headers "" ;
+            pid:to "https://eia.testing.bdr.gov.au/object?iri=https://linked.data.gov.au/def/eia-dk" ;
+            schema:name "EIA Data Kinds HTML" ;
+        ] ;
+    schema:creator <https://linked.data.gov.au/person/nicholas.car> ;
+    schema:dateCreated "2026-11-25"^^xsd:date ;
+    schema:dateModified "2026-11-25"^^xsd:date ;
+    schema:name "EIA Domain Knowledge" ;
+    schema:sponsor <https://linked.data.gov.au/org/dcceew> ;
+    schema:url "https://linked.data.gov.au/def/eia-dk"^^pid:agldwgPid ;
+.

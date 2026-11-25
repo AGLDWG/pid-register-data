@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import os
 import shutil
+import tempfile
 from collections import defaultdict
 from pathlib import Path
 
@@ -17,10 +18,24 @@ def main() -> None:
     parser.add_argument("--source", default="resources/pids")
     parser.add_argument("--username", default=os.getenv("SPARQL_USERNAME"))
     parser.add_argument("--password", default=os.getenv("SPARQL_PASSWORD"))
-    parser.add_argument("--output", type=Path, default=Path("tests/conf"))
+    parser.add_argument(
+        "--output",
+        type=Path,
+        default=Path(
+            os.getenv(
+                "PID_TEST_CONF",
+                str(
+                    Path(tempfile.gettempdir()) / "pid-register-redirect-tests" / "conf"
+                ),
+            )
+        ),
+        help="Temporary configuration directory (overrides PID_TEST_CONF).",
+    )
     args = parser.parse_args()
 
-    redirects = load_redirects(args.source_type, args.source, args.username, args.password)
+    redirects = load_redirects(
+        args.source_type, args.source, args.username, args.password
+    )
     grouped = defaultdict(list)
     for redirect in redirects:
         grouped[sponsor_slug(redirect.sponsor)].append(redirect)
@@ -33,7 +48,9 @@ def main() -> None:
         for entry in entries:
             content.extend((f"# {entry.pid}", entry.rules.strip(), ""))
         (args.output / f"{sponsor}.conf").write_text("\n".join(content).rstrip() + "\n")
-    print(f"Built {len(redirects)} redirects in {len(grouped)} sponsor configuration files under {args.output}")
+    print(
+        f"Built {len(redirects)} redirects in {len(grouped)} sponsor configuration files under {args.output}"
+    )
 
 
 if __name__ == "__main__":

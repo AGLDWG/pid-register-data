@@ -1,0 +1,33 @@
+PREFIX pid: <https://linked.data.gov.au/def/pid/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/pid/def/smurf>
+    a pid:Pid ;
+    pid:redirectRules """RewriteCond %{QUERY_STRING} ^_mediatype=text/turtle$ [OR]
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^/def/smurf                                 https://rmit-gkl.github.io/SMURF/smurf.ttl [R=303,L]
+RewriteRule ^/def/smurf.ttl                             https://rmit-gkl.github.io/SMURF/smurf.ttl [R=303,L]
+RewriteRule ^/def/smurf                                 https://rmit-gkl.github.io/SMURF/smurf.html [R=303,L]"""^^pid:apacheRedirectRules ;
+    pid:redirectTest 
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/smurf" ;
+            pid:headers "'Accept': 'text/turtle'" ;
+            pid:to "https://rmit-gkl.github.io/SMURF/smurf.ttl" ;
+            schema:name "SURF Ontology RDF" ;
+        ] ,
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/def/smurf" ;
+            pid:headers "" ;
+            pid:to "https://rmit-gkl.github.io/SMURF/smurf.html" ;
+            schema:name "SURF Ontology HTML" ;
+        ] ;
+    schema:creator <https://linked.data.gov.au/person/matt.duckham> ;
+    schema:dateCreated "2026-11-25"^^xsd:date ;
+    schema:dateModified "2026-11-26"^^xsd:date ;
+    schema:name "SMURF" ;
+    schema:sponsor <https://linked.data.gov.au/org/agldwg> ;
+    schema:url "https://linked.data.gov.au/def/smurf"^^pid:agldwgPid ;
+.
