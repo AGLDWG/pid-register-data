@@ -1,0 +1,9 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/aec>
+    a schema:Organization ;
+    schema:description "The AEC maintains an impartial and independent electoral system for eligible voters through active electoral roll management, efficient delivery of polling services and targeted education and public awareness programs." ;
+    schema:name "Australian Electoral Commission" ;
+    schema:url "https://www.aec.gov.au"^^xsd:anyURI ;
+.
