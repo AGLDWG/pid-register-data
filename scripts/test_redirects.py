@@ -7,6 +7,7 @@ import os
 import shutil
 import subprocess
 import sys
+import tempfile
 import time
 from pathlib import Path
 from urllib.parse import urlsplit
@@ -142,7 +143,12 @@ def _missing_tests_reason(pid: str) -> str:
 
 @pytest.fixture(scope="session", autouse=True)
 def apache_server():
-    conf = (ROOT / os.getenv("PID_TEST_CONF", "conf")).resolve()
+    conf = Path(
+        os.getenv(
+            "PID_TEST_CONF",
+            str(Path(tempfile.gettempdir()) / "pid-register-redirect-tests" / "conf"),
+        )
+    ).resolve()
     if not list(conf.glob("*.conf")):
         pytest.fail(
             f"Cannot run redirect tests: {conf} contains no generated .conf files. Run task build-redirects, or set PID_TEST_CONF to the builder's output directory.",
@@ -198,10 +204,12 @@ def apache_server():
             f"Apache did not become ready on port {PORT} within 20 seconds. Check the generated configuration.\n{logs.stdout}\n{logs.stderr}",
             pytrace=False,
         )
-    yield
-    subprocess.run(
-        ["docker", "rm", "-f", CONTAINER], check=False, stdout=subprocess.DEVNULL
-    )
+    try:
+        yield
+    finally:
+        subprocess.run(
+            ["docker", "rm", "-f", CONTAINER], check=False, stdout=subprocess.DEVNULL
+        )
 
 
 def test_redirect(redirect_test: RedirectTest):

@@ -39,6 +39,37 @@ The AGLDWG creates PIDs according to its [Guidelines](https://www.linked.data.go
 
 Please refer to the -guidelines_ page linked to above for more details about who can and how to make PIDs.
 
+## Redirect tests
+
+Pull requests targeting `main` run the `Redirect tests` check in GitHub Actions. It checks out the PR's exact head commit,
+builds Apache redirect configurations from that branch's local `resources/pids` files, and runs
+`scripts/test_redirects.py` against those configurations in Docker. New commits to the PR rerun the check.
+
+The workflow creates its `.conf` files under the runner's temporary directory and deletes them when the test step exits,
+including on failure. It does not upload or cache the generated configurations, and rejects committed `.conf` files.
+
+The `main` branch requires the `Redirect tests` check from GitHub Actions to pass before merging, including administrator
+merges. The branch must also be up to date with `main` before merging. Keep this job name unchanged unless the required
+check in the branch protection settings is updated too.
+
+To build and test locally, start Docker and run:
+
+```bash
+task test-redirects
+```
+
+Both scripts default to the same configuration directory under the operating system's temporary directory. Set
+`PID_TEST_CONF` to use a different directory for both scripts, or pass `--output` to the builder and set `PID_TEST_CONF`
+to that path when testing. To use a fresh directory and remove it automatically after a local run:
+
+```bash
+redirect_temp=$(mktemp -d)
+export PID_TEST_CONF="$redirect_temp/conf"
+trap 'rm -rf "$redirect_temp"' EXIT
+uv run --locked python scripts/build_redirects.py
+uv run --locked pytest -v scripts/test_redirects.py
+```
+
 ## License
 
 All the content of this repository is licensed with the [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/) license with the following copyright notice:

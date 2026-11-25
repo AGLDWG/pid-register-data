@@ -1,0 +1,52 @@
+name: PID redirect validation
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened, ready_for_review, edited]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: redirect-tests-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  redirect-tests:
+    name: Redirect tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out the proposed branch
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: false
+
+      - name: Install uv and Python
+        uses: astral-sh/setup-uv@1db35dd8eee11c5894872e0b383ae6c406cf738d # v10.4.0
+        with:
+          python-version: "3.15"
+          enable-cache: false
+
+      - name: Install locked dependencies
+        run: uv sync --locked --group dev
+
+      - name: Build and test temporary redirect configurations
+        shell: bash
+        env:
+          SOURCE_TYPE: local
+          SOURCE: resources/pids
+        run: |
+          set -euo pipefail
+          if [[ -n "$(git ls-files -- '*.conf')" ]]; then
+            echo "::error::Generated .conf files must not be committed."
+            exit 1
+          fi
+          redirect_temp=$(mktemp -d "$RUNNER_TEMP/pid-redirects.XXXXXX")
+          export PID_TEST_CONF="$redirect_temp/conf"
+          trap 'docker rm -f pid-register-redirect-tests >/dev/null 2>&1 || true; rm -rf "$redirect_temp"' EXIT
+          uv run --locked python scripts/build_redirects.py \
+            --source-type local --source "$SOURCE" --output "$PID_TEST_CONF"
+          uv run --locked pytest -v scripts/test_redirects.py
