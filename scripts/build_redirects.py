@@ -17,7 +17,7 @@ def main() -> None:
     parser.add_argument("--source", default="resources/pids")
     parser.add_argument("--username", default=os.getenv("SPARQL_USERNAME"))
     parser.add_argument("--password", default=os.getenv("SPARQL_PASSWORD"))
-    parser.add_argument("--output", type=Path, default=Path("tests/conf"))
+    parser.add_argument("--output", type=Path, default=Path("conf"))
     args = parser.parse_args()
 
     redirects = load_redirects(args.source_type, args.source, args.username, args.password)
