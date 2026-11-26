@@ -9,6 +9,14 @@ RewriteCond %{HTTP:Accept} text/turtle [NC]
 RewriteRule ^/org/dem($|/.*)$ "https://pidreg.dev.kurrawong.ai/object?iri=https://linked.data.gov.au/org/dem$1&_mediatype=text/turtle" [R=302,L]
 RewriteRule ^/org/dem(.*).ttl$ "https://pidreg.dev.kurrawong.ai/object?iri=https://linked.data.gov.au/org/dem$1&_mediatype=text/turtle" [R=302,L]
 RewriteRule ^/org/dem($|/.*)$ "https://pidreg.dev.kurrawong.ai/object?iri=https://linked.data.gov.au/org/dem$1" [R=302,NE,L]"""^^pid:apacheRedirectRules ;
+    pid:redirectTest
+        [
+            a pid:RedirectTest ;
+            pid:from "https://linked.data.gov.au/org/dem" ;
+            pid:headers "" ;
+            pid:to "https://pidreg.dev.kurrawong.ai/object?iri=https://linked.data.gov.au/org/dem" ;
+            schema:name "/org/dem HTML" ;
+        ] ;
     schema:creator <https://linked.data.gov.au/person/nicholas.car> ;
     schema:dateCreated "2024-09-10"^^xsd:date ;
     schema:dateModified "2026-09-07"^^xsd:date ;
