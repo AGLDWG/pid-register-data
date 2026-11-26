@@ -374,8 +374,8 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "httpx", specifier = ">=0.28.1" },
-    { name = "kgm", specifier = ">=2.1.2" },
-    { name = "kurra", specifier = ">=3.0.6" },
+    { name = "kgm", specifier = ">=2.2.5" },
+    { name = "kurra", specifier = ">=3.2.1" },
     { name = "rdflib", specifier = ">=7.1.4" },
 ]
 
