@@ -1,7 +1,8 @@
 """Check that stable registered PID URLs ultimately return HTTP 200 from linked.data.gov.au.
 
 Run with ``uv run python scripts/test_resolution.py``. Requests use GET without
-an Accept header and follow redirects. Exit status is 1 for resolution failures
+an Accept header and follow redirects. HTTP 403 responses are retried once with
+a browser User-Agent. Exit status is 1 for resolution failures
 and 2 for invalid input; this script does not require pytest or Docker.
 """
 
@@ -23,6 +24,10 @@ PID = Namespace("https://linked.data.gov.au/def/pid/")
 SCHEMA = Namespace("https://schema.org/")
 STABLE = URIRef("https://linked.data.gov.au/def/reg-statuses/stable")
 RESOURCES = Path(__file__).resolve().parent.parent / "resources"
+BROWSER_USER_AGENT = (
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:160.0) "
+    "Gecko/20100101 Firefox/160.0"
+)
 
 
 @dataclass(frozen=True)
@@ -63,20 +68,28 @@ def load_stable_pids(
 
 
 def check_resolution(client: httpx.Client, url: str) -> Failure | None:
-    """Follow a basic GET to its final status without downloading the final body."""
+    """Follow GET redirects, retrying HTTP 403 once with a browser User-Agent."""
     try:
         parsed = urlsplit(url)
         if parsed.scheme not in {"http", "https"} or not parsed.netloc:
             return Failure(
                 url, "Invalid URL", url, "schema:url must be an absolute HTTP(S) URL"
             )
-        with client.stream("GET", url, follow_redirects=True) as response:
-            if response.status_code != httpx.codes.OK:
+        for attempt in range(2):
+            headers = {"User-Agent": BROWSER_USER_AGENT} if attempt else {}
+            with client.stream(
+                "GET", url, headers=headers, follow_redirects=True
+            ) as response:
+                if response.status_code == httpx.codes.OK:
+                    return None
+                if response.status_code == httpx.codes.FORBIDDEN and not attempt:
+                    continue
                 return Failure(
                     url,
                     f"HTTP {response.status_code}",
                     str(response.url),
-                    response.reason_phrase,
+                    response.reason_phrase
+                    + (" (after User-Agent retry)" if attempt else ""),
                 )
     except httpx.RequestError as error:
         return Failure(url, type(error).__name__, str(error.request.url), str(error))
