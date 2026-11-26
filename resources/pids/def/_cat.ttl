@@ -1,4 +1,5 @@
 PREFIX : <https://linked.data.gov.au/pid/def/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX reg: <https://linked.data.gov.au/reg/pids/defs>
 PREFIX schema: <https://schema.org/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -10,7 +11,7 @@ reg:
     schema:dateCreated "2018"^^xsd:gYear ;
     schema:dateModified "2026-11-25"^^xsd:date ;
     schema:description "The register of linked.data.gov.au Definitional Item PIDs" ;
-    schema:hasPart
+    rdfs:member
         :Bioregional-Assessment-Programme-Glossary ,
         :CRIRSCO-mineral-resource-reporting ,
         :JORC-Code ,
