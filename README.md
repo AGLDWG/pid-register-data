@@ -98,7 +98,17 @@ gh secret set SPARQL_PASSWORD --repo AGLDWG/pid-register-data
 
 The workflow supplies these secrets as environment variables only to the sync step. `scripts/sync.sh` exits with an error if a
 value is missing. No endpoint or credential values belong in repository files. For a local sync, supply the same three
-environment variables before running `bash scripts/sync.sh`.
+environment variables before running `bash scripts/sync.sh`, or create a `.env` file in the repository root:
+
+```bash
+SPARQL_ENDPOINT='your-endpoint-url'
+SPARQL_USERNAME='your-username'
+SPARQL_PASSWORD='your-password'
+```
+
+The script loads `.env` only when one or more required values are missing or empty. Existing non-empty environment values
+take precedence over file values. The file uses Bash assignment syntax; quote values containing spaces or special
+characters. `.env` is ignored by Git and should remain local.
 
 KGM validates the manifest and its resources before synchronising. Its validator lookup can contact the Semantic
 Background service, so that service must be reachable as well as the target SPARQL endpoint. A validator lookup timeout
