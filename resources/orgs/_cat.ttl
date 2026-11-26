@@ -205,5 +205,5 @@ reg:
         :wwf-australia ;
     schema:name "Organisations Register" ;
     schema:publisher :agldwg ;
-    schema:version "1" ;
+    schema:version "2" ;
 .
