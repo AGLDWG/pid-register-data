@@ -1,4 +1,5 @@
 PREFIX reg: <https://linked.data.gov.au/reg>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX schema: <https://schema.org/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
@@ -9,7 +10,7 @@ reg:
     schema:dateCreated "2026"^^xsd:gYear ;
     schema:dateModified "2026-09-07"^^xsd:date ;
     schema:description "The top-level register of the linked.data.gov.au Linked Data system" ;
-    schema:hasPart
+    rdfs:member
         <https://linked.data.gov.au/reg/models> ,
         <https://linked.data.gov.au/reg/orgs> ,
         <https://linked.data.gov.au/reg/pids> ,
